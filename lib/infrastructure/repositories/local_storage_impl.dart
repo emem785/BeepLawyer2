@@ -26,7 +26,7 @@ class LocalStorageImpl implements LocalStorageInterface {
   @override
   Future<Either<Failure, String>> getUser() async {
     final prefs = await SharedPreferences.getInstance();
-    String data = prefs.getString(USER_KEY);
+    String? data = prefs.getString(USER_KEY);
     if (data == null) {
       return Left(CacheFailure("user not available"));
     } else {
@@ -49,7 +49,7 @@ class LocalStorageImpl implements LocalStorageInterface {
   @override
   Future<Either<Failure, String>> getToken() async {
     final prefs = await SharedPreferences.getInstance();
-    String data = prefs.getString(TOKEN_KEY);
+    String? data = prefs.getString(TOKEN_KEY);
     if (data == null) {
       return Left(CacheFailure("token not available"));
     } else {
@@ -78,7 +78,7 @@ class LocalStorageImpl implements LocalStorageInterface {
   @override
   Future<Either<Failure, bool>> getOnCall() async {
     final prefs = await SharedPreferences.getInstance();
-    bool data = prefs.getBool(ON_CALL_KEY);
+    bool? data = prefs.getBool(ON_CALL_KEY);
     if (data == null) {
       return Left(CacheFailure("token not available"));
     } else {
@@ -100,8 +100,8 @@ class LocalStorageImpl implements LocalStorageInterface {
 
   @override
   Future<User> cacheUserFromSignIn(
-      Map<String, dynamic> map, String phoneNumber) async {
-    final userMap = map["response"]["content"]["details"];
+      Map<String, dynamic>? map, String phoneNumber) async {
+    final userMap = map!["response"]["content"]["details"];
     final tokenMap = map["response"]["auth_keys"]["access_token"];
     final user = User.fromJson(userMap);
     user.phone = phoneNumber;
@@ -113,17 +113,17 @@ class LocalStorageImpl implements LocalStorageInterface {
   @override
   cacheScnNumber(String scnNumber) async {
     final response = await getUser();
-    final userString = response.fold((l) => null, (r) => r);
+    final userString = response.fold(((l) => null) as String Function(Failure), (r) => r);
     final user = User.fromJson(jsonDecode(userString));
     user.scnNumber = scnNumber;
     await cacheUser(jsonEncode(user));
   }
 
   @override
-  Future<String> getPhoneNumber() async {
+  Future<String?> getPhoneNumber() async {
     final response = await getUser();
     final user =
-        response.fold((l) => null, (r) => User.fromJson(jsonDecode(r)));
+        response.fold(((l) => null) as User Function(Failure), (r) => User.fromJson(jsonDecode(r)));
     final phone = user.phone;
     return phone;
   }

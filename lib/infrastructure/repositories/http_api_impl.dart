@@ -22,18 +22,18 @@ const API_LOCATION_REQUEST_DELAY = 7;
 
 @LazySingleton(as: ApiInterface)
 class HttpApiImpl implements ApiInterface {
-  final LocalStorageInterface localStorageRepo;
-  final NetworkInterface client;
-  StreamSubscription<Location> _subscription;
+  final LocalStorageInterface? localStorageRepo;
+  final NetworkInterface? client;
+  StreamSubscription<Location>? _subscription;
 
-  HttpApiImpl({@required this.localStorageRepo, @required this.client});
+  HttpApiImpl({required this.localStorageRepo, required this.client});
 
   //Authentication
   @override
   Future<Either<Failure, bool>> registerUser(
-      {User user, String password}) async {
+      {User? user, String? password}) async {
     final body = {
-      "firstname": user.firstname,
+      "firstname": user!.firstname,
       "lastname": user.lastname,
       "email": user.email,
       "phone": user.phone,
@@ -41,40 +41,40 @@ class HttpApiImpl implements ApiInterface {
       "password": password
     };
     final response =
-        await client.post(endPoint: "mobile_register_lawyer", body: body);
+        await client!.post(endPoint: "mobile_register_lawyer", body: body);
     return response.fold((l) => Left(l), (r) => Right(true));
   }
 
   @override
-  Future<Either<Failure, Map<String, dynamic>>> signIn(
+  Future<Either<Failure, Map<String, dynamic>?>> signIn(
       String phoneNumber, String password) async {
     final body = {"phone": phoneNumber, "password": password};
-    final response = await client.post(endPoint: "mobile_signin", body: body);
+    final response = await client!.post(endPoint: "mobile_signin", body: body);
     return response.fold((l) => Left(l), (r) => Right(r));
   }
 
   @override
   Future<Either<Failure, String>> getVerifyCode(String phoneNumber) async {
-    final response = await client.get("get_verification_code", phoneNumber);
+    final response = await client!.get("get_verification_code", phoneNumber);
     return response.fold(
         (l) => Left(l),
         (r) => Right(
-            r["response"]["content"]["verification_code"]["code"].toString()));
+            r!["response"]["content"]["verification_code"]["code"].toString()));
   }
 
   @override
-  Future<Either<Failure, Map<String, dynamic>>> mobileVerify(
+  Future<Either<Failure, Map<String, dynamic>?>> mobileVerify(
       String phoneNumber, String vcode) async {
     final body = {"phone": phoneNumber, "code": vcode};
     final response =
-        await client.post(endPoint: "mobile_verify_code", body: body);
+        await client!.post(endPoint: "mobile_verify_code", body: body);
     return response.fold((l) => Left(l), (r) => Right(r));
   }
 
   //Modify User Details
 
   @override
-  Future<Either<Failure, Map<String, dynamic>>> updateUser(User user) async {
+  Future<Either<Failure, Map<String, dynamic>?>> updateUser(User user) async {
     final body = {
       "firstname": user.firstname,
       "lastname": user.lastname,
@@ -84,7 +84,7 @@ class HttpApiImpl implements ApiInterface {
     };
 
     final response =
-        await client.postAuth(endpoint: "update_details", body: body);
+        await client!.postAuth(endpoint: "update_details", body: body);
     return response.fold((l) => Left(l), (r) => Right(r));
   }
 
@@ -92,7 +92,7 @@ class HttpApiImpl implements ApiInterface {
   Future<Either<Failure, bool>> updatePassword(String password) async {
     final body = {"password": password};
     final response =
-        await client.postAuth(endpoint: "update_details", body: body);
+        await client!.postAuth(endpoint: "update_details", body: body);
     return response.fold((l) => Left(l), (r) => Right(true));
   }
 
@@ -100,7 +100,7 @@ class HttpApiImpl implements ApiInterface {
   Future<Either<Failure, bool>> setPlan(int plan) async {
     final body = {"plan": plan};
     final response =
-        await client.postAuth(endpoint: "update_details", body: body);
+        await client!.postAuth(endpoint: "update_details", body: body);
     return response.fold((l) => Left(l), (r) => Right(true));
   }
 
@@ -109,29 +109,29 @@ class HttpApiImpl implements ApiInterface {
   Future<Either<Failure, bool>> startOnCall(String onCall) async {
     final body = {"on_call": onCall};
     final response =
-        await client.postAuth(endpoint: "update_details", body: body);
+        await client!.postAuth(endpoint: "update_details", body: body);
     return response.fold((l) => Left(l), (r) => Right(true));
   }
 
   @override
   Future<Either<Failure, bool>> sendLocation(
-      double latitude, double longitude) async {
+      double latitude, double? longitude) async {
     final body = {
       "longitude": longitude.toString(),
       "latitude": latitude.toString(),
       "user_type": "lawyer"
     };
     final response =
-        await client.postAuth(endpoint: "add_location", body: body);
+        await client!.postAuth(endpoint: "add_location", body: body);
     return response.fold((l) => Left(l), (r) => Right(true));
   }
 
   @override
-  StreamSubscription<Location> sendLocationAsStream(
+  StreamSubscription<Location>? sendLocationAsStream(
       Stream<Location> locationStream) {
     _subscription = locationStream.listen((event) {
       sendLocation(event.latitude, event.longitude);
-      _subscription.pause(
+      _subscription!.pause(
           Future.delayed(const Duration(seconds: API_LOCATION_UPDATE_DELAY)));
     });
     return _subscription;
@@ -154,11 +154,11 @@ class HttpApiImpl implements ApiInterface {
   // }
 
   @override
-  Future<Either<Failure, Location>> getLocation(String phoneNumber) async {
-    final response = await client.getAuth("get_user_location", phoneNumber);
+  Future<Either<Failure, Location>> getLocation(String? phoneNumber) async {
+    final response = await client!.getAuth("get_user_location", phoneNumber);
     return response.fold((l) => Left(l), (r) {
       final location =
-          r["response"]["content"]["details"]["target_user_location"];
+          r!["response"]["content"]["details"]["target_user_location"];
       return Right(
           Location(latitude: location["lat"], longitude: location["lng"]));
     });
@@ -171,7 +171,7 @@ class HttpApiImpl implements ApiInterface {
     print(firebaseKey);
     final body = {"firebase_key": firebaseKey};
     final response =
-        await client.postAuth(endpoint: "update_details", body: body);
+        await client!.postAuth(endpoint: "update_details", body: body);
 
     return response.fold((l) => Left(l), (r) => Right(true));
   }
@@ -180,16 +180,16 @@ class HttpApiImpl implements ApiInterface {
   Future<Either<Failure, bool>> updateScnNumber(String scnNumber) async {
     final body = {"scn_number": scnNumber};
     final response =
-        await client.postAuth(endpoint: "update_details", body: body);
+        await client!.postAuth(endpoint: "update_details", body: body);
 
     return response.fold((l) => Left(l), (r) => Right(true));
   }
 
   @override
   Future<Either<Failure, bool>> registerUserWithForm(
-      {User user, String password, String imagePath}) async {
+      {User? user, String? password, String? imagePath}) async {
     final body = {
-      "firstname": user.firstname,
+      "firstname": user!.firstname,
       "lastname": user.lastname,
       "email": user.email,
       "phone": user.phone,
@@ -198,7 +198,7 @@ class HttpApiImpl implements ApiInterface {
       "image": imagePath
     };
     final response =
-        await client.postForm(endPoint: "mobile_register_lawyer", body: body);
+        await client!.postForm(endPoint: "mobile_register_lawyer", body: body);
     return response.fold((l) => Left(l), (r) => Right(true));
   }
 }

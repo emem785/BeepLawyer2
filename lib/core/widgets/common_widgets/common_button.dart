@@ -3,11 +3,11 @@ import 'package:beep_lawyer_3/core/utils/StyleGuide.dart';
 import 'package:flutter/material.dart';
 
 class CommonButton extends StatelessWidget {
-  final Function onPressed;
-  final String text;
+  final Function? onPressed;
+  final String? text;
   final bool isGreen;
 
-  const CommonButton({Key key, this.onPressed, this.text, this.isGreen = false})
+  const CommonButton({Key? key, this.onPressed, this.text, this.isGreen = false})
       : super(key: key);
 
   @override
@@ -18,14 +18,14 @@ class CommonButton extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(top: 24),
           child: RaisedButton(
-            onPressed: onPressed,
+            onPressed: onPressed as void Function()?,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),
                 side: BorderSide(color: isGreen ? primaryColor : Colors.brown)),
             color: isGreen ? Colors.transparent: Colors.brown,
             elevation: 0.0,
             child: Text(
-              text,
+              text!,
               style: TextStyle(color: isGreen ? primaryColor : Colors.white, fontWeight: FontWeight.w600),
             ),
           ),

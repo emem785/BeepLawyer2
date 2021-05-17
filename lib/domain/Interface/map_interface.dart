@@ -6,8 +6,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:web_socket_channel/io.dart';
 
 abstract class MapInterface {
-  StreamSubscription<Location> startMapUpdateStream(MapTool mapTool);
-  StreamSubscription<Location> startMapUpdateStreamFromApi(
-      MapTool mapTool, String phoneNumber, IOWebSocketChannel channel);
+  StreamSubscription<Location> startMapUpdateStream(MapTool? mapTool);
+  StreamSubscription<Location?> startMapUpdateStreamFromApi(
+      MapTool mapTool, String? phoneNumber, IOWebSocketChannel? channel);
   Marker getMarker(Location location);
 }

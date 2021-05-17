@@ -15,7 +15,7 @@ class ChangePasswordThree extends StatefulWidget {
 class _ChangePasswordThreeState extends State<ChangePasswordThree> {
   final _formKey = GlobalKey<FormState>();
   final _key = GlobalKey<ScaffoldState>();
-  TextEditingController _password;
+  TextEditingController? _password;
 
   @override
   void initState() {
@@ -26,7 +26,7 @@ class _ChangePasswordThreeState extends State<ChangePasswordThree> {
   @override
   void dispose() {
     super.dispose();
-    _password.dispose();
+    _password!.dispose();
   }
 
   @override
@@ -74,12 +74,12 @@ class _ChangePasswordThreeState extends State<ChangePasswordThree> {
                           controller: _password, header: 'Password'),
                       BlocConsumer<UserBloc, UserState>(
                         listener: (_, state) {
-                          return state.maybeMap(
+                          state.maybeMap(
                               orElse: () => 1,
-                              userError: (e) => _key.currentState.showSnackBar(
+                              userError: (e) => _key.currentState!.showSnackBar(
                                   SnackBar(content: Text(e.failure.message))),
                               userUpdated: (u) =>
-                                  _key.currentState.showSnackBar(SnackBar(
+                                  _key.currentState!.showSnackBar(SnackBar(
                                       content: Text(u.msg),
                                       action: SnackBarAction(
                                           label: "Go Back",
@@ -99,8 +99,8 @@ class _ChangePasswordThreeState extends State<ChangePasswordThree> {
                         padding: const EdgeInsets.only(bottom: 8.0),
                         child: CommonButton(
                             onPressed: () {
-                              if (_formKey.currentState.validate()) {
-                                userBloc.add(UpdatePassword(_password.text));
+                              if (_formKey.currentState!.validate()) {
+                                userBloc.add(UpdatePassword(_password!.text));
                               }
                             },
                             text: 'Reset'),

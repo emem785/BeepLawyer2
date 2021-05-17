@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
-  final TextEditingController controller;
-  final String title;
+  final TextEditingController? controller;
+  final String? title;
   final isOptional;
 
-  const CustomTextField({Key key, this.controller, this.title, this.isOptional = false})
+  const CustomTextField({Key? key, this.controller, this.title, this.isOptional = false})
       : super(key: key);
 
   @override
@@ -24,7 +24,7 @@ class CustomTextField extends StatelessWidget {
           controller: controller,
           validator: isOptional
               ? null
-              : (value) => (value.isEmpty) ? "Please enter $title" : null,
+              : (value) => (value!.isEmpty) ? "Please enter $title" : null,
           decoration: InputDecoration(
             border: OutlineInputBorder(gapPadding: 0.1),
             contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 6),
@@ -36,12 +36,12 @@ class CustomTextField extends StatelessWidget {
 }
 
 class CustomTextFieldNum extends StatelessWidget {
-  final TextEditingController controller;
-  final String title;
+  final TextEditingController? controller;
+  final String? title;
   final isOptional;
 
   const CustomTextFieldNum (
-      {Key key, this.controller, this.title, this.isOptional = false})
+      {Key? key, this.controller, this.title, this.isOptional = false})
       : super(key: key);
 
   @override
@@ -62,7 +62,7 @@ class CustomTextFieldNum extends StatelessWidget {
           controller: controller,
           validator: isOptional
               ? null
-              : (value) => (value.isEmpty) ? "Please enter $title" : null,
+              : (value) => (value!.isEmpty) ? "Please enter $title" : null,
           keyboardType: TextInputType.number,
           decoration: InputDecoration(
             border: OutlineInputBorder(gapPadding: 0.1),
@@ -75,13 +75,13 @@ class CustomTextFieldNum extends StatelessWidget {
 }
 
 class CustomTextFieldPassword extends StatefulWidget {
-  final TextEditingController controller;
-  final String header;
+  final TextEditingController? controller;
+  final String? header;
   final isOptional;
   //remember to trim right text when authenticaticng
 
   const CustomTextFieldPassword(
-      {Key key, this.controller, this.header, this.isOptional = false})
+      {Key? key, this.controller, this.header, this.isOptional = false})
       : super(key: key);
   @override
   _CustomTextFieldPassword createState() => _CustomTextFieldPassword();
@@ -111,7 +111,7 @@ class _CustomTextFieldPassword extends State<CustomTextFieldPassword> {
           validator: widget.isOptional
               ? null
               : (value) =>
-                  (value.isEmpty) ? "Please enter ${widget.header}" : null,
+                  (value!.isEmpty) ? "Please enter ${widget.header}" : null,
           decoration: InputDecoration(
               border: OutlineInputBorder(gapPadding: 0.1),
               contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 6),

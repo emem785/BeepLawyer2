@@ -26,18 +26,18 @@ const URL_SHORT4 = 'https://bleep3.herokuapp.com/';
 
 @LazySingleton(as: NetworkInterface)
 class NetworkClientImpl implements NetworkInterface {
-  final LocalStorageInterface localStorageInterface;
+  final LocalStorageInterface? localStorageInterface;
 
-  NetworkClientImpl({@required this.localStorageInterface});
+  NetworkClientImpl({required this.localStorageInterface});
   //Authenticated Request
   @override
-  Future<Either<Failure, Map<String, dynamic>>> postAuth(
-      {endpoint, body}) async {
+  Future<Either<Failure, Map<String, dynamic>?>> postAuth(
+      {required endpoint, body}) async {
     final url = URL_SHORT2 + endpoint;
-    final token = await localStorageInterface.getToken().then((value) {
+    final token = await localStorageInterface!.getToken().then((value) {
       return value.fold((l) => -1, (r) => jsonDecode(r));
     });
-    final userMap = await localStorageInterface.getUser().then((value) {
+    final userMap = await localStorageInterface!.getUser().then((value) {
       return value.fold((l) => -1, (r) => jsonDecode(r));
     });
     final phone = userMap["phone"].toString();
@@ -73,13 +73,13 @@ class NetworkClientImpl implements NetworkInterface {
   }
 
   @override
-  Future<Either<Failure, Map<String, dynamic>>> getAuth(endpoint,
+  Future<Either<Failure, Map<String, dynamic>?>> getAuth(endpoint,
       [data]) async {
     final url = "$URL_SHORT2$endpoint${data != null ? '/' + data : ""}";
-    final token = await localStorageInterface.getToken().then((value) {
+    final token = await localStorageInterface!.getToken().then((value) {
       return value.fold((l) => -1, (r) => jsonDecode(r));
     });
-    final userMap = await localStorageInterface.getUser().then((value) {
+    final userMap = await localStorageInterface!.getUser().then((value) {
       return value.fold((l) => -1, (r) => jsonDecode(r));
     });
     final phone = userMap["phone"].toString();
@@ -109,8 +109,9 @@ class NetworkClientImpl implements NetworkInterface {
   // Unauthenticated requests
 
   @override
-  Future<Either<Failure, Map<String, dynamic>>> get(endPoint, [data]) async {
-    final url = URL2 + endPoint + "/" + data ?? "";
+  Future<Either<Failure, Map<String, dynamic>?>> get(endPoint,
+      [data = ""]) async {
+    final url = URL2 + endPoint + "/" + data;
     try {
       final jsonResponse =
           await http.get(Uri.parse(url)).timeout(const Duration(seconds: 10));
@@ -128,14 +129,16 @@ class NetworkClientImpl implements NetworkInterface {
   }
 
   @override
-  Future<Either<Failure, Map<String, dynamic>>> post({endPoint, body}) async {
-    final url = URL2 + endPoint;
+  Future<Either<Failure, Map<String, dynamic>?>> post({
+    required endPoint,
+    body,
+  }) async {
+    final url = Uri.parse(URL2 + endPoint);
 
     try {
       final jsonResponse = await http
-          .post(Uri.parse(url), body: jsonEncode(body))
+          .post(url, body: jsonEncode(body))
           .timeout(const Duration(seconds: 10));
-      print(jsonResponse.body);
       if (jsonResponse.statusCode == 201) {
         final response = jsonDecode(jsonResponse.body);
         return Right(response);
@@ -155,14 +158,12 @@ class NetworkClientImpl implements NetworkInterface {
       return Left(ServerFailure("Request Timeout"));
     } on SocketException {
       return Left(ServerFailure("Server error"));
-    } catch (e) {
-      print(e.toString());
     }
   }
 
   @override
   Future<Either<Failure, Map<String, dynamic>>> postForm(
-      {endPoint, body}) async {
+      {required endPoint, required body}) async {
     final url = URL2 + endPoint;
     final uri = Uri.parse(url);
 
@@ -186,8 +187,7 @@ class NetworkClientImpl implements NetworkInterface {
         return Right({"success": "true"});
       } else if (jsonResponse.statusCode == 202) {
         return Right({"success": "true"});
-      }
-      if (jsonResponse.statusCode == 401) {
+      } else if (jsonResponse.statusCode == 401) {
         return Left(NoCredentials("Username or Password might be wrong..!!"));
       } else if (jsonResponse.statusCode == 412) {
         return Left(UserExist("User alredy exist"));
@@ -200,8 +200,6 @@ class NetworkClientImpl implements NetworkInterface {
       return Left(ServerFailure("Request Timeout"));
     } on SocketException {
       return Left(ServerFailure("Server error"));
-    } catch (e) {
-      print(e.toString());
     }
   }
 }

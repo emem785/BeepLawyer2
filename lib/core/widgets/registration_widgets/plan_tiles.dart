@@ -8,14 +8,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PlanTiles extends StatefulWidget {
   final PaymentBloc paymentBloc;
-  PlanTiles({Key key, @required this.paymentBloc}) : super(key: key);
+  PlanTiles({Key? key, required this.paymentBloc}) : super(key: key);
 
   @override
   _PlanTilesState createState() => _PlanTilesState();
 }
 
 class _PlanTilesState extends State<PlanTiles> {
-  plan currentPlan;
+  plan? currentPlan;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class _PlanTilesState extends State<PlanTiles> {
                   groupValue: currentPlan,
                   activeColor: primaryColor,
                   controlAffinity: ListTileControlAffinity.trailing,
-                  onChanged: (plan value) {
+                  onChanged: (plan? value) {
                     setState(() {
                       currentPlan = value;
                     });
@@ -97,7 +97,7 @@ class _PlanTilesState extends State<PlanTiles> {
                     groupValue: currentPlan,
                     activeColor: primaryColor,
                     controlAffinity: ListTileControlAffinity.trailing,
-                    onChanged: (plan value) {
+                    onChanged: (plan? value) {
                       setState(() {
                         currentPlan = value;
                       });

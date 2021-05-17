@@ -55,7 +55,7 @@ class _HomeMapState extends State<HomeMap> {
                     });
               },
               listener: (context, state) {
-                return state.maybeMap(
+                state.maybeMap(
                     orElse: () => 1,
                     mapRendered: (m) => BlocProvider.of<AddressBloc>(context)
                         .add(GetAddress()));

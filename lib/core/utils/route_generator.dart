@@ -27,8 +27,8 @@ import 'package:flutter/material.dart';
 class RouteGenerator {
   RouteFactory generateRoutes() {
     return (settings) {
-      final Map<String, dynamic> args = settings.arguments;
-      Widget screen;
+      final Map<String, dynamic>? args = settings.arguments as Map<String, dynamic>?;
+      late Widget screen;
       switch (settings.name) {
         case '/':
           screen = AuthController();
@@ -43,7 +43,7 @@ class RouteGenerator {
           break;
 
         case '/ReceiveBeep':
-          screen = ReceiveBeepPage(buddy: args["buddy"]);
+          screen = ReceiveBeepPage(buddy: args!["buddy"]);
           break;
         //Registration Pages
 
@@ -57,7 +57,7 @@ class RouteGenerator {
 
         case '/RegisterTwo':
           screen = RegisterTwo(
-            phone: args["phone"],
+            phone: args!["phone"],
           );
           break;
 
@@ -96,7 +96,7 @@ class RouteGenerator {
 
         case '/ForgotPassword2':
           screen = ForgotPasswordTwo(
-            phone: args["phone"],
+            phone: args!["phone"],
           );
           break;
 
@@ -120,7 +120,7 @@ class RouteGenerator {
 
         case 'ChangePasswordOne':
           screen = ChangePasswordOne(
-            phone: args["phone"],
+            phone: args!["phone"],
           );
           break;
 
@@ -137,7 +137,7 @@ class RouteGenerator {
 
         case 'ProfileMenu':
           screen = ProfileMenu(
-            user: args["user"],
+            user: args!["user"],
           );
           break;
       }

@@ -9,7 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/enums.dart';
 
 class SetupBeepPage extends StatelessWidget {
-  const SetupBeepPage({Key key}) : super(key: key);
+  const SetupBeepPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -25,7 +25,7 @@ class SetupBeep extends StatefulWidget {
 
 class _SetupBeepState extends State<SetupBeep> {
   GlobalKey<ScaffoldState> globalKey = GlobalKey<ScaffoldState>();
-  plan currentPlan;
+  plan? currentPlan;
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +81,7 @@ class _SetupBeepState extends State<SetupBeep> {
                         state.maybeMap(
                             orElse: () => 1,
                             paymentFailed: (f) =>
-                                globalKey.currentState.showSnackBar(SnackBar(
+                                globalKey.currentState!.showSnackBar(SnackBar(
                                   content: Text(f.failure.message),
                                 )),
                             paymentSucceeded: (s) => Navigator.pushNamed(

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'user_bloc.dart';
 
@@ -9,29 +9,29 @@ part of 'user_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$UserEventTearOff {
   const _$UserEventTearOff();
 
-// ignore: unused_element
   InsertUser insertUser() {
     return const InsertUser();
   }
 
-// ignore: unused_element
   UpdateUser updateUser(User user) {
     return UpdateUser(
       user,
     );
   }
 
-// ignore: unused_element
   UpdatePassword updatePassword(String password) {
     return UpdatePassword(
       password,
     );
   }
 
-// ignore: unused_element
   CacheScnNumber cacheScnNumber(String scnNumber) {
     return CacheScnNumber(
       scnNumber,
@@ -39,47 +39,54 @@ class _$UserEventTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $UserEvent = _$UserEventTearOff();
 
+/// @nodoc
 mixin _$UserEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result insertUser(),
-    @required Result updateUser(User user),
-    @required Result updatePassword(String password),
-    @required Result cacheScnNumber(String scnNumber),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() insertUser,
+    required TResult Function(User user) updateUser,
+    required TResult Function(String password) updatePassword,
+    required TResult Function(String scnNumber) cacheScnNumber,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result insertUser(),
-    Result updateUser(User user),
-    Result updatePassword(String password),
-    Result cacheScnNumber(String scnNumber),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? insertUser,
+    TResult Function(User user)? updateUser,
+    TResult Function(String password)? updatePassword,
+    TResult Function(String scnNumber)? cacheScnNumber,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result insertUser(InsertUser value),
-    @required Result updateUser(UpdateUser value),
-    @required Result updatePassword(UpdatePassword value),
-    @required Result cacheScnNumber(CacheScnNumber value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(InsertUser value) insertUser,
+    required TResult Function(UpdateUser value) updateUser,
+    required TResult Function(UpdatePassword value) updatePassword,
+    required TResult Function(CacheScnNumber value) cacheScnNumber,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result insertUser(InsertUser value),
-    Result updateUser(UpdateUser value),
-    Result updatePassword(UpdatePassword value),
-    Result cacheScnNumber(CacheScnNumber value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InsertUser value)? insertUser,
+    TResult Function(UpdateUser value)? updateUser,
+    TResult Function(UpdatePassword value)? updatePassword,
+    TResult Function(CacheScnNumber value)? cacheScnNumber,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $UserEventCopyWith<$Res> {
   factory $UserEventCopyWith(UserEvent value, $Res Function(UserEvent) then) =
       _$UserEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UserEventCopyWithImpl<$Res> implements $UserEventCopyWith<$Res> {
   _$UserEventCopyWithImpl(this._value, this._then);
 
@@ -88,12 +95,14 @@ class _$UserEventCopyWithImpl<$Res> implements $UserEventCopyWith<$Res> {
   final $Res Function(UserEvent) _then;
 }
 
+/// @nodoc
 abstract class $InsertUserCopyWith<$Res> {
   factory $InsertUserCopyWith(
           InsertUser value, $Res Function(InsertUser) then) =
       _$InsertUserCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$InsertUserCopyWithImpl<$Res> extends _$UserEventCopyWithImpl<$Res>
     implements $InsertUserCopyWith<$Res> {
   _$InsertUserCopyWithImpl(InsertUser _value, $Res Function(InsertUser) _then)
@@ -102,6 +111,8 @@ class _$InsertUserCopyWithImpl<$Res> extends _$UserEventCopyWithImpl<$Res>
   @override
   InsertUser get _value => super._value as InsertUser;
 }
+
+/// @nodoc
 
 class _$InsertUser implements InsertUser {
   const _$InsertUser();
@@ -121,29 +132,24 @@ class _$InsertUser implements InsertUser {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result insertUser(),
-    @required Result updateUser(User user),
-    @required Result updatePassword(String password),
-    @required Result cacheScnNumber(String scnNumber),
+  TResult when<TResult extends Object?>({
+    required TResult Function() insertUser,
+    required TResult Function(User user) updateUser,
+    required TResult Function(String password) updatePassword,
+    required TResult Function(String scnNumber) cacheScnNumber,
   }) {
-    assert(insertUser != null);
-    assert(updateUser != null);
-    assert(updatePassword != null);
-    assert(cacheScnNumber != null);
     return insertUser();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result insertUser(),
-    Result updateUser(User user),
-    Result updatePassword(String password),
-    Result cacheScnNumber(String scnNumber),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? insertUser,
+    TResult Function(User user)? updateUser,
+    TResult Function(String password)? updatePassword,
+    TResult Function(String scnNumber)? cacheScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (insertUser != null) {
       return insertUser();
     }
@@ -152,29 +158,24 @@ class _$InsertUser implements InsertUser {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result insertUser(InsertUser value),
-    @required Result updateUser(UpdateUser value),
-    @required Result updatePassword(UpdatePassword value),
-    @required Result cacheScnNumber(CacheScnNumber value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InsertUser value) insertUser,
+    required TResult Function(UpdateUser value) updateUser,
+    required TResult Function(UpdatePassword value) updatePassword,
+    required TResult Function(CacheScnNumber value) cacheScnNumber,
   }) {
-    assert(insertUser != null);
-    assert(updateUser != null);
-    assert(updatePassword != null);
-    assert(cacheScnNumber != null);
     return insertUser(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result insertUser(InsertUser value),
-    Result updateUser(UpdateUser value),
-    Result updatePassword(UpdatePassword value),
-    Result cacheScnNumber(CacheScnNumber value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InsertUser value)? insertUser,
+    TResult Function(UpdateUser value)? updateUser,
+    TResult Function(UpdatePassword value)? updatePassword,
+    TResult Function(CacheScnNumber value)? cacheScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (insertUser != null) {
       return insertUser(this);
     }
@@ -186,6 +187,7 @@ abstract class InsertUser implements UserEvent {
   const factory InsertUser() = _$InsertUser;
 }
 
+/// @nodoc
 abstract class $UpdateUserCopyWith<$Res> {
   factory $UpdateUserCopyWith(
           UpdateUser value, $Res Function(UpdateUser) then) =
@@ -193,6 +195,7 @@ abstract class $UpdateUserCopyWith<$Res> {
   $Res call({User user});
 }
 
+/// @nodoc
 class _$UpdateUserCopyWithImpl<$Res> extends _$UserEventCopyWithImpl<$Res>
     implements $UpdateUserCopyWith<$Res> {
   _$UpdateUserCopyWithImpl(UpdateUser _value, $Res Function(UpdateUser) _then)
@@ -203,16 +206,21 @@ class _$UpdateUserCopyWithImpl<$Res> extends _$UserEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
+    Object? user = freezed,
   }) {
     return _then(UpdateUser(
-      user == freezed ? _value.user : user as User,
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
     ));
   }
 }
 
+/// @nodoc
+
 class _$UpdateUser implements UpdateUser {
-  const _$UpdateUser(this.user) : assert(user != null);
+  const _$UpdateUser(this.user);
 
   @override
   final User user;
@@ -234,35 +242,31 @@ class _$UpdateUser implements UpdateUser {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
 
+  @JsonKey(ignore: true)
   @override
   $UpdateUserCopyWith<UpdateUser> get copyWith =>
       _$UpdateUserCopyWithImpl<UpdateUser>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result insertUser(),
-    @required Result updateUser(User user),
-    @required Result updatePassword(String password),
-    @required Result cacheScnNumber(String scnNumber),
+  TResult when<TResult extends Object?>({
+    required TResult Function() insertUser,
+    required TResult Function(User user) updateUser,
+    required TResult Function(String password) updatePassword,
+    required TResult Function(String scnNumber) cacheScnNumber,
   }) {
-    assert(insertUser != null);
-    assert(updateUser != null);
-    assert(updatePassword != null);
-    assert(cacheScnNumber != null);
     return updateUser(user);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result insertUser(),
-    Result updateUser(User user),
-    Result updatePassword(String password),
-    Result cacheScnNumber(String scnNumber),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? insertUser,
+    TResult Function(User user)? updateUser,
+    TResult Function(String password)? updatePassword,
+    TResult Function(String scnNumber)? cacheScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (updateUser != null) {
       return updateUser(user);
     }
@@ -271,29 +275,24 @@ class _$UpdateUser implements UpdateUser {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result insertUser(InsertUser value),
-    @required Result updateUser(UpdateUser value),
-    @required Result updatePassword(UpdatePassword value),
-    @required Result cacheScnNumber(CacheScnNumber value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InsertUser value) insertUser,
+    required TResult Function(UpdateUser value) updateUser,
+    required TResult Function(UpdatePassword value) updatePassword,
+    required TResult Function(CacheScnNumber value) cacheScnNumber,
   }) {
-    assert(insertUser != null);
-    assert(updateUser != null);
-    assert(updatePassword != null);
-    assert(cacheScnNumber != null);
     return updateUser(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result insertUser(InsertUser value),
-    Result updateUser(UpdateUser value),
-    Result updatePassword(UpdatePassword value),
-    Result cacheScnNumber(CacheScnNumber value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InsertUser value)? insertUser,
+    TResult Function(UpdateUser value)? updateUser,
+    TResult Function(UpdatePassword value)? updatePassword,
+    TResult Function(CacheScnNumber value)? cacheScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (updateUser != null) {
       return updateUser(this);
     }
@@ -304,10 +303,13 @@ class _$UpdateUser implements UpdateUser {
 abstract class UpdateUser implements UserEvent {
   const factory UpdateUser(User user) = _$UpdateUser;
 
-  User get user;
-  $UpdateUserCopyWith<UpdateUser> get copyWith;
+  User get user => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UpdateUserCopyWith<UpdateUser> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $UpdatePasswordCopyWith<$Res> {
   factory $UpdatePasswordCopyWith(
           UpdatePassword value, $Res Function(UpdatePassword) then) =
@@ -315,6 +317,7 @@ abstract class $UpdatePasswordCopyWith<$Res> {
   $Res call({String password});
 }
 
+/// @nodoc
 class _$UpdatePasswordCopyWithImpl<$Res> extends _$UserEventCopyWithImpl<$Res>
     implements $UpdatePasswordCopyWith<$Res> {
   _$UpdatePasswordCopyWithImpl(
@@ -326,16 +329,21 @@ class _$UpdatePasswordCopyWithImpl<$Res> extends _$UserEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object password = freezed,
+    Object? password = freezed,
   }) {
     return _then(UpdatePassword(
-      password == freezed ? _value.password : password as String,
+      password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$UpdatePassword implements UpdatePassword {
-  const _$UpdatePassword(this.password) : assert(password != null);
+  const _$UpdatePassword(this.password);
 
   @override
   final String password;
@@ -358,35 +366,31 @@ class _$UpdatePassword implements UpdatePassword {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(password);
 
+  @JsonKey(ignore: true)
   @override
   $UpdatePasswordCopyWith<UpdatePassword> get copyWith =>
       _$UpdatePasswordCopyWithImpl<UpdatePassword>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result insertUser(),
-    @required Result updateUser(User user),
-    @required Result updatePassword(String password),
-    @required Result cacheScnNumber(String scnNumber),
+  TResult when<TResult extends Object?>({
+    required TResult Function() insertUser,
+    required TResult Function(User user) updateUser,
+    required TResult Function(String password) updatePassword,
+    required TResult Function(String scnNumber) cacheScnNumber,
   }) {
-    assert(insertUser != null);
-    assert(updateUser != null);
-    assert(updatePassword != null);
-    assert(cacheScnNumber != null);
     return updatePassword(password);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result insertUser(),
-    Result updateUser(User user),
-    Result updatePassword(String password),
-    Result cacheScnNumber(String scnNumber),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? insertUser,
+    TResult Function(User user)? updateUser,
+    TResult Function(String password)? updatePassword,
+    TResult Function(String scnNumber)? cacheScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (updatePassword != null) {
       return updatePassword(password);
     }
@@ -395,29 +399,24 @@ class _$UpdatePassword implements UpdatePassword {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result insertUser(InsertUser value),
-    @required Result updateUser(UpdateUser value),
-    @required Result updatePassword(UpdatePassword value),
-    @required Result cacheScnNumber(CacheScnNumber value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InsertUser value) insertUser,
+    required TResult Function(UpdateUser value) updateUser,
+    required TResult Function(UpdatePassword value) updatePassword,
+    required TResult Function(CacheScnNumber value) cacheScnNumber,
   }) {
-    assert(insertUser != null);
-    assert(updateUser != null);
-    assert(updatePassword != null);
-    assert(cacheScnNumber != null);
     return updatePassword(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result insertUser(InsertUser value),
-    Result updateUser(UpdateUser value),
-    Result updatePassword(UpdatePassword value),
-    Result cacheScnNumber(CacheScnNumber value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InsertUser value)? insertUser,
+    TResult Function(UpdateUser value)? updateUser,
+    TResult Function(UpdatePassword value)? updatePassword,
+    TResult Function(CacheScnNumber value)? cacheScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (updatePassword != null) {
       return updatePassword(this);
     }
@@ -428,10 +427,13 @@ class _$UpdatePassword implements UpdatePassword {
 abstract class UpdatePassword implements UserEvent {
   const factory UpdatePassword(String password) = _$UpdatePassword;
 
-  String get password;
-  $UpdatePasswordCopyWith<UpdatePassword> get copyWith;
+  String get password => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UpdatePasswordCopyWith<UpdatePassword> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $CacheScnNumberCopyWith<$Res> {
   factory $CacheScnNumberCopyWith(
           CacheScnNumber value, $Res Function(CacheScnNumber) then) =
@@ -439,6 +441,7 @@ abstract class $CacheScnNumberCopyWith<$Res> {
   $Res call({String scnNumber});
 }
 
+/// @nodoc
 class _$CacheScnNumberCopyWithImpl<$Res> extends _$UserEventCopyWithImpl<$Res>
     implements $CacheScnNumberCopyWith<$Res> {
   _$CacheScnNumberCopyWithImpl(
@@ -450,16 +453,21 @@ class _$CacheScnNumberCopyWithImpl<$Res> extends _$UserEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object scnNumber = freezed,
+    Object? scnNumber = freezed,
   }) {
     return _then(CacheScnNumber(
-      scnNumber == freezed ? _value.scnNumber : scnNumber as String,
+      scnNumber == freezed
+          ? _value.scnNumber
+          : scnNumber // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$CacheScnNumber implements CacheScnNumber {
-  const _$CacheScnNumber(this.scnNumber) : assert(scnNumber != null);
+  const _$CacheScnNumber(this.scnNumber);
 
   @override
   final String scnNumber;
@@ -482,35 +490,31 @@ class _$CacheScnNumber implements CacheScnNumber {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(scnNumber);
 
+  @JsonKey(ignore: true)
   @override
   $CacheScnNumberCopyWith<CacheScnNumber> get copyWith =>
       _$CacheScnNumberCopyWithImpl<CacheScnNumber>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result insertUser(),
-    @required Result updateUser(User user),
-    @required Result updatePassword(String password),
-    @required Result cacheScnNumber(String scnNumber),
+  TResult when<TResult extends Object?>({
+    required TResult Function() insertUser,
+    required TResult Function(User user) updateUser,
+    required TResult Function(String password) updatePassword,
+    required TResult Function(String scnNumber) cacheScnNumber,
   }) {
-    assert(insertUser != null);
-    assert(updateUser != null);
-    assert(updatePassword != null);
-    assert(cacheScnNumber != null);
     return cacheScnNumber(scnNumber);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result insertUser(),
-    Result updateUser(User user),
-    Result updatePassword(String password),
-    Result cacheScnNumber(String scnNumber),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? insertUser,
+    TResult Function(User user)? updateUser,
+    TResult Function(String password)? updatePassword,
+    TResult Function(String scnNumber)? cacheScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (cacheScnNumber != null) {
       return cacheScnNumber(scnNumber);
     }
@@ -519,29 +523,24 @@ class _$CacheScnNumber implements CacheScnNumber {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result insertUser(InsertUser value),
-    @required Result updateUser(UpdateUser value),
-    @required Result updatePassword(UpdatePassword value),
-    @required Result cacheScnNumber(CacheScnNumber value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InsertUser value) insertUser,
+    required TResult Function(UpdateUser value) updateUser,
+    required TResult Function(UpdatePassword value) updatePassword,
+    required TResult Function(CacheScnNumber value) cacheScnNumber,
   }) {
-    assert(insertUser != null);
-    assert(updateUser != null);
-    assert(updatePassword != null);
-    assert(cacheScnNumber != null);
     return cacheScnNumber(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result insertUser(InsertUser value),
-    Result updateUser(UpdateUser value),
-    Result updatePassword(UpdatePassword value),
-    Result cacheScnNumber(CacheScnNumber value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InsertUser value)? insertUser,
+    TResult Function(UpdateUser value)? updateUser,
+    TResult Function(UpdatePassword value)? updatePassword,
+    TResult Function(CacheScnNumber value)? cacheScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (cacheScnNumber != null) {
       return cacheScnNumber(this);
     }
@@ -552,90 +551,95 @@ class _$CacheScnNumber implements CacheScnNumber {
 abstract class CacheScnNumber implements UserEvent {
   const factory CacheScnNumber(String scnNumber) = _$CacheScnNumber;
 
-  String get scnNumber;
-  $CacheScnNumberCopyWith<CacheScnNumber> get copyWith;
+  String get scnNumber => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CacheScnNumberCopyWith<CacheScnNumber> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 class _$UserStateTearOff {
   const _$UserStateTearOff();
 
-// ignore: unused_element
   UserInitial initial() {
     return const UserInitial();
   }
 
-// ignore: unused_element
   UserLoaded userLoaded(User user) {
     return UserLoaded(
       user,
     );
   }
 
-// ignore: unused_element
   UserError userError(Failure failure) {
     return UserError(
       failure,
     );
   }
 
-// ignore: unused_element
   UserUpdated userUpdated(String msg) {
     return UserUpdated(
       msg,
     );
   }
 
-// ignore: unused_element
   UserUpdating userUpdating() {
     return const UserUpdating();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $UserState = _$UserStateTearOff();
 
+/// @nodoc
 mixin _$UserState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result userLoaded(User user),
-    @required Result userError(Failure failure),
-    @required Result userUpdated(String msg),
-    @required Result userUpdating(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) userLoaded,
+    required TResult Function(Failure failure) userError,
+    required TResult Function(String msg) userUpdated,
+    required TResult Function() userUpdating,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result userLoaded(User user),
-    Result userError(Failure failure),
-    Result userUpdated(String msg),
-    Result userUpdating(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? userLoaded,
+    TResult Function(Failure failure)? userError,
+    TResult Function(String msg)? userUpdated,
+    TResult Function()? userUpdating,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(UserInitial value),
-    @required Result userLoaded(UserLoaded value),
-    @required Result userError(UserError value),
-    @required Result userUpdated(UserUpdated value),
-    @required Result userUpdating(UserUpdating value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserInitial value) initial,
+    required TResult Function(UserLoaded value) userLoaded,
+    required TResult Function(UserError value) userError,
+    required TResult Function(UserUpdated value) userUpdated,
+    required TResult Function(UserUpdating value) userUpdating,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(UserInitial value),
-    Result userLoaded(UserLoaded value),
-    Result userError(UserError value),
-    Result userUpdated(UserUpdated value),
-    Result userUpdating(UserUpdating value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserInitial value)? initial,
+    TResult Function(UserLoaded value)? userLoaded,
+    TResult Function(UserError value)? userError,
+    TResult Function(UserUpdated value)? userUpdated,
+    TResult Function(UserUpdating value)? userUpdating,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $UserStateCopyWith<$Res> {
   factory $UserStateCopyWith(UserState value, $Res Function(UserState) then) =
       _$UserStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UserStateCopyWithImpl<$Res> implements $UserStateCopyWith<$Res> {
   _$UserStateCopyWithImpl(this._value, this._then);
 
@@ -644,12 +648,14 @@ class _$UserStateCopyWithImpl<$Res> implements $UserStateCopyWith<$Res> {
   final $Res Function(UserState) _then;
 }
 
+/// @nodoc
 abstract class $UserInitialCopyWith<$Res> {
   factory $UserInitialCopyWith(
           UserInitial value, $Res Function(UserInitial) then) =
       _$UserInitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UserInitialCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
     implements $UserInitialCopyWith<$Res> {
   _$UserInitialCopyWithImpl(
@@ -659,6 +665,8 @@ class _$UserInitialCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
   @override
   UserInitial get _value => super._value as UserInitial;
 }
+
+/// @nodoc
 
 class _$UserInitial implements UserInitial {
   const _$UserInitial();
@@ -678,32 +686,26 @@ class _$UserInitial implements UserInitial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result userLoaded(User user),
-    @required Result userError(Failure failure),
-    @required Result userUpdated(String msg),
-    @required Result userUpdating(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) userLoaded,
+    required TResult Function(Failure failure) userError,
+    required TResult Function(String msg) userUpdated,
+    required TResult Function() userUpdating,
   }) {
-    assert(initial != null);
-    assert(userLoaded != null);
-    assert(userError != null);
-    assert(userUpdated != null);
-    assert(userUpdating != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result userLoaded(User user),
-    Result userError(Failure failure),
-    Result userUpdated(String msg),
-    Result userUpdating(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? userLoaded,
+    TResult Function(Failure failure)? userError,
+    TResult Function(String msg)? userUpdated,
+    TResult Function()? userUpdating,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -712,32 +714,26 @@ class _$UserInitial implements UserInitial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(UserInitial value),
-    @required Result userLoaded(UserLoaded value),
-    @required Result userError(UserError value),
-    @required Result userUpdated(UserUpdated value),
-    @required Result userUpdating(UserUpdating value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserInitial value) initial,
+    required TResult Function(UserLoaded value) userLoaded,
+    required TResult Function(UserError value) userError,
+    required TResult Function(UserUpdated value) userUpdated,
+    required TResult Function(UserUpdating value) userUpdating,
   }) {
-    assert(initial != null);
-    assert(userLoaded != null);
-    assert(userError != null);
-    assert(userUpdated != null);
-    assert(userUpdating != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(UserInitial value),
-    Result userLoaded(UserLoaded value),
-    Result userError(UserError value),
-    Result userUpdated(UserUpdated value),
-    Result userUpdating(UserUpdating value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserInitial value)? initial,
+    TResult Function(UserLoaded value)? userLoaded,
+    TResult Function(UserError value)? userError,
+    TResult Function(UserUpdated value)? userUpdated,
+    TResult Function(UserUpdating value)? userUpdating,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -749,6 +745,7 @@ abstract class UserInitial implements UserState {
   const factory UserInitial() = _$UserInitial;
 }
 
+/// @nodoc
 abstract class $UserLoadedCopyWith<$Res> {
   factory $UserLoadedCopyWith(
           UserLoaded value, $Res Function(UserLoaded) then) =
@@ -756,6 +753,7 @@ abstract class $UserLoadedCopyWith<$Res> {
   $Res call({User user});
 }
 
+/// @nodoc
 class _$UserLoadedCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
     implements $UserLoadedCopyWith<$Res> {
   _$UserLoadedCopyWithImpl(UserLoaded _value, $Res Function(UserLoaded) _then)
@@ -766,16 +764,21 @@ class _$UserLoadedCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
+    Object? user = freezed,
   }) {
     return _then(UserLoaded(
-      user == freezed ? _value.user : user as User,
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
     ));
   }
 }
 
+/// @nodoc
+
 class _$UserLoaded implements UserLoaded {
-  const _$UserLoaded(this.user) : assert(user != null);
+  const _$UserLoaded(this.user);
 
   @override
   final User user;
@@ -797,38 +800,33 @@ class _$UserLoaded implements UserLoaded {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
 
+  @JsonKey(ignore: true)
   @override
   $UserLoadedCopyWith<UserLoaded> get copyWith =>
       _$UserLoadedCopyWithImpl<UserLoaded>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result userLoaded(User user),
-    @required Result userError(Failure failure),
-    @required Result userUpdated(String msg),
-    @required Result userUpdating(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) userLoaded,
+    required TResult Function(Failure failure) userError,
+    required TResult Function(String msg) userUpdated,
+    required TResult Function() userUpdating,
   }) {
-    assert(initial != null);
-    assert(userLoaded != null);
-    assert(userError != null);
-    assert(userUpdated != null);
-    assert(userUpdating != null);
     return userLoaded(user);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result userLoaded(User user),
-    Result userError(Failure failure),
-    Result userUpdated(String msg),
-    Result userUpdating(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? userLoaded,
+    TResult Function(Failure failure)? userError,
+    TResult Function(String msg)? userUpdated,
+    TResult Function()? userUpdating,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userLoaded != null) {
       return userLoaded(user);
     }
@@ -837,32 +835,26 @@ class _$UserLoaded implements UserLoaded {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(UserInitial value),
-    @required Result userLoaded(UserLoaded value),
-    @required Result userError(UserError value),
-    @required Result userUpdated(UserUpdated value),
-    @required Result userUpdating(UserUpdating value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserInitial value) initial,
+    required TResult Function(UserLoaded value) userLoaded,
+    required TResult Function(UserError value) userError,
+    required TResult Function(UserUpdated value) userUpdated,
+    required TResult Function(UserUpdating value) userUpdating,
   }) {
-    assert(initial != null);
-    assert(userLoaded != null);
-    assert(userError != null);
-    assert(userUpdated != null);
-    assert(userUpdating != null);
     return userLoaded(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(UserInitial value),
-    Result userLoaded(UserLoaded value),
-    Result userError(UserError value),
-    Result userUpdated(UserUpdated value),
-    Result userUpdating(UserUpdating value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserInitial value)? initial,
+    TResult Function(UserLoaded value)? userLoaded,
+    TResult Function(UserError value)? userError,
+    TResult Function(UserUpdated value)? userUpdated,
+    TResult Function(UserUpdating value)? userUpdating,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userLoaded != null) {
       return userLoaded(this);
     }
@@ -873,10 +865,13 @@ class _$UserLoaded implements UserLoaded {
 abstract class UserLoaded implements UserState {
   const factory UserLoaded(User user) = _$UserLoaded;
 
-  User get user;
-  $UserLoadedCopyWith<UserLoaded> get copyWith;
+  User get user => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserLoadedCopyWith<UserLoaded> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $UserErrorCopyWith<$Res> {
   factory $UserErrorCopyWith(UserError value, $Res Function(UserError) then) =
       _$UserErrorCopyWithImpl<$Res>;
@@ -885,6 +880,7 @@ abstract class $UserErrorCopyWith<$Res> {
   $FailureCopyWith<$Res> get failure;
 }
 
+/// @nodoc
 class _$UserErrorCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
     implements $UserErrorCopyWith<$Res> {
   _$UserErrorCopyWithImpl(UserError _value, $Res Function(UserError) _then)
@@ -895,26 +891,28 @@ class _$UserErrorCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object failure = freezed,
+    Object? failure = freezed,
   }) {
     return _then(UserError(
-      failure == freezed ? _value.failure : failure as Failure,
+      failure == freezed
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as Failure,
     ));
   }
 
   @override
   $FailureCopyWith<$Res> get failure {
-    if (_value.failure == null) {
-      return null;
-    }
     return $FailureCopyWith<$Res>(_value.failure, (value) {
       return _then(_value.copyWith(failure: value));
     });
   }
 }
 
+/// @nodoc
+
 class _$UserError implements UserError {
-  const _$UserError(this.failure) : assert(failure != null);
+  const _$UserError(this.failure);
 
   @override
   final Failure failure;
@@ -936,38 +934,33 @@ class _$UserError implements UserError {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failure);
 
+  @JsonKey(ignore: true)
   @override
   $UserErrorCopyWith<UserError> get copyWith =>
       _$UserErrorCopyWithImpl<UserError>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result userLoaded(User user),
-    @required Result userError(Failure failure),
-    @required Result userUpdated(String msg),
-    @required Result userUpdating(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) userLoaded,
+    required TResult Function(Failure failure) userError,
+    required TResult Function(String msg) userUpdated,
+    required TResult Function() userUpdating,
   }) {
-    assert(initial != null);
-    assert(userLoaded != null);
-    assert(userError != null);
-    assert(userUpdated != null);
-    assert(userUpdating != null);
     return userError(failure);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result userLoaded(User user),
-    Result userError(Failure failure),
-    Result userUpdated(String msg),
-    Result userUpdating(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? userLoaded,
+    TResult Function(Failure failure)? userError,
+    TResult Function(String msg)? userUpdated,
+    TResult Function()? userUpdating,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userError != null) {
       return userError(failure);
     }
@@ -976,32 +969,26 @@ class _$UserError implements UserError {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(UserInitial value),
-    @required Result userLoaded(UserLoaded value),
-    @required Result userError(UserError value),
-    @required Result userUpdated(UserUpdated value),
-    @required Result userUpdating(UserUpdating value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserInitial value) initial,
+    required TResult Function(UserLoaded value) userLoaded,
+    required TResult Function(UserError value) userError,
+    required TResult Function(UserUpdated value) userUpdated,
+    required TResult Function(UserUpdating value) userUpdating,
   }) {
-    assert(initial != null);
-    assert(userLoaded != null);
-    assert(userError != null);
-    assert(userUpdated != null);
-    assert(userUpdating != null);
     return userError(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(UserInitial value),
-    Result userLoaded(UserLoaded value),
-    Result userError(UserError value),
-    Result userUpdated(UserUpdated value),
-    Result userUpdating(UserUpdating value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserInitial value)? initial,
+    TResult Function(UserLoaded value)? userLoaded,
+    TResult Function(UserError value)? userError,
+    TResult Function(UserUpdated value)? userUpdated,
+    TResult Function(UserUpdating value)? userUpdating,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userError != null) {
       return userError(this);
     }
@@ -1012,10 +999,13 @@ class _$UserError implements UserError {
 abstract class UserError implements UserState {
   const factory UserError(Failure failure) = _$UserError;
 
-  Failure get failure;
-  $UserErrorCopyWith<UserError> get copyWith;
+  Failure get failure => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserErrorCopyWith<UserError> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $UserUpdatedCopyWith<$Res> {
   factory $UserUpdatedCopyWith(
           UserUpdated value, $Res Function(UserUpdated) then) =
@@ -1023,6 +1013,7 @@ abstract class $UserUpdatedCopyWith<$Res> {
   $Res call({String msg});
 }
 
+/// @nodoc
 class _$UserUpdatedCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
     implements $UserUpdatedCopyWith<$Res> {
   _$UserUpdatedCopyWithImpl(
@@ -1034,16 +1025,21 @@ class _$UserUpdatedCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object msg = freezed,
+    Object? msg = freezed,
   }) {
     return _then(UserUpdated(
-      msg == freezed ? _value.msg : msg as String,
+      msg == freezed
+          ? _value.msg
+          : msg // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$UserUpdated implements UserUpdated {
-  const _$UserUpdated(this.msg) : assert(msg != null);
+  const _$UserUpdated(this.msg);
 
   @override
   final String msg;
@@ -1065,38 +1061,33 @@ class _$UserUpdated implements UserUpdated {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(msg);
 
+  @JsonKey(ignore: true)
   @override
   $UserUpdatedCopyWith<UserUpdated> get copyWith =>
       _$UserUpdatedCopyWithImpl<UserUpdated>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result userLoaded(User user),
-    @required Result userError(Failure failure),
-    @required Result userUpdated(String msg),
-    @required Result userUpdating(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) userLoaded,
+    required TResult Function(Failure failure) userError,
+    required TResult Function(String msg) userUpdated,
+    required TResult Function() userUpdating,
   }) {
-    assert(initial != null);
-    assert(userLoaded != null);
-    assert(userError != null);
-    assert(userUpdated != null);
-    assert(userUpdating != null);
     return userUpdated(msg);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result userLoaded(User user),
-    Result userError(Failure failure),
-    Result userUpdated(String msg),
-    Result userUpdating(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? userLoaded,
+    TResult Function(Failure failure)? userError,
+    TResult Function(String msg)? userUpdated,
+    TResult Function()? userUpdating,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userUpdated != null) {
       return userUpdated(msg);
     }
@@ -1105,32 +1096,26 @@ class _$UserUpdated implements UserUpdated {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(UserInitial value),
-    @required Result userLoaded(UserLoaded value),
-    @required Result userError(UserError value),
-    @required Result userUpdated(UserUpdated value),
-    @required Result userUpdating(UserUpdating value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserInitial value) initial,
+    required TResult Function(UserLoaded value) userLoaded,
+    required TResult Function(UserError value) userError,
+    required TResult Function(UserUpdated value) userUpdated,
+    required TResult Function(UserUpdating value) userUpdating,
   }) {
-    assert(initial != null);
-    assert(userLoaded != null);
-    assert(userError != null);
-    assert(userUpdated != null);
-    assert(userUpdating != null);
     return userUpdated(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(UserInitial value),
-    Result userLoaded(UserLoaded value),
-    Result userError(UserError value),
-    Result userUpdated(UserUpdated value),
-    Result userUpdating(UserUpdating value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserInitial value)? initial,
+    TResult Function(UserLoaded value)? userLoaded,
+    TResult Function(UserError value)? userError,
+    TResult Function(UserUpdated value)? userUpdated,
+    TResult Function(UserUpdating value)? userUpdating,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userUpdated != null) {
       return userUpdated(this);
     }
@@ -1141,16 +1126,20 @@ class _$UserUpdated implements UserUpdated {
 abstract class UserUpdated implements UserState {
   const factory UserUpdated(String msg) = _$UserUpdated;
 
-  String get msg;
-  $UserUpdatedCopyWith<UserUpdated> get copyWith;
+  String get msg => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserUpdatedCopyWith<UserUpdated> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $UserUpdatingCopyWith<$Res> {
   factory $UserUpdatingCopyWith(
           UserUpdating value, $Res Function(UserUpdating) then) =
       _$UserUpdatingCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UserUpdatingCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
     implements $UserUpdatingCopyWith<$Res> {
   _$UserUpdatingCopyWithImpl(
@@ -1160,6 +1149,8 @@ class _$UserUpdatingCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
   @override
   UserUpdating get _value => super._value as UserUpdating;
 }
+
+/// @nodoc
 
 class _$UserUpdating implements UserUpdating {
   const _$UserUpdating();
@@ -1179,32 +1170,26 @@ class _$UserUpdating implements UserUpdating {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result userLoaded(User user),
-    @required Result userError(Failure failure),
-    @required Result userUpdated(String msg),
-    @required Result userUpdating(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) userLoaded,
+    required TResult Function(Failure failure) userError,
+    required TResult Function(String msg) userUpdated,
+    required TResult Function() userUpdating,
   }) {
-    assert(initial != null);
-    assert(userLoaded != null);
-    assert(userError != null);
-    assert(userUpdated != null);
-    assert(userUpdating != null);
     return userUpdating();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result userLoaded(User user),
-    Result userError(Failure failure),
-    Result userUpdated(String msg),
-    Result userUpdating(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? userLoaded,
+    TResult Function(Failure failure)? userError,
+    TResult Function(String msg)? userUpdated,
+    TResult Function()? userUpdating,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userUpdating != null) {
       return userUpdating();
     }
@@ -1213,32 +1198,26 @@ class _$UserUpdating implements UserUpdating {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(UserInitial value),
-    @required Result userLoaded(UserLoaded value),
-    @required Result userError(UserError value),
-    @required Result userUpdated(UserUpdated value),
-    @required Result userUpdating(UserUpdating value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserInitial value) initial,
+    required TResult Function(UserLoaded value) userLoaded,
+    required TResult Function(UserError value) userError,
+    required TResult Function(UserUpdated value) userUpdated,
+    required TResult Function(UserUpdating value) userUpdating,
   }) {
-    assert(initial != null);
-    assert(userLoaded != null);
-    assert(userError != null);
-    assert(userUpdated != null);
-    assert(userUpdating != null);
     return userUpdating(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(UserInitial value),
-    Result userLoaded(UserLoaded value),
-    Result userError(UserError value),
-    Result userUpdated(UserUpdated value),
-    Result userUpdating(UserUpdating value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserInitial value)? initial,
+    TResult Function(UserLoaded value)? userLoaded,
+    TResult Function(UserError value)? userError,
+    TResult Function(UserUpdated value)? userUpdated,
+    TResult Function(UserUpdating value)? userUpdating,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userUpdating != null) {
       return userUpdating(this);
     }

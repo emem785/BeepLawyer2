@@ -11,7 +11,7 @@ class ForgotPassword extends StatefulWidget {
 class _ForgotPasswordState extends State<ForgotPassword> {
   final _formKey = GlobalKey<FormState>();
   final _key = GlobalKey<ScaffoldState>();
-  TextEditingController _phoneNumber;
+  TextEditingController? _phoneNumber;
 
   @override
   void initState() {
@@ -22,7 +22,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   void dispose() {
     super.dispose();
-    _phoneNumber.dispose();
+    _phoneNumber!.dispose();
   }
 
   @override
@@ -69,9 +69,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                         padding: const EdgeInsets.only(bottom: 8.0),
                         child: CommonButton(
                             onPressed: () {
-                              if (_formKey.currentState.validate()) {
+                              if (_formKey.currentState!.validate()) {
                                 Navigator.pushNamed(
-                                    context, '/ForgotPassword2',arguments: {"phone": _phoneNumber.text});
+                                    context, '/ForgotPassword2',arguments: {"phone": _phoneNumber!.text});
                               }
                             },
                             text: 'Request Code'),

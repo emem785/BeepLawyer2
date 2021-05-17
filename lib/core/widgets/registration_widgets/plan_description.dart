@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class PlanDescription extends StatelessWidget {
   final bool isEssential;
   const PlanDescription({
-    Key key,
-    @required this.isEssential,
+    Key? key,
+    required this.isEssential,
   }) : super(key: key);
 
   @override

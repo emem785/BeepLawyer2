@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'navigation_bloc.dart';
 
@@ -9,10 +9,13 @@ part of 'navigation_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$NavigationEventTearOff {
   const _$NavigationEventTearOff();
 
-// ignore: unused_element
   ChangeNavState changeNavState(int i) {
     return ChangeNavState(
       i,
@@ -20,34 +23,42 @@ class _$NavigationEventTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $NavigationEvent = _$NavigationEventTearOff();
 
+/// @nodoc
 mixin _$NavigationEvent {
-  int get i;
+  int get i => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result changeNavState(int i),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(int i) changeNavState,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result changeNavState(int i),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int i)? changeNavState,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result changeNavState(ChangeNavState value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(ChangeNavState value) changeNavState,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result changeNavState(ChangeNavState value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ChangeNavState value)? changeNavState,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 
-  $NavigationEventCopyWith<NavigationEvent> get copyWith;
+  @JsonKey(ignore: true)
+  $NavigationEventCopyWith<NavigationEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $NavigationEventCopyWith<$Res> {
   factory $NavigationEventCopyWith(
           NavigationEvent value, $Res Function(NavigationEvent) then) =
@@ -55,6 +66,7 @@ abstract class $NavigationEventCopyWith<$Res> {
   $Res call({int i});
 }
 
+/// @nodoc
 class _$NavigationEventCopyWithImpl<$Res>
     implements $NavigationEventCopyWith<$Res> {
   _$NavigationEventCopyWithImpl(this._value, this._then);
@@ -65,14 +77,18 @@ class _$NavigationEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object i = freezed,
+    Object? i = freezed,
   }) {
     return _then(_value.copyWith(
-      i: i == freezed ? _value.i : i as int,
+      i: i == freezed
+          ? _value.i
+          : i // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
+/// @nodoc
 abstract class $ChangeNavStateCopyWith<$Res>
     implements $NavigationEventCopyWith<$Res> {
   factory $ChangeNavStateCopyWith(
@@ -82,6 +98,7 @@ abstract class $ChangeNavStateCopyWith<$Res>
   $Res call({int i});
 }
 
+/// @nodoc
 class _$ChangeNavStateCopyWithImpl<$Res>
     extends _$NavigationEventCopyWithImpl<$Res>
     implements $ChangeNavStateCopyWith<$Res> {
@@ -94,16 +111,21 @@ class _$ChangeNavStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object i = freezed,
+    Object? i = freezed,
   }) {
     return _then(ChangeNavState(
-      i == freezed ? _value.i : i as int,
+      i == freezed
+          ? _value.i
+          : i // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
+/// @nodoc
+
 class _$ChangeNavState with DiagnosticableTreeMixin implements ChangeNavState {
-  const _$ChangeNavState(this.i) : assert(i != null);
+  const _$ChangeNavState(this.i);
 
   @override
   final int i;
@@ -133,26 +155,25 @@ class _$ChangeNavState with DiagnosticableTreeMixin implements ChangeNavState {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(i);
 
+  @JsonKey(ignore: true)
   @override
   $ChangeNavStateCopyWith<ChangeNavState> get copyWith =>
       _$ChangeNavStateCopyWithImpl<ChangeNavState>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result changeNavState(int i),
+  TResult when<TResult extends Object?>({
+    required TResult Function(int i) changeNavState,
   }) {
-    assert(changeNavState != null);
     return changeNavState(i);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result changeNavState(int i),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int i)? changeNavState,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (changeNavState != null) {
       return changeNavState(i);
     }
@@ -161,20 +182,18 @@ class _$ChangeNavState with DiagnosticableTreeMixin implements ChangeNavState {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result changeNavState(ChangeNavState value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(ChangeNavState value) changeNavState,
   }) {
-    assert(changeNavState != null);
     return changeNavState(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result changeNavState(ChangeNavState value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ChangeNavState value)? changeNavState,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (changeNavState != null) {
       return changeNavState(this);
     }
@@ -186,59 +205,67 @@ abstract class ChangeNavState implements NavigationEvent {
   const factory ChangeNavState(int i) = _$ChangeNavState;
 
   @override
-  int get i;
+  int get i => throw _privateConstructorUsedError;
   @override
-  $ChangeNavStateCopyWith<ChangeNavState> get copyWith;
+  @JsonKey(ignore: true)
+  $ChangeNavStateCopyWith<ChangeNavState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 class _$NavigationStateTearOff {
   const _$NavigationStateTearOff();
 
-// ignore: unused_element
   MapHome mapHome() {
     return const MapHome();
   }
 
-// ignore: unused_element
   Menu menu() {
     return const Menu();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $NavigationState = _$NavigationStateTearOff();
 
+/// @nodoc
 mixin _$NavigationState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result mapHome(),
-    @required Result menu(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() mapHome,
+    required TResult Function() menu,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result mapHome(),
-    Result menu(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? mapHome,
+    TResult Function()? menu,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result mapHome(MapHome value),
-    @required Result menu(Menu value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(MapHome value) mapHome,
+    required TResult Function(Menu value) menu,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result mapHome(MapHome value),
-    Result menu(Menu value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MapHome value)? mapHome,
+    TResult Function(Menu value)? menu,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $NavigationStateCopyWith<$Res> {
   factory $NavigationStateCopyWith(
           NavigationState value, $Res Function(NavigationState) then) =
       _$NavigationStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$NavigationStateCopyWithImpl<$Res>
     implements $NavigationStateCopyWith<$Res> {
   _$NavigationStateCopyWithImpl(this._value, this._then);
@@ -248,11 +275,13 @@ class _$NavigationStateCopyWithImpl<$Res>
   final $Res Function(NavigationState) _then;
 }
 
+/// @nodoc
 abstract class $MapHomeCopyWith<$Res> {
   factory $MapHomeCopyWith(MapHome value, $Res Function(MapHome) then) =
       _$MapHomeCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$MapHomeCopyWithImpl<$Res> extends _$NavigationStateCopyWithImpl<$Res>
     implements $MapHomeCopyWith<$Res> {
   _$MapHomeCopyWithImpl(MapHome _value, $Res Function(MapHome) _then)
@@ -261,6 +290,8 @@ class _$MapHomeCopyWithImpl<$Res> extends _$NavigationStateCopyWithImpl<$Res>
   @override
   MapHome get _value => super._value as MapHome;
 }
+
+/// @nodoc
 
 class _$MapHome with DiagnosticableTreeMixin implements MapHome {
   const _$MapHome();
@@ -286,23 +317,20 @@ class _$MapHome with DiagnosticableTreeMixin implements MapHome {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result mapHome(),
-    @required Result menu(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() mapHome,
+    required TResult Function() menu,
   }) {
-    assert(mapHome != null);
-    assert(menu != null);
     return mapHome();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result mapHome(),
-    Result menu(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? mapHome,
+    TResult Function()? menu,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (mapHome != null) {
       return mapHome();
     }
@@ -311,23 +339,20 @@ class _$MapHome with DiagnosticableTreeMixin implements MapHome {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result mapHome(MapHome value),
-    @required Result menu(Menu value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(MapHome value) mapHome,
+    required TResult Function(Menu value) menu,
   }) {
-    assert(mapHome != null);
-    assert(menu != null);
     return mapHome(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result mapHome(MapHome value),
-    Result menu(Menu value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MapHome value)? mapHome,
+    TResult Function(Menu value)? menu,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (mapHome != null) {
       return mapHome(this);
     }
@@ -339,11 +364,13 @@ abstract class MapHome implements NavigationState {
   const factory MapHome() = _$MapHome;
 }
 
+/// @nodoc
 abstract class $MenuCopyWith<$Res> {
   factory $MenuCopyWith(Menu value, $Res Function(Menu) then) =
       _$MenuCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$MenuCopyWithImpl<$Res> extends _$NavigationStateCopyWithImpl<$Res>
     implements $MenuCopyWith<$Res> {
   _$MenuCopyWithImpl(Menu _value, $Res Function(Menu) _then)
@@ -352,6 +379,8 @@ class _$MenuCopyWithImpl<$Res> extends _$NavigationStateCopyWithImpl<$Res>
   @override
   Menu get _value => super._value as Menu;
 }
+
+/// @nodoc
 
 class _$Menu with DiagnosticableTreeMixin implements Menu {
   const _$Menu();
@@ -377,23 +406,20 @@ class _$Menu with DiagnosticableTreeMixin implements Menu {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result mapHome(),
-    @required Result menu(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() mapHome,
+    required TResult Function() menu,
   }) {
-    assert(mapHome != null);
-    assert(menu != null);
     return menu();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result mapHome(),
-    Result menu(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? mapHome,
+    TResult Function()? menu,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (menu != null) {
       return menu();
     }
@@ -402,23 +428,20 @@ class _$Menu with DiagnosticableTreeMixin implements Menu {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result mapHome(MapHome value),
-    @required Result menu(Menu value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(MapHome value) mapHome,
+    required TResult Function(Menu value) menu,
   }) {
-    assert(mapHome != null);
-    assert(menu != null);
     return menu(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result mapHome(MapHome value),
-    Result menu(Menu value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MapHome value)? mapHome,
+    TResult Function(Menu value)? menu,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (menu != null) {
       return menu(this);
     }

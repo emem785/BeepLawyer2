@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'unilink_cubit.dart';
 
@@ -9,54 +9,63 @@ part of 'unilink_cubit.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$UnilinkStateTearOff {
   const _$UnilinkStateTearOff();
 
-// ignore: unused_element
   UnilinkInitial initial() {
     return const UnilinkInitial();
   }
 
-// ignore: unused_element
   UnilinkDisposed disposed() {
     return const UnilinkDisposed();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $UnilinkState = _$UnilinkStateTearOff();
 
+/// @nodoc
 mixin _$UnilinkState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result disposed(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() disposed,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result disposed(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? disposed,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(UnilinkInitial value),
-    @required Result disposed(UnilinkDisposed value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnilinkInitial value) initial,
+    required TResult Function(UnilinkDisposed value) disposed,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(UnilinkInitial value),
-    Result disposed(UnilinkDisposed value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnilinkInitial value)? initial,
+    TResult Function(UnilinkDisposed value)? disposed,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $UnilinkStateCopyWith<$Res> {
   factory $UnilinkStateCopyWith(
           UnilinkState value, $Res Function(UnilinkState) then) =
       _$UnilinkStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UnilinkStateCopyWithImpl<$Res> implements $UnilinkStateCopyWith<$Res> {
   _$UnilinkStateCopyWithImpl(this._value, this._then);
 
@@ -65,12 +74,14 @@ class _$UnilinkStateCopyWithImpl<$Res> implements $UnilinkStateCopyWith<$Res> {
   final $Res Function(UnilinkState) _then;
 }
 
+/// @nodoc
 abstract class $UnilinkInitialCopyWith<$Res> {
   factory $UnilinkInitialCopyWith(
           UnilinkInitial value, $Res Function(UnilinkInitial) then) =
       _$UnilinkInitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UnilinkInitialCopyWithImpl<$Res>
     extends _$UnilinkStateCopyWithImpl<$Res>
     implements $UnilinkInitialCopyWith<$Res> {
@@ -81,6 +92,8 @@ class _$UnilinkInitialCopyWithImpl<$Res>
   @override
   UnilinkInitial get _value => super._value as UnilinkInitial;
 }
+
+/// @nodoc
 
 class _$UnilinkInitial implements UnilinkInitial {
   const _$UnilinkInitial();
@@ -100,23 +113,20 @@ class _$UnilinkInitial implements UnilinkInitial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result disposed(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() disposed,
   }) {
-    assert(initial != null);
-    assert(disposed != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result disposed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? disposed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -125,23 +135,20 @@ class _$UnilinkInitial implements UnilinkInitial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(UnilinkInitial value),
-    @required Result disposed(UnilinkDisposed value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnilinkInitial value) initial,
+    required TResult Function(UnilinkDisposed value) disposed,
   }) {
-    assert(initial != null);
-    assert(disposed != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(UnilinkInitial value),
-    Result disposed(UnilinkDisposed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnilinkInitial value)? initial,
+    TResult Function(UnilinkDisposed value)? disposed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -153,12 +160,14 @@ abstract class UnilinkInitial implements UnilinkState {
   const factory UnilinkInitial() = _$UnilinkInitial;
 }
 
+/// @nodoc
 abstract class $UnilinkDisposedCopyWith<$Res> {
   factory $UnilinkDisposedCopyWith(
           UnilinkDisposed value, $Res Function(UnilinkDisposed) then) =
       _$UnilinkDisposedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UnilinkDisposedCopyWithImpl<$Res>
     extends _$UnilinkStateCopyWithImpl<$Res>
     implements $UnilinkDisposedCopyWith<$Res> {
@@ -169,6 +178,8 @@ class _$UnilinkDisposedCopyWithImpl<$Res>
   @override
   UnilinkDisposed get _value => super._value as UnilinkDisposed;
 }
+
+/// @nodoc
 
 class _$UnilinkDisposed implements UnilinkDisposed {
   const _$UnilinkDisposed();
@@ -188,23 +199,20 @@ class _$UnilinkDisposed implements UnilinkDisposed {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result disposed(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() disposed,
   }) {
-    assert(initial != null);
-    assert(disposed != null);
     return disposed();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result disposed(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? disposed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (disposed != null) {
       return disposed();
     }
@@ -213,23 +221,20 @@ class _$UnilinkDisposed implements UnilinkDisposed {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(UnilinkInitial value),
-    @required Result disposed(UnilinkDisposed value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnilinkInitial value) initial,
+    required TResult Function(UnilinkDisposed value) disposed,
   }) {
-    assert(initial != null);
-    assert(disposed != null);
     return disposed(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(UnilinkInitial value),
-    Result disposed(UnilinkDisposed value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnilinkInitial value)? initial,
+    TResult Function(UnilinkDisposed value)? disposed,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (disposed != null) {
       return disposed(this);
     }

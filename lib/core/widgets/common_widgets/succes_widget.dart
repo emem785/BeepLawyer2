@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class SuccessWidget extends StatelessWidget {
   const SuccessWidget({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 class StopBeep extends StatelessWidget {
   const StopBeep({
-    Key key,
-    @required this.locationBloc,
+    Key? key,
+    required this.locationBloc,
   }) : super(key: key);
 
   final LocationBloc locationBloc;
@@ -26,8 +26,8 @@ class StopBeep extends StatelessWidget {
 
 class ResumeBeep extends StatelessWidget {
   const ResumeBeep({
-    Key key,
-    @required this.locationBloc,
+    Key? key,
+    required this.locationBloc,
   }) : super(key: key);
 
   final LocationBloc locationBloc;
@@ -48,8 +48,8 @@ class ResumeBeep extends StatelessWidget {
 
 class StartBeep extends StatelessWidget {
   const StartBeep({
-    Key key,
-    @required this.locationBloc,
+    Key? key,
+    required this.locationBloc,
   }) : super(key: key);
 
   final LocationBloc locationBloc;

@@ -6,17 +6,17 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 const ZOOM = 17.0;
 
 class MapTool {
-  GoogleMapController mapController;
-  Marker marker;
-  Location location;
-  StreamController<Marker> markerStreamController;
-  String address;
+  late GoogleMapController mapController;
+  Marker? marker;
+  late Location location;
+  late StreamController<Marker> markerStreamController;
+  String? address;
 
-  MapTool({Location location}) {
+  MapTool({required Location location}) {
     this.location = location;
     marker = Marker(
       markerId: MarkerId("User Location"),
-      position: LatLng(location.latitude, location.longitude),
+      position: LatLng(location.latitude, location.longitude!),
       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
     );
     markerStreamController = StreamController<Marker>.broadcast();
@@ -24,7 +24,7 @@ class MapTool {
 
   void updateController(Location location) {
     var cameraPosition = CameraPosition(
-        target: LatLng(location.latitude, location.longitude), zoom: ZOOM);
+        target: LatLng(location.latitude, location.longitude!), zoom: ZOOM);
     mapController.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
   }
 

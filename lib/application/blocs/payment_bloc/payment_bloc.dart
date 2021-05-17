@@ -17,11 +17,11 @@ part 'payment_bloc.freezed.dart';
 
 @injectable
 class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
-  final PaymentInterface paymentInterface;
-  final LocalStorageInterface localStorageInterface;
+  final PaymentInterface? paymentInterface;
+  final LocalStorageInterface? localStorageInterface;
   int price = 150000;
   PaymentBloc(
-      {@required this.localStorageInterface, @required this.paymentInterface})
+      {required this.localStorageInterface, required this.paymentInterface})
       : super(PaymentInitial());
 
   @override
@@ -30,28 +30,28 @@ class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
   ) async* {
     yield PaymentLoading();
     yield* event.map(initializePayment: (e) async* {
-      paymentInterface.initializePlugin();
+      paymentInterface!.initializePlugin();
       yield PaymentInitialized();
     }, makePayment: (e) async* {
       print("bloc active");
       final email = await _getEmail();
-      final charge = paymentInterface.createCharge(price, email);
-      final paymentResponse =
-          await paymentInterface.checkOut(charge, e.context);
-      yield* paymentResponse.fold((l) async* {
-        yield PaymentFailed(l);
-      }, (r) async* {
-        yield PaymentSucceeded();
-      });
-    },setPrice: (e) async* {
+      final charge = paymentInterface!.createCharge(price, email);
+      // final paymentResponse =
+      //     await paymentInterface!.checkOut(charge, e.context);
+      // yield* paymentResponse.fold((l) async* {
+      //   yield PaymentFailed(l);
+      // }, (r) async* {
+      //   yield PaymentSucceeded();
+      // });
+    }, setPrice: (e) async* {
       price = e.price;
     });
   }
 
-  Future<String> _getEmail() async {
-    final response = await localStorageInterface.getUser();
-    final user =
-        response.fold((l) => null, (r) => User.fromJson(jsonDecode(r)));
+  Future<String?> _getEmail() async {
+    final response = await localStorageInterface!.getUser();
+    final user = response.fold(((l) => null) as User Function(Failure),
+        (r) => User.fromJson(jsonDecode(r)));
     final email = user.email;
     return email;
   }

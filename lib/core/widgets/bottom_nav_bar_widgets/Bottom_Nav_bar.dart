@@ -8,9 +8,9 @@ class BottomBar extends StatefulWidget {
   final Function(int) onPressed;
 
   const BottomBar({
-    Key key,
-    @required this.activeIndex,
-    @required this.onPressed,
+    Key? key,
+    required this.activeIndex,
+    required this.onPressed,
   }) : super(key: key);
 
   @override

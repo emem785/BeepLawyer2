@@ -13,10 +13,10 @@ const URL2 = 'ws://bleep3.herokuapp.com/ws/tracking/';
 
 @Injectable(as: WebSocketInterface)
 class WebSocketImpl implements WebSocketInterface {
-  final UserLocationInterface userLocationInterface;
-  IOWebSocketChannel channel;
+  final UserLocationInterface? userLocationInterface;
+  IOWebSocketChannel? channel;
 
-  WebSocketImpl({@required this.userLocationInterface});
+  WebSocketImpl({required this.userLocationInterface});
   @override
   bool closeSocketConnection(IOWebSocketChannel channel) {
     channel.sink.add(
@@ -32,14 +32,14 @@ class WebSocketImpl implements WebSocketInterface {
     return channel.stream.map((event) {
       final map = jsonDecode(event);
       Location(latitude: map["lat"], longitude: map["lng"]);
-    }).asBroadcastStream();
+    }).asBroadcastStream() as Stream<Location>;
   }
 
   @override
   StreamSubscription<Location> sendLocationAsStreamWithSocket(
       IOWebSocketChannel channel) {
     final locationSub =
-        userLocationInterface.getUserLocationStream().listen((event) {
+        userLocationInterface!.getUserLocationStream().listen((event) {
       channel.sink.add(jsonEncode({
         "lat": event.latitude,
         "lng": event.longitude,
@@ -50,8 +50,8 @@ class WebSocketImpl implements WebSocketInterface {
   }
 
   @override
-  IOWebSocketChannel connect(String phoneNumber) {
-    final url = URL2 + phoneNumber + "/";
+  IOWebSocketChannel connect(String? phoneNumber) {
+    final url = URL2 + phoneNumber! + "/";
     final channel = IOWebSocketChannel.connect(url);
     return channel;
   }

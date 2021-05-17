@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 class TopBar extends StatelessWidget {
   final String address;
   const TopBar({
-    Key key,
-    @required this.address,
+    Key? key,
+    required this.address,
   }) : super(key: key);
 
   @override

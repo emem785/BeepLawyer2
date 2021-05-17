@@ -6,6 +6,6 @@ import 'package:flutter_paystack/flutter_paystack.dart';
 abstract class PaymentInterface {
   initializePlugin();
   String getPaymentReference();
-  Charge createCharge(int chargeAmount, String email);
-  Future<Either<Failure, String>> checkOut(Charge charge, BuildContext context);
+  Charge createCharge(int chargeAmount, String? email);
+  // Future<Either<Failure, String>> checkOut(Charge charge, BuildContext context);
 }

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'register_bloc.dart';
 
@@ -9,11 +9,14 @@ part of 'register_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$RegisterEventTearOff {
   const _$RegisterEventTearOff();
 
-// ignore: unused_element
-  RegisterUser register({User user, String password, String imagePath}) {
+  RegisterUser register({User? user, String? password, String? imagePath}) {
     return RegisterUser(
       user: user,
       password: password,
@@ -21,14 +24,12 @@ class _$RegisterEventTearOff {
     );
   }
 
-// ignore: unused_element
   GetCode getCode(String phoneNumber) {
     return GetCode(
       phoneNumber,
     );
   }
 
-// ignore: unused_element
   MobileVerify mobileVerify(String phoneNumber, String code) {
     return MobileVerify(
       phoneNumber,
@@ -36,7 +37,6 @@ class _$RegisterEventTearOff {
     );
   }
 
-// ignore: unused_element
   UpdateScnNumber updateScnNumber(String scnNumber) {
     return UpdateScnNumber(
       scnNumber,
@@ -44,48 +44,56 @@ class _$RegisterEventTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $RegisterEvent = _$RegisterEventTearOff();
 
+/// @nodoc
 mixin _$RegisterEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result register(User user, String password, String imagePath),
-    @required Result getCode(String phoneNumber),
-    @required Result mobileVerify(String phoneNumber, String code),
-    @required Result updateScnNumber(String scnNumber),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(User? user, String? password, String? imagePath)
+        register,
+    required TResult Function(String phoneNumber) getCode,
+    required TResult Function(String phoneNumber, String code) mobileVerify,
+    required TResult Function(String scnNumber) updateScnNumber,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result register(User user, String password, String imagePath),
-    Result getCode(String phoneNumber),
-    Result mobileVerify(String phoneNumber, String code),
-    Result updateScnNumber(String scnNumber),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(User? user, String? password, String? imagePath)? register,
+    TResult Function(String phoneNumber)? getCode,
+    TResult Function(String phoneNumber, String code)? mobileVerify,
+    TResult Function(String scnNumber)? updateScnNumber,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result register(RegisterUser value),
-    @required Result getCode(GetCode value),
-    @required Result mobileVerify(MobileVerify value),
-    @required Result updateScnNumber(UpdateScnNumber value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUser value) register,
+    required TResult Function(GetCode value) getCode,
+    required TResult Function(MobileVerify value) mobileVerify,
+    required TResult Function(UpdateScnNumber value) updateScnNumber,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result register(RegisterUser value),
-    Result getCode(GetCode value),
-    Result mobileVerify(MobileVerify value),
-    Result updateScnNumber(UpdateScnNumber value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUser value)? register,
+    TResult Function(GetCode value)? getCode,
+    TResult Function(MobileVerify value)? mobileVerify,
+    TResult Function(UpdateScnNumber value)? updateScnNumber,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $RegisterEventCopyWith<$Res> {
   factory $RegisterEventCopyWith(
           RegisterEvent value, $Res Function(RegisterEvent) then) =
       _$RegisterEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$RegisterEventCopyWithImpl<$Res>
     implements $RegisterEventCopyWith<$Res> {
   _$RegisterEventCopyWithImpl(this._value, this._then);
@@ -95,13 +103,15 @@ class _$RegisterEventCopyWithImpl<$Res>
   final $Res Function(RegisterEvent) _then;
 }
 
+/// @nodoc
 abstract class $RegisterUserCopyWith<$Res> {
   factory $RegisterUserCopyWith(
           RegisterUser value, $Res Function(RegisterUser) then) =
       _$RegisterUserCopyWithImpl<$Res>;
-  $Res call({User user, String password, String imagePath});
+  $Res call({User? user, String? password, String? imagePath});
 }
 
+/// @nodoc
 class _$RegisterUserCopyWithImpl<$Res> extends _$RegisterEventCopyWithImpl<$Res>
     implements $RegisterUserCopyWith<$Res> {
   _$RegisterUserCopyWithImpl(
@@ -113,27 +123,38 @@ class _$RegisterUserCopyWithImpl<$Res> extends _$RegisterEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
-    Object password = freezed,
-    Object imagePath = freezed,
+    Object? user = freezed,
+    Object? password = freezed,
+    Object? imagePath = freezed,
   }) {
     return _then(RegisterUser(
-      user: user == freezed ? _value.user : user as User,
-      password: password == freezed ? _value.password : password as String,
-      imagePath: imagePath == freezed ? _value.imagePath : imagePath as String,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User?,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String?,
+      imagePath: imagePath == freezed
+          ? _value.imagePath
+          : imagePath // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
+
+/// @nodoc
 
 class _$RegisterUser implements RegisterUser {
   const _$RegisterUser({this.user, this.password, this.imagePath});
 
   @override
-  final User user;
+  final User? user;
   @override
-  final String password;
+  final String? password;
   @override
-  final String imagePath;
+  final String? imagePath;
 
   @override
   String toString() {
@@ -161,35 +182,32 @@ class _$RegisterUser implements RegisterUser {
       const DeepCollectionEquality().hash(password) ^
       const DeepCollectionEquality().hash(imagePath);
 
+  @JsonKey(ignore: true)
   @override
   $RegisterUserCopyWith<RegisterUser> get copyWith =>
       _$RegisterUserCopyWithImpl<RegisterUser>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result register(User user, String password, String imagePath),
-    @required Result getCode(String phoneNumber),
-    @required Result mobileVerify(String phoneNumber, String code),
-    @required Result updateScnNumber(String scnNumber),
+  TResult when<TResult extends Object?>({
+    required TResult Function(User? user, String? password, String? imagePath)
+        register,
+    required TResult Function(String phoneNumber) getCode,
+    required TResult Function(String phoneNumber, String code) mobileVerify,
+    required TResult Function(String scnNumber) updateScnNumber,
   }) {
-    assert(register != null);
-    assert(getCode != null);
-    assert(mobileVerify != null);
-    assert(updateScnNumber != null);
     return register(user, password, imagePath);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result register(User user, String password, String imagePath),
-    Result getCode(String phoneNumber),
-    Result mobileVerify(String phoneNumber, String code),
-    Result updateScnNumber(String scnNumber),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(User? user, String? password, String? imagePath)? register,
+    TResult Function(String phoneNumber)? getCode,
+    TResult Function(String phoneNumber, String code)? mobileVerify,
+    TResult Function(String scnNumber)? updateScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (register != null) {
       return register(user, password, imagePath);
     }
@@ -198,29 +216,24 @@ class _$RegisterUser implements RegisterUser {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result register(RegisterUser value),
-    @required Result getCode(GetCode value),
-    @required Result mobileVerify(MobileVerify value),
-    @required Result updateScnNumber(UpdateScnNumber value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUser value) register,
+    required TResult Function(GetCode value) getCode,
+    required TResult Function(MobileVerify value) mobileVerify,
+    required TResult Function(UpdateScnNumber value) updateScnNumber,
   }) {
-    assert(register != null);
-    assert(getCode != null);
-    assert(mobileVerify != null);
-    assert(updateScnNumber != null);
     return register(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result register(RegisterUser value),
-    Result getCode(GetCode value),
-    Result mobileVerify(MobileVerify value),
-    Result updateScnNumber(UpdateScnNumber value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUser value)? register,
+    TResult Function(GetCode value)? getCode,
+    TResult Function(MobileVerify value)? mobileVerify,
+    TResult Function(UpdateScnNumber value)? updateScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (register != null) {
       return register(this);
     }
@@ -229,21 +242,25 @@ class _$RegisterUser implements RegisterUser {
 }
 
 abstract class RegisterUser implements RegisterEvent {
-  const factory RegisterUser({User user, String password, String imagePath}) =
-      _$RegisterUser;
+  const factory RegisterUser(
+      {User? user, String? password, String? imagePath}) = _$RegisterUser;
 
-  User get user;
-  String get password;
-  String get imagePath;
-  $RegisterUserCopyWith<RegisterUser> get copyWith;
+  User? get user => throw _privateConstructorUsedError;
+  String? get password => throw _privateConstructorUsedError;
+  String? get imagePath => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RegisterUserCopyWith<RegisterUser> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $GetCodeCopyWith<$Res> {
   factory $GetCodeCopyWith(GetCode value, $Res Function(GetCode) then) =
       _$GetCodeCopyWithImpl<$Res>;
   $Res call({String phoneNumber});
 }
 
+/// @nodoc
 class _$GetCodeCopyWithImpl<$Res> extends _$RegisterEventCopyWithImpl<$Res>
     implements $GetCodeCopyWith<$Res> {
   _$GetCodeCopyWithImpl(GetCode _value, $Res Function(GetCode) _then)
@@ -254,16 +271,21 @@ class _$GetCodeCopyWithImpl<$Res> extends _$RegisterEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object phoneNumber = freezed,
+    Object? phoneNumber = freezed,
   }) {
     return _then(GetCode(
-      phoneNumber == freezed ? _value.phoneNumber : phoneNumber as String,
+      phoneNumber == freezed
+          ? _value.phoneNumber
+          : phoneNumber // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$GetCode implements GetCode {
-  const _$GetCode(this.phoneNumber) : assert(phoneNumber != null);
+  const _$GetCode(this.phoneNumber);
 
   @override
   final String phoneNumber;
@@ -286,35 +308,32 @@ class _$GetCode implements GetCode {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(phoneNumber);
 
+  @JsonKey(ignore: true)
   @override
   $GetCodeCopyWith<GetCode> get copyWith =>
       _$GetCodeCopyWithImpl<GetCode>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result register(User user, String password, String imagePath),
-    @required Result getCode(String phoneNumber),
-    @required Result mobileVerify(String phoneNumber, String code),
-    @required Result updateScnNumber(String scnNumber),
+  TResult when<TResult extends Object?>({
+    required TResult Function(User? user, String? password, String? imagePath)
+        register,
+    required TResult Function(String phoneNumber) getCode,
+    required TResult Function(String phoneNumber, String code) mobileVerify,
+    required TResult Function(String scnNumber) updateScnNumber,
   }) {
-    assert(register != null);
-    assert(getCode != null);
-    assert(mobileVerify != null);
-    assert(updateScnNumber != null);
     return getCode(phoneNumber);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result register(User user, String password, String imagePath),
-    Result getCode(String phoneNumber),
-    Result mobileVerify(String phoneNumber, String code),
-    Result updateScnNumber(String scnNumber),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(User? user, String? password, String? imagePath)? register,
+    TResult Function(String phoneNumber)? getCode,
+    TResult Function(String phoneNumber, String code)? mobileVerify,
+    TResult Function(String scnNumber)? updateScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (getCode != null) {
       return getCode(phoneNumber);
     }
@@ -323,29 +342,24 @@ class _$GetCode implements GetCode {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result register(RegisterUser value),
-    @required Result getCode(GetCode value),
-    @required Result mobileVerify(MobileVerify value),
-    @required Result updateScnNumber(UpdateScnNumber value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUser value) register,
+    required TResult Function(GetCode value) getCode,
+    required TResult Function(MobileVerify value) mobileVerify,
+    required TResult Function(UpdateScnNumber value) updateScnNumber,
   }) {
-    assert(register != null);
-    assert(getCode != null);
-    assert(mobileVerify != null);
-    assert(updateScnNumber != null);
     return getCode(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result register(RegisterUser value),
-    Result getCode(GetCode value),
-    Result mobileVerify(MobileVerify value),
-    Result updateScnNumber(UpdateScnNumber value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUser value)? register,
+    TResult Function(GetCode value)? getCode,
+    TResult Function(MobileVerify value)? mobileVerify,
+    TResult Function(UpdateScnNumber value)? updateScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (getCode != null) {
       return getCode(this);
     }
@@ -356,10 +370,12 @@ class _$GetCode implements GetCode {
 abstract class GetCode implements RegisterEvent {
   const factory GetCode(String phoneNumber) = _$GetCode;
 
-  String get phoneNumber;
-  $GetCodeCopyWith<GetCode> get copyWith;
+  String get phoneNumber => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetCodeCopyWith<GetCode> get copyWith => throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $MobileVerifyCopyWith<$Res> {
   factory $MobileVerifyCopyWith(
           MobileVerify value, $Res Function(MobileVerify) then) =
@@ -367,6 +383,7 @@ abstract class $MobileVerifyCopyWith<$Res> {
   $Res call({String phoneNumber, String code});
 }
 
+/// @nodoc
 class _$MobileVerifyCopyWithImpl<$Res> extends _$RegisterEventCopyWithImpl<$Res>
     implements $MobileVerifyCopyWith<$Res> {
   _$MobileVerifyCopyWithImpl(
@@ -378,20 +395,26 @@ class _$MobileVerifyCopyWithImpl<$Res> extends _$RegisterEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object phoneNumber = freezed,
-    Object code = freezed,
+    Object? phoneNumber = freezed,
+    Object? code = freezed,
   }) {
     return _then(MobileVerify(
-      phoneNumber == freezed ? _value.phoneNumber : phoneNumber as String,
-      code == freezed ? _value.code : code as String,
+      phoneNumber == freezed
+          ? _value.phoneNumber
+          : phoneNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$MobileVerify implements MobileVerify {
-  const _$MobileVerify(this.phoneNumber, this.code)
-      : assert(phoneNumber != null),
-        assert(code != null);
+  const _$MobileVerify(this.phoneNumber, this.code);
 
   @override
   final String phoneNumber;
@@ -420,35 +443,32 @@ class _$MobileVerify implements MobileVerify {
       const DeepCollectionEquality().hash(phoneNumber) ^
       const DeepCollectionEquality().hash(code);
 
+  @JsonKey(ignore: true)
   @override
   $MobileVerifyCopyWith<MobileVerify> get copyWith =>
       _$MobileVerifyCopyWithImpl<MobileVerify>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result register(User user, String password, String imagePath),
-    @required Result getCode(String phoneNumber),
-    @required Result mobileVerify(String phoneNumber, String code),
-    @required Result updateScnNumber(String scnNumber),
+  TResult when<TResult extends Object?>({
+    required TResult Function(User? user, String? password, String? imagePath)
+        register,
+    required TResult Function(String phoneNumber) getCode,
+    required TResult Function(String phoneNumber, String code) mobileVerify,
+    required TResult Function(String scnNumber) updateScnNumber,
   }) {
-    assert(register != null);
-    assert(getCode != null);
-    assert(mobileVerify != null);
-    assert(updateScnNumber != null);
     return mobileVerify(phoneNumber, code);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result register(User user, String password, String imagePath),
-    Result getCode(String phoneNumber),
-    Result mobileVerify(String phoneNumber, String code),
-    Result updateScnNumber(String scnNumber),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(User? user, String? password, String? imagePath)? register,
+    TResult Function(String phoneNumber)? getCode,
+    TResult Function(String phoneNumber, String code)? mobileVerify,
+    TResult Function(String scnNumber)? updateScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (mobileVerify != null) {
       return mobileVerify(phoneNumber, code);
     }
@@ -457,29 +477,24 @@ class _$MobileVerify implements MobileVerify {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result register(RegisterUser value),
-    @required Result getCode(GetCode value),
-    @required Result mobileVerify(MobileVerify value),
-    @required Result updateScnNumber(UpdateScnNumber value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUser value) register,
+    required TResult Function(GetCode value) getCode,
+    required TResult Function(MobileVerify value) mobileVerify,
+    required TResult Function(UpdateScnNumber value) updateScnNumber,
   }) {
-    assert(register != null);
-    assert(getCode != null);
-    assert(mobileVerify != null);
-    assert(updateScnNumber != null);
     return mobileVerify(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result register(RegisterUser value),
-    Result getCode(GetCode value),
-    Result mobileVerify(MobileVerify value),
-    Result updateScnNumber(UpdateScnNumber value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUser value)? register,
+    TResult Function(GetCode value)? getCode,
+    TResult Function(MobileVerify value)? mobileVerify,
+    TResult Function(UpdateScnNumber value)? updateScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (mobileVerify != null) {
       return mobileVerify(this);
     }
@@ -490,11 +505,14 @@ class _$MobileVerify implements MobileVerify {
 abstract class MobileVerify implements RegisterEvent {
   const factory MobileVerify(String phoneNumber, String code) = _$MobileVerify;
 
-  String get phoneNumber;
-  String get code;
-  $MobileVerifyCopyWith<MobileVerify> get copyWith;
+  String get phoneNumber => throw _privateConstructorUsedError;
+  String get code => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MobileVerifyCopyWith<MobileVerify> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $UpdateScnNumberCopyWith<$Res> {
   factory $UpdateScnNumberCopyWith(
           UpdateScnNumber value, $Res Function(UpdateScnNumber) then) =
@@ -502,6 +520,7 @@ abstract class $UpdateScnNumberCopyWith<$Res> {
   $Res call({String scnNumber});
 }
 
+/// @nodoc
 class _$UpdateScnNumberCopyWithImpl<$Res>
     extends _$RegisterEventCopyWithImpl<$Res>
     implements $UpdateScnNumberCopyWith<$Res> {
@@ -514,16 +533,21 @@ class _$UpdateScnNumberCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object scnNumber = freezed,
+    Object? scnNumber = freezed,
   }) {
     return _then(UpdateScnNumber(
-      scnNumber == freezed ? _value.scnNumber : scnNumber as String,
+      scnNumber == freezed
+          ? _value.scnNumber
+          : scnNumber // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$UpdateScnNumber implements UpdateScnNumber {
-  const _$UpdateScnNumber(this.scnNumber) : assert(scnNumber != null);
+  const _$UpdateScnNumber(this.scnNumber);
 
   @override
   final String scnNumber;
@@ -546,35 +570,32 @@ class _$UpdateScnNumber implements UpdateScnNumber {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(scnNumber);
 
+  @JsonKey(ignore: true)
   @override
   $UpdateScnNumberCopyWith<UpdateScnNumber> get copyWith =>
       _$UpdateScnNumberCopyWithImpl<UpdateScnNumber>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result register(User user, String password, String imagePath),
-    @required Result getCode(String phoneNumber),
-    @required Result mobileVerify(String phoneNumber, String code),
-    @required Result updateScnNumber(String scnNumber),
+  TResult when<TResult extends Object?>({
+    required TResult Function(User? user, String? password, String? imagePath)
+        register,
+    required TResult Function(String phoneNumber) getCode,
+    required TResult Function(String phoneNumber, String code) mobileVerify,
+    required TResult Function(String scnNumber) updateScnNumber,
   }) {
-    assert(register != null);
-    assert(getCode != null);
-    assert(mobileVerify != null);
-    assert(updateScnNumber != null);
     return updateScnNumber(scnNumber);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result register(User user, String password, String imagePath),
-    Result getCode(String phoneNumber),
-    Result mobileVerify(String phoneNumber, String code),
-    Result updateScnNumber(String scnNumber),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(User? user, String? password, String? imagePath)? register,
+    TResult Function(String phoneNumber)? getCode,
+    TResult Function(String phoneNumber, String code)? mobileVerify,
+    TResult Function(String scnNumber)? updateScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (updateScnNumber != null) {
       return updateScnNumber(scnNumber);
     }
@@ -583,29 +604,24 @@ class _$UpdateScnNumber implements UpdateScnNumber {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result register(RegisterUser value),
-    @required Result getCode(GetCode value),
-    @required Result mobileVerify(MobileVerify value),
-    @required Result updateScnNumber(UpdateScnNumber value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUser value) register,
+    required TResult Function(GetCode value) getCode,
+    required TResult Function(MobileVerify value) mobileVerify,
+    required TResult Function(UpdateScnNumber value) updateScnNumber,
   }) {
-    assert(register != null);
-    assert(getCode != null);
-    assert(mobileVerify != null);
-    assert(updateScnNumber != null);
     return updateScnNumber(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result register(RegisterUser value),
-    Result getCode(GetCode value),
-    Result mobileVerify(MobileVerify value),
-    Result updateScnNumber(UpdateScnNumber value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUser value)? register,
+    TResult Function(GetCode value)? getCode,
+    TResult Function(MobileVerify value)? mobileVerify,
+    TResult Function(UpdateScnNumber value)? updateScnNumber,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (updateScnNumber != null) {
       return updateScnNumber(this);
     }
@@ -616,50 +632,46 @@ class _$UpdateScnNumber implements UpdateScnNumber {
 abstract class UpdateScnNumber implements RegisterEvent {
   const factory UpdateScnNumber(String scnNumber) = _$UpdateScnNumber;
 
-  String get scnNumber;
-  $UpdateScnNumberCopyWith<UpdateScnNumber> get copyWith;
+  String get scnNumber => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UpdateScnNumberCopyWith<UpdateScnNumber> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 class _$RegisterStateTearOff {
   const _$RegisterStateTearOff();
 
-// ignore: unused_element
   RegisterUserInitial initial() {
     return const RegisterUserInitial();
   }
 
-// ignore: unused_element
   RegisterComplete registerComplete(String phoneNumber) {
     return RegisterComplete(
       phoneNumber,
     );
   }
 
-// ignore: unused_element
   GetCodeComplete getCodeComplete(String code) {
     return GetCodeComplete(
       code,
     );
   }
 
-// ignore: unused_element
   ScnNumberUpdated scnNumberUpdated() {
     return const ScnNumberUpdated();
   }
 
-// ignore: unused_element
   VerifyComplete verifyComplete(User user) {
     return VerifyComplete(
       user,
     );
   }
 
-// ignore: unused_element
   RegisterLoading loading() {
     return const RegisterLoading();
   }
 
-// ignore: unused_element
   RegisterError error(Failure failure) {
     return RegisterError(
       failure,
@@ -667,60 +679,67 @@ class _$RegisterStateTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $RegisterState = _$RegisterStateTearOff();
 
+/// @nodoc
 mixin _$RegisterState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result registerComplete(String phoneNumber),
-    @required Result getCodeComplete(String code),
-    @required Result scnNumberUpdated(),
-    @required Result verifyComplete(User user),
-    @required Result loading(),
-    @required Result error(Failure failure),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String phoneNumber) registerComplete,
+    required TResult Function(String code) getCodeComplete,
+    required TResult Function() scnNumberUpdated,
+    required TResult Function(User user) verifyComplete,
+    required TResult Function() loading,
+    required TResult Function(Failure failure) error,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerComplete(String phoneNumber),
-    Result getCodeComplete(String code),
-    Result scnNumberUpdated(),
-    Result verifyComplete(User user),
-    Result loading(),
-    Result error(Failure failure),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String phoneNumber)? registerComplete,
+    TResult Function(String code)? getCodeComplete,
+    TResult Function()? scnNumberUpdated,
+    TResult Function(User user)? verifyComplete,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(RegisterUserInitial value),
-    @required Result registerComplete(RegisterComplete value),
-    @required Result getCodeComplete(GetCodeComplete value),
-    @required Result scnNumberUpdated(ScnNumberUpdated value),
-    @required Result verifyComplete(VerifyComplete value),
-    @required Result loading(RegisterLoading value),
-    @required Result error(RegisterError value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUserInitial value) initial,
+    required TResult Function(RegisterComplete value) registerComplete,
+    required TResult Function(GetCodeComplete value) getCodeComplete,
+    required TResult Function(ScnNumberUpdated value) scnNumberUpdated,
+    required TResult Function(VerifyComplete value) verifyComplete,
+    required TResult Function(RegisterLoading value) loading,
+    required TResult Function(RegisterError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(RegisterUserInitial value),
-    Result registerComplete(RegisterComplete value),
-    Result getCodeComplete(GetCodeComplete value),
-    Result scnNumberUpdated(ScnNumberUpdated value),
-    Result verifyComplete(VerifyComplete value),
-    Result loading(RegisterLoading value),
-    Result error(RegisterError value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUserInitial value)? initial,
+    TResult Function(RegisterComplete value)? registerComplete,
+    TResult Function(GetCodeComplete value)? getCodeComplete,
+    TResult Function(ScnNumberUpdated value)? scnNumberUpdated,
+    TResult Function(VerifyComplete value)? verifyComplete,
+    TResult Function(RegisterLoading value)? loading,
+    TResult Function(RegisterError value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $RegisterStateCopyWith<$Res> {
   factory $RegisterStateCopyWith(
           RegisterState value, $Res Function(RegisterState) then) =
       _$RegisterStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$RegisterStateCopyWithImpl<$Res>
     implements $RegisterStateCopyWith<$Res> {
   _$RegisterStateCopyWithImpl(this._value, this._then);
@@ -730,12 +749,14 @@ class _$RegisterStateCopyWithImpl<$Res>
   final $Res Function(RegisterState) _then;
 }
 
+/// @nodoc
 abstract class $RegisterUserInitialCopyWith<$Res> {
   factory $RegisterUserInitialCopyWith(
           RegisterUserInitial value, $Res Function(RegisterUserInitial) then) =
       _$RegisterUserInitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$RegisterUserInitialCopyWithImpl<$Res>
     extends _$RegisterStateCopyWithImpl<$Res>
     implements $RegisterUserInitialCopyWith<$Res> {
@@ -746,6 +767,8 @@ class _$RegisterUserInitialCopyWithImpl<$Res>
   @override
   RegisterUserInitial get _value => super._value as RegisterUserInitial;
 }
+
+/// @nodoc
 
 class _$RegisterUserInitial implements RegisterUserInitial {
   const _$RegisterUserInitial();
@@ -765,38 +788,30 @@ class _$RegisterUserInitial implements RegisterUserInitial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result registerComplete(String phoneNumber),
-    @required Result getCodeComplete(String code),
-    @required Result scnNumberUpdated(),
-    @required Result verifyComplete(User user),
-    @required Result loading(),
-    @required Result error(Failure failure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String phoneNumber) registerComplete,
+    required TResult Function(String code) getCodeComplete,
+    required TResult Function() scnNumberUpdated,
+    required TResult Function(User user) verifyComplete,
+    required TResult Function() loading,
+    required TResult Function(Failure failure) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerComplete(String phoneNumber),
-    Result getCodeComplete(String code),
-    Result scnNumberUpdated(),
-    Result verifyComplete(User user),
-    Result loading(),
-    Result error(Failure failure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String phoneNumber)? registerComplete,
+    TResult Function(String code)? getCodeComplete,
+    TResult Function()? scnNumberUpdated,
+    TResult Function(User user)? verifyComplete,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -805,38 +820,30 @@ class _$RegisterUserInitial implements RegisterUserInitial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(RegisterUserInitial value),
-    @required Result registerComplete(RegisterComplete value),
-    @required Result getCodeComplete(GetCodeComplete value),
-    @required Result scnNumberUpdated(ScnNumberUpdated value),
-    @required Result verifyComplete(VerifyComplete value),
-    @required Result loading(RegisterLoading value),
-    @required Result error(RegisterError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUserInitial value) initial,
+    required TResult Function(RegisterComplete value) registerComplete,
+    required TResult Function(GetCodeComplete value) getCodeComplete,
+    required TResult Function(ScnNumberUpdated value) scnNumberUpdated,
+    required TResult Function(VerifyComplete value) verifyComplete,
+    required TResult Function(RegisterLoading value) loading,
+    required TResult Function(RegisterError value) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(RegisterUserInitial value),
-    Result registerComplete(RegisterComplete value),
-    Result getCodeComplete(GetCodeComplete value),
-    Result scnNumberUpdated(ScnNumberUpdated value),
-    Result verifyComplete(VerifyComplete value),
-    Result loading(RegisterLoading value),
-    Result error(RegisterError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUserInitial value)? initial,
+    TResult Function(RegisterComplete value)? registerComplete,
+    TResult Function(GetCodeComplete value)? getCodeComplete,
+    TResult Function(ScnNumberUpdated value)? scnNumberUpdated,
+    TResult Function(VerifyComplete value)? verifyComplete,
+    TResult Function(RegisterLoading value)? loading,
+    TResult Function(RegisterError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -848,6 +855,7 @@ abstract class RegisterUserInitial implements RegisterState {
   const factory RegisterUserInitial() = _$RegisterUserInitial;
 }
 
+/// @nodoc
 abstract class $RegisterCompleteCopyWith<$Res> {
   factory $RegisterCompleteCopyWith(
           RegisterComplete value, $Res Function(RegisterComplete) then) =
@@ -855,6 +863,7 @@ abstract class $RegisterCompleteCopyWith<$Res> {
   $Res call({String phoneNumber});
 }
 
+/// @nodoc
 class _$RegisterCompleteCopyWithImpl<$Res>
     extends _$RegisterStateCopyWithImpl<$Res>
     implements $RegisterCompleteCopyWith<$Res> {
@@ -867,16 +876,21 @@ class _$RegisterCompleteCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object phoneNumber = freezed,
+    Object? phoneNumber = freezed,
   }) {
     return _then(RegisterComplete(
-      phoneNumber == freezed ? _value.phoneNumber : phoneNumber as String,
+      phoneNumber == freezed
+          ? _value.phoneNumber
+          : phoneNumber // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$RegisterComplete implements RegisterComplete {
-  const _$RegisterComplete(this.phoneNumber) : assert(phoneNumber != null);
+  const _$RegisterComplete(this.phoneNumber);
 
   @override
   final String phoneNumber;
@@ -899,44 +913,37 @@ class _$RegisterComplete implements RegisterComplete {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(phoneNumber);
 
+  @JsonKey(ignore: true)
   @override
   $RegisterCompleteCopyWith<RegisterComplete> get copyWith =>
       _$RegisterCompleteCopyWithImpl<RegisterComplete>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result registerComplete(String phoneNumber),
-    @required Result getCodeComplete(String code),
-    @required Result scnNumberUpdated(),
-    @required Result verifyComplete(User user),
-    @required Result loading(),
-    @required Result error(Failure failure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String phoneNumber) registerComplete,
+    required TResult Function(String code) getCodeComplete,
+    required TResult Function() scnNumberUpdated,
+    required TResult Function(User user) verifyComplete,
+    required TResult Function() loading,
+    required TResult Function(Failure failure) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return registerComplete(phoneNumber);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerComplete(String phoneNumber),
-    Result getCodeComplete(String code),
-    Result scnNumberUpdated(),
-    Result verifyComplete(User user),
-    Result loading(),
-    Result error(Failure failure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String phoneNumber)? registerComplete,
+    TResult Function(String code)? getCodeComplete,
+    TResult Function()? scnNumberUpdated,
+    TResult Function(User user)? verifyComplete,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (registerComplete != null) {
       return registerComplete(phoneNumber);
     }
@@ -945,38 +952,30 @@ class _$RegisterComplete implements RegisterComplete {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(RegisterUserInitial value),
-    @required Result registerComplete(RegisterComplete value),
-    @required Result getCodeComplete(GetCodeComplete value),
-    @required Result scnNumberUpdated(ScnNumberUpdated value),
-    @required Result verifyComplete(VerifyComplete value),
-    @required Result loading(RegisterLoading value),
-    @required Result error(RegisterError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUserInitial value) initial,
+    required TResult Function(RegisterComplete value) registerComplete,
+    required TResult Function(GetCodeComplete value) getCodeComplete,
+    required TResult Function(ScnNumberUpdated value) scnNumberUpdated,
+    required TResult Function(VerifyComplete value) verifyComplete,
+    required TResult Function(RegisterLoading value) loading,
+    required TResult Function(RegisterError value) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return registerComplete(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(RegisterUserInitial value),
-    Result registerComplete(RegisterComplete value),
-    Result getCodeComplete(GetCodeComplete value),
-    Result scnNumberUpdated(ScnNumberUpdated value),
-    Result verifyComplete(VerifyComplete value),
-    Result loading(RegisterLoading value),
-    Result error(RegisterError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUserInitial value)? initial,
+    TResult Function(RegisterComplete value)? registerComplete,
+    TResult Function(GetCodeComplete value)? getCodeComplete,
+    TResult Function(ScnNumberUpdated value)? scnNumberUpdated,
+    TResult Function(VerifyComplete value)? verifyComplete,
+    TResult Function(RegisterLoading value)? loading,
+    TResult Function(RegisterError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (registerComplete != null) {
       return registerComplete(this);
     }
@@ -987,10 +986,13 @@ class _$RegisterComplete implements RegisterComplete {
 abstract class RegisterComplete implements RegisterState {
   const factory RegisterComplete(String phoneNumber) = _$RegisterComplete;
 
-  String get phoneNumber;
-  $RegisterCompleteCopyWith<RegisterComplete> get copyWith;
+  String get phoneNumber => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RegisterCompleteCopyWith<RegisterComplete> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $GetCodeCompleteCopyWith<$Res> {
   factory $GetCodeCompleteCopyWith(
           GetCodeComplete value, $Res Function(GetCodeComplete) then) =
@@ -998,6 +1000,7 @@ abstract class $GetCodeCompleteCopyWith<$Res> {
   $Res call({String code});
 }
 
+/// @nodoc
 class _$GetCodeCompleteCopyWithImpl<$Res>
     extends _$RegisterStateCopyWithImpl<$Res>
     implements $GetCodeCompleteCopyWith<$Res> {
@@ -1010,16 +1013,21 @@ class _$GetCodeCompleteCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object code = freezed,
+    Object? code = freezed,
   }) {
     return _then(GetCodeComplete(
-      code == freezed ? _value.code : code as String,
+      code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$GetCodeComplete implements GetCodeComplete {
-  const _$GetCodeComplete(this.code) : assert(code != null);
+  const _$GetCodeComplete(this.code);
 
   @override
   final String code;
@@ -1041,44 +1049,37 @@ class _$GetCodeComplete implements GetCodeComplete {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(code);
 
+  @JsonKey(ignore: true)
   @override
   $GetCodeCompleteCopyWith<GetCodeComplete> get copyWith =>
       _$GetCodeCompleteCopyWithImpl<GetCodeComplete>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result registerComplete(String phoneNumber),
-    @required Result getCodeComplete(String code),
-    @required Result scnNumberUpdated(),
-    @required Result verifyComplete(User user),
-    @required Result loading(),
-    @required Result error(Failure failure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String phoneNumber) registerComplete,
+    required TResult Function(String code) getCodeComplete,
+    required TResult Function() scnNumberUpdated,
+    required TResult Function(User user) verifyComplete,
+    required TResult Function() loading,
+    required TResult Function(Failure failure) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return getCodeComplete(code);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerComplete(String phoneNumber),
-    Result getCodeComplete(String code),
-    Result scnNumberUpdated(),
-    Result verifyComplete(User user),
-    Result loading(),
-    Result error(Failure failure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String phoneNumber)? registerComplete,
+    TResult Function(String code)? getCodeComplete,
+    TResult Function()? scnNumberUpdated,
+    TResult Function(User user)? verifyComplete,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (getCodeComplete != null) {
       return getCodeComplete(code);
     }
@@ -1087,38 +1088,30 @@ class _$GetCodeComplete implements GetCodeComplete {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(RegisterUserInitial value),
-    @required Result registerComplete(RegisterComplete value),
-    @required Result getCodeComplete(GetCodeComplete value),
-    @required Result scnNumberUpdated(ScnNumberUpdated value),
-    @required Result verifyComplete(VerifyComplete value),
-    @required Result loading(RegisterLoading value),
-    @required Result error(RegisterError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUserInitial value) initial,
+    required TResult Function(RegisterComplete value) registerComplete,
+    required TResult Function(GetCodeComplete value) getCodeComplete,
+    required TResult Function(ScnNumberUpdated value) scnNumberUpdated,
+    required TResult Function(VerifyComplete value) verifyComplete,
+    required TResult Function(RegisterLoading value) loading,
+    required TResult Function(RegisterError value) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return getCodeComplete(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(RegisterUserInitial value),
-    Result registerComplete(RegisterComplete value),
-    Result getCodeComplete(GetCodeComplete value),
-    Result scnNumberUpdated(ScnNumberUpdated value),
-    Result verifyComplete(VerifyComplete value),
-    Result loading(RegisterLoading value),
-    Result error(RegisterError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUserInitial value)? initial,
+    TResult Function(RegisterComplete value)? registerComplete,
+    TResult Function(GetCodeComplete value)? getCodeComplete,
+    TResult Function(ScnNumberUpdated value)? scnNumberUpdated,
+    TResult Function(VerifyComplete value)? verifyComplete,
+    TResult Function(RegisterLoading value)? loading,
+    TResult Function(RegisterError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (getCodeComplete != null) {
       return getCodeComplete(this);
     }
@@ -1129,16 +1122,20 @@ class _$GetCodeComplete implements GetCodeComplete {
 abstract class GetCodeComplete implements RegisterState {
   const factory GetCodeComplete(String code) = _$GetCodeComplete;
 
-  String get code;
-  $GetCodeCompleteCopyWith<GetCodeComplete> get copyWith;
+  String get code => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetCodeCompleteCopyWith<GetCodeComplete> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $ScnNumberUpdatedCopyWith<$Res> {
   factory $ScnNumberUpdatedCopyWith(
           ScnNumberUpdated value, $Res Function(ScnNumberUpdated) then) =
       _$ScnNumberUpdatedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$ScnNumberUpdatedCopyWithImpl<$Res>
     extends _$RegisterStateCopyWithImpl<$Res>
     implements $ScnNumberUpdatedCopyWith<$Res> {
@@ -1149,6 +1146,8 @@ class _$ScnNumberUpdatedCopyWithImpl<$Res>
   @override
   ScnNumberUpdated get _value => super._value as ScnNumberUpdated;
 }
+
+/// @nodoc
 
 class _$ScnNumberUpdated implements ScnNumberUpdated {
   const _$ScnNumberUpdated();
@@ -1168,38 +1167,30 @@ class _$ScnNumberUpdated implements ScnNumberUpdated {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result registerComplete(String phoneNumber),
-    @required Result getCodeComplete(String code),
-    @required Result scnNumberUpdated(),
-    @required Result verifyComplete(User user),
-    @required Result loading(),
-    @required Result error(Failure failure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String phoneNumber) registerComplete,
+    required TResult Function(String code) getCodeComplete,
+    required TResult Function() scnNumberUpdated,
+    required TResult Function(User user) verifyComplete,
+    required TResult Function() loading,
+    required TResult Function(Failure failure) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return scnNumberUpdated();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerComplete(String phoneNumber),
-    Result getCodeComplete(String code),
-    Result scnNumberUpdated(),
-    Result verifyComplete(User user),
-    Result loading(),
-    Result error(Failure failure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String phoneNumber)? registerComplete,
+    TResult Function(String code)? getCodeComplete,
+    TResult Function()? scnNumberUpdated,
+    TResult Function(User user)? verifyComplete,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (scnNumberUpdated != null) {
       return scnNumberUpdated();
     }
@@ -1208,38 +1199,30 @@ class _$ScnNumberUpdated implements ScnNumberUpdated {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(RegisterUserInitial value),
-    @required Result registerComplete(RegisterComplete value),
-    @required Result getCodeComplete(GetCodeComplete value),
-    @required Result scnNumberUpdated(ScnNumberUpdated value),
-    @required Result verifyComplete(VerifyComplete value),
-    @required Result loading(RegisterLoading value),
-    @required Result error(RegisterError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUserInitial value) initial,
+    required TResult Function(RegisterComplete value) registerComplete,
+    required TResult Function(GetCodeComplete value) getCodeComplete,
+    required TResult Function(ScnNumberUpdated value) scnNumberUpdated,
+    required TResult Function(VerifyComplete value) verifyComplete,
+    required TResult Function(RegisterLoading value) loading,
+    required TResult Function(RegisterError value) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return scnNumberUpdated(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(RegisterUserInitial value),
-    Result registerComplete(RegisterComplete value),
-    Result getCodeComplete(GetCodeComplete value),
-    Result scnNumberUpdated(ScnNumberUpdated value),
-    Result verifyComplete(VerifyComplete value),
-    Result loading(RegisterLoading value),
-    Result error(RegisterError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUserInitial value)? initial,
+    TResult Function(RegisterComplete value)? registerComplete,
+    TResult Function(GetCodeComplete value)? getCodeComplete,
+    TResult Function(ScnNumberUpdated value)? scnNumberUpdated,
+    TResult Function(VerifyComplete value)? verifyComplete,
+    TResult Function(RegisterLoading value)? loading,
+    TResult Function(RegisterError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (scnNumberUpdated != null) {
       return scnNumberUpdated(this);
     }
@@ -1251,6 +1234,7 @@ abstract class ScnNumberUpdated implements RegisterState {
   const factory ScnNumberUpdated() = _$ScnNumberUpdated;
 }
 
+/// @nodoc
 abstract class $VerifyCompleteCopyWith<$Res> {
   factory $VerifyCompleteCopyWith(
           VerifyComplete value, $Res Function(VerifyComplete) then) =
@@ -1258,6 +1242,7 @@ abstract class $VerifyCompleteCopyWith<$Res> {
   $Res call({User user});
 }
 
+/// @nodoc
 class _$VerifyCompleteCopyWithImpl<$Res>
     extends _$RegisterStateCopyWithImpl<$Res>
     implements $VerifyCompleteCopyWith<$Res> {
@@ -1270,16 +1255,21 @@ class _$VerifyCompleteCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
+    Object? user = freezed,
   }) {
     return _then(VerifyComplete(
-      user == freezed ? _value.user : user as User,
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
     ));
   }
 }
 
+/// @nodoc
+
 class _$VerifyComplete implements VerifyComplete {
-  const _$VerifyComplete(this.user) : assert(user != null);
+  const _$VerifyComplete(this.user);
 
   @override
   final User user;
@@ -1301,44 +1291,37 @@ class _$VerifyComplete implements VerifyComplete {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
 
+  @JsonKey(ignore: true)
   @override
   $VerifyCompleteCopyWith<VerifyComplete> get copyWith =>
       _$VerifyCompleteCopyWithImpl<VerifyComplete>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result registerComplete(String phoneNumber),
-    @required Result getCodeComplete(String code),
-    @required Result scnNumberUpdated(),
-    @required Result verifyComplete(User user),
-    @required Result loading(),
-    @required Result error(Failure failure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String phoneNumber) registerComplete,
+    required TResult Function(String code) getCodeComplete,
+    required TResult Function() scnNumberUpdated,
+    required TResult Function(User user) verifyComplete,
+    required TResult Function() loading,
+    required TResult Function(Failure failure) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return verifyComplete(user);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerComplete(String phoneNumber),
-    Result getCodeComplete(String code),
-    Result scnNumberUpdated(),
-    Result verifyComplete(User user),
-    Result loading(),
-    Result error(Failure failure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String phoneNumber)? registerComplete,
+    TResult Function(String code)? getCodeComplete,
+    TResult Function()? scnNumberUpdated,
+    TResult Function(User user)? verifyComplete,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (verifyComplete != null) {
       return verifyComplete(user);
     }
@@ -1347,38 +1330,30 @@ class _$VerifyComplete implements VerifyComplete {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(RegisterUserInitial value),
-    @required Result registerComplete(RegisterComplete value),
-    @required Result getCodeComplete(GetCodeComplete value),
-    @required Result scnNumberUpdated(ScnNumberUpdated value),
-    @required Result verifyComplete(VerifyComplete value),
-    @required Result loading(RegisterLoading value),
-    @required Result error(RegisterError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUserInitial value) initial,
+    required TResult Function(RegisterComplete value) registerComplete,
+    required TResult Function(GetCodeComplete value) getCodeComplete,
+    required TResult Function(ScnNumberUpdated value) scnNumberUpdated,
+    required TResult Function(VerifyComplete value) verifyComplete,
+    required TResult Function(RegisterLoading value) loading,
+    required TResult Function(RegisterError value) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return verifyComplete(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(RegisterUserInitial value),
-    Result registerComplete(RegisterComplete value),
-    Result getCodeComplete(GetCodeComplete value),
-    Result scnNumberUpdated(ScnNumberUpdated value),
-    Result verifyComplete(VerifyComplete value),
-    Result loading(RegisterLoading value),
-    Result error(RegisterError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUserInitial value)? initial,
+    TResult Function(RegisterComplete value)? registerComplete,
+    TResult Function(GetCodeComplete value)? getCodeComplete,
+    TResult Function(ScnNumberUpdated value)? scnNumberUpdated,
+    TResult Function(VerifyComplete value)? verifyComplete,
+    TResult Function(RegisterLoading value)? loading,
+    TResult Function(RegisterError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (verifyComplete != null) {
       return verifyComplete(this);
     }
@@ -1389,16 +1364,20 @@ class _$VerifyComplete implements VerifyComplete {
 abstract class VerifyComplete implements RegisterState {
   const factory VerifyComplete(User user) = _$VerifyComplete;
 
-  User get user;
-  $VerifyCompleteCopyWith<VerifyComplete> get copyWith;
+  User get user => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $VerifyCompleteCopyWith<VerifyComplete> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $RegisterLoadingCopyWith<$Res> {
   factory $RegisterLoadingCopyWith(
           RegisterLoading value, $Res Function(RegisterLoading) then) =
       _$RegisterLoadingCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$RegisterLoadingCopyWithImpl<$Res>
     extends _$RegisterStateCopyWithImpl<$Res>
     implements $RegisterLoadingCopyWith<$Res> {
@@ -1409,6 +1388,8 @@ class _$RegisterLoadingCopyWithImpl<$Res>
   @override
   RegisterLoading get _value => super._value as RegisterLoading;
 }
+
+/// @nodoc
 
 class _$RegisterLoading implements RegisterLoading {
   const _$RegisterLoading();
@@ -1428,38 +1409,30 @@ class _$RegisterLoading implements RegisterLoading {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result registerComplete(String phoneNumber),
-    @required Result getCodeComplete(String code),
-    @required Result scnNumberUpdated(),
-    @required Result verifyComplete(User user),
-    @required Result loading(),
-    @required Result error(Failure failure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String phoneNumber) registerComplete,
+    required TResult Function(String code) getCodeComplete,
+    required TResult Function() scnNumberUpdated,
+    required TResult Function(User user) verifyComplete,
+    required TResult Function() loading,
+    required TResult Function(Failure failure) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return loading();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerComplete(String phoneNumber),
-    Result getCodeComplete(String code),
-    Result scnNumberUpdated(),
-    Result verifyComplete(User user),
-    Result loading(),
-    Result error(Failure failure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String phoneNumber)? registerComplete,
+    TResult Function(String code)? getCodeComplete,
+    TResult Function()? scnNumberUpdated,
+    TResult Function(User user)? verifyComplete,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading();
     }
@@ -1468,38 +1441,30 @@ class _$RegisterLoading implements RegisterLoading {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(RegisterUserInitial value),
-    @required Result registerComplete(RegisterComplete value),
-    @required Result getCodeComplete(GetCodeComplete value),
-    @required Result scnNumberUpdated(ScnNumberUpdated value),
-    @required Result verifyComplete(VerifyComplete value),
-    @required Result loading(RegisterLoading value),
-    @required Result error(RegisterError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUserInitial value) initial,
+    required TResult Function(RegisterComplete value) registerComplete,
+    required TResult Function(GetCodeComplete value) getCodeComplete,
+    required TResult Function(ScnNumberUpdated value) scnNumberUpdated,
+    required TResult Function(VerifyComplete value) verifyComplete,
+    required TResult Function(RegisterLoading value) loading,
+    required TResult Function(RegisterError value) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return loading(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(RegisterUserInitial value),
-    Result registerComplete(RegisterComplete value),
-    Result getCodeComplete(GetCodeComplete value),
-    Result scnNumberUpdated(ScnNumberUpdated value),
-    Result verifyComplete(VerifyComplete value),
-    Result loading(RegisterLoading value),
-    Result error(RegisterError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUserInitial value)? initial,
+    TResult Function(RegisterComplete value)? registerComplete,
+    TResult Function(GetCodeComplete value)? getCodeComplete,
+    TResult Function(ScnNumberUpdated value)? scnNumberUpdated,
+    TResult Function(VerifyComplete value)? verifyComplete,
+    TResult Function(RegisterLoading value)? loading,
+    TResult Function(RegisterError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading(this);
     }
@@ -1511,6 +1476,7 @@ abstract class RegisterLoading implements RegisterState {
   const factory RegisterLoading() = _$RegisterLoading;
 }
 
+/// @nodoc
 abstract class $RegisterErrorCopyWith<$Res> {
   factory $RegisterErrorCopyWith(
           RegisterError value, $Res Function(RegisterError) then) =
@@ -1520,6 +1486,7 @@ abstract class $RegisterErrorCopyWith<$Res> {
   $FailureCopyWith<$Res> get failure;
 }
 
+/// @nodoc
 class _$RegisterErrorCopyWithImpl<$Res>
     extends _$RegisterStateCopyWithImpl<$Res>
     implements $RegisterErrorCopyWith<$Res> {
@@ -1532,26 +1499,28 @@ class _$RegisterErrorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object failure = freezed,
+    Object? failure = freezed,
   }) {
     return _then(RegisterError(
-      failure == freezed ? _value.failure : failure as Failure,
+      failure == freezed
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as Failure,
     ));
   }
 
   @override
   $FailureCopyWith<$Res> get failure {
-    if (_value.failure == null) {
-      return null;
-    }
     return $FailureCopyWith<$Res>(_value.failure, (value) {
       return _then(_value.copyWith(failure: value));
     });
   }
 }
 
+/// @nodoc
+
 class _$RegisterError implements RegisterError {
-  const _$RegisterError(this.failure) : assert(failure != null);
+  const _$RegisterError(this.failure);
 
   @override
   final Failure failure;
@@ -1573,44 +1542,37 @@ class _$RegisterError implements RegisterError {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failure);
 
+  @JsonKey(ignore: true)
   @override
   $RegisterErrorCopyWith<RegisterError> get copyWith =>
       _$RegisterErrorCopyWithImpl<RegisterError>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result registerComplete(String phoneNumber),
-    @required Result getCodeComplete(String code),
-    @required Result scnNumberUpdated(),
-    @required Result verifyComplete(User user),
-    @required Result loading(),
-    @required Result error(Failure failure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String phoneNumber) registerComplete,
+    required TResult Function(String code) getCodeComplete,
+    required TResult Function() scnNumberUpdated,
+    required TResult Function(User user) verifyComplete,
+    required TResult Function() loading,
+    required TResult Function(Failure failure) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return error(failure);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result registerComplete(String phoneNumber),
-    Result getCodeComplete(String code),
-    Result scnNumberUpdated(),
-    Result verifyComplete(User user),
-    Result loading(),
-    Result error(Failure failure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String phoneNumber)? registerComplete,
+    TResult Function(String code)? getCodeComplete,
+    TResult Function()? scnNumberUpdated,
+    TResult Function(User user)? verifyComplete,
+    TResult Function()? loading,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(failure);
     }
@@ -1619,38 +1581,30 @@ class _$RegisterError implements RegisterError {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(RegisterUserInitial value),
-    @required Result registerComplete(RegisterComplete value),
-    @required Result getCodeComplete(GetCodeComplete value),
-    @required Result scnNumberUpdated(ScnNumberUpdated value),
-    @required Result verifyComplete(VerifyComplete value),
-    @required Result loading(RegisterLoading value),
-    @required Result error(RegisterError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RegisterUserInitial value) initial,
+    required TResult Function(RegisterComplete value) registerComplete,
+    required TResult Function(GetCodeComplete value) getCodeComplete,
+    required TResult Function(ScnNumberUpdated value) scnNumberUpdated,
+    required TResult Function(VerifyComplete value) verifyComplete,
+    required TResult Function(RegisterLoading value) loading,
+    required TResult Function(RegisterError value) error,
   }) {
-    assert(initial != null);
-    assert(registerComplete != null);
-    assert(getCodeComplete != null);
-    assert(scnNumberUpdated != null);
-    assert(verifyComplete != null);
-    assert(loading != null);
-    assert(error != null);
     return error(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(RegisterUserInitial value),
-    Result registerComplete(RegisterComplete value),
-    Result getCodeComplete(GetCodeComplete value),
-    Result scnNumberUpdated(ScnNumberUpdated value),
-    Result verifyComplete(VerifyComplete value),
-    Result loading(RegisterLoading value),
-    Result error(RegisterError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RegisterUserInitial value)? initial,
+    TResult Function(RegisterComplete value)? registerComplete,
+    TResult Function(GetCodeComplete value)? getCodeComplete,
+    TResult Function(ScnNumberUpdated value)? scnNumberUpdated,
+    TResult Function(VerifyComplete value)? verifyComplete,
+    TResult Function(RegisterLoading value)? loading,
+    TResult Function(RegisterError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this);
     }
@@ -1661,6 +1615,8 @@ class _$RegisterError implements RegisterError {
 abstract class RegisterError implements RegisterState {
   const factory RegisterError(Failure failure) = _$RegisterError;
 
-  Failure get failure;
-  $RegisterErrorCopyWith<RegisterError> get copyWith;
+  Failure get failure => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RegisterErrorCopyWith<RegisterError> get copyWith =>
+      throw _privateConstructorUsedError;
 }

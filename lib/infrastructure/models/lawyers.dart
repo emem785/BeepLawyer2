@@ -1,10 +1,10 @@
 
 
 class Lawyer {
-  String firstname;
-  String lastname;
-  String phone;
-  double distance;
+  String? firstname;
+  String? lastname;
+  String? phone;
+  double? distance;
 
   Lawyer({this.firstname, this.lastname, this.phone, this.distance});
 

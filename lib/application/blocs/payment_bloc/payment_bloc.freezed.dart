@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'payment_bloc.dart';
 
@@ -9,22 +9,23 @@ part of 'payment_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$PaymentEventTearOff {
   const _$PaymentEventTearOff();
 
-// ignore: unused_element
   InitializePayment initializePayment() {
     return const InitializePayment();
   }
 
-// ignore: unused_element
   MakePayment makePayment(BuildContext context) {
     return MakePayment(
       context,
     );
   }
 
-// ignore: unused_element
   SetPrice setPrice(int price) {
     return SetPrice(
       price,
@@ -32,44 +33,51 @@ class _$PaymentEventTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $PaymentEvent = _$PaymentEventTearOff();
 
+/// @nodoc
 mixin _$PaymentEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initializePayment(),
-    @required Result makePayment(BuildContext context),
-    @required Result setPrice(int price),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initializePayment,
+    required TResult Function(BuildContext context) makePayment,
+    required TResult Function(int price) setPrice,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initializePayment(),
-    Result makePayment(BuildContext context),
-    Result setPrice(int price),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initializePayment,
+    TResult Function(BuildContext context)? makePayment,
+    TResult Function(int price)? setPrice,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initializePayment(InitializePayment value),
-    @required Result makePayment(MakePayment value),
-    @required Result setPrice(SetPrice value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(InitializePayment value) initializePayment,
+    required TResult Function(MakePayment value) makePayment,
+    required TResult Function(SetPrice value) setPrice,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initializePayment(InitializePayment value),
-    Result makePayment(MakePayment value),
-    Result setPrice(SetPrice value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InitializePayment value)? initializePayment,
+    TResult Function(MakePayment value)? makePayment,
+    TResult Function(SetPrice value)? setPrice,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $PaymentEventCopyWith<$Res> {
   factory $PaymentEventCopyWith(
           PaymentEvent value, $Res Function(PaymentEvent) then) =
       _$PaymentEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$PaymentEventCopyWithImpl<$Res> implements $PaymentEventCopyWith<$Res> {
   _$PaymentEventCopyWithImpl(this._value, this._then);
 
@@ -78,12 +86,14 @@ class _$PaymentEventCopyWithImpl<$Res> implements $PaymentEventCopyWith<$Res> {
   final $Res Function(PaymentEvent) _then;
 }
 
+/// @nodoc
 abstract class $InitializePaymentCopyWith<$Res> {
   factory $InitializePaymentCopyWith(
           InitializePayment value, $Res Function(InitializePayment) then) =
       _$InitializePaymentCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$InitializePaymentCopyWithImpl<$Res>
     extends _$PaymentEventCopyWithImpl<$Res>
     implements $InitializePaymentCopyWith<$Res> {
@@ -94,6 +104,8 @@ class _$InitializePaymentCopyWithImpl<$Res>
   @override
   InitializePayment get _value => super._value as InitializePayment;
 }
+
+/// @nodoc
 
 class _$InitializePayment implements InitializePayment {
   const _$InitializePayment();
@@ -113,26 +125,22 @@ class _$InitializePayment implements InitializePayment {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initializePayment(),
-    @required Result makePayment(BuildContext context),
-    @required Result setPrice(int price),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initializePayment,
+    required TResult Function(BuildContext context) makePayment,
+    required TResult Function(int price) setPrice,
   }) {
-    assert(initializePayment != null);
-    assert(makePayment != null);
-    assert(setPrice != null);
     return initializePayment();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initializePayment(),
-    Result makePayment(BuildContext context),
-    Result setPrice(int price),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initializePayment,
+    TResult Function(BuildContext context)? makePayment,
+    TResult Function(int price)? setPrice,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initializePayment != null) {
       return initializePayment();
     }
@@ -141,26 +149,22 @@ class _$InitializePayment implements InitializePayment {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initializePayment(InitializePayment value),
-    @required Result makePayment(MakePayment value),
-    @required Result setPrice(SetPrice value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InitializePayment value) initializePayment,
+    required TResult Function(MakePayment value) makePayment,
+    required TResult Function(SetPrice value) setPrice,
   }) {
-    assert(initializePayment != null);
-    assert(makePayment != null);
-    assert(setPrice != null);
     return initializePayment(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initializePayment(InitializePayment value),
-    Result makePayment(MakePayment value),
-    Result setPrice(SetPrice value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InitializePayment value)? initializePayment,
+    TResult Function(MakePayment value)? makePayment,
+    TResult Function(SetPrice value)? setPrice,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initializePayment != null) {
       return initializePayment(this);
     }
@@ -172,6 +176,7 @@ abstract class InitializePayment implements PaymentEvent {
   const factory InitializePayment() = _$InitializePayment;
 }
 
+/// @nodoc
 abstract class $MakePaymentCopyWith<$Res> {
   factory $MakePaymentCopyWith(
           MakePayment value, $Res Function(MakePayment) then) =
@@ -179,6 +184,7 @@ abstract class $MakePaymentCopyWith<$Res> {
   $Res call({BuildContext context});
 }
 
+/// @nodoc
 class _$MakePaymentCopyWithImpl<$Res> extends _$PaymentEventCopyWithImpl<$Res>
     implements $MakePaymentCopyWith<$Res> {
   _$MakePaymentCopyWithImpl(
@@ -190,16 +196,21 @@ class _$MakePaymentCopyWithImpl<$Res> extends _$PaymentEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object context = freezed,
+    Object? context = freezed,
   }) {
     return _then(MakePayment(
-      context == freezed ? _value.context : context as BuildContext,
+      context == freezed
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
     ));
   }
 }
 
+/// @nodoc
+
 class _$MakePayment implements MakePayment {
-  const _$MakePayment(this.context) : assert(context != null);
+  const _$MakePayment(this.context);
 
   @override
   final BuildContext context;
@@ -221,32 +232,29 @@ class _$MakePayment implements MakePayment {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(context);
 
+  @JsonKey(ignore: true)
   @override
   $MakePaymentCopyWith<MakePayment> get copyWith =>
       _$MakePaymentCopyWithImpl<MakePayment>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initializePayment(),
-    @required Result makePayment(BuildContext context),
-    @required Result setPrice(int price),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initializePayment,
+    required TResult Function(BuildContext context) makePayment,
+    required TResult Function(int price) setPrice,
   }) {
-    assert(initializePayment != null);
-    assert(makePayment != null);
-    assert(setPrice != null);
     return makePayment(context);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initializePayment(),
-    Result makePayment(BuildContext context),
-    Result setPrice(int price),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initializePayment,
+    TResult Function(BuildContext context)? makePayment,
+    TResult Function(int price)? setPrice,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (makePayment != null) {
       return makePayment(context);
     }
@@ -255,26 +263,22 @@ class _$MakePayment implements MakePayment {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initializePayment(InitializePayment value),
-    @required Result makePayment(MakePayment value),
-    @required Result setPrice(SetPrice value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InitializePayment value) initializePayment,
+    required TResult Function(MakePayment value) makePayment,
+    required TResult Function(SetPrice value) setPrice,
   }) {
-    assert(initializePayment != null);
-    assert(makePayment != null);
-    assert(setPrice != null);
     return makePayment(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initializePayment(InitializePayment value),
-    Result makePayment(MakePayment value),
-    Result setPrice(SetPrice value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InitializePayment value)? initializePayment,
+    TResult Function(MakePayment value)? makePayment,
+    TResult Function(SetPrice value)? setPrice,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (makePayment != null) {
       return makePayment(this);
     }
@@ -285,16 +289,20 @@ class _$MakePayment implements MakePayment {
 abstract class MakePayment implements PaymentEvent {
   const factory MakePayment(BuildContext context) = _$MakePayment;
 
-  BuildContext get context;
-  $MakePaymentCopyWith<MakePayment> get copyWith;
+  BuildContext get context => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MakePaymentCopyWith<MakePayment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $SetPriceCopyWith<$Res> {
   factory $SetPriceCopyWith(SetPrice value, $Res Function(SetPrice) then) =
       _$SetPriceCopyWithImpl<$Res>;
   $Res call({int price});
 }
 
+/// @nodoc
 class _$SetPriceCopyWithImpl<$Res> extends _$PaymentEventCopyWithImpl<$Res>
     implements $SetPriceCopyWith<$Res> {
   _$SetPriceCopyWithImpl(SetPrice _value, $Res Function(SetPrice) _then)
@@ -305,16 +313,21 @@ class _$SetPriceCopyWithImpl<$Res> extends _$PaymentEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object price = freezed,
+    Object? price = freezed,
   }) {
     return _then(SetPrice(
-      price == freezed ? _value.price : price as int,
+      price == freezed
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
+/// @nodoc
+
 class _$SetPrice implements SetPrice {
-  const _$SetPrice(this.price) : assert(price != null);
+  const _$SetPrice(this.price);
 
   @override
   final int price;
@@ -336,32 +349,29 @@ class _$SetPrice implements SetPrice {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(price);
 
+  @JsonKey(ignore: true)
   @override
   $SetPriceCopyWith<SetPrice> get copyWith =>
       _$SetPriceCopyWithImpl<SetPrice>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initializePayment(),
-    @required Result makePayment(BuildContext context),
-    @required Result setPrice(int price),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initializePayment,
+    required TResult Function(BuildContext context) makePayment,
+    required TResult Function(int price) setPrice,
   }) {
-    assert(initializePayment != null);
-    assert(makePayment != null);
-    assert(setPrice != null);
     return setPrice(price);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initializePayment(),
-    Result makePayment(BuildContext context),
-    Result setPrice(int price),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initializePayment,
+    TResult Function(BuildContext context)? makePayment,
+    TResult Function(int price)? setPrice,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (setPrice != null) {
       return setPrice(price);
     }
@@ -370,26 +380,22 @@ class _$SetPrice implements SetPrice {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initializePayment(InitializePayment value),
-    @required Result makePayment(MakePayment value),
-    @required Result setPrice(SetPrice value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(InitializePayment value) initializePayment,
+    required TResult Function(MakePayment value) makePayment,
+    required TResult Function(SetPrice value) setPrice,
   }) {
-    assert(initializePayment != null);
-    assert(makePayment != null);
-    assert(setPrice != null);
     return setPrice(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initializePayment(InitializePayment value),
-    Result makePayment(MakePayment value),
-    Result setPrice(SetPrice value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InitializePayment value)? initializePayment,
+    TResult Function(MakePayment value)? makePayment,
+    TResult Function(SetPrice value)? setPrice,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (setPrice != null) {
       return setPrice(this);
     }
@@ -400,87 +406,92 @@ class _$SetPrice implements SetPrice {
 abstract class SetPrice implements PaymentEvent {
   const factory SetPrice(int price) = _$SetPrice;
 
-  int get price;
-  $SetPriceCopyWith<SetPrice> get copyWith;
+  int get price => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SetPriceCopyWith<SetPrice> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 class _$PaymentStateTearOff {
   const _$PaymentStateTearOff();
 
-// ignore: unused_element
   PaymentInitial paymentInitial() {
     return const PaymentInitial();
   }
 
-// ignore: unused_element
   PaymentInitialized paymentInitialized() {
     return const PaymentInitialized();
   }
 
-// ignore: unused_element
   PaymentFailed paymentFailed(Failure failure) {
     return PaymentFailed(
       failure,
     );
   }
 
-// ignore: unused_element
   PaymentSucceeded paymentSucceeded() {
     return const PaymentSucceeded();
   }
 
-// ignore: unused_element
   PaymentLoading paymentLoading() {
     return const PaymentLoading();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $PaymentState = _$PaymentStateTearOff();
 
+/// @nodoc
 mixin _$PaymentState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result paymentInitial(),
-    @required Result paymentInitialized(),
-    @required Result paymentFailed(Failure failure),
-    @required Result paymentSucceeded(),
-    @required Result paymentLoading(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() paymentInitial,
+    required TResult Function() paymentInitialized,
+    required TResult Function(Failure failure) paymentFailed,
+    required TResult Function() paymentSucceeded,
+    required TResult Function() paymentLoading,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result paymentInitial(),
-    Result paymentInitialized(),
-    Result paymentFailed(Failure failure),
-    Result paymentSucceeded(),
-    Result paymentLoading(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? paymentInitial,
+    TResult Function()? paymentInitialized,
+    TResult Function(Failure failure)? paymentFailed,
+    TResult Function()? paymentSucceeded,
+    TResult Function()? paymentLoading,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result paymentInitial(PaymentInitial value),
-    @required Result paymentInitialized(PaymentInitialized value),
-    @required Result paymentFailed(PaymentFailed value),
-    @required Result paymentSucceeded(PaymentSucceeded value),
-    @required Result paymentLoading(PaymentLoading value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(PaymentInitial value) paymentInitial,
+    required TResult Function(PaymentInitialized value) paymentInitialized,
+    required TResult Function(PaymentFailed value) paymentFailed,
+    required TResult Function(PaymentSucceeded value) paymentSucceeded,
+    required TResult Function(PaymentLoading value) paymentLoading,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result paymentInitial(PaymentInitial value),
-    Result paymentInitialized(PaymentInitialized value),
-    Result paymentFailed(PaymentFailed value),
-    Result paymentSucceeded(PaymentSucceeded value),
-    Result paymentLoading(PaymentLoading value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PaymentInitial value)? paymentInitial,
+    TResult Function(PaymentInitialized value)? paymentInitialized,
+    TResult Function(PaymentFailed value)? paymentFailed,
+    TResult Function(PaymentSucceeded value)? paymentSucceeded,
+    TResult Function(PaymentLoading value)? paymentLoading,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $PaymentStateCopyWith<$Res> {
   factory $PaymentStateCopyWith(
           PaymentState value, $Res Function(PaymentState) then) =
       _$PaymentStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$PaymentStateCopyWithImpl<$Res> implements $PaymentStateCopyWith<$Res> {
   _$PaymentStateCopyWithImpl(this._value, this._then);
 
@@ -489,12 +500,14 @@ class _$PaymentStateCopyWithImpl<$Res> implements $PaymentStateCopyWith<$Res> {
   final $Res Function(PaymentState) _then;
 }
 
+/// @nodoc
 abstract class $PaymentInitialCopyWith<$Res> {
   factory $PaymentInitialCopyWith(
           PaymentInitial value, $Res Function(PaymentInitial) then) =
       _$PaymentInitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$PaymentInitialCopyWithImpl<$Res>
     extends _$PaymentStateCopyWithImpl<$Res>
     implements $PaymentInitialCopyWith<$Res> {
@@ -505,6 +518,8 @@ class _$PaymentInitialCopyWithImpl<$Res>
   @override
   PaymentInitial get _value => super._value as PaymentInitial;
 }
+
+/// @nodoc
 
 class _$PaymentInitial implements PaymentInitial {
   const _$PaymentInitial();
@@ -524,32 +539,26 @@ class _$PaymentInitial implements PaymentInitial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result paymentInitial(),
-    @required Result paymentInitialized(),
-    @required Result paymentFailed(Failure failure),
-    @required Result paymentSucceeded(),
-    @required Result paymentLoading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() paymentInitial,
+    required TResult Function() paymentInitialized,
+    required TResult Function(Failure failure) paymentFailed,
+    required TResult Function() paymentSucceeded,
+    required TResult Function() paymentLoading,
   }) {
-    assert(paymentInitial != null);
-    assert(paymentInitialized != null);
-    assert(paymentFailed != null);
-    assert(paymentSucceeded != null);
-    assert(paymentLoading != null);
     return paymentInitial();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result paymentInitial(),
-    Result paymentInitialized(),
-    Result paymentFailed(Failure failure),
-    Result paymentSucceeded(),
-    Result paymentLoading(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? paymentInitial,
+    TResult Function()? paymentInitialized,
+    TResult Function(Failure failure)? paymentFailed,
+    TResult Function()? paymentSucceeded,
+    TResult Function()? paymentLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentInitial != null) {
       return paymentInitial();
     }
@@ -558,32 +567,26 @@ class _$PaymentInitial implements PaymentInitial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result paymentInitial(PaymentInitial value),
-    @required Result paymentInitialized(PaymentInitialized value),
-    @required Result paymentFailed(PaymentFailed value),
-    @required Result paymentSucceeded(PaymentSucceeded value),
-    @required Result paymentLoading(PaymentLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(PaymentInitial value) paymentInitial,
+    required TResult Function(PaymentInitialized value) paymentInitialized,
+    required TResult Function(PaymentFailed value) paymentFailed,
+    required TResult Function(PaymentSucceeded value) paymentSucceeded,
+    required TResult Function(PaymentLoading value) paymentLoading,
   }) {
-    assert(paymentInitial != null);
-    assert(paymentInitialized != null);
-    assert(paymentFailed != null);
-    assert(paymentSucceeded != null);
-    assert(paymentLoading != null);
     return paymentInitial(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result paymentInitial(PaymentInitial value),
-    Result paymentInitialized(PaymentInitialized value),
-    Result paymentFailed(PaymentFailed value),
-    Result paymentSucceeded(PaymentSucceeded value),
-    Result paymentLoading(PaymentLoading value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PaymentInitial value)? paymentInitial,
+    TResult Function(PaymentInitialized value)? paymentInitialized,
+    TResult Function(PaymentFailed value)? paymentFailed,
+    TResult Function(PaymentSucceeded value)? paymentSucceeded,
+    TResult Function(PaymentLoading value)? paymentLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentInitial != null) {
       return paymentInitial(this);
     }
@@ -595,12 +598,14 @@ abstract class PaymentInitial implements PaymentState {
   const factory PaymentInitial() = _$PaymentInitial;
 }
 
+/// @nodoc
 abstract class $PaymentInitializedCopyWith<$Res> {
   factory $PaymentInitializedCopyWith(
           PaymentInitialized value, $Res Function(PaymentInitialized) then) =
       _$PaymentInitializedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$PaymentInitializedCopyWithImpl<$Res>
     extends _$PaymentStateCopyWithImpl<$Res>
     implements $PaymentInitializedCopyWith<$Res> {
@@ -611,6 +616,8 @@ class _$PaymentInitializedCopyWithImpl<$Res>
   @override
   PaymentInitialized get _value => super._value as PaymentInitialized;
 }
+
+/// @nodoc
 
 class _$PaymentInitialized implements PaymentInitialized {
   const _$PaymentInitialized();
@@ -630,32 +637,26 @@ class _$PaymentInitialized implements PaymentInitialized {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result paymentInitial(),
-    @required Result paymentInitialized(),
-    @required Result paymentFailed(Failure failure),
-    @required Result paymentSucceeded(),
-    @required Result paymentLoading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() paymentInitial,
+    required TResult Function() paymentInitialized,
+    required TResult Function(Failure failure) paymentFailed,
+    required TResult Function() paymentSucceeded,
+    required TResult Function() paymentLoading,
   }) {
-    assert(paymentInitial != null);
-    assert(paymentInitialized != null);
-    assert(paymentFailed != null);
-    assert(paymentSucceeded != null);
-    assert(paymentLoading != null);
     return paymentInitialized();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result paymentInitial(),
-    Result paymentInitialized(),
-    Result paymentFailed(Failure failure),
-    Result paymentSucceeded(),
-    Result paymentLoading(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? paymentInitial,
+    TResult Function()? paymentInitialized,
+    TResult Function(Failure failure)? paymentFailed,
+    TResult Function()? paymentSucceeded,
+    TResult Function()? paymentLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentInitialized != null) {
       return paymentInitialized();
     }
@@ -664,32 +665,26 @@ class _$PaymentInitialized implements PaymentInitialized {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result paymentInitial(PaymentInitial value),
-    @required Result paymentInitialized(PaymentInitialized value),
-    @required Result paymentFailed(PaymentFailed value),
-    @required Result paymentSucceeded(PaymentSucceeded value),
-    @required Result paymentLoading(PaymentLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(PaymentInitial value) paymentInitial,
+    required TResult Function(PaymentInitialized value) paymentInitialized,
+    required TResult Function(PaymentFailed value) paymentFailed,
+    required TResult Function(PaymentSucceeded value) paymentSucceeded,
+    required TResult Function(PaymentLoading value) paymentLoading,
   }) {
-    assert(paymentInitial != null);
-    assert(paymentInitialized != null);
-    assert(paymentFailed != null);
-    assert(paymentSucceeded != null);
-    assert(paymentLoading != null);
     return paymentInitialized(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result paymentInitial(PaymentInitial value),
-    Result paymentInitialized(PaymentInitialized value),
-    Result paymentFailed(PaymentFailed value),
-    Result paymentSucceeded(PaymentSucceeded value),
-    Result paymentLoading(PaymentLoading value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PaymentInitial value)? paymentInitial,
+    TResult Function(PaymentInitialized value)? paymentInitialized,
+    TResult Function(PaymentFailed value)? paymentFailed,
+    TResult Function(PaymentSucceeded value)? paymentSucceeded,
+    TResult Function(PaymentLoading value)? paymentLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentInitialized != null) {
       return paymentInitialized(this);
     }
@@ -701,6 +696,7 @@ abstract class PaymentInitialized implements PaymentState {
   const factory PaymentInitialized() = _$PaymentInitialized;
 }
 
+/// @nodoc
 abstract class $PaymentFailedCopyWith<$Res> {
   factory $PaymentFailedCopyWith(
           PaymentFailed value, $Res Function(PaymentFailed) then) =
@@ -710,6 +706,7 @@ abstract class $PaymentFailedCopyWith<$Res> {
   $FailureCopyWith<$Res> get failure;
 }
 
+/// @nodoc
 class _$PaymentFailedCopyWithImpl<$Res> extends _$PaymentStateCopyWithImpl<$Res>
     implements $PaymentFailedCopyWith<$Res> {
   _$PaymentFailedCopyWithImpl(
@@ -721,26 +718,28 @@ class _$PaymentFailedCopyWithImpl<$Res> extends _$PaymentStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object failure = freezed,
+    Object? failure = freezed,
   }) {
     return _then(PaymentFailed(
-      failure == freezed ? _value.failure : failure as Failure,
+      failure == freezed
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as Failure,
     ));
   }
 
   @override
   $FailureCopyWith<$Res> get failure {
-    if (_value.failure == null) {
-      return null;
-    }
     return $FailureCopyWith<$Res>(_value.failure, (value) {
       return _then(_value.copyWith(failure: value));
     });
   }
 }
 
+/// @nodoc
+
 class _$PaymentFailed implements PaymentFailed {
-  const _$PaymentFailed(this.failure) : assert(failure != null);
+  const _$PaymentFailed(this.failure);
 
   @override
   final Failure failure;
@@ -762,38 +761,33 @@ class _$PaymentFailed implements PaymentFailed {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failure);
 
+  @JsonKey(ignore: true)
   @override
   $PaymentFailedCopyWith<PaymentFailed> get copyWith =>
       _$PaymentFailedCopyWithImpl<PaymentFailed>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result paymentInitial(),
-    @required Result paymentInitialized(),
-    @required Result paymentFailed(Failure failure),
-    @required Result paymentSucceeded(),
-    @required Result paymentLoading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() paymentInitial,
+    required TResult Function() paymentInitialized,
+    required TResult Function(Failure failure) paymentFailed,
+    required TResult Function() paymentSucceeded,
+    required TResult Function() paymentLoading,
   }) {
-    assert(paymentInitial != null);
-    assert(paymentInitialized != null);
-    assert(paymentFailed != null);
-    assert(paymentSucceeded != null);
-    assert(paymentLoading != null);
     return paymentFailed(failure);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result paymentInitial(),
-    Result paymentInitialized(),
-    Result paymentFailed(Failure failure),
-    Result paymentSucceeded(),
-    Result paymentLoading(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? paymentInitial,
+    TResult Function()? paymentInitialized,
+    TResult Function(Failure failure)? paymentFailed,
+    TResult Function()? paymentSucceeded,
+    TResult Function()? paymentLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentFailed != null) {
       return paymentFailed(failure);
     }
@@ -802,32 +796,26 @@ class _$PaymentFailed implements PaymentFailed {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result paymentInitial(PaymentInitial value),
-    @required Result paymentInitialized(PaymentInitialized value),
-    @required Result paymentFailed(PaymentFailed value),
-    @required Result paymentSucceeded(PaymentSucceeded value),
-    @required Result paymentLoading(PaymentLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(PaymentInitial value) paymentInitial,
+    required TResult Function(PaymentInitialized value) paymentInitialized,
+    required TResult Function(PaymentFailed value) paymentFailed,
+    required TResult Function(PaymentSucceeded value) paymentSucceeded,
+    required TResult Function(PaymentLoading value) paymentLoading,
   }) {
-    assert(paymentInitial != null);
-    assert(paymentInitialized != null);
-    assert(paymentFailed != null);
-    assert(paymentSucceeded != null);
-    assert(paymentLoading != null);
     return paymentFailed(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result paymentInitial(PaymentInitial value),
-    Result paymentInitialized(PaymentInitialized value),
-    Result paymentFailed(PaymentFailed value),
-    Result paymentSucceeded(PaymentSucceeded value),
-    Result paymentLoading(PaymentLoading value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PaymentInitial value)? paymentInitial,
+    TResult Function(PaymentInitialized value)? paymentInitialized,
+    TResult Function(PaymentFailed value)? paymentFailed,
+    TResult Function(PaymentSucceeded value)? paymentSucceeded,
+    TResult Function(PaymentLoading value)? paymentLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentFailed != null) {
       return paymentFailed(this);
     }
@@ -838,16 +826,20 @@ class _$PaymentFailed implements PaymentFailed {
 abstract class PaymentFailed implements PaymentState {
   const factory PaymentFailed(Failure failure) = _$PaymentFailed;
 
-  Failure get failure;
-  $PaymentFailedCopyWith<PaymentFailed> get copyWith;
+  Failure get failure => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PaymentFailedCopyWith<PaymentFailed> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $PaymentSucceededCopyWith<$Res> {
   factory $PaymentSucceededCopyWith(
           PaymentSucceeded value, $Res Function(PaymentSucceeded) then) =
       _$PaymentSucceededCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$PaymentSucceededCopyWithImpl<$Res>
     extends _$PaymentStateCopyWithImpl<$Res>
     implements $PaymentSucceededCopyWith<$Res> {
@@ -858,6 +850,8 @@ class _$PaymentSucceededCopyWithImpl<$Res>
   @override
   PaymentSucceeded get _value => super._value as PaymentSucceeded;
 }
+
+/// @nodoc
 
 class _$PaymentSucceeded implements PaymentSucceeded {
   const _$PaymentSucceeded();
@@ -877,32 +871,26 @@ class _$PaymentSucceeded implements PaymentSucceeded {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result paymentInitial(),
-    @required Result paymentInitialized(),
-    @required Result paymentFailed(Failure failure),
-    @required Result paymentSucceeded(),
-    @required Result paymentLoading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() paymentInitial,
+    required TResult Function() paymentInitialized,
+    required TResult Function(Failure failure) paymentFailed,
+    required TResult Function() paymentSucceeded,
+    required TResult Function() paymentLoading,
   }) {
-    assert(paymentInitial != null);
-    assert(paymentInitialized != null);
-    assert(paymentFailed != null);
-    assert(paymentSucceeded != null);
-    assert(paymentLoading != null);
     return paymentSucceeded();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result paymentInitial(),
-    Result paymentInitialized(),
-    Result paymentFailed(Failure failure),
-    Result paymentSucceeded(),
-    Result paymentLoading(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? paymentInitial,
+    TResult Function()? paymentInitialized,
+    TResult Function(Failure failure)? paymentFailed,
+    TResult Function()? paymentSucceeded,
+    TResult Function()? paymentLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentSucceeded != null) {
       return paymentSucceeded();
     }
@@ -911,32 +899,26 @@ class _$PaymentSucceeded implements PaymentSucceeded {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result paymentInitial(PaymentInitial value),
-    @required Result paymentInitialized(PaymentInitialized value),
-    @required Result paymentFailed(PaymentFailed value),
-    @required Result paymentSucceeded(PaymentSucceeded value),
-    @required Result paymentLoading(PaymentLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(PaymentInitial value) paymentInitial,
+    required TResult Function(PaymentInitialized value) paymentInitialized,
+    required TResult Function(PaymentFailed value) paymentFailed,
+    required TResult Function(PaymentSucceeded value) paymentSucceeded,
+    required TResult Function(PaymentLoading value) paymentLoading,
   }) {
-    assert(paymentInitial != null);
-    assert(paymentInitialized != null);
-    assert(paymentFailed != null);
-    assert(paymentSucceeded != null);
-    assert(paymentLoading != null);
     return paymentSucceeded(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result paymentInitial(PaymentInitial value),
-    Result paymentInitialized(PaymentInitialized value),
-    Result paymentFailed(PaymentFailed value),
-    Result paymentSucceeded(PaymentSucceeded value),
-    Result paymentLoading(PaymentLoading value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PaymentInitial value)? paymentInitial,
+    TResult Function(PaymentInitialized value)? paymentInitialized,
+    TResult Function(PaymentFailed value)? paymentFailed,
+    TResult Function(PaymentSucceeded value)? paymentSucceeded,
+    TResult Function(PaymentLoading value)? paymentLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentSucceeded != null) {
       return paymentSucceeded(this);
     }
@@ -948,12 +930,14 @@ abstract class PaymentSucceeded implements PaymentState {
   const factory PaymentSucceeded() = _$PaymentSucceeded;
 }
 
+/// @nodoc
 abstract class $PaymentLoadingCopyWith<$Res> {
   factory $PaymentLoadingCopyWith(
           PaymentLoading value, $Res Function(PaymentLoading) then) =
       _$PaymentLoadingCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$PaymentLoadingCopyWithImpl<$Res>
     extends _$PaymentStateCopyWithImpl<$Res>
     implements $PaymentLoadingCopyWith<$Res> {
@@ -964,6 +948,8 @@ class _$PaymentLoadingCopyWithImpl<$Res>
   @override
   PaymentLoading get _value => super._value as PaymentLoading;
 }
+
+/// @nodoc
 
 class _$PaymentLoading implements PaymentLoading {
   const _$PaymentLoading();
@@ -983,32 +969,26 @@ class _$PaymentLoading implements PaymentLoading {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result paymentInitial(),
-    @required Result paymentInitialized(),
-    @required Result paymentFailed(Failure failure),
-    @required Result paymentSucceeded(),
-    @required Result paymentLoading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() paymentInitial,
+    required TResult Function() paymentInitialized,
+    required TResult Function(Failure failure) paymentFailed,
+    required TResult Function() paymentSucceeded,
+    required TResult Function() paymentLoading,
   }) {
-    assert(paymentInitial != null);
-    assert(paymentInitialized != null);
-    assert(paymentFailed != null);
-    assert(paymentSucceeded != null);
-    assert(paymentLoading != null);
     return paymentLoading();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result paymentInitial(),
-    Result paymentInitialized(),
-    Result paymentFailed(Failure failure),
-    Result paymentSucceeded(),
-    Result paymentLoading(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? paymentInitial,
+    TResult Function()? paymentInitialized,
+    TResult Function(Failure failure)? paymentFailed,
+    TResult Function()? paymentSucceeded,
+    TResult Function()? paymentLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentLoading != null) {
       return paymentLoading();
     }
@@ -1017,32 +997,26 @@ class _$PaymentLoading implements PaymentLoading {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result paymentInitial(PaymentInitial value),
-    @required Result paymentInitialized(PaymentInitialized value),
-    @required Result paymentFailed(PaymentFailed value),
-    @required Result paymentSucceeded(PaymentSucceeded value),
-    @required Result paymentLoading(PaymentLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(PaymentInitial value) paymentInitial,
+    required TResult Function(PaymentInitialized value) paymentInitialized,
+    required TResult Function(PaymentFailed value) paymentFailed,
+    required TResult Function(PaymentSucceeded value) paymentSucceeded,
+    required TResult Function(PaymentLoading value) paymentLoading,
   }) {
-    assert(paymentInitial != null);
-    assert(paymentInitialized != null);
-    assert(paymentFailed != null);
-    assert(paymentSucceeded != null);
-    assert(paymentLoading != null);
     return paymentLoading(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result paymentInitial(PaymentInitial value),
-    Result paymentInitialized(PaymentInitialized value),
-    Result paymentFailed(PaymentFailed value),
-    Result paymentSucceeded(PaymentSucceeded value),
-    Result paymentLoading(PaymentLoading value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PaymentInitial value)? paymentInitial,
+    TResult Function(PaymentInitialized value)? paymentInitialized,
+    TResult Function(PaymentFailed value)? paymentFailed,
+    TResult Function(PaymentSucceeded value)? paymentSucceeded,
+    TResult Function(PaymentLoading value)? paymentLoading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (paymentLoading != null) {
       return paymentLoading(this);
     }

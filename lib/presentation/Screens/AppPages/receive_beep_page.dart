@@ -8,9 +8,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ReceiveBeepPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
-  final Buddy buddy;
+  final Buddy? buddy;
 
-  ReceiveBeepPage({@required this.buddy});
+  ReceiveBeepPage({required this.buddy});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class ReceiveBeepPage extends StatelessWidget {
         body: MultiBlocProvider(
           providers: [
             BlocProvider(
-                create: (_) => getIt<MapBloc>()..add(RenderBuddyMap(buddy))),
+                create: (_) => getIt<MapBloc>()..add(RenderBuddyMap(buddy!))),
             BlocProvider(
                 create: (_) => getIt<AddressBloc>()..add(GetBuddyAddress())),
           ],

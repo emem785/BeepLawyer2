@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MenuItem extends StatelessWidget {
-  final SvgPicture icon;
-  final String mainText;
-  final String subText;
+  final SvgPicture? icon;
+  final String? mainText;
+  final String? subText;
 
-  const MenuItem({Key key, this.icon, this.mainText, this.subText})
+  const MenuItem({Key? key, this.icon, this.mainText, this.subText})
       : super(key: key);
 
   @override
@@ -25,12 +25,12 @@ class MenuItem extends StatelessWidget {
                               child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(mainText,
+                      Text(mainText!,
                           style: TextStyle(
                               fontFamily: 'Nunito',
                               fontSize: 16,
                               fontWeight: FontWeight.w600)),
-                      Text(subText,
+                      Text(subText!,
                           style: TextStyle(
                               fontFamily: 'Nunito',
                               fontSize: 14,

@@ -9,7 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class ChangePasswordOne extends StatefulWidget {
   final phone;
 
-  const ChangePasswordOne({Key key, this.phone}) : super(key: key);
+  const ChangePasswordOne({Key? key, this.phone}) : super(key: key);
   @override
   _ChangePasswordOneState createState() => _ChangePasswordOneState();
 }
@@ -17,8 +17,8 @@ class ChangePasswordOne extends StatefulWidget {
 class _ChangePasswordOneState extends State<ChangePasswordOne> {
   final _formKey = GlobalKey<FormState>();
   final _key = GlobalKey<ScaffoldState>();
-  TextEditingController _smsCode;
-  Timer _timer;
+  TextEditingController? _smsCode;
+  Timer? _timer;
   int _count = 60;
   bool isCounting = false;
 
@@ -31,7 +31,7 @@ class _ChangePasswordOneState extends State<ChangePasswordOne> {
   @override
   void dispose() {
     super.dispose();
-    _smsCode.dispose();
+    _smsCode!.dispose();
     // _timer.cancel();
   }
 
@@ -87,7 +87,7 @@ class _ChangePasswordOneState extends State<ChangePasswordOne> {
                             ),
                             TextFormField(
                               controller: _smsCode,
-                              validator: (value) => (value.isEmpty)
+                              validator: (value) => (value!.isEmpty)
                                   ? "Please enter 4-digit code"
                                   : null,
                               keyboardType: TextInputType.number,
@@ -105,7 +105,7 @@ class _ChangePasswordOneState extends State<ChangePasswordOne> {
                           child: InkWell(
                             onTap: () {
                               registerBloc.add(GetCode(widget.phone));
-                            }, 
+                            },
                             child: Row(
                               children: <Widget>[
                                 Text(
@@ -142,23 +142,23 @@ class _ChangePasswordOneState extends State<ChangePasswordOne> {
                               orElse: () => SizedBox(),
                               loading: (m) => LoadingIndicator());
                         }, listener: (_, state) {
-                          return state.maybeMap(
+                          state.maybeMap(
                               orElse: () => 1,
                               verifyComplete: (u) => Navigator.pushNamed(
                                   context, 'ChangePasswordTwo'),
                               error: (e) =>
-                                  _key.currentState.showSnackBar(SnackBar(
+                                  _key.currentState!.showSnackBar(SnackBar(
                                     content: Text(e.failure.message),
                                   )),
-                              getCodeComplete: (c) => _smsCode.text = c.code);
+                              getCodeComplete: (c) => _smsCode!.text = c.code);
                         }),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 8.0),
                           child: CommonButton(
                             onPressed: () {
-                              if (_formKey.currentState.validate()) {
+                              if (_formKey.currentState!.validate()) {
                                 registerBloc.add(
-                                    MobileVerify(widget.phone, _smsCode.text));
+                                    MobileVerify(widget.phone, _smsCode!.text));
                               }
                               // Navigator.pushNamed(context, 'ChangePasswordTwo');
                             },

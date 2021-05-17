@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 class BottomContainer extends StatelessWidget {
   final double height;
   const BottomContainer({
-    Key key,
-    @required this.height,
+    Key? key,
+    required this.height,
   }) : super(key: key);
 
   @override
@@ -36,7 +36,7 @@ class BottomContainer extends StatelessWidget {
 
 class BottomContainerOffline extends StatelessWidget {
   final double height;
-  const BottomContainerOffline({Key key,@required this.height}) : super(key: key);
+  const BottomContainerOffline({Key? key,required this.height}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

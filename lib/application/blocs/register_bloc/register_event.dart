@@ -4,7 +4,7 @@ part of 'register_bloc.dart';
 @freezed
 abstract class RegisterEvent with _$RegisterEvent {
   const factory RegisterEvent.register(
-      {User user, String password, String imagePath}) = RegisterUser;
+      {User? user, String? password, String? imagePath}) = RegisterUser;
   const factory RegisterEvent.getCode(String phoneNumber) = GetCode;
   const factory RegisterEvent.mobileVerify(String phoneNumber, String code) =
       MobileVerify;

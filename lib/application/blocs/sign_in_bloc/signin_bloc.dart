@@ -16,10 +16,10 @@ part 'signin_bloc.freezed.dart';
 
 @injectable
 class SigninBloc extends Bloc<SignInEvent, SignInState> {
-  final ApiInterface apiInterface;
- final LocalStorageInterface localStorageInterface;
+  final ApiInterface? apiInterface;
+ final LocalStorageInterface? localStorageInterface;
 
-  SigninBloc({@required this.localStorageInterface, @required this.apiInterface}) : super(SignInStateInitial());
+  SigninBloc({required this.localStorageInterface, required this.apiInterface}) : super(SignInStateInitial());
 
   @override
   Stream<SignInState> mapEventToState(
@@ -27,11 +27,11 @@ class SigninBloc extends Bloc<SignInEvent, SignInState> {
   ) async* {
     yield SignInStateAuthenticating();
     yield* event.map(onSubmit: (e) async* {
-      final response = await apiInterface.signIn(e.phoneNumber, e.password);
+      final response = await apiInterface!.signIn(e.phoneNumber, e.password);
       yield* response.fold((l) async* {
         yield SignInStateError(l);
       }, (r) async* {
-        localStorageInterface.cacheUserFromSignIn(r, e.phoneNumber);
+        localStorageInterface!.cacheUserFromSignIn(r, e.phoneNumber);
         yield SignInStateAuthenticated();
       });
     }, register: (e) async* {

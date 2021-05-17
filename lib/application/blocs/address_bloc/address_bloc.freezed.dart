@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'address_bloc.dart';
 
@@ -9,54 +9,63 @@ part of 'address_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$AddressEventTearOff {
   const _$AddressEventTearOff();
 
-// ignore: unused_element
   GetAddress getAddress() {
     return const GetAddress();
   }
 
-// ignore: unused_element
   GetBuddyAddress getBuddyAddress() {
     return const GetBuddyAddress();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $AddressEvent = _$AddressEventTearOff();
 
+/// @nodoc
 mixin _$AddressEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getAddress(),
-    @required Result getBuddyAddress(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() getAddress,
+    required TResult Function() getBuddyAddress,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getAddress(),
-    Result getBuddyAddress(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getAddress,
+    TResult Function()? getBuddyAddress,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getAddress(GetAddress value),
-    @required Result getBuddyAddress(GetBuddyAddress value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetAddress value) getAddress,
+    required TResult Function(GetBuddyAddress value) getBuddyAddress,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getAddress(GetAddress value),
-    Result getBuddyAddress(GetBuddyAddress value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetAddress value)? getAddress,
+    TResult Function(GetBuddyAddress value)? getBuddyAddress,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $AddressEventCopyWith<$Res> {
   factory $AddressEventCopyWith(
           AddressEvent value, $Res Function(AddressEvent) then) =
       _$AddressEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AddressEventCopyWithImpl<$Res> implements $AddressEventCopyWith<$Res> {
   _$AddressEventCopyWithImpl(this._value, this._then);
 
@@ -65,12 +74,14 @@ class _$AddressEventCopyWithImpl<$Res> implements $AddressEventCopyWith<$Res> {
   final $Res Function(AddressEvent) _then;
 }
 
+/// @nodoc
 abstract class $GetAddressCopyWith<$Res> {
   factory $GetAddressCopyWith(
           GetAddress value, $Res Function(GetAddress) then) =
       _$GetAddressCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$GetAddressCopyWithImpl<$Res> extends _$AddressEventCopyWithImpl<$Res>
     implements $GetAddressCopyWith<$Res> {
   _$GetAddressCopyWithImpl(GetAddress _value, $Res Function(GetAddress) _then)
@@ -79,6 +90,8 @@ class _$GetAddressCopyWithImpl<$Res> extends _$AddressEventCopyWithImpl<$Res>
   @override
   GetAddress get _value => super._value as GetAddress;
 }
+
+/// @nodoc
 
 class _$GetAddress implements GetAddress {
   const _$GetAddress();
@@ -98,23 +111,20 @@ class _$GetAddress implements GetAddress {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getAddress(),
-    @required Result getBuddyAddress(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() getAddress,
+    required TResult Function() getBuddyAddress,
   }) {
-    assert(getAddress != null);
-    assert(getBuddyAddress != null);
     return getAddress();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getAddress(),
-    Result getBuddyAddress(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getAddress,
+    TResult Function()? getBuddyAddress,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (getAddress != null) {
       return getAddress();
     }
@@ -123,23 +133,20 @@ class _$GetAddress implements GetAddress {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getAddress(GetAddress value),
-    @required Result getBuddyAddress(GetBuddyAddress value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetAddress value) getAddress,
+    required TResult Function(GetBuddyAddress value) getBuddyAddress,
   }) {
-    assert(getAddress != null);
-    assert(getBuddyAddress != null);
     return getAddress(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getAddress(GetAddress value),
-    Result getBuddyAddress(GetBuddyAddress value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetAddress value)? getAddress,
+    TResult Function(GetBuddyAddress value)? getBuddyAddress,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (getAddress != null) {
       return getAddress(this);
     }
@@ -151,12 +158,14 @@ abstract class GetAddress implements AddressEvent {
   const factory GetAddress() = _$GetAddress;
 }
 
+/// @nodoc
 abstract class $GetBuddyAddressCopyWith<$Res> {
   factory $GetBuddyAddressCopyWith(
           GetBuddyAddress value, $Res Function(GetBuddyAddress) then) =
       _$GetBuddyAddressCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$GetBuddyAddressCopyWithImpl<$Res>
     extends _$AddressEventCopyWithImpl<$Res>
     implements $GetBuddyAddressCopyWith<$Res> {
@@ -167,6 +176,8 @@ class _$GetBuddyAddressCopyWithImpl<$Res>
   @override
   GetBuddyAddress get _value => super._value as GetBuddyAddress;
 }
+
+/// @nodoc
 
 class _$GetBuddyAddress implements GetBuddyAddress {
   const _$GetBuddyAddress();
@@ -186,23 +197,20 @@ class _$GetBuddyAddress implements GetBuddyAddress {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result getAddress(),
-    @required Result getBuddyAddress(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() getAddress,
+    required TResult Function() getBuddyAddress,
   }) {
-    assert(getAddress != null);
-    assert(getBuddyAddress != null);
     return getBuddyAddress();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result getAddress(),
-    Result getBuddyAddress(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getAddress,
+    TResult Function()? getBuddyAddress,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (getBuddyAddress != null) {
       return getBuddyAddress();
     }
@@ -211,23 +219,20 @@ class _$GetBuddyAddress implements GetBuddyAddress {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result getAddress(GetAddress value),
-    @required Result getBuddyAddress(GetBuddyAddress value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(GetAddress value) getAddress,
+    required TResult Function(GetBuddyAddress value) getBuddyAddress,
   }) {
-    assert(getAddress != null);
-    assert(getBuddyAddress != null);
     return getBuddyAddress(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result getAddress(GetAddress value),
-    Result getBuddyAddress(GetBuddyAddress value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(GetAddress value)? getAddress,
+    TResult Function(GetBuddyAddress value)? getBuddyAddress,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (getBuddyAddress != null) {
       return getBuddyAddress(this);
     }
@@ -239,74 +244,78 @@ abstract class GetBuddyAddress implements AddressEvent {
   const factory GetBuddyAddress() = _$GetBuddyAddress;
 }
 
+/// @nodoc
 class _$AddressStateTearOff {
   const _$AddressStateTearOff();
 
-// ignore: unused_element
   AddressInitial addressInitial() {
     return const AddressInitial();
   }
 
-// ignore: unused_element
   AddressLoading addressLoading() {
     return const AddressLoading();
   }
 
-// ignore: unused_element
   AddressGotten addressGotten(String address) {
     return AddressGotten(
       address,
     );
   }
 
-// ignore: unused_element
   AddressFailure addressFailure() {
     return const AddressFailure();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $AddressState = _$AddressStateTearOff();
 
+/// @nodoc
 mixin _$AddressState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result addressInitial(),
-    @required Result addressLoading(),
-    @required Result addressGotten(String address),
-    @required Result addressFailure(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() addressInitial,
+    required TResult Function() addressLoading,
+    required TResult Function(String address) addressGotten,
+    required TResult Function() addressFailure,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result addressInitial(),
-    Result addressLoading(),
-    Result addressGotten(String address),
-    Result addressFailure(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? addressInitial,
+    TResult Function()? addressLoading,
+    TResult Function(String address)? addressGotten,
+    TResult Function()? addressFailure,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result addressInitial(AddressInitial value),
-    @required Result addressLoading(AddressLoading value),
-    @required Result addressGotten(AddressGotten value),
-    @required Result addressFailure(AddressFailure value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(AddressInitial value) addressInitial,
+    required TResult Function(AddressLoading value) addressLoading,
+    required TResult Function(AddressGotten value) addressGotten,
+    required TResult Function(AddressFailure value) addressFailure,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result addressInitial(AddressInitial value),
-    Result addressLoading(AddressLoading value),
-    Result addressGotten(AddressGotten value),
-    Result addressFailure(AddressFailure value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AddressInitial value)? addressInitial,
+    TResult Function(AddressLoading value)? addressLoading,
+    TResult Function(AddressGotten value)? addressGotten,
+    TResult Function(AddressFailure value)? addressFailure,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $AddressStateCopyWith<$Res> {
   factory $AddressStateCopyWith(
           AddressState value, $Res Function(AddressState) then) =
       _$AddressStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AddressStateCopyWithImpl<$Res> implements $AddressStateCopyWith<$Res> {
   _$AddressStateCopyWithImpl(this._value, this._then);
 
@@ -315,12 +324,14 @@ class _$AddressStateCopyWithImpl<$Res> implements $AddressStateCopyWith<$Res> {
   final $Res Function(AddressState) _then;
 }
 
+/// @nodoc
 abstract class $AddressInitialCopyWith<$Res> {
   factory $AddressInitialCopyWith(
           AddressInitial value, $Res Function(AddressInitial) then) =
       _$AddressInitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AddressInitialCopyWithImpl<$Res>
     extends _$AddressStateCopyWithImpl<$Res>
     implements $AddressInitialCopyWith<$Res> {
@@ -331,6 +342,8 @@ class _$AddressInitialCopyWithImpl<$Res>
   @override
   AddressInitial get _value => super._value as AddressInitial;
 }
+
+/// @nodoc
 
 class _$AddressInitial implements AddressInitial {
   const _$AddressInitial();
@@ -350,29 +363,24 @@ class _$AddressInitial implements AddressInitial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result addressInitial(),
-    @required Result addressLoading(),
-    @required Result addressGotten(String address),
-    @required Result addressFailure(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() addressInitial,
+    required TResult Function() addressLoading,
+    required TResult Function(String address) addressGotten,
+    required TResult Function() addressFailure,
   }) {
-    assert(addressInitial != null);
-    assert(addressLoading != null);
-    assert(addressGotten != null);
-    assert(addressFailure != null);
     return addressInitial();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result addressInitial(),
-    Result addressLoading(),
-    Result addressGotten(String address),
-    Result addressFailure(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? addressInitial,
+    TResult Function()? addressLoading,
+    TResult Function(String address)? addressGotten,
+    TResult Function()? addressFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (addressInitial != null) {
       return addressInitial();
     }
@@ -381,29 +389,24 @@ class _$AddressInitial implements AddressInitial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result addressInitial(AddressInitial value),
-    @required Result addressLoading(AddressLoading value),
-    @required Result addressGotten(AddressGotten value),
-    @required Result addressFailure(AddressFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(AddressInitial value) addressInitial,
+    required TResult Function(AddressLoading value) addressLoading,
+    required TResult Function(AddressGotten value) addressGotten,
+    required TResult Function(AddressFailure value) addressFailure,
   }) {
-    assert(addressInitial != null);
-    assert(addressLoading != null);
-    assert(addressGotten != null);
-    assert(addressFailure != null);
     return addressInitial(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result addressInitial(AddressInitial value),
-    Result addressLoading(AddressLoading value),
-    Result addressGotten(AddressGotten value),
-    Result addressFailure(AddressFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AddressInitial value)? addressInitial,
+    TResult Function(AddressLoading value)? addressLoading,
+    TResult Function(AddressGotten value)? addressGotten,
+    TResult Function(AddressFailure value)? addressFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (addressInitial != null) {
       return addressInitial(this);
     }
@@ -415,12 +418,14 @@ abstract class AddressInitial implements AddressState {
   const factory AddressInitial() = _$AddressInitial;
 }
 
+/// @nodoc
 abstract class $AddressLoadingCopyWith<$Res> {
   factory $AddressLoadingCopyWith(
           AddressLoading value, $Res Function(AddressLoading) then) =
       _$AddressLoadingCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AddressLoadingCopyWithImpl<$Res>
     extends _$AddressStateCopyWithImpl<$Res>
     implements $AddressLoadingCopyWith<$Res> {
@@ -431,6 +436,8 @@ class _$AddressLoadingCopyWithImpl<$Res>
   @override
   AddressLoading get _value => super._value as AddressLoading;
 }
+
+/// @nodoc
 
 class _$AddressLoading implements AddressLoading {
   const _$AddressLoading();
@@ -450,29 +457,24 @@ class _$AddressLoading implements AddressLoading {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result addressInitial(),
-    @required Result addressLoading(),
-    @required Result addressGotten(String address),
-    @required Result addressFailure(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() addressInitial,
+    required TResult Function() addressLoading,
+    required TResult Function(String address) addressGotten,
+    required TResult Function() addressFailure,
   }) {
-    assert(addressInitial != null);
-    assert(addressLoading != null);
-    assert(addressGotten != null);
-    assert(addressFailure != null);
     return addressLoading();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result addressInitial(),
-    Result addressLoading(),
-    Result addressGotten(String address),
-    Result addressFailure(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? addressInitial,
+    TResult Function()? addressLoading,
+    TResult Function(String address)? addressGotten,
+    TResult Function()? addressFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (addressLoading != null) {
       return addressLoading();
     }
@@ -481,29 +483,24 @@ class _$AddressLoading implements AddressLoading {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result addressInitial(AddressInitial value),
-    @required Result addressLoading(AddressLoading value),
-    @required Result addressGotten(AddressGotten value),
-    @required Result addressFailure(AddressFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(AddressInitial value) addressInitial,
+    required TResult Function(AddressLoading value) addressLoading,
+    required TResult Function(AddressGotten value) addressGotten,
+    required TResult Function(AddressFailure value) addressFailure,
   }) {
-    assert(addressInitial != null);
-    assert(addressLoading != null);
-    assert(addressGotten != null);
-    assert(addressFailure != null);
     return addressLoading(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result addressInitial(AddressInitial value),
-    Result addressLoading(AddressLoading value),
-    Result addressGotten(AddressGotten value),
-    Result addressFailure(AddressFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AddressInitial value)? addressInitial,
+    TResult Function(AddressLoading value)? addressLoading,
+    TResult Function(AddressGotten value)? addressGotten,
+    TResult Function(AddressFailure value)? addressFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (addressLoading != null) {
       return addressLoading(this);
     }
@@ -515,6 +512,7 @@ abstract class AddressLoading implements AddressState {
   const factory AddressLoading() = _$AddressLoading;
 }
 
+/// @nodoc
 abstract class $AddressGottenCopyWith<$Res> {
   factory $AddressGottenCopyWith(
           AddressGotten value, $Res Function(AddressGotten) then) =
@@ -522,6 +520,7 @@ abstract class $AddressGottenCopyWith<$Res> {
   $Res call({String address});
 }
 
+/// @nodoc
 class _$AddressGottenCopyWithImpl<$Res> extends _$AddressStateCopyWithImpl<$Res>
     implements $AddressGottenCopyWith<$Res> {
   _$AddressGottenCopyWithImpl(
@@ -533,16 +532,21 @@ class _$AddressGottenCopyWithImpl<$Res> extends _$AddressStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object address = freezed,
+    Object? address = freezed,
   }) {
     return _then(AddressGotten(
-      address == freezed ? _value.address : address as String,
+      address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$AddressGotten implements AddressGotten {
-  const _$AddressGotten(this.address) : assert(address != null);
+  const _$AddressGotten(this.address);
 
   @override
   final String address;
@@ -564,35 +568,31 @@ class _$AddressGotten implements AddressGotten {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(address);
 
+  @JsonKey(ignore: true)
   @override
   $AddressGottenCopyWith<AddressGotten> get copyWith =>
       _$AddressGottenCopyWithImpl<AddressGotten>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result addressInitial(),
-    @required Result addressLoading(),
-    @required Result addressGotten(String address),
-    @required Result addressFailure(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() addressInitial,
+    required TResult Function() addressLoading,
+    required TResult Function(String address) addressGotten,
+    required TResult Function() addressFailure,
   }) {
-    assert(addressInitial != null);
-    assert(addressLoading != null);
-    assert(addressGotten != null);
-    assert(addressFailure != null);
     return addressGotten(address);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result addressInitial(),
-    Result addressLoading(),
-    Result addressGotten(String address),
-    Result addressFailure(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? addressInitial,
+    TResult Function()? addressLoading,
+    TResult Function(String address)? addressGotten,
+    TResult Function()? addressFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (addressGotten != null) {
       return addressGotten(address);
     }
@@ -601,29 +601,24 @@ class _$AddressGotten implements AddressGotten {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result addressInitial(AddressInitial value),
-    @required Result addressLoading(AddressLoading value),
-    @required Result addressGotten(AddressGotten value),
-    @required Result addressFailure(AddressFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(AddressInitial value) addressInitial,
+    required TResult Function(AddressLoading value) addressLoading,
+    required TResult Function(AddressGotten value) addressGotten,
+    required TResult Function(AddressFailure value) addressFailure,
   }) {
-    assert(addressInitial != null);
-    assert(addressLoading != null);
-    assert(addressGotten != null);
-    assert(addressFailure != null);
     return addressGotten(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result addressInitial(AddressInitial value),
-    Result addressLoading(AddressLoading value),
-    Result addressGotten(AddressGotten value),
-    Result addressFailure(AddressFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AddressInitial value)? addressInitial,
+    TResult Function(AddressLoading value)? addressLoading,
+    TResult Function(AddressGotten value)? addressGotten,
+    TResult Function(AddressFailure value)? addressFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (addressGotten != null) {
       return addressGotten(this);
     }
@@ -634,16 +629,20 @@ class _$AddressGotten implements AddressGotten {
 abstract class AddressGotten implements AddressState {
   const factory AddressGotten(String address) = _$AddressGotten;
 
-  String get address;
-  $AddressGottenCopyWith<AddressGotten> get copyWith;
+  String get address => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AddressGottenCopyWith<AddressGotten> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $AddressFailureCopyWith<$Res> {
   factory $AddressFailureCopyWith(
           AddressFailure value, $Res Function(AddressFailure) then) =
       _$AddressFailureCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AddressFailureCopyWithImpl<$Res>
     extends _$AddressStateCopyWithImpl<$Res>
     implements $AddressFailureCopyWith<$Res> {
@@ -654,6 +653,8 @@ class _$AddressFailureCopyWithImpl<$Res>
   @override
   AddressFailure get _value => super._value as AddressFailure;
 }
+
+/// @nodoc
 
 class _$AddressFailure implements AddressFailure {
   const _$AddressFailure();
@@ -673,29 +674,24 @@ class _$AddressFailure implements AddressFailure {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result addressInitial(),
-    @required Result addressLoading(),
-    @required Result addressGotten(String address),
-    @required Result addressFailure(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() addressInitial,
+    required TResult Function() addressLoading,
+    required TResult Function(String address) addressGotten,
+    required TResult Function() addressFailure,
   }) {
-    assert(addressInitial != null);
-    assert(addressLoading != null);
-    assert(addressGotten != null);
-    assert(addressFailure != null);
     return addressFailure();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result addressInitial(),
-    Result addressLoading(),
-    Result addressGotten(String address),
-    Result addressFailure(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? addressInitial,
+    TResult Function()? addressLoading,
+    TResult Function(String address)? addressGotten,
+    TResult Function()? addressFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (addressFailure != null) {
       return addressFailure();
     }
@@ -704,29 +700,24 @@ class _$AddressFailure implements AddressFailure {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result addressInitial(AddressInitial value),
-    @required Result addressLoading(AddressLoading value),
-    @required Result addressGotten(AddressGotten value),
-    @required Result addressFailure(AddressFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(AddressInitial value) addressInitial,
+    required TResult Function(AddressLoading value) addressLoading,
+    required TResult Function(AddressGotten value) addressGotten,
+    required TResult Function(AddressFailure value) addressFailure,
   }) {
-    assert(addressInitial != null);
-    assert(addressLoading != null);
-    assert(addressGotten != null);
-    assert(addressFailure != null);
     return addressFailure(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result addressInitial(AddressInitial value),
-    Result addressLoading(AddressLoading value),
-    Result addressGotten(AddressGotten value),
-    Result addressFailure(AddressFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AddressInitial value)? addressInitial,
+    TResult Function(AddressLoading value)? addressLoading,
+    TResult Function(AddressGotten value)? addressGotten,
+    TResult Function(AddressFailure value)? addressFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (addressFailure != null) {
       return addressFailure(this);
     }

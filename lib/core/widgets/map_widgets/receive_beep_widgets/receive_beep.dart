@@ -20,7 +20,7 @@ class ReceiveBeep extends StatefulWidget {
 
 class _ReceiveBeepState extends State<ReceiveBeep> {
   Future<bool> _onWillPop(MapBloc mapBloc) async {
-    return (await showDialog(
+    return (await (showDialog(
           context: context,
           builder: (context) => new AlertDialog(
             title: new Text('Are you sure?', style: nunitoMid),
@@ -40,7 +40,7 @@ class _ReceiveBeepState extends State<ReceiveBeep> {
               ),
             ],
           ),
-        )) ??
+        ) as FutureOr<bool>?)) ??
         false;
   }
 

@@ -4,9 +4,9 @@ import 'package:beep_lawyer_3/core/widgets/common_widgets/common_button.dart';
 import 'package:flutter/material.dart';
 
 class VerifyNumber extends StatefulWidget {
-  final String phoneNumber;
+  final String? phoneNumber;
 
-  const VerifyNumber({Key key, this.phoneNumber}) : super(key: key);
+  const VerifyNumber({Key? key, this.phoneNumber}) : super(key: key);
   @override
   _VerifyNumberState createState() => _VerifyNumberState();
 }
@@ -14,8 +14,8 @@ class VerifyNumber extends StatefulWidget {
 class _VerifyNumberState extends State<VerifyNumber> {
   final _formKey = GlobalKey<FormState>();
   final _key = GlobalKey<ScaffoldState>();
-  TextEditingController _smsCode;
-  Timer _timer;
+  TextEditingController? _smsCode;
+  Timer? _timer;
   int _count = 60;
   bool isCounting = false;
 
@@ -28,7 +28,7 @@ class _VerifyNumberState extends State<VerifyNumber> {
   @override
   void dispose() {
     super.dispose();
-    _smsCode.dispose();
+    _smsCode!.dispose();
   }
 
   @override
@@ -82,7 +82,7 @@ class _VerifyNumberState extends State<VerifyNumber> {
                             ),
                             TextFormField(
                               controller: _smsCode,
-                              validator: (value) => (value.isEmpty)
+                              validator: (value) => (value!.isEmpty)
                                   ? "Please enter 4-digit code"
                                   : null,
                               keyboardType: TextInputType.number,

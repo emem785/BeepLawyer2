@@ -1,8 +1,8 @@
 class Alert {
-  double lng;
-  String phone;
-  String name;
-  double lat;
+  double? lng;
+  String? phone;
+  String? name;
+  double? lat;
 
   Alert({this.lng, this.phone, this.name, this.lat});
 

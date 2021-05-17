@@ -20,18 +20,18 @@ part 'location_bloc.freezed.dart';
 
 @injectable
 class LocationBloc extends Bloc<LocationEvent, LocationState> {
-  final UserLocationInterface userLocation;
-  final MapInterface mapInterface;
-  final LocalStorageInterface localStorageInterface;
-  final ApiInterface apiInterface;
-  StreamSubscription<Location> _mapUpdateSubscription;
-  MapTool mapTool;
+  final UserLocationInterface? userLocation;
+  final MapInterface? mapInterface;
+  final LocalStorageInterface? localStorageInterface;
+  final ApiInterface? apiInterface;
+  late StreamSubscription<Location> _mapUpdateSubscription;
+  MapTool? mapTool;
 
   LocationBloc({
-    @required this.localStorageInterface,
-    @required this.mapInterface,
-    @required this.userLocation,
-    @required this.apiInterface,
+    required this.localStorageInterface,
+    required this.mapInterface,
+    required this.userLocation,
+    required this.apiInterface,
   }) : super(Initial());
 
   @override
@@ -39,34 +39,34 @@ class LocationBloc extends Bloc<LocationEvent, LocationState> {
     LocationEvent event,
   ) async* {
     yield* event.map(renderMap: (e) async* {
-      await apiInterface.updateFirebaseKey(e.firebaseMessaging);
-      final location = await userLocation.getLocation();
-      await apiInterface.sendLocation(location.latitude, location.longitude);
+      await apiInterface!.updateFirebaseKey(e.firebaseMessaging);
+      final location = await userLocation!.getLocation();
+      await apiInterface!.sendLocation(location.latitude, location.longitude);
       mapTool = MapTool(location: location);
-      final onCallResponse = await localStorageInterface.getOnCall();
+      final onCallResponse = await localStorageInterface!.getOnCall();
       yield* onCallResponse.fold((l) async* {
-        yield MapRendered(mapTool);
+        yield MapRendered(mapTool!);
       }, (r) async* {
         add(StartOnCallSession());
       });
     }, startOnCallSession: (e) async* {
-       final onCall = await apiInterface.startOnCall("True");
-      _mapUpdateSubscription = mapInterface.startMapUpdateStream(mapTool);
+       final onCall = await apiInterface!.startOnCall("True");
+      _mapUpdateSubscription = mapInterface!.startMapUpdateStream(mapTool);
       // userLocation.startLawyerOnCallSession();
-      localStorageInterface.cacheOncall(true);
-      yield BroadcastStarted(mapTool);
+      localStorageInterface!.cacheOncall(true);
+      yield BroadcastStarted(mapTool!);
     }, stopOnCallSession: (e) async* {
-      final onCall = await apiInterface.startOnCall("False");
+      final onCall = await apiInterface!.startOnCall("False");
       _mapUpdateSubscription.cancel();
       // userLocation.stopLawyerOnCallSession();
-      localStorageInterface.removeOnCall();
-      yield BroadcastStopped(mapTool);
+      localStorageInterface!.removeOnCall();
+      yield BroadcastStopped(mapTool!);
     }, resumeOnCallSession: (e) async* {
-      final onCall = await apiInterface.startOnCall("True");
-      _mapUpdateSubscription = mapInterface.startMapUpdateStream(mapTool);
+      final onCall = await apiInterface!.startOnCall("True");
+      _mapUpdateSubscription = mapInterface!.startMapUpdateStream(mapTool);
       // userLocation.startLawyerOnCallSession();
-      localStorageInterface.cacheOncall(true);
-      yield BroadcastStarted(mapTool);
+      localStorageInterface!.cacheOncall(true);
+      yield BroadcastStarted(mapTool!);
     });
   }
 }

@@ -17,10 +17,10 @@ part 'user_bloc.freezed.dart';
 
 @injectable
 class UserBloc extends Bloc<UserEvent, UserState> {
-  final LocalStorageInterface localStorageInterface;
-  final ApiInterface apiInterface;
+  final LocalStorageInterface? localStorageInterface;
+  final ApiInterface? apiInterface;
 
-  UserBloc({@required this.localStorageInterface, @required this.apiInterface})
+  UserBloc({required this.localStorageInterface, required this.apiInterface})
       : super(UserInitial());
 
   @override
@@ -30,11 +30,11 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     yield UserUpdating();
     yield* event.map(
       cacheScnNumber: (e) async* {
-        await localStorageInterface.cacheScnNumber(e.scnNumber);
+        await localStorageInterface!.cacheScnNumber(e.scnNumber);
         yield UserUpdated("Scn Added");
       },
       insertUser: (e) async* {
-        final user = await localStorageInterface.getUser();
+        final user = await localStorageInterface!.getUser();
         yield* user.fold((l) async* {
           UserError(l);
         }, (r) async* {
@@ -42,16 +42,16 @@ class UserBloc extends Bloc<UserEvent, UserState> {
         });
       },
       updateUser: (e) async* {
-        final response = await apiInterface.updateUser(e.user);
+        final response = await apiInterface!.updateUser(e.user);
         yield* response.fold((l) async* {
           yield UserError(l);
         }, (r) async* {
-          await localStorageInterface.cacheUser(jsonEncode(r));
+          await localStorageInterface!.cacheUser(jsonEncode(r));
           yield UserUpdated("Changes Saved");
         });
       },
       updatePassword: (e) async* {
-        final response = await apiInterface.updatePassword(e.password);
+        final response = await apiInterface!.updatePassword(e.password);
         yield* response.fold((l) async* {
           yield UserError(l);
         }, (r) async* {

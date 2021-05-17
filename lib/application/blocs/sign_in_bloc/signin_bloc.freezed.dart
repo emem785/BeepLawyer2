@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'signin_bloc.dart';
 
@@ -9,10 +9,13 @@ part of 'signin_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$SignInEventTearOff {
   const _$SignInEventTearOff();
 
-// ignore: unused_element
   SignInEventOnSubmit onSubmit(String phoneNumber, String password) {
     return SignInEventOnSubmit(
       phoneNumber,
@@ -20,46 +23,52 @@ class _$SignInEventTearOff {
     );
   }
 
-// ignore: unused_element
   SignInEventRegister register() {
     return const SignInEventRegister();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $SignInEvent = _$SignInEventTearOff();
 
+/// @nodoc
 mixin _$SignInEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result onSubmit(String phoneNumber, String password),
-    @required Result register(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phoneNumber, String password) onSubmit,
+    required TResult Function() register,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result onSubmit(String phoneNumber, String password),
-    Result register(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phoneNumber, String password)? onSubmit,
+    TResult Function()? register,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result onSubmit(SignInEventOnSubmit value),
-    @required Result register(SignInEventRegister value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignInEventOnSubmit value) onSubmit,
+    required TResult Function(SignInEventRegister value) register,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result onSubmit(SignInEventOnSubmit value),
-    Result register(SignInEventRegister value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignInEventOnSubmit value)? onSubmit,
+    TResult Function(SignInEventRegister value)? register,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $SignInEventCopyWith<$Res> {
   factory $SignInEventCopyWith(
           SignInEvent value, $Res Function(SignInEvent) then) =
       _$SignInEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SignInEventCopyWithImpl<$Res> implements $SignInEventCopyWith<$Res> {
   _$SignInEventCopyWithImpl(this._value, this._then);
 
@@ -68,6 +77,7 @@ class _$SignInEventCopyWithImpl<$Res> implements $SignInEventCopyWith<$Res> {
   final $Res Function(SignInEvent) _then;
 }
 
+/// @nodoc
 abstract class $SignInEventOnSubmitCopyWith<$Res> {
   factory $SignInEventOnSubmitCopyWith(
           SignInEventOnSubmit value, $Res Function(SignInEventOnSubmit) then) =
@@ -75,6 +85,7 @@ abstract class $SignInEventOnSubmitCopyWith<$Res> {
   $Res call({String phoneNumber, String password});
 }
 
+/// @nodoc
 class _$SignInEventOnSubmitCopyWithImpl<$Res>
     extends _$SignInEventCopyWithImpl<$Res>
     implements $SignInEventOnSubmitCopyWith<$Res> {
@@ -87,20 +98,26 @@ class _$SignInEventOnSubmitCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object phoneNumber = freezed,
-    Object password = freezed,
+    Object? phoneNumber = freezed,
+    Object? password = freezed,
   }) {
     return _then(SignInEventOnSubmit(
-      phoneNumber == freezed ? _value.phoneNumber : phoneNumber as String,
-      password == freezed ? _value.password : password as String,
+      phoneNumber == freezed
+          ? _value.phoneNumber
+          : phoneNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$SignInEventOnSubmit implements SignInEventOnSubmit {
-  const _$SignInEventOnSubmit(this.phoneNumber, this.password)
-      : assert(phoneNumber != null),
-        assert(password != null);
+  const _$SignInEventOnSubmit(this.phoneNumber, this.password);
 
   @override
   final String phoneNumber;
@@ -130,29 +147,27 @@ class _$SignInEventOnSubmit implements SignInEventOnSubmit {
       const DeepCollectionEquality().hash(phoneNumber) ^
       const DeepCollectionEquality().hash(password);
 
+  @JsonKey(ignore: true)
   @override
   $SignInEventOnSubmitCopyWith<SignInEventOnSubmit> get copyWith =>
       _$SignInEventOnSubmitCopyWithImpl<SignInEventOnSubmit>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result onSubmit(String phoneNumber, String password),
-    @required Result register(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phoneNumber, String password) onSubmit,
+    required TResult Function() register,
   }) {
-    assert(onSubmit != null);
-    assert(register != null);
     return onSubmit(phoneNumber, password);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result onSubmit(String phoneNumber, String password),
-    Result register(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phoneNumber, String password)? onSubmit,
+    TResult Function()? register,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onSubmit != null) {
       return onSubmit(phoneNumber, password);
     }
@@ -161,23 +176,20 @@ class _$SignInEventOnSubmit implements SignInEventOnSubmit {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result onSubmit(SignInEventOnSubmit value),
-    @required Result register(SignInEventRegister value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignInEventOnSubmit value) onSubmit,
+    required TResult Function(SignInEventRegister value) register,
   }) {
-    assert(onSubmit != null);
-    assert(register != null);
     return onSubmit(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result onSubmit(SignInEventOnSubmit value),
-    Result register(SignInEventRegister value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignInEventOnSubmit value)? onSubmit,
+    TResult Function(SignInEventRegister value)? register,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onSubmit != null) {
       return onSubmit(this);
     }
@@ -189,17 +201,21 @@ abstract class SignInEventOnSubmit implements SignInEvent {
   const factory SignInEventOnSubmit(String phoneNumber, String password) =
       _$SignInEventOnSubmit;
 
-  String get phoneNumber;
-  String get password;
-  $SignInEventOnSubmitCopyWith<SignInEventOnSubmit> get copyWith;
+  String get phoneNumber => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SignInEventOnSubmitCopyWith<SignInEventOnSubmit> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $SignInEventRegisterCopyWith<$Res> {
   factory $SignInEventRegisterCopyWith(
           SignInEventRegister value, $Res Function(SignInEventRegister) then) =
       _$SignInEventRegisterCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SignInEventRegisterCopyWithImpl<$Res>
     extends _$SignInEventCopyWithImpl<$Res>
     implements $SignInEventRegisterCopyWith<$Res> {
@@ -210,6 +226,8 @@ class _$SignInEventRegisterCopyWithImpl<$Res>
   @override
   SignInEventRegister get _value => super._value as SignInEventRegister;
 }
+
+/// @nodoc
 
 class _$SignInEventRegister implements SignInEventRegister {
   const _$SignInEventRegister();
@@ -229,23 +247,20 @@ class _$SignInEventRegister implements SignInEventRegister {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result onSubmit(String phoneNumber, String password),
-    @required Result register(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String phoneNumber, String password) onSubmit,
+    required TResult Function() register,
   }) {
-    assert(onSubmit != null);
-    assert(register != null);
     return register();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result onSubmit(String phoneNumber, String password),
-    Result register(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String phoneNumber, String password)? onSubmit,
+    TResult Function()? register,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (register != null) {
       return register();
     }
@@ -254,23 +269,20 @@ class _$SignInEventRegister implements SignInEventRegister {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result onSubmit(SignInEventOnSubmit value),
-    @required Result register(SignInEventRegister value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignInEventOnSubmit value) onSubmit,
+    required TResult Function(SignInEventRegister value) register,
   }) {
-    assert(onSubmit != null);
-    assert(register != null);
     return register(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result onSubmit(SignInEventOnSubmit value),
-    Result register(SignInEventRegister value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignInEventOnSubmit value)? onSubmit,
+    TResult Function(SignInEventRegister value)? register,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (register != null) {
       return register(this);
     }
@@ -282,25 +294,22 @@ abstract class SignInEventRegister implements SignInEvent {
   const factory SignInEventRegister() = _$SignInEventRegister;
 }
 
+/// @nodoc
 class _$SignInStateTearOff {
   const _$SignInStateTearOff();
 
-// ignore: unused_element
   SignInStateInitial initial() {
     return const SignInStateInitial();
   }
 
-// ignore: unused_element
   SignInStateAuthenticating authenticating() {
     return const SignInStateAuthenticating();
   }
 
-// ignore: unused_element
   SignInStateAuthenticated authenticated() {
     return const SignInStateAuthenticated();
   }
 
-// ignore: unused_element
   SignInStateError error(Failure failure) {
     return SignInStateError(
       failure,
@@ -308,48 +317,55 @@ class _$SignInStateTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $SignInState = _$SignInStateTearOff();
 
+/// @nodoc
 mixin _$SignInState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticating(),
-    @required Result authenticated(),
-    @required Result error(Failure failure),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() authenticating,
+    required TResult Function() authenticated,
+    required TResult Function(Failure failure) error,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticating(),
-    Result authenticated(),
-    Result error(Failure failure),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? authenticating,
+    TResult Function()? authenticated,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(SignInStateInitial value),
-    @required Result authenticating(SignInStateAuthenticating value),
-    @required Result authenticated(SignInStateAuthenticated value),
-    @required Result error(SignInStateError value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignInStateInitial value) initial,
+    required TResult Function(SignInStateAuthenticating value) authenticating,
+    required TResult Function(SignInStateAuthenticated value) authenticated,
+    required TResult Function(SignInStateError value) error,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(SignInStateInitial value),
-    Result authenticating(SignInStateAuthenticating value),
-    Result authenticated(SignInStateAuthenticated value),
-    Result error(SignInStateError value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignInStateInitial value)? initial,
+    TResult Function(SignInStateAuthenticating value)? authenticating,
+    TResult Function(SignInStateAuthenticated value)? authenticated,
+    TResult Function(SignInStateError value)? error,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $SignInStateCopyWith<$Res> {
   factory $SignInStateCopyWith(
           SignInState value, $Res Function(SignInState) then) =
       _$SignInStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SignInStateCopyWithImpl<$Res> implements $SignInStateCopyWith<$Res> {
   _$SignInStateCopyWithImpl(this._value, this._then);
 
@@ -358,12 +374,14 @@ class _$SignInStateCopyWithImpl<$Res> implements $SignInStateCopyWith<$Res> {
   final $Res Function(SignInState) _then;
 }
 
+/// @nodoc
 abstract class $SignInStateInitialCopyWith<$Res> {
   factory $SignInStateInitialCopyWith(
           SignInStateInitial value, $Res Function(SignInStateInitial) then) =
       _$SignInStateInitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SignInStateInitialCopyWithImpl<$Res>
     extends _$SignInStateCopyWithImpl<$Res>
     implements $SignInStateInitialCopyWith<$Res> {
@@ -374,6 +392,8 @@ class _$SignInStateInitialCopyWithImpl<$Res>
   @override
   SignInStateInitial get _value => super._value as SignInStateInitial;
 }
+
+/// @nodoc
 
 class _$SignInStateInitial implements SignInStateInitial {
   const _$SignInStateInitial();
@@ -393,29 +413,24 @@ class _$SignInStateInitial implements SignInStateInitial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticating(),
-    @required Result authenticated(),
-    @required Result error(Failure failure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() authenticating,
+    required TResult Function() authenticated,
+    required TResult Function(Failure failure) error,
   }) {
-    assert(initial != null);
-    assert(authenticating != null);
-    assert(authenticated != null);
-    assert(error != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticating(),
-    Result authenticated(),
-    Result error(Failure failure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? authenticating,
+    TResult Function()? authenticated,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -424,29 +439,24 @@ class _$SignInStateInitial implements SignInStateInitial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(SignInStateInitial value),
-    @required Result authenticating(SignInStateAuthenticating value),
-    @required Result authenticated(SignInStateAuthenticated value),
-    @required Result error(SignInStateError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignInStateInitial value) initial,
+    required TResult Function(SignInStateAuthenticating value) authenticating,
+    required TResult Function(SignInStateAuthenticated value) authenticated,
+    required TResult Function(SignInStateError value) error,
   }) {
-    assert(initial != null);
-    assert(authenticating != null);
-    assert(authenticated != null);
-    assert(error != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(SignInStateInitial value),
-    Result authenticating(SignInStateAuthenticating value),
-    Result authenticated(SignInStateAuthenticated value),
-    Result error(SignInStateError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignInStateInitial value)? initial,
+    TResult Function(SignInStateAuthenticating value)? authenticating,
+    TResult Function(SignInStateAuthenticated value)? authenticated,
+    TResult Function(SignInStateError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -458,12 +468,14 @@ abstract class SignInStateInitial implements SignInState {
   const factory SignInStateInitial() = _$SignInStateInitial;
 }
 
+/// @nodoc
 abstract class $SignInStateAuthenticatingCopyWith<$Res> {
   factory $SignInStateAuthenticatingCopyWith(SignInStateAuthenticating value,
           $Res Function(SignInStateAuthenticating) then) =
       _$SignInStateAuthenticatingCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SignInStateAuthenticatingCopyWithImpl<$Res>
     extends _$SignInStateCopyWithImpl<$Res>
     implements $SignInStateAuthenticatingCopyWith<$Res> {
@@ -475,6 +487,8 @@ class _$SignInStateAuthenticatingCopyWithImpl<$Res>
   SignInStateAuthenticating get _value =>
       super._value as SignInStateAuthenticating;
 }
+
+/// @nodoc
 
 class _$SignInStateAuthenticating implements SignInStateAuthenticating {
   const _$SignInStateAuthenticating();
@@ -494,29 +508,24 @@ class _$SignInStateAuthenticating implements SignInStateAuthenticating {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticating(),
-    @required Result authenticated(),
-    @required Result error(Failure failure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() authenticating,
+    required TResult Function() authenticated,
+    required TResult Function(Failure failure) error,
   }) {
-    assert(initial != null);
-    assert(authenticating != null);
-    assert(authenticated != null);
-    assert(error != null);
     return authenticating();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticating(),
-    Result authenticated(),
-    Result error(Failure failure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? authenticating,
+    TResult Function()? authenticated,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (authenticating != null) {
       return authenticating();
     }
@@ -525,29 +534,24 @@ class _$SignInStateAuthenticating implements SignInStateAuthenticating {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(SignInStateInitial value),
-    @required Result authenticating(SignInStateAuthenticating value),
-    @required Result authenticated(SignInStateAuthenticated value),
-    @required Result error(SignInStateError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignInStateInitial value) initial,
+    required TResult Function(SignInStateAuthenticating value) authenticating,
+    required TResult Function(SignInStateAuthenticated value) authenticated,
+    required TResult Function(SignInStateError value) error,
   }) {
-    assert(initial != null);
-    assert(authenticating != null);
-    assert(authenticated != null);
-    assert(error != null);
     return authenticating(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(SignInStateInitial value),
-    Result authenticating(SignInStateAuthenticating value),
-    Result authenticated(SignInStateAuthenticated value),
-    Result error(SignInStateError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignInStateInitial value)? initial,
+    TResult Function(SignInStateAuthenticating value)? authenticating,
+    TResult Function(SignInStateAuthenticated value)? authenticated,
+    TResult Function(SignInStateError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (authenticating != null) {
       return authenticating(this);
     }
@@ -559,12 +563,14 @@ abstract class SignInStateAuthenticating implements SignInState {
   const factory SignInStateAuthenticating() = _$SignInStateAuthenticating;
 }
 
+/// @nodoc
 abstract class $SignInStateAuthenticatedCopyWith<$Res> {
   factory $SignInStateAuthenticatedCopyWith(SignInStateAuthenticated value,
           $Res Function(SignInStateAuthenticated) then) =
       _$SignInStateAuthenticatedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SignInStateAuthenticatedCopyWithImpl<$Res>
     extends _$SignInStateCopyWithImpl<$Res>
     implements $SignInStateAuthenticatedCopyWith<$Res> {
@@ -576,6 +582,8 @@ class _$SignInStateAuthenticatedCopyWithImpl<$Res>
   SignInStateAuthenticated get _value =>
       super._value as SignInStateAuthenticated;
 }
+
+/// @nodoc
 
 class _$SignInStateAuthenticated implements SignInStateAuthenticated {
   const _$SignInStateAuthenticated();
@@ -595,29 +603,24 @@ class _$SignInStateAuthenticated implements SignInStateAuthenticated {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticating(),
-    @required Result authenticated(),
-    @required Result error(Failure failure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() authenticating,
+    required TResult Function() authenticated,
+    required TResult Function(Failure failure) error,
   }) {
-    assert(initial != null);
-    assert(authenticating != null);
-    assert(authenticated != null);
-    assert(error != null);
     return authenticated();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticating(),
-    Result authenticated(),
-    Result error(Failure failure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? authenticating,
+    TResult Function()? authenticated,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (authenticated != null) {
       return authenticated();
     }
@@ -626,29 +629,24 @@ class _$SignInStateAuthenticated implements SignInStateAuthenticated {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(SignInStateInitial value),
-    @required Result authenticating(SignInStateAuthenticating value),
-    @required Result authenticated(SignInStateAuthenticated value),
-    @required Result error(SignInStateError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignInStateInitial value) initial,
+    required TResult Function(SignInStateAuthenticating value) authenticating,
+    required TResult Function(SignInStateAuthenticated value) authenticated,
+    required TResult Function(SignInStateError value) error,
   }) {
-    assert(initial != null);
-    assert(authenticating != null);
-    assert(authenticated != null);
-    assert(error != null);
     return authenticated(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(SignInStateInitial value),
-    Result authenticating(SignInStateAuthenticating value),
-    Result authenticated(SignInStateAuthenticated value),
-    Result error(SignInStateError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignInStateInitial value)? initial,
+    TResult Function(SignInStateAuthenticating value)? authenticating,
+    TResult Function(SignInStateAuthenticated value)? authenticated,
+    TResult Function(SignInStateError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (authenticated != null) {
       return authenticated(this);
     }
@@ -660,6 +658,7 @@ abstract class SignInStateAuthenticated implements SignInState {
   const factory SignInStateAuthenticated() = _$SignInStateAuthenticated;
 }
 
+/// @nodoc
 abstract class $SignInStateErrorCopyWith<$Res> {
   factory $SignInStateErrorCopyWith(
           SignInStateError value, $Res Function(SignInStateError) then) =
@@ -669,6 +668,7 @@ abstract class $SignInStateErrorCopyWith<$Res> {
   $FailureCopyWith<$Res> get failure;
 }
 
+/// @nodoc
 class _$SignInStateErrorCopyWithImpl<$Res>
     extends _$SignInStateCopyWithImpl<$Res>
     implements $SignInStateErrorCopyWith<$Res> {
@@ -681,26 +681,28 @@ class _$SignInStateErrorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object failure = freezed,
+    Object? failure = freezed,
   }) {
     return _then(SignInStateError(
-      failure == freezed ? _value.failure : failure as Failure,
+      failure == freezed
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as Failure,
     ));
   }
 
   @override
   $FailureCopyWith<$Res> get failure {
-    if (_value.failure == null) {
-      return null;
-    }
     return $FailureCopyWith<$Res>(_value.failure, (value) {
       return _then(_value.copyWith(failure: value));
     });
   }
 }
 
+/// @nodoc
+
 class _$SignInStateError implements SignInStateError {
-  const _$SignInStateError(this.failure) : assert(failure != null);
+  const _$SignInStateError(this.failure);
 
   @override
   final Failure failure;
@@ -722,35 +724,31 @@ class _$SignInStateError implements SignInStateError {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failure);
 
+  @JsonKey(ignore: true)
   @override
   $SignInStateErrorCopyWith<SignInStateError> get copyWith =>
       _$SignInStateErrorCopyWithImpl<SignInStateError>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticating(),
-    @required Result authenticated(),
-    @required Result error(Failure failure),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() authenticating,
+    required TResult Function() authenticated,
+    required TResult Function(Failure failure) error,
   }) {
-    assert(initial != null);
-    assert(authenticating != null);
-    assert(authenticated != null);
-    assert(error != null);
     return error(failure);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticating(),
-    Result authenticated(),
-    Result error(Failure failure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? authenticating,
+    TResult Function()? authenticated,
+    TResult Function(Failure failure)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(failure);
     }
@@ -759,29 +757,24 @@ class _$SignInStateError implements SignInStateError {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(SignInStateInitial value),
-    @required Result authenticating(SignInStateAuthenticating value),
-    @required Result authenticated(SignInStateAuthenticated value),
-    @required Result error(SignInStateError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(SignInStateInitial value) initial,
+    required TResult Function(SignInStateAuthenticating value) authenticating,
+    required TResult Function(SignInStateAuthenticated value) authenticated,
+    required TResult Function(SignInStateError value) error,
   }) {
-    assert(initial != null);
-    assert(authenticating != null);
-    assert(authenticated != null);
-    assert(error != null);
     return error(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(SignInStateInitial value),
-    Result authenticating(SignInStateAuthenticating value),
-    Result authenticated(SignInStateAuthenticated value),
-    Result error(SignInStateError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SignInStateInitial value)? initial,
+    TResult Function(SignInStateAuthenticating value)? authenticating,
+    TResult Function(SignInStateAuthenticated value)? authenticated,
+    TResult Function(SignInStateError value)? error,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (error != null) {
       return error(this);
     }
@@ -792,6 +785,8 @@ class _$SignInStateError implements SignInStateError {
 abstract class SignInStateError implements SignInState {
   const factory SignInStateError(Failure failure) = _$SignInStateError;
 
-  Failure get failure;
-  $SignInStateErrorCopyWith<SignInStateError> get copyWith;
+  Failure get failure => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SignInStateErrorCopyWith<SignInStateError> get copyWith =>
+      throw _privateConstructorUsedError;
 }

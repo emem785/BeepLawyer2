@@ -14,8 +14,8 @@ class LoginOne extends StatefulWidget {
 class _LoginOneState extends State<LoginOne> {
   final _formKey = GlobalKey<FormState>();
   final _key = GlobalKey<ScaffoldState>();
-  TextEditingController _phoneNumber;
-  TextEditingController _password;
+  TextEditingController? _phoneNumber;
+  TextEditingController? _password;
 
   @override
   void initState() {
@@ -27,8 +27,8 @@ class _LoginOneState extends State<LoginOne> {
   @override
   void dispose() {
     super.dispose();
-    _phoneNumber.dispose();
-    _password.dispose();
+    _phoneNumber!.dispose();
+    _password!.dispose();
   }
 
   @override
@@ -97,18 +97,18 @@ class _LoginOneState extends State<LoginOne> {
                             orElse: () => 1,
                             error: (e) => e.failure.maybeMap(
                                   orElse: () =>
-                                      _key.currentState.showSnackBar(SnackBar(
+                                      _key.currentState!.showSnackBar(SnackBar(
                                     content: Text(e.failure.message),
                                   )),
                                   notAuthorized: (value) =>
-                                      _key.currentState.showSnackBar(SnackBar(
+                                      _key.currentState!.showSnackBar(SnackBar(
                                     content: Text(value.message),
                                     action: SnackBarAction(
                                         label: "Verify Number",
                                         onPressed: () => Navigator.pushNamed(
                                                 context, '/RegisterTwo',
                                                 arguments: {
-                                                  "phone": _phoneNumber.text
+                                                  "phone": _phoneNumber!.text
                                                 })),
                                   )),
                                 ),
@@ -120,9 +120,9 @@ class _LoginOneState extends State<LoginOne> {
                         padding: const EdgeInsets.only(bottom: 8.0),
                         child: CommonButton(
                             onPressed: () {
-                              if (_formKey.currentState.validate()) {
+                              if (_formKey.currentState!.validate()) {
                                 signInBloc.add(SignInEventOnSubmit(
-                                    _phoneNumber.text, _password.text));
+                                    _phoneNumber!.text, _password!.text));
                               }
                             },
                             text: 'Login'),

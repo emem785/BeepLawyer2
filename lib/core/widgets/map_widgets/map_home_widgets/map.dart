@@ -7,7 +7,7 @@ class Map extends StatelessWidget {
   final MapTool mapTool;
   final Stream<Marker> markerStream;
 
-  Map({Key key, @required this.mapTool, @required this.markerStream})
+  Map({Key? key, required this.mapTool, required this.markerStream})
       : super(key: key);
 
   @override
@@ -17,6 +17,6 @@ class Map extends StatelessWidget {
         initialData: mapTool.marker,
         builder: (context, snapshot) {
           return ;
-        });
+        } as Widget Function(BuildContext, AsyncSnapshot<Marker>));
   }
 }

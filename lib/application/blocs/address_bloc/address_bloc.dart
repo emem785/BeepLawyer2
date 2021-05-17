@@ -15,9 +15,9 @@ part 'address_bloc.freezed.dart';
 
 @injectable
 class AddressBloc extends Bloc<AddressEvent, AddressState> {
-  final UserLocationInterface userLocationInterface;
-  final ApiInterface apiInterface;
-  final LocalStorageInterface localStorageInterface;
+  final UserLocationInterface? userLocationInterface;
+  final ApiInterface? apiInterface;
+  final LocalStorageInterface? localStorageInterface;
   AddressBloc(
       {this.apiInterface,
       this.localStorageInterface,

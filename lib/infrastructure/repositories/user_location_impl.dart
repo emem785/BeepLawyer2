@@ -15,11 +15,11 @@ import 'package:injectable/injectable.dart';
 
 @Injectable(as: UserLocationInterface)
 class UserLocationImpl implements UserLocationInterface {
-  final Geolocator geolocator;
-  final LocalStorageInterface localStorageInterface;
+  final Geolocator? geolocator;
+  final LocalStorageInterface? localStorageInterface;
 
   UserLocationImpl(
-      {@required this.localStorageInterface, @required this.geolocator});
+      {required this.localStorageInterface, required this.geolocator});
 
   @override
   Future<Location> getLocation() async {

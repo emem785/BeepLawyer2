@@ -9,13 +9,13 @@ import 'package:uni_links/uni_links.dart';
 
 class UnilinkImpl implements UnilinkInterface {
   @override
-  Future<void> initUnilink(BuildContext context, StreamSubscription<Uri> subscription) async {
+  Future<void> initUnilink(BuildContext context, StreamSubscription<Uri?> subscription) async {
     try {
-      String initialLink = await getInitialLink();
+      String? initialLink = await getInitialLink();
       if (initialLink != null) {
         Navigator.pushNamed(context, '/ReceiveBeep');
       }
-      subscription = getUriLinksStream().listen((Uri uri) {
+      subscription = getUriLinksStream().listen((Uri? uri) {
         Navigator.pushNamedAndRemoveUntil(
             context, '/ReceiveBeep', ModalRoute.withName('/HomeScreen'));
       }, onError: (err) {

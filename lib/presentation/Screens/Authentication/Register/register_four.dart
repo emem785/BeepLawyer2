@@ -75,7 +75,7 @@ class _RegisterFourState extends State<RegisterFour> {
                             ),
                             TextFormField(
                               controller: _scnNumber,
-                              validator: (value) => (value.isEmpty)
+                              validator: (value) => (value!.isEmpty)
                                   ? "Please enter Scn Number"
                                   : null,
                               keyboardType: TextInputType.number,
@@ -95,13 +95,13 @@ class _RegisterFourState extends State<RegisterFour> {
                                   orElse: () => 1,
                                   scnNumberUpdated: (u) => Navigator.pushNamed(
                                       context, '/RegisterFive'),
-                                  error: (e) => _key.currentState.showSnackBar(
+                                  error: (e) => _key.currentState!.showSnackBar(
                                       SnackBar(
                                           content: Text(e.failure.message))));
                             },
                             child: CommonButton(
                               onPressed: () {
-                                if (_formKey.currentState.validate()) {
+                                if (_formKey.currentState!.validate()) {
                                   BlocProvider.of<RegisterBloc>(context)
                                       .add(UpdateScnNumber(_scnNumber.text));
                                 }

@@ -8,9 +8,9 @@ import 'package:beep_lawyer_3/application/blocs/user_bloc/user_bloc.dart';
 import '../../../../application/blocs/navigation_bloc/navigation_bloc.dart';
 
 class ProfileMenu extends StatefulWidget {
-  final User user;
+  final User? user;
 
-  const ProfileMenu({Key key, @required this.user}) : super(key: key);
+  const ProfileMenu({Key? key, required this.user}) : super(key: key);
   @override
   _ProfileMenuState createState() => _ProfileMenuState();
 }
@@ -18,28 +18,28 @@ class ProfileMenu extends StatefulWidget {
 class _ProfileMenuState extends State<ProfileMenu> {
   final _formKey = GlobalKey<FormState>();
   final _key = GlobalKey<ScaffoldState>();
-  TextEditingController _firstname;
-  TextEditingController _lastname;
-  TextEditingController _phonenumber;
-  TextEditingController _twitterhandle;
-  TextEditingController _email;
+  TextEditingController? _firstname;
+  TextEditingController? _lastname;
+  late TextEditingController _phonenumber;
+  TextEditingController? _twitterhandle;
+  TextEditingController? _email;
 
   @override
   void initState() {
     super.initState();
-    _firstname = TextEditingController(text: widget.user.firstname);
-    _lastname = TextEditingController(text: widget.user.lastname);
-    _phonenumber = TextEditingController(text: widget.user.phone);
-    _email = TextEditingController(text: widget.user.email);
+    _firstname = TextEditingController(text: widget.user!.firstname);
+    _lastname = TextEditingController(text: widget.user!.lastname);
+    _phonenumber = TextEditingController(text: widget.user!.phone);
+    _email = TextEditingController(text: widget.user!.email);
   }
 
   @override
   void dispose() {
     super.dispose();
-    _firstname.dispose();
-    _lastname.dispose();
+    _firstname!.dispose();
+    _lastname!.dispose();
     _phonenumber.dispose();
-    _email.dispose();
+    _email!.dispose();
   }
 
   @override
@@ -92,11 +92,11 @@ class _ProfileMenuState extends State<ProfileMenu> {
                     ),
                     BlocConsumer<UserBloc, UserState>(
                       listener: (_, state) {
-                        return state.maybeMap(
+                        state.maybeMap(
                             orElse: () => 1,
-                            userError: (e) => _key.currentState.showSnackBar(
+                            userError: (e) => _key.currentState!.showSnackBar(
                                 SnackBar(content: Text(e.failure.message))),
-                            userUpdated: (u) => _key.currentState
+                            userUpdated: (u) => _key.currentState!
                                 .showSnackBar(SnackBar(content: Text(u.msg))));
                       },
                       builder: (_, state) {
@@ -108,12 +108,12 @@ class _ProfileMenuState extends State<ProfileMenu> {
                     CommonButton(
                         text: 'Save Changes',
                         onPressed: () {
-                          if (_formKey.currentState.validate()) {
+                          if (_formKey.currentState!.validate()) {
                             userBloc.add(UpdateUser(User(
-                                firstname: _firstname.text,
-                                lastname: _lastname.text,
+                                firstname: _firstname!.text,
+                                lastname: _lastname!.text,
                                 // phone: _phonenumber.text,
-                                email: _email.text)));
+                                email: _email!.text)));
                           }
                         }),
                     CommonButton(
@@ -135,12 +135,12 @@ class _ProfileMenuState extends State<ProfileMenu> {
 }
 
 class CusTextFine extends StatelessWidget {
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final bool num;
-  final String labelText;
+  final String? labelText;
 
   const CusTextFine(
-      {Key key, this.controller, this.num = false, this.labelText})
+      {Key? key, this.controller, this.num = false, this.labelText})
       : super(key: key);
 
   @override
@@ -193,7 +193,7 @@ class CusTextFine extends StatelessWidget {
                     keyboardType:
                         num ? TextInputType.number : TextInputType.text,
                     validator: (value) =>
-                        (value.isEmpty) ? 'Enter a valid $labelText' : null,
+                        (value!.isEmpty) ? 'Enter a valid $labelText' : null,
                   ),
                 ],
               )

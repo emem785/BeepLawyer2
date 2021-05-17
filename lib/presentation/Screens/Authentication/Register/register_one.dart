@@ -102,7 +102,7 @@ class _RegisterOneState extends State<RegisterOne> {
                             orElse: () => SizedBox(),
                             loading: (m) => LoadingIndicator());
                       }, listener: (_, state) {
-                        return state.maybeMap(
+                        state.maybeMap(
                             orElse: () => 1,
                             registerComplete: (u) => Navigator.pushNamed(
                                 context, '/RegisterTwo',
@@ -110,11 +110,11 @@ class _RegisterOneState extends State<RegisterOne> {
                             error: (e) {
                               return e.failure.maybeMap(
                                   orElse: () =>
-                                      _key.currentState.showSnackBar(SnackBar(
+                                      _key.currentState!.showSnackBar(SnackBar(
                                         content: Text(e.failure.message),
                                       )),
                                   userExist: (value) =>
-                                      _key.currentState.showSnackBar(SnackBar(
+                                      _key.currentState!.showSnackBar(SnackBar(
                                         content: Text(value.message),
                                         action: SnackBarAction(
                                             label: "Go to login",
@@ -128,7 +128,7 @@ class _RegisterOneState extends State<RegisterOne> {
                         padding: const EdgeInsets.only(bottom: 8.0),
                         child: CommonButton(
                             onPressed: () {
-                              if (_formKey.currentState.validate()) {
+                              if (_formKey.currentState!.validate()) {
                                 registerBloc.add(RegisterUser(
                                     user: User(
                                         firstname: _firstName.text.trimRight(),

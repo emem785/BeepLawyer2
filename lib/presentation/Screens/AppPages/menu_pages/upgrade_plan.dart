@@ -9,7 +9,7 @@ class UpgradePlan extends StatefulWidget {
 }
 
 class _UpgradePlanState extends State<UpgradePlan> {
-  plan opt;
+  plan? opt;
 
   @override
   void initState() {
@@ -80,7 +80,7 @@ class _UpgradePlanState extends State<UpgradePlan> {
                           groupValue: opt,
                           activeColor: Colors.brown,
                           controlAffinity: ListTileControlAffinity.trailing,
-                          onChanged: (plan value) {
+                          onChanged: (plan? value) {
                             setState(() {
                               opt = value;
                             });
@@ -138,7 +138,7 @@ class _UpgradePlanState extends State<UpgradePlan> {
                             groupValue: opt,
                             activeColor: Colors.brown,
                             controlAffinity: ListTileControlAffinity.trailing,
-                            onChanged: (plan value) {
+                            onChanged: (plan? value) {
                               setState(() {
                                 opt = value;
                               });

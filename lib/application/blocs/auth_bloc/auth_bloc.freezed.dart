@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'auth_bloc.dart';
 
@@ -9,53 +9,62 @@ part of 'auth_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$AuthEventTearOff {
   const _$AuthEventTearOff();
 
-// ignore: unused_element
   AppLoaded appLoaded() {
     return const AppLoaded();
   }
 
-// ignore: unused_element
   SignOut signOut() {
     return const SignOut();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $AuthEvent = _$AuthEventTearOff();
 
+/// @nodoc
 mixin _$AuthEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result appLoaded(),
-    @required Result signOut(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() appLoaded,
+    required TResult Function() signOut,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result appLoaded(),
-    Result signOut(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? appLoaded,
+    TResult Function()? signOut,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result appLoaded(AppLoaded value),
-    @required Result signOut(SignOut value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(AppLoaded value) appLoaded,
+    required TResult Function(SignOut value) signOut,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result appLoaded(AppLoaded value),
-    Result signOut(SignOut value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AppLoaded value)? appLoaded,
+    TResult Function(SignOut value)? signOut,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $AuthEventCopyWith<$Res> {
   factory $AuthEventCopyWith(AuthEvent value, $Res Function(AuthEvent) then) =
       _$AuthEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AuthEventCopyWithImpl<$Res> implements $AuthEventCopyWith<$Res> {
   _$AuthEventCopyWithImpl(this._value, this._then);
 
@@ -64,11 +73,13 @@ class _$AuthEventCopyWithImpl<$Res> implements $AuthEventCopyWith<$Res> {
   final $Res Function(AuthEvent) _then;
 }
 
+/// @nodoc
 abstract class $AppLoadedCopyWith<$Res> {
   factory $AppLoadedCopyWith(AppLoaded value, $Res Function(AppLoaded) then) =
       _$AppLoadedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AppLoadedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
     implements $AppLoadedCopyWith<$Res> {
   _$AppLoadedCopyWithImpl(AppLoaded _value, $Res Function(AppLoaded) _then)
@@ -77,6 +88,8 @@ class _$AppLoadedCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
   @override
   AppLoaded get _value => super._value as AppLoaded;
 }
+
+/// @nodoc
 
 class _$AppLoaded with DiagnosticableTreeMixin implements AppLoaded {
   const _$AppLoaded();
@@ -102,23 +115,20 @@ class _$AppLoaded with DiagnosticableTreeMixin implements AppLoaded {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result appLoaded(),
-    @required Result signOut(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() appLoaded,
+    required TResult Function() signOut,
   }) {
-    assert(appLoaded != null);
-    assert(signOut != null);
     return appLoaded();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result appLoaded(),
-    Result signOut(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? appLoaded,
+    TResult Function()? signOut,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (appLoaded != null) {
       return appLoaded();
     }
@@ -127,23 +137,20 @@ class _$AppLoaded with DiagnosticableTreeMixin implements AppLoaded {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result appLoaded(AppLoaded value),
-    @required Result signOut(SignOut value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(AppLoaded value) appLoaded,
+    required TResult Function(SignOut value) signOut,
   }) {
-    assert(appLoaded != null);
-    assert(signOut != null);
     return appLoaded(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result appLoaded(AppLoaded value),
-    Result signOut(SignOut value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AppLoaded value)? appLoaded,
+    TResult Function(SignOut value)? signOut,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (appLoaded != null) {
       return appLoaded(this);
     }
@@ -155,11 +162,13 @@ abstract class AppLoaded implements AuthEvent {
   const factory AppLoaded() = _$AppLoaded;
 }
 
+/// @nodoc
 abstract class $SignOutCopyWith<$Res> {
   factory $SignOutCopyWith(SignOut value, $Res Function(SignOut) then) =
       _$SignOutCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SignOutCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
     implements $SignOutCopyWith<$Res> {
   _$SignOutCopyWithImpl(SignOut _value, $Res Function(SignOut) _then)
@@ -168,6 +177,8 @@ class _$SignOutCopyWithImpl<$Res> extends _$AuthEventCopyWithImpl<$Res>
   @override
   SignOut get _value => super._value as SignOut;
 }
+
+/// @nodoc
 
 class _$SignOut with DiagnosticableTreeMixin implements SignOut {
   const _$SignOut();
@@ -193,23 +204,20 @@ class _$SignOut with DiagnosticableTreeMixin implements SignOut {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result appLoaded(),
-    @required Result signOut(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() appLoaded,
+    required TResult Function() signOut,
   }) {
-    assert(appLoaded != null);
-    assert(signOut != null);
     return signOut();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result appLoaded(),
-    Result signOut(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? appLoaded,
+    TResult Function()? signOut,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signOut != null) {
       return signOut();
     }
@@ -218,23 +226,20 @@ class _$SignOut with DiagnosticableTreeMixin implements SignOut {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result appLoaded(AppLoaded value),
-    @required Result signOut(SignOut value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(AppLoaded value) appLoaded,
+    required TResult Function(SignOut value) signOut,
   }) {
-    assert(appLoaded != null);
-    assert(signOut != null);
     return signOut(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result appLoaded(AppLoaded value),
-    Result signOut(SignOut value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AppLoaded value)? appLoaded,
+    TResult Function(SignOut value)? signOut,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (signOut != null) {
       return signOut(this);
     }
@@ -246,64 +251,69 @@ abstract class SignOut implements AuthEvent {
   const factory SignOut() = _$SignOut;
 }
 
+/// @nodoc
 class _$AuthStateTearOff {
   const _$AuthStateTearOff();
 
-// ignore: unused_element
   Initial initial() {
     return const Initial();
   }
 
-// ignore: unused_element
   Authenticated authenticated(User user) {
     return Authenticated(
       user,
     );
   }
 
-// ignore: unused_element
   Unauthenticated unauthenticated() {
     return const Unauthenticated();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $AuthState = _$AuthStateTearOff();
 
+/// @nodoc
 mixin _$AuthState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticated(User user),
-    @required Result unauthenticated(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) authenticated,
+    required TResult Function() unauthenticated,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticated(User user),
-    Result unauthenticated(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? authenticated,
+    TResult Function()? unauthenticated,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(Initial value),
-    @required Result authenticated(Authenticated value),
-    @required Result unauthenticated(Unauthenticated value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(Unauthenticated value) unauthenticated,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(Initial value),
-    Result authenticated(Authenticated value),
-    Result unauthenticated(Unauthenticated value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Authenticated value)? authenticated,
+    TResult Function(Unauthenticated value)? unauthenticated,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $AuthStateCopyWith<$Res> {
   factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) =
       _$AuthStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
   _$AuthStateCopyWithImpl(this._value, this._then);
 
@@ -312,11 +322,13 @@ class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
   final $Res Function(AuthState) _then;
 }
 
+/// @nodoc
 abstract class $InitialCopyWith<$Res> {
   factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
       _$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$InitialCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
     implements $InitialCopyWith<$Res> {
   _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
@@ -325,6 +337,8 @@ class _$InitialCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
   @override
   Initial get _value => super._value as Initial;
 }
+
+/// @nodoc
 
 class _$Initial with DiagnosticableTreeMixin implements Initial {
   const _$Initial();
@@ -350,26 +364,22 @@ class _$Initial with DiagnosticableTreeMixin implements Initial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticated(User user),
-    @required Result unauthenticated(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) authenticated,
+    required TResult Function() unauthenticated,
   }) {
-    assert(initial != null);
-    assert(authenticated != null);
-    assert(unauthenticated != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticated(User user),
-    Result unauthenticated(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? authenticated,
+    TResult Function()? unauthenticated,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -378,26 +388,22 @@ class _$Initial with DiagnosticableTreeMixin implements Initial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(Initial value),
-    @required Result authenticated(Authenticated value),
-    @required Result unauthenticated(Unauthenticated value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(Unauthenticated value) unauthenticated,
   }) {
-    assert(initial != null);
-    assert(authenticated != null);
-    assert(unauthenticated != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(Initial value),
-    Result authenticated(Authenticated value),
-    Result unauthenticated(Unauthenticated value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Authenticated value)? authenticated,
+    TResult Function(Unauthenticated value)? unauthenticated,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -409,6 +415,7 @@ abstract class Initial implements AuthState {
   const factory Initial() = _$Initial;
 }
 
+/// @nodoc
 abstract class $AuthenticatedCopyWith<$Res> {
   factory $AuthenticatedCopyWith(
           Authenticated value, $Res Function(Authenticated) then) =
@@ -416,6 +423,7 @@ abstract class $AuthenticatedCopyWith<$Res> {
   $Res call({User user});
 }
 
+/// @nodoc
 class _$AuthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
     implements $AuthenticatedCopyWith<$Res> {
   _$AuthenticatedCopyWithImpl(
@@ -427,16 +435,21 @@ class _$AuthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
+    Object? user = freezed,
   }) {
     return _then(Authenticated(
-      user == freezed ? _value.user : user as User,
+      user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
     ));
   }
 }
 
+/// @nodoc
+
 class _$Authenticated with DiagnosticableTreeMixin implements Authenticated {
-  const _$Authenticated(this.user) : assert(user != null);
+  const _$Authenticated(this.user);
 
   @override
   final User user;
@@ -466,32 +479,29 @@ class _$Authenticated with DiagnosticableTreeMixin implements Authenticated {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
 
+  @JsonKey(ignore: true)
   @override
   $AuthenticatedCopyWith<Authenticated> get copyWith =>
       _$AuthenticatedCopyWithImpl<Authenticated>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticated(User user),
-    @required Result unauthenticated(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) authenticated,
+    required TResult Function() unauthenticated,
   }) {
-    assert(initial != null);
-    assert(authenticated != null);
-    assert(unauthenticated != null);
     return authenticated(user);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticated(User user),
-    Result unauthenticated(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? authenticated,
+    TResult Function()? unauthenticated,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (authenticated != null) {
       return authenticated(user);
     }
@@ -500,26 +510,22 @@ class _$Authenticated with DiagnosticableTreeMixin implements Authenticated {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(Initial value),
-    @required Result authenticated(Authenticated value),
-    @required Result unauthenticated(Unauthenticated value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(Unauthenticated value) unauthenticated,
   }) {
-    assert(initial != null);
-    assert(authenticated != null);
-    assert(unauthenticated != null);
     return authenticated(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(Initial value),
-    Result authenticated(Authenticated value),
-    Result unauthenticated(Unauthenticated value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Authenticated value)? authenticated,
+    TResult Function(Unauthenticated value)? unauthenticated,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (authenticated != null) {
       return authenticated(this);
     }
@@ -530,16 +536,20 @@ class _$Authenticated with DiagnosticableTreeMixin implements Authenticated {
 abstract class Authenticated implements AuthState {
   const factory Authenticated(User user) = _$Authenticated;
 
-  User get user;
-  $AuthenticatedCopyWith<Authenticated> get copyWith;
+  User get user => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AuthenticatedCopyWith<Authenticated> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $UnauthenticatedCopyWith<$Res> {
   factory $UnauthenticatedCopyWith(
           Unauthenticated value, $Res Function(Unauthenticated) then) =
       _$UnauthenticatedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UnauthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
     implements $UnauthenticatedCopyWith<$Res> {
   _$UnauthenticatedCopyWithImpl(
@@ -549,6 +559,8 @@ class _$UnauthenticatedCopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
   @override
   Unauthenticated get _value => super._value as Unauthenticated;
 }
+
+/// @nodoc
 
 class _$Unauthenticated
     with DiagnosticableTreeMixin
@@ -576,26 +588,22 @@ class _$Unauthenticated
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result authenticated(User user),
-    @required Result unauthenticated(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(User user) authenticated,
+    required TResult Function() unauthenticated,
   }) {
-    assert(initial != null);
-    assert(authenticated != null);
-    assert(unauthenticated != null);
     return unauthenticated();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result authenticated(User user),
-    Result unauthenticated(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(User user)? authenticated,
+    TResult Function()? unauthenticated,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unauthenticated != null) {
       return unauthenticated();
     }
@@ -604,26 +612,22 @@ class _$Unauthenticated
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(Initial value),
-    @required Result authenticated(Authenticated value),
-    @required Result unauthenticated(Unauthenticated value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(Unauthenticated value) unauthenticated,
   }) {
-    assert(initial != null);
-    assert(authenticated != null);
-    assert(unauthenticated != null);
     return unauthenticated(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(Initial value),
-    Result authenticated(Authenticated value),
-    Result unauthenticated(Unauthenticated value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Authenticated value)? authenticated,
+    TResult Function(Unauthenticated value)? unauthenticated,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (unauthenticated != null) {
       return unauthenticated(this);
     }

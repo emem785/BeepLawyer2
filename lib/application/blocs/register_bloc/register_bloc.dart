@@ -15,8 +15,8 @@ part 'register_bloc.freezed.dart';
 
 @injectable
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
-  final ApiInterface apiInterface;
-  final LocalStorageInterface localStorageInterface;
+  final ApiInterface? apiInterface;
+  final LocalStorageInterface? localStorageInterface;
   RegisterBloc({this.localStorageInterface, this.apiInterface})
       : super(RegisterUserInitial());
 
@@ -26,31 +26,31 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   ) async* {
     yield RegisterLoading();
     yield* event.map(register: (e) async* {
-      final response = await apiInterface.registerUserWithForm(
+      final response = await apiInterface!.registerUserWithForm(
           user: e.user, password: e.password, imagePath: e.imagePath);
       yield* response.fold((l) async* {
         yield RegisterError(l);
       }, (r) async* {
-        yield RegisterComplete(e.user.phone);
+        yield RegisterComplete(e.user!.phone!);
       });
     }, getCode: (e) async* {
-      final response = await apiInterface.getVerifyCode(e.phoneNumber);
+      final response = await apiInterface!.getVerifyCode(e.phoneNumber);
       yield* response.fold((l) async* {
         yield RegisterError(l);
       }, (r) async* {
         yield GetCodeComplete(r.toString());
       });
     }, mobileVerify: (e) async* {
-      final response = await apiInterface.mobileVerify(e.phoneNumber, e.code);
+      final response = await apiInterface!.mobileVerify(e.phoneNumber, e.code);
       yield* response.fold((l) async* {
         yield RegisterError(l);
       }, (r) async* {
         final user =
-            await localStorageInterface.cacheUserFromSignIn(r, e.phoneNumber);
+            await localStorageInterface!.cacheUserFromSignIn(r, e.phoneNumber);
         yield VerifyComplete(user);
       });
     }, updateScnNumber: (e) async* {
-      final response = await apiInterface.updateScnNumber(e.scnNumber);
+      final response = await apiInterface!.updateScnNumber(e.scnNumber);
       yield* response.fold((l) async* {
         yield RegisterError(l);
       }, (r) async* {

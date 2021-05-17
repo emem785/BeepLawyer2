@@ -13,39 +13,39 @@ import 'package:web_socket_channel/io.dart';
 
 @Injectable(as: MapInterface)
 class MapHelperImpl implements MapInterface {
-  final UserLocationInterface userLocationInterface;
-  final ApiInterface apiInterface;
+  final UserLocationInterface? userLocationInterface;
+  final ApiInterface? apiInterface;
 
   MapHelperImpl(
-      {@required this.apiInterface, @required this.userLocationInterface});
+      {required this.apiInterface, required this.userLocationInterface});
   @override
-  StreamSubscription<Location> startMapUpdateStream(MapTool mapTool) {
+  StreamSubscription<Location> startMapUpdateStream(MapTool? mapTool) {
     final mapUpdateSubscription =
-        userLocationInterface.getUserLocationStream().listen((event) {
-      mapTool.updateController(event);
+        userLocationInterface!.getUserLocationStream().listen((event) {
+      mapTool!.updateController(event);
       mapTool.markerStreamController.add(getMarker(event));
     });
     return mapUpdateSubscription;
   }
 
   @override
-  StreamSubscription<Location> startMapUpdateStreamFromApi(
-      MapTool mapTool, String phoneNumber, IOWebSocketChannel channel) {
-    final mapUpdateSubscription = channel.stream.listen((event) {
+  StreamSubscription<Location?> startMapUpdateStreamFromApi(
+      MapTool mapTool, String? phoneNumber, IOWebSocketChannel? channel) {
+    final mapUpdateSubscription = channel!.stream.listen((event) {
       final map = jsonDecode(event);
       mapTool.updateController(
           Location(latitude: map["lat"], longitude: map["lng"]));
       mapTool.markerStreamController.add(
           getMarker(Location(latitude: map["lat"], longitude: map["lng"])));
     }, cancelOnError: false);
-    return mapUpdateSubscription;
+    return mapUpdateSubscription as StreamSubscription<Location?>;
   }
 
   @override
   Marker getMarker(Location location) {
     return Marker(
         markerId: MarkerId("User Location"),
-        position: LatLng(location.latitude, location.longitude),
+        position: LatLng(location.latitude, location.longitude!),
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen));
   }
 }

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'failure.dart';
 
@@ -9,45 +9,43 @@ part of 'failure.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$FailureTearOff {
   const _$FailureTearOff();
 
-// ignore: unused_element
   UserExist userExist(String message) {
     return UserExist(
       message,
     );
   }
 
-// ignore: unused_element
   NoCredentials noCredentials(String message) {
     return NoCredentials(
       message,
     );
   }
 
-// ignore: unused_element
   NotAuthorized notAuthorized(String message) {
     return NotAuthorized(
       message,
     );
   }
 
-// ignore: unused_element
   ServerFailure serverFailure(String message) {
     return ServerFailure(
       message,
     );
   }
 
-// ignore: unused_element
   CacheFailure cacheFailure(String message) {
     return CacheFailure(
       message,
     );
   }
 
-// ignore: unused_element
   PlatformFailure platformFailure(String message) {
     return PlatformFailure(
       message,
@@ -55,60 +53,68 @@ class _$FailureTearOff {
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $Failure = _$FailureTearOff();
 
+/// @nodoc
 mixin _$Failure {
-  String get message;
+  String get message => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result userExist(String message),
-    @required Result noCredentials(String message),
-    @required Result notAuthorized(String message),
-    @required Result serverFailure(String message),
-    @required Result cacheFailure(String message),
-    @required Result platformFailure(String message),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(String message) userExist,
+    required TResult Function(String message) noCredentials,
+    required TResult Function(String message) notAuthorized,
+    required TResult Function(String message) serverFailure,
+    required TResult Function(String message) cacheFailure,
+    required TResult Function(String message) platformFailure,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result userExist(String message),
-    Result noCredentials(String message),
-    Result notAuthorized(String message),
-    Result serverFailure(String message),
-    Result cacheFailure(String message),
-    Result platformFailure(String message),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String message)? userExist,
+    TResult Function(String message)? noCredentials,
+    TResult Function(String message)? notAuthorized,
+    TResult Function(String message)? serverFailure,
+    TResult Function(String message)? cacheFailure,
+    TResult Function(String message)? platformFailure,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result userExist(UserExist value),
-    @required Result noCredentials(NoCredentials value),
-    @required Result notAuthorized(NotAuthorized value),
-    @required Result serverFailure(ServerFailure value),
-    @required Result cacheFailure(CacheFailure value),
-    @required Result platformFailure(PlatformFailure value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserExist value) userExist,
+    required TResult Function(NoCredentials value) noCredentials,
+    required TResult Function(NotAuthorized value) notAuthorized,
+    required TResult Function(ServerFailure value) serverFailure,
+    required TResult Function(CacheFailure value) cacheFailure,
+    required TResult Function(PlatformFailure value) platformFailure,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result userExist(UserExist value),
-    Result noCredentials(NoCredentials value),
-    Result notAuthorized(NotAuthorized value),
-    Result serverFailure(ServerFailure value),
-    Result cacheFailure(CacheFailure value),
-    Result platformFailure(PlatformFailure value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserExist value)? userExist,
+    TResult Function(NoCredentials value)? noCredentials,
+    TResult Function(NotAuthorized value)? notAuthorized,
+    TResult Function(ServerFailure value)? serverFailure,
+    TResult Function(CacheFailure value)? cacheFailure,
+    TResult Function(PlatformFailure value)? platformFailure,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 
-  $FailureCopyWith<Failure> get copyWith;
+  @JsonKey(ignore: true)
+  $FailureCopyWith<Failure> get copyWith => throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $FailureCopyWith<$Res> {
   factory $FailureCopyWith(Failure value, $Res Function(Failure) then) =
       _$FailureCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
+/// @nodoc
 class _$FailureCopyWithImpl<$Res> implements $FailureCopyWith<$Res> {
   _$FailureCopyWithImpl(this._value, this._then);
 
@@ -118,14 +124,18 @@ class _$FailureCopyWithImpl<$Res> implements $FailureCopyWith<$Res> {
 
   @override
   $Res call({
-    Object message = freezed,
+    Object? message = freezed,
   }) {
     return _then(_value.copyWith(
-      message: message == freezed ? _value.message : message as String,
+      message: message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
 abstract class $UserExistCopyWith<$Res> implements $FailureCopyWith<$Res> {
   factory $UserExistCopyWith(UserExist value, $Res Function(UserExist) then) =
       _$UserExistCopyWithImpl<$Res>;
@@ -133,6 +143,7 @@ abstract class $UserExistCopyWith<$Res> implements $FailureCopyWith<$Res> {
   $Res call({String message});
 }
 
+/// @nodoc
 class _$UserExistCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
     implements $UserExistCopyWith<$Res> {
   _$UserExistCopyWithImpl(UserExist _value, $Res Function(UserExist) _then)
@@ -143,16 +154,21 @@ class _$UserExistCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object message = freezed,
+    Object? message = freezed,
   }) {
     return _then(UserExist(
-      message == freezed ? _value.message : message as String,
+      message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$UserExist implements UserExist {
-  const _$UserExist(this.message) : assert(message != null);
+  const _$UserExist(this.message);
 
   @override
   final String message;
@@ -174,41 +190,35 @@ class _$UserExist implements UserExist {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
 
+  @JsonKey(ignore: true)
   @override
   $UserExistCopyWith<UserExist> get copyWith =>
       _$UserExistCopyWithImpl<UserExist>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result userExist(String message),
-    @required Result noCredentials(String message),
-    @required Result notAuthorized(String message),
-    @required Result serverFailure(String message),
-    @required Result cacheFailure(String message),
-    @required Result platformFailure(String message),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String message) userExist,
+    required TResult Function(String message) noCredentials,
+    required TResult Function(String message) notAuthorized,
+    required TResult Function(String message) serverFailure,
+    required TResult Function(String message) cacheFailure,
+    required TResult Function(String message) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return userExist(message);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result userExist(String message),
-    Result noCredentials(String message),
-    Result notAuthorized(String message),
-    Result serverFailure(String message),
-    Result cacheFailure(String message),
-    Result platformFailure(String message),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String message)? userExist,
+    TResult Function(String message)? noCredentials,
+    TResult Function(String message)? notAuthorized,
+    TResult Function(String message)? serverFailure,
+    TResult Function(String message)? cacheFailure,
+    TResult Function(String message)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userExist != null) {
       return userExist(message);
     }
@@ -217,35 +227,28 @@ class _$UserExist implements UserExist {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result userExist(UserExist value),
-    @required Result noCredentials(NoCredentials value),
-    @required Result notAuthorized(NotAuthorized value),
-    @required Result serverFailure(ServerFailure value),
-    @required Result cacheFailure(CacheFailure value),
-    @required Result platformFailure(PlatformFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserExist value) userExist,
+    required TResult Function(NoCredentials value) noCredentials,
+    required TResult Function(NotAuthorized value) notAuthorized,
+    required TResult Function(ServerFailure value) serverFailure,
+    required TResult Function(CacheFailure value) cacheFailure,
+    required TResult Function(PlatformFailure value) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return userExist(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result userExist(UserExist value),
-    Result noCredentials(NoCredentials value),
-    Result notAuthorized(NotAuthorized value),
-    Result serverFailure(ServerFailure value),
-    Result cacheFailure(CacheFailure value),
-    Result platformFailure(PlatformFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserExist value)? userExist,
+    TResult Function(NoCredentials value)? noCredentials,
+    TResult Function(NotAuthorized value)? notAuthorized,
+    TResult Function(ServerFailure value)? serverFailure,
+    TResult Function(CacheFailure value)? cacheFailure,
+    TResult Function(PlatformFailure value)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (userExist != null) {
       return userExist(this);
     }
@@ -257,11 +260,14 @@ abstract class UserExist implements Failure {
   const factory UserExist(String message) = _$UserExist;
 
   @override
-  String get message;
+  String get message => throw _privateConstructorUsedError;
   @override
-  $UserExistCopyWith<UserExist> get copyWith;
+  @JsonKey(ignore: true)
+  $UserExistCopyWith<UserExist> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $NoCredentialsCopyWith<$Res> implements $FailureCopyWith<$Res> {
   factory $NoCredentialsCopyWith(
           NoCredentials value, $Res Function(NoCredentials) then) =
@@ -270,6 +276,7 @@ abstract class $NoCredentialsCopyWith<$Res> implements $FailureCopyWith<$Res> {
   $Res call({String message});
 }
 
+/// @nodoc
 class _$NoCredentialsCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
     implements $NoCredentialsCopyWith<$Res> {
   _$NoCredentialsCopyWithImpl(
@@ -281,16 +288,21 @@ class _$NoCredentialsCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object message = freezed,
+    Object? message = freezed,
   }) {
     return _then(NoCredentials(
-      message == freezed ? _value.message : message as String,
+      message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$NoCredentials implements NoCredentials {
-  const _$NoCredentials(this.message) : assert(message != null);
+  const _$NoCredentials(this.message);
 
   @override
   final String message;
@@ -312,41 +324,35 @@ class _$NoCredentials implements NoCredentials {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
 
+  @JsonKey(ignore: true)
   @override
   $NoCredentialsCopyWith<NoCredentials> get copyWith =>
       _$NoCredentialsCopyWithImpl<NoCredentials>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result userExist(String message),
-    @required Result noCredentials(String message),
-    @required Result notAuthorized(String message),
-    @required Result serverFailure(String message),
-    @required Result cacheFailure(String message),
-    @required Result platformFailure(String message),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String message) userExist,
+    required TResult Function(String message) noCredentials,
+    required TResult Function(String message) notAuthorized,
+    required TResult Function(String message) serverFailure,
+    required TResult Function(String message) cacheFailure,
+    required TResult Function(String message) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return noCredentials(message);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result userExist(String message),
-    Result noCredentials(String message),
-    Result notAuthorized(String message),
-    Result serverFailure(String message),
-    Result cacheFailure(String message),
-    Result platformFailure(String message),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String message)? userExist,
+    TResult Function(String message)? noCredentials,
+    TResult Function(String message)? notAuthorized,
+    TResult Function(String message)? serverFailure,
+    TResult Function(String message)? cacheFailure,
+    TResult Function(String message)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (noCredentials != null) {
       return noCredentials(message);
     }
@@ -355,35 +361,28 @@ class _$NoCredentials implements NoCredentials {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result userExist(UserExist value),
-    @required Result noCredentials(NoCredentials value),
-    @required Result notAuthorized(NotAuthorized value),
-    @required Result serverFailure(ServerFailure value),
-    @required Result cacheFailure(CacheFailure value),
-    @required Result platformFailure(PlatformFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserExist value) userExist,
+    required TResult Function(NoCredentials value) noCredentials,
+    required TResult Function(NotAuthorized value) notAuthorized,
+    required TResult Function(ServerFailure value) serverFailure,
+    required TResult Function(CacheFailure value) cacheFailure,
+    required TResult Function(PlatformFailure value) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return noCredentials(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result userExist(UserExist value),
-    Result noCredentials(NoCredentials value),
-    Result notAuthorized(NotAuthorized value),
-    Result serverFailure(ServerFailure value),
-    Result cacheFailure(CacheFailure value),
-    Result platformFailure(PlatformFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserExist value)? userExist,
+    TResult Function(NoCredentials value)? noCredentials,
+    TResult Function(NotAuthorized value)? notAuthorized,
+    TResult Function(ServerFailure value)? serverFailure,
+    TResult Function(CacheFailure value)? cacheFailure,
+    TResult Function(PlatformFailure value)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (noCredentials != null) {
       return noCredentials(this);
     }
@@ -395,11 +394,14 @@ abstract class NoCredentials implements Failure {
   const factory NoCredentials(String message) = _$NoCredentials;
 
   @override
-  String get message;
+  String get message => throw _privateConstructorUsedError;
   @override
-  $NoCredentialsCopyWith<NoCredentials> get copyWith;
+  @JsonKey(ignore: true)
+  $NoCredentialsCopyWith<NoCredentials> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $NotAuthorizedCopyWith<$Res> implements $FailureCopyWith<$Res> {
   factory $NotAuthorizedCopyWith(
           NotAuthorized value, $Res Function(NotAuthorized) then) =
@@ -408,6 +410,7 @@ abstract class $NotAuthorizedCopyWith<$Res> implements $FailureCopyWith<$Res> {
   $Res call({String message});
 }
 
+/// @nodoc
 class _$NotAuthorizedCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
     implements $NotAuthorizedCopyWith<$Res> {
   _$NotAuthorizedCopyWithImpl(
@@ -419,16 +422,21 @@ class _$NotAuthorizedCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object message = freezed,
+    Object? message = freezed,
   }) {
     return _then(NotAuthorized(
-      message == freezed ? _value.message : message as String,
+      message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$NotAuthorized implements NotAuthorized {
-  const _$NotAuthorized(this.message) : assert(message != null);
+  const _$NotAuthorized(this.message);
 
   @override
   final String message;
@@ -450,41 +458,35 @@ class _$NotAuthorized implements NotAuthorized {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
 
+  @JsonKey(ignore: true)
   @override
   $NotAuthorizedCopyWith<NotAuthorized> get copyWith =>
       _$NotAuthorizedCopyWithImpl<NotAuthorized>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result userExist(String message),
-    @required Result noCredentials(String message),
-    @required Result notAuthorized(String message),
-    @required Result serverFailure(String message),
-    @required Result cacheFailure(String message),
-    @required Result platformFailure(String message),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String message) userExist,
+    required TResult Function(String message) noCredentials,
+    required TResult Function(String message) notAuthorized,
+    required TResult Function(String message) serverFailure,
+    required TResult Function(String message) cacheFailure,
+    required TResult Function(String message) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return notAuthorized(message);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result userExist(String message),
-    Result noCredentials(String message),
-    Result notAuthorized(String message),
-    Result serverFailure(String message),
-    Result cacheFailure(String message),
-    Result platformFailure(String message),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String message)? userExist,
+    TResult Function(String message)? noCredentials,
+    TResult Function(String message)? notAuthorized,
+    TResult Function(String message)? serverFailure,
+    TResult Function(String message)? cacheFailure,
+    TResult Function(String message)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notAuthorized != null) {
       return notAuthorized(message);
     }
@@ -493,35 +495,28 @@ class _$NotAuthorized implements NotAuthorized {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result userExist(UserExist value),
-    @required Result noCredentials(NoCredentials value),
-    @required Result notAuthorized(NotAuthorized value),
-    @required Result serverFailure(ServerFailure value),
-    @required Result cacheFailure(CacheFailure value),
-    @required Result platformFailure(PlatformFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserExist value) userExist,
+    required TResult Function(NoCredentials value) noCredentials,
+    required TResult Function(NotAuthorized value) notAuthorized,
+    required TResult Function(ServerFailure value) serverFailure,
+    required TResult Function(CacheFailure value) cacheFailure,
+    required TResult Function(PlatformFailure value) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return notAuthorized(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result userExist(UserExist value),
-    Result noCredentials(NoCredentials value),
-    Result notAuthorized(NotAuthorized value),
-    Result serverFailure(ServerFailure value),
-    Result cacheFailure(CacheFailure value),
-    Result platformFailure(PlatformFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserExist value)? userExist,
+    TResult Function(NoCredentials value)? noCredentials,
+    TResult Function(NotAuthorized value)? notAuthorized,
+    TResult Function(ServerFailure value)? serverFailure,
+    TResult Function(CacheFailure value)? cacheFailure,
+    TResult Function(PlatformFailure value)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (notAuthorized != null) {
       return notAuthorized(this);
     }
@@ -533,11 +528,14 @@ abstract class NotAuthorized implements Failure {
   const factory NotAuthorized(String message) = _$NotAuthorized;
 
   @override
-  String get message;
+  String get message => throw _privateConstructorUsedError;
   @override
-  $NotAuthorizedCopyWith<NotAuthorized> get copyWith;
+  @JsonKey(ignore: true)
+  $NotAuthorizedCopyWith<NotAuthorized> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $ServerFailureCopyWith<$Res> implements $FailureCopyWith<$Res> {
   factory $ServerFailureCopyWith(
           ServerFailure value, $Res Function(ServerFailure) then) =
@@ -546,6 +544,7 @@ abstract class $ServerFailureCopyWith<$Res> implements $FailureCopyWith<$Res> {
   $Res call({String message});
 }
 
+/// @nodoc
 class _$ServerFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
     implements $ServerFailureCopyWith<$Res> {
   _$ServerFailureCopyWithImpl(
@@ -557,16 +556,21 @@ class _$ServerFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object message = freezed,
+    Object? message = freezed,
   }) {
     return _then(ServerFailure(
-      message == freezed ? _value.message : message as String,
+      message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$ServerFailure implements ServerFailure {
-  const _$ServerFailure(this.message) : assert(message != null);
+  const _$ServerFailure(this.message);
 
   @override
   final String message;
@@ -588,41 +592,35 @@ class _$ServerFailure implements ServerFailure {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
 
+  @JsonKey(ignore: true)
   @override
   $ServerFailureCopyWith<ServerFailure> get copyWith =>
       _$ServerFailureCopyWithImpl<ServerFailure>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result userExist(String message),
-    @required Result noCredentials(String message),
-    @required Result notAuthorized(String message),
-    @required Result serverFailure(String message),
-    @required Result cacheFailure(String message),
-    @required Result platformFailure(String message),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String message) userExist,
+    required TResult Function(String message) noCredentials,
+    required TResult Function(String message) notAuthorized,
+    required TResult Function(String message) serverFailure,
+    required TResult Function(String message) cacheFailure,
+    required TResult Function(String message) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return serverFailure(message);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result userExist(String message),
-    Result noCredentials(String message),
-    Result notAuthorized(String message),
-    Result serverFailure(String message),
-    Result cacheFailure(String message),
-    Result platformFailure(String message),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String message)? userExist,
+    TResult Function(String message)? noCredentials,
+    TResult Function(String message)? notAuthorized,
+    TResult Function(String message)? serverFailure,
+    TResult Function(String message)? cacheFailure,
+    TResult Function(String message)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (serverFailure != null) {
       return serverFailure(message);
     }
@@ -631,35 +629,28 @@ class _$ServerFailure implements ServerFailure {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result userExist(UserExist value),
-    @required Result noCredentials(NoCredentials value),
-    @required Result notAuthorized(NotAuthorized value),
-    @required Result serverFailure(ServerFailure value),
-    @required Result cacheFailure(CacheFailure value),
-    @required Result platformFailure(PlatformFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserExist value) userExist,
+    required TResult Function(NoCredentials value) noCredentials,
+    required TResult Function(NotAuthorized value) notAuthorized,
+    required TResult Function(ServerFailure value) serverFailure,
+    required TResult Function(CacheFailure value) cacheFailure,
+    required TResult Function(PlatformFailure value) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return serverFailure(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result userExist(UserExist value),
-    Result noCredentials(NoCredentials value),
-    Result notAuthorized(NotAuthorized value),
-    Result serverFailure(ServerFailure value),
-    Result cacheFailure(CacheFailure value),
-    Result platformFailure(PlatformFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserExist value)? userExist,
+    TResult Function(NoCredentials value)? noCredentials,
+    TResult Function(NotAuthorized value)? notAuthorized,
+    TResult Function(ServerFailure value)? serverFailure,
+    TResult Function(CacheFailure value)? cacheFailure,
+    TResult Function(PlatformFailure value)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (serverFailure != null) {
       return serverFailure(this);
     }
@@ -671,11 +662,14 @@ abstract class ServerFailure implements Failure {
   const factory ServerFailure(String message) = _$ServerFailure;
 
   @override
-  String get message;
+  String get message => throw _privateConstructorUsedError;
   @override
-  $ServerFailureCopyWith<ServerFailure> get copyWith;
+  @JsonKey(ignore: true)
+  $ServerFailureCopyWith<ServerFailure> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $CacheFailureCopyWith<$Res> implements $FailureCopyWith<$Res> {
   factory $CacheFailureCopyWith(
           CacheFailure value, $Res Function(CacheFailure) then) =
@@ -684,6 +678,7 @@ abstract class $CacheFailureCopyWith<$Res> implements $FailureCopyWith<$Res> {
   $Res call({String message});
 }
 
+/// @nodoc
 class _$CacheFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
     implements $CacheFailureCopyWith<$Res> {
   _$CacheFailureCopyWithImpl(
@@ -695,16 +690,21 @@ class _$CacheFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object message = freezed,
+    Object? message = freezed,
   }) {
     return _then(CacheFailure(
-      message == freezed ? _value.message : message as String,
+      message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$CacheFailure implements CacheFailure {
-  const _$CacheFailure(this.message) : assert(message != null);
+  const _$CacheFailure(this.message);
 
   @override
   final String message;
@@ -726,41 +726,35 @@ class _$CacheFailure implements CacheFailure {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
 
+  @JsonKey(ignore: true)
   @override
   $CacheFailureCopyWith<CacheFailure> get copyWith =>
       _$CacheFailureCopyWithImpl<CacheFailure>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result userExist(String message),
-    @required Result noCredentials(String message),
-    @required Result notAuthorized(String message),
-    @required Result serverFailure(String message),
-    @required Result cacheFailure(String message),
-    @required Result platformFailure(String message),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String message) userExist,
+    required TResult Function(String message) noCredentials,
+    required TResult Function(String message) notAuthorized,
+    required TResult Function(String message) serverFailure,
+    required TResult Function(String message) cacheFailure,
+    required TResult Function(String message) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return cacheFailure(message);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result userExist(String message),
-    Result noCredentials(String message),
-    Result notAuthorized(String message),
-    Result serverFailure(String message),
-    Result cacheFailure(String message),
-    Result platformFailure(String message),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String message)? userExist,
+    TResult Function(String message)? noCredentials,
+    TResult Function(String message)? notAuthorized,
+    TResult Function(String message)? serverFailure,
+    TResult Function(String message)? cacheFailure,
+    TResult Function(String message)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (cacheFailure != null) {
       return cacheFailure(message);
     }
@@ -769,35 +763,28 @@ class _$CacheFailure implements CacheFailure {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result userExist(UserExist value),
-    @required Result noCredentials(NoCredentials value),
-    @required Result notAuthorized(NotAuthorized value),
-    @required Result serverFailure(ServerFailure value),
-    @required Result cacheFailure(CacheFailure value),
-    @required Result platformFailure(PlatformFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserExist value) userExist,
+    required TResult Function(NoCredentials value) noCredentials,
+    required TResult Function(NotAuthorized value) notAuthorized,
+    required TResult Function(ServerFailure value) serverFailure,
+    required TResult Function(CacheFailure value) cacheFailure,
+    required TResult Function(PlatformFailure value) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return cacheFailure(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result userExist(UserExist value),
-    Result noCredentials(NoCredentials value),
-    Result notAuthorized(NotAuthorized value),
-    Result serverFailure(ServerFailure value),
-    Result cacheFailure(CacheFailure value),
-    Result platformFailure(PlatformFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserExist value)? userExist,
+    TResult Function(NoCredentials value)? noCredentials,
+    TResult Function(NotAuthorized value)? notAuthorized,
+    TResult Function(ServerFailure value)? serverFailure,
+    TResult Function(CacheFailure value)? cacheFailure,
+    TResult Function(PlatformFailure value)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (cacheFailure != null) {
       return cacheFailure(this);
     }
@@ -809,11 +796,14 @@ abstract class CacheFailure implements Failure {
   const factory CacheFailure(String message) = _$CacheFailure;
 
   @override
-  String get message;
+  String get message => throw _privateConstructorUsedError;
   @override
-  $CacheFailureCopyWith<CacheFailure> get copyWith;
+  @JsonKey(ignore: true)
+  $CacheFailureCopyWith<CacheFailure> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $PlatformFailureCopyWith<$Res>
     implements $FailureCopyWith<$Res> {
   factory $PlatformFailureCopyWith(
@@ -823,6 +813,7 @@ abstract class $PlatformFailureCopyWith<$Res>
   $Res call({String message});
 }
 
+/// @nodoc
 class _$PlatformFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
     implements $PlatformFailureCopyWith<$Res> {
   _$PlatformFailureCopyWithImpl(
@@ -834,16 +825,21 @@ class _$PlatformFailureCopyWithImpl<$Res> extends _$FailureCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object message = freezed,
+    Object? message = freezed,
   }) {
     return _then(PlatformFailure(
-      message == freezed ? _value.message : message as String,
+      message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
+/// @nodoc
+
 class _$PlatformFailure implements PlatformFailure {
-  const _$PlatformFailure(this.message) : assert(message != null);
+  const _$PlatformFailure(this.message);
 
   @override
   final String message;
@@ -865,41 +861,35 @@ class _$PlatformFailure implements PlatformFailure {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(message);
 
+  @JsonKey(ignore: true)
   @override
   $PlatformFailureCopyWith<PlatformFailure> get copyWith =>
       _$PlatformFailureCopyWithImpl<PlatformFailure>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result userExist(String message),
-    @required Result noCredentials(String message),
-    @required Result notAuthorized(String message),
-    @required Result serverFailure(String message),
-    @required Result cacheFailure(String message),
-    @required Result platformFailure(String message),
+  TResult when<TResult extends Object?>({
+    required TResult Function(String message) userExist,
+    required TResult Function(String message) noCredentials,
+    required TResult Function(String message) notAuthorized,
+    required TResult Function(String message) serverFailure,
+    required TResult Function(String message) cacheFailure,
+    required TResult Function(String message) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return platformFailure(message);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result userExist(String message),
-    Result noCredentials(String message),
-    Result notAuthorized(String message),
-    Result serverFailure(String message),
-    Result cacheFailure(String message),
-    Result platformFailure(String message),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String message)? userExist,
+    TResult Function(String message)? noCredentials,
+    TResult Function(String message)? notAuthorized,
+    TResult Function(String message)? serverFailure,
+    TResult Function(String message)? cacheFailure,
+    TResult Function(String message)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (platformFailure != null) {
       return platformFailure(message);
     }
@@ -908,35 +898,28 @@ class _$PlatformFailure implements PlatformFailure {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result userExist(UserExist value),
-    @required Result noCredentials(NoCredentials value),
-    @required Result notAuthorized(NotAuthorized value),
-    @required Result serverFailure(ServerFailure value),
-    @required Result cacheFailure(CacheFailure value),
-    @required Result platformFailure(PlatformFailure value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(UserExist value) userExist,
+    required TResult Function(NoCredentials value) noCredentials,
+    required TResult Function(NotAuthorized value) notAuthorized,
+    required TResult Function(ServerFailure value) serverFailure,
+    required TResult Function(CacheFailure value) cacheFailure,
+    required TResult Function(PlatformFailure value) platformFailure,
   }) {
-    assert(userExist != null);
-    assert(noCredentials != null);
-    assert(notAuthorized != null);
-    assert(serverFailure != null);
-    assert(cacheFailure != null);
-    assert(platformFailure != null);
     return platformFailure(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result userExist(UserExist value),
-    Result noCredentials(NoCredentials value),
-    Result notAuthorized(NotAuthorized value),
-    Result serverFailure(ServerFailure value),
-    Result cacheFailure(CacheFailure value),
-    Result platformFailure(PlatformFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UserExist value)? userExist,
+    TResult Function(NoCredentials value)? noCredentials,
+    TResult Function(NotAuthorized value)? notAuthorized,
+    TResult Function(ServerFailure value)? serverFailure,
+    TResult Function(CacheFailure value)? cacheFailure,
+    TResult Function(PlatformFailure value)? platformFailure,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (platformFailure != null) {
       return platformFailure(this);
     }
@@ -948,7 +931,9 @@ abstract class PlatformFailure implements Failure {
   const factory PlatformFailure(String message) = _$PlatformFailure;
 
   @override
-  String get message;
+  String get message => throw _privateConstructorUsedError;
   @override
-  $PlatformFailureCopyWith<PlatformFailure> get copyWith;
+  @JsonKey(ignore: true)
+  $PlatformFailureCopyWith<PlatformFailure> get copyWith =>
+      throw _privateConstructorUsedError;
 }

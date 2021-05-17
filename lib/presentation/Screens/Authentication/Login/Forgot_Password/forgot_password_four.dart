@@ -14,7 +14,7 @@ class ForgotPasswordFour extends StatefulWidget {
 class _ForgotPasswordFourState extends State<ForgotPasswordFour> {
   final _formKey = GlobalKey<FormState>();
   final _key = GlobalKey<ScaffoldState>();
-  TextEditingController _password;
+  TextEditingController? _password;
 
   @override
   void initState() {
@@ -25,7 +25,7 @@ class _ForgotPasswordFourState extends State<ForgotPasswordFour> {
   @override
   void dispose() {
     super.dispose();
-    _password.dispose();
+    _password!.dispose();
   }
 
   @override
@@ -68,12 +68,13 @@ class _ForgotPasswordFourState extends State<ForgotPasswordFour> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      CustomTextFieldPassword(controller: _password, header: 'Password'),
+                      CustomTextFieldPassword(
+                          controller: _password, header: 'Password'),
                       BlocConsumer<UserBloc, UserState>(
                         listener: (_, state) {
-                          return state.maybeMap(
+                          state.maybeMap(
                               orElse: () => 1,
-                              userError: (e) => _key.currentState.showSnackBar(
+                              userError: (e) => _key.currentState!.showSnackBar(
                                   SnackBar(content: Text(e.failure.message))),
                               userUpdated: (u) => Navigator.pushNamed(
                                   context, '/ForgotPassword5'));
@@ -92,8 +93,7 @@ class _ForgotPasswordFourState extends State<ForgotPasswordFour> {
                               //   userBloc.add(UpdatePassword(_password.text));
                               // }
                               //TODO
-                              Navigator.pushNamed(
-                                  context, '/ForgotPassword5');
+                              Navigator.pushNamed(context, '/ForgotPassword5');
                             },
                             text: 'Reset'),
                       ),

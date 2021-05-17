@@ -18,7 +18,7 @@ part 'auth_bloc.freezed.dart';
 
 @injectable
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  LocalStorageInterface localStorageInterface;
+  LocalStorageInterface? localStorageInterface;
   AuthBloc({this.localStorageInterface}) : super(Initial());
 
   @override
@@ -26,15 +26,15 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     AuthEvent event,
   ) async* {
     yield* event.map(appLoaded: (e) async* {
-      final user = await localStorageInterface.getUser();
+      final user = await localStorageInterface!.getUser();
       yield* user.fold((l) async* {
         yield Unauthenticated();
       }, (r) async* {
         yield Authenticated(User.fromJson(jsonDecode(r)));
       });
     }, signOut: (e) async* {
-      await localStorageInterface.removeUser();
-      await localStorageInterface.removeToken();
+      await localStorageInterface!.removeUser();
+      await localStorageInterface!.removeToken();
     });
   }
 }

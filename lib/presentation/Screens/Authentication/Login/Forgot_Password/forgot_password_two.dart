@@ -9,7 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class ForgotPasswordTwo extends StatefulWidget {
   final phone;
 
-  const ForgotPasswordTwo({Key key, this.phone}) : super(key: key);
+  const ForgotPasswordTwo({Key? key, this.phone}) : super(key: key);
   @override
   _ForgotPasswordTwoState createState() => _ForgotPasswordTwoState();
 }
@@ -17,8 +17,8 @@ class ForgotPasswordTwo extends StatefulWidget {
 class _ForgotPasswordTwoState extends State<ForgotPasswordTwo> {
   final _formKey = GlobalKey<FormState>();
   final _key = GlobalKey<ScaffoldState>();
-  TextEditingController _smsCode;
-  Timer _timer;
+  TextEditingController? _smsCode;
+  late Timer _timer;
   int _count = 60;
   bool isCounting = false;
 
@@ -31,7 +31,7 @@ class _ForgotPasswordTwoState extends State<ForgotPasswordTwo> {
   @override
   void dispose() {
     super.dispose();
-    _smsCode.dispose();
+    _smsCode!.dispose();
     _timer.cancel();
   }
 
@@ -87,7 +87,7 @@ class _ForgotPasswordTwoState extends State<ForgotPasswordTwo> {
                             ),
                             TextFormField(
                               controller: _smsCode,
-                              validator: (value) => (value.isEmpty)
+                              validator: (value) => (value!.isEmpty)
                                   ? "Please enter 4-digit code"
                                   : null,
                               keyboardType: TextInputType.number,
@@ -142,23 +142,23 @@ class _ForgotPasswordTwoState extends State<ForgotPasswordTwo> {
                               orElse: () => SizedBox(),
                               loading: (m) => LoadingIndicator());
                         }, listener: (_, state) {
-                          return state.maybeMap(
+                          state.maybeMap(
                               orElse: () => 1,
                               verifyComplete: (u) => Navigator.pushNamed(
                                   context, '/ForgotPassword3'),
                               error: (e) =>
-                                  _key.currentState.showSnackBar(SnackBar(
+                                  _key.currentState!.showSnackBar(SnackBar(
                                     content: Text(e.failure.message),
                                   )),
-                              getCodeComplete: (c) => _smsCode.text = c.code);
+                              getCodeComplete: (c) => _smsCode!.text = c.code);
                         }),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 8.0),
                           child: CommonButton(
                             onPressed: () {
-                              if (_formKey.currentState.validate()) {
+                              if (_formKey.currentState!.validate()) {
                                 registerBloc.add(
-                                    MobileVerify(widget.phone, _smsCode.text));
+                                    MobileVerify(widget.phone, _smsCode!.text));
                               }
                               // Navigator.pushNamed(context, '/RegisterThree');
                             },

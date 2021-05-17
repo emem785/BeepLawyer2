@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'map_bloc.dart';
 
@@ -9,17 +9,19 @@ part of 'map_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+/// @nodoc
 class _$MapEventTearOff {
   const _$MapEventTearOff();
 
-// ignore: unused_element
   RenderBuddyMap renderClientMap(Buddy buddy) {
     return RenderBuddyMap(
       buddy,
     );
   }
 
-// ignore: unused_element
   StartBroadcast startBroadcast(MapTool mapTool, Buddy buddy) {
     return StartBroadcast(
       mapTool,
@@ -27,58 +29,63 @@ class _$MapEventTearOff {
     );
   }
 
-// ignore: unused_element
   StopSecondBroadcast stopSecondBroadcast() {
     return const StopSecondBroadcast();
   }
 
-// ignore: unused_element
   OnBroadcastError onBroadcastError() {
     return const OnBroadcastError();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $MapEvent = _$MapEventTearOff();
 
+/// @nodoc
 mixin _$MapEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result renderClientMap(Buddy buddy),
-    @required Result startBroadcast(MapTool mapTool, Buddy buddy),
-    @required Result stopSecondBroadcast(),
-    @required Result onBroadcastError(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function(Buddy buddy) renderClientMap,
+    required TResult Function(MapTool mapTool, Buddy buddy) startBroadcast,
+    required TResult Function() stopSecondBroadcast,
+    required TResult Function() onBroadcastError,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result renderClientMap(Buddy buddy),
-    Result startBroadcast(MapTool mapTool, Buddy buddy),
-    Result stopSecondBroadcast(),
-    Result onBroadcastError(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Buddy buddy)? renderClientMap,
+    TResult Function(MapTool mapTool, Buddy buddy)? startBroadcast,
+    TResult Function()? stopSecondBroadcast,
+    TResult Function()? onBroadcastError,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result renderClientMap(RenderBuddyMap value),
-    @required Result startBroadcast(StartBroadcast value),
-    @required Result stopSecondBroadcast(StopSecondBroadcast value),
-    @required Result onBroadcastError(OnBroadcastError value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(RenderBuddyMap value) renderClientMap,
+    required TResult Function(StartBroadcast value) startBroadcast,
+    required TResult Function(StopSecondBroadcast value) stopSecondBroadcast,
+    required TResult Function(OnBroadcastError value) onBroadcastError,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result renderClientMap(RenderBuddyMap value),
-    Result startBroadcast(StartBroadcast value),
-    Result stopSecondBroadcast(StopSecondBroadcast value),
-    Result onBroadcastError(OnBroadcastError value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RenderBuddyMap value)? renderClientMap,
+    TResult Function(StartBroadcast value)? startBroadcast,
+    TResult Function(StopSecondBroadcast value)? stopSecondBroadcast,
+    TResult Function(OnBroadcastError value)? onBroadcastError,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $MapEventCopyWith<$Res> {
   factory $MapEventCopyWith(MapEvent value, $Res Function(MapEvent) then) =
       _$MapEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$MapEventCopyWithImpl<$Res> implements $MapEventCopyWith<$Res> {
   _$MapEventCopyWithImpl(this._value, this._then);
 
@@ -87,6 +94,7 @@ class _$MapEventCopyWithImpl<$Res> implements $MapEventCopyWith<$Res> {
   final $Res Function(MapEvent) _then;
 }
 
+/// @nodoc
 abstract class $RenderBuddyMapCopyWith<$Res> {
   factory $RenderBuddyMapCopyWith(
           RenderBuddyMap value, $Res Function(RenderBuddyMap) then) =
@@ -94,6 +102,7 @@ abstract class $RenderBuddyMapCopyWith<$Res> {
   $Res call({Buddy buddy});
 }
 
+/// @nodoc
 class _$RenderBuddyMapCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
     implements $RenderBuddyMapCopyWith<$Res> {
   _$RenderBuddyMapCopyWithImpl(
@@ -105,16 +114,21 @@ class _$RenderBuddyMapCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object buddy = freezed,
+    Object? buddy = freezed,
   }) {
     return _then(RenderBuddyMap(
-      buddy == freezed ? _value.buddy : buddy as Buddy,
+      buddy == freezed
+          ? _value.buddy
+          : buddy // ignore: cast_nullable_to_non_nullable
+              as Buddy,
     ));
   }
 }
 
+/// @nodoc
+
 class _$RenderBuddyMap implements RenderBuddyMap {
-  const _$RenderBuddyMap(this.buddy) : assert(buddy != null);
+  const _$RenderBuddyMap(this.buddy);
 
   @override
   final Buddy buddy;
@@ -136,35 +150,31 @@ class _$RenderBuddyMap implements RenderBuddyMap {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(buddy);
 
+  @JsonKey(ignore: true)
   @override
   $RenderBuddyMapCopyWith<RenderBuddyMap> get copyWith =>
       _$RenderBuddyMapCopyWithImpl<RenderBuddyMap>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result renderClientMap(Buddy buddy),
-    @required Result startBroadcast(MapTool mapTool, Buddy buddy),
-    @required Result stopSecondBroadcast(),
-    @required Result onBroadcastError(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(Buddy buddy) renderClientMap,
+    required TResult Function(MapTool mapTool, Buddy buddy) startBroadcast,
+    required TResult Function() stopSecondBroadcast,
+    required TResult Function() onBroadcastError,
   }) {
-    assert(renderClientMap != null);
-    assert(startBroadcast != null);
-    assert(stopSecondBroadcast != null);
-    assert(onBroadcastError != null);
     return renderClientMap(buddy);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result renderClientMap(Buddy buddy),
-    Result startBroadcast(MapTool mapTool, Buddy buddy),
-    Result stopSecondBroadcast(),
-    Result onBroadcastError(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Buddy buddy)? renderClientMap,
+    TResult Function(MapTool mapTool, Buddy buddy)? startBroadcast,
+    TResult Function()? stopSecondBroadcast,
+    TResult Function()? onBroadcastError,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (renderClientMap != null) {
       return renderClientMap(buddy);
     }
@@ -173,29 +183,24 @@ class _$RenderBuddyMap implements RenderBuddyMap {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result renderClientMap(RenderBuddyMap value),
-    @required Result startBroadcast(StartBroadcast value),
-    @required Result stopSecondBroadcast(StopSecondBroadcast value),
-    @required Result onBroadcastError(OnBroadcastError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RenderBuddyMap value) renderClientMap,
+    required TResult Function(StartBroadcast value) startBroadcast,
+    required TResult Function(StopSecondBroadcast value) stopSecondBroadcast,
+    required TResult Function(OnBroadcastError value) onBroadcastError,
   }) {
-    assert(renderClientMap != null);
-    assert(startBroadcast != null);
-    assert(stopSecondBroadcast != null);
-    assert(onBroadcastError != null);
     return renderClientMap(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result renderClientMap(RenderBuddyMap value),
-    Result startBroadcast(StartBroadcast value),
-    Result stopSecondBroadcast(StopSecondBroadcast value),
-    Result onBroadcastError(OnBroadcastError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RenderBuddyMap value)? renderClientMap,
+    TResult Function(StartBroadcast value)? startBroadcast,
+    TResult Function(StopSecondBroadcast value)? stopSecondBroadcast,
+    TResult Function(OnBroadcastError value)? onBroadcastError,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (renderClientMap != null) {
       return renderClientMap(this);
     }
@@ -206,10 +211,13 @@ class _$RenderBuddyMap implements RenderBuddyMap {
 abstract class RenderBuddyMap implements MapEvent {
   const factory RenderBuddyMap(Buddy buddy) = _$RenderBuddyMap;
 
-  Buddy get buddy;
-  $RenderBuddyMapCopyWith<RenderBuddyMap> get copyWith;
+  Buddy get buddy => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RenderBuddyMapCopyWith<RenderBuddyMap> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $StartBroadcastCopyWith<$Res> {
   factory $StartBroadcastCopyWith(
           StartBroadcast value, $Res Function(StartBroadcast) then) =
@@ -217,6 +225,7 @@ abstract class $StartBroadcastCopyWith<$Res> {
   $Res call({MapTool mapTool, Buddy buddy});
 }
 
+/// @nodoc
 class _$StartBroadcastCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
     implements $StartBroadcastCopyWith<$Res> {
   _$StartBroadcastCopyWithImpl(
@@ -228,20 +237,26 @@ class _$StartBroadcastCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object mapTool = freezed,
-    Object buddy = freezed,
+    Object? mapTool = freezed,
+    Object? buddy = freezed,
   }) {
     return _then(StartBroadcast(
-      mapTool == freezed ? _value.mapTool : mapTool as MapTool,
-      buddy == freezed ? _value.buddy : buddy as Buddy,
+      mapTool == freezed
+          ? _value.mapTool
+          : mapTool // ignore: cast_nullable_to_non_nullable
+              as MapTool,
+      buddy == freezed
+          ? _value.buddy
+          : buddy // ignore: cast_nullable_to_non_nullable
+              as Buddy,
     ));
   }
 }
 
+/// @nodoc
+
 class _$StartBroadcast implements StartBroadcast {
-  const _$StartBroadcast(this.mapTool, this.buddy)
-      : assert(mapTool != null),
-        assert(buddy != null);
+  const _$StartBroadcast(this.mapTool, this.buddy);
 
   @override
   final MapTool mapTool;
@@ -270,35 +285,31 @@ class _$StartBroadcast implements StartBroadcast {
       const DeepCollectionEquality().hash(mapTool) ^
       const DeepCollectionEquality().hash(buddy);
 
+  @JsonKey(ignore: true)
   @override
   $StartBroadcastCopyWith<StartBroadcast> get copyWith =>
       _$StartBroadcastCopyWithImpl<StartBroadcast>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result renderClientMap(Buddy buddy),
-    @required Result startBroadcast(MapTool mapTool, Buddy buddy),
-    @required Result stopSecondBroadcast(),
-    @required Result onBroadcastError(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(Buddy buddy) renderClientMap,
+    required TResult Function(MapTool mapTool, Buddy buddy) startBroadcast,
+    required TResult Function() stopSecondBroadcast,
+    required TResult Function() onBroadcastError,
   }) {
-    assert(renderClientMap != null);
-    assert(startBroadcast != null);
-    assert(stopSecondBroadcast != null);
-    assert(onBroadcastError != null);
     return startBroadcast(mapTool, buddy);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result renderClientMap(Buddy buddy),
-    Result startBroadcast(MapTool mapTool, Buddy buddy),
-    Result stopSecondBroadcast(),
-    Result onBroadcastError(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Buddy buddy)? renderClientMap,
+    TResult Function(MapTool mapTool, Buddy buddy)? startBroadcast,
+    TResult Function()? stopSecondBroadcast,
+    TResult Function()? onBroadcastError,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (startBroadcast != null) {
       return startBroadcast(mapTool, buddy);
     }
@@ -307,29 +318,24 @@ class _$StartBroadcast implements StartBroadcast {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result renderClientMap(RenderBuddyMap value),
-    @required Result startBroadcast(StartBroadcast value),
-    @required Result stopSecondBroadcast(StopSecondBroadcast value),
-    @required Result onBroadcastError(OnBroadcastError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RenderBuddyMap value) renderClientMap,
+    required TResult Function(StartBroadcast value) startBroadcast,
+    required TResult Function(StopSecondBroadcast value) stopSecondBroadcast,
+    required TResult Function(OnBroadcastError value) onBroadcastError,
   }) {
-    assert(renderClientMap != null);
-    assert(startBroadcast != null);
-    assert(stopSecondBroadcast != null);
-    assert(onBroadcastError != null);
     return startBroadcast(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result renderClientMap(RenderBuddyMap value),
-    Result startBroadcast(StartBroadcast value),
-    Result stopSecondBroadcast(StopSecondBroadcast value),
-    Result onBroadcastError(OnBroadcastError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RenderBuddyMap value)? renderClientMap,
+    TResult Function(StartBroadcast value)? startBroadcast,
+    TResult Function(StopSecondBroadcast value)? stopSecondBroadcast,
+    TResult Function(OnBroadcastError value)? onBroadcastError,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (startBroadcast != null) {
       return startBroadcast(this);
     }
@@ -340,17 +346,21 @@ class _$StartBroadcast implements StartBroadcast {
 abstract class StartBroadcast implements MapEvent {
   const factory StartBroadcast(MapTool mapTool, Buddy buddy) = _$StartBroadcast;
 
-  MapTool get mapTool;
-  Buddy get buddy;
-  $StartBroadcastCopyWith<StartBroadcast> get copyWith;
+  MapTool get mapTool => throw _privateConstructorUsedError;
+  Buddy get buddy => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $StartBroadcastCopyWith<StartBroadcast> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $StopSecondBroadcastCopyWith<$Res> {
   factory $StopSecondBroadcastCopyWith(
           StopSecondBroadcast value, $Res Function(StopSecondBroadcast) then) =
       _$StopSecondBroadcastCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$StopSecondBroadcastCopyWithImpl<$Res>
     extends _$MapEventCopyWithImpl<$Res>
     implements $StopSecondBroadcastCopyWith<$Res> {
@@ -361,6 +371,8 @@ class _$StopSecondBroadcastCopyWithImpl<$Res>
   @override
   StopSecondBroadcast get _value => super._value as StopSecondBroadcast;
 }
+
+/// @nodoc
 
 class _$StopSecondBroadcast implements StopSecondBroadcast {
   const _$StopSecondBroadcast();
@@ -380,29 +392,24 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result renderClientMap(Buddy buddy),
-    @required Result startBroadcast(MapTool mapTool, Buddy buddy),
-    @required Result stopSecondBroadcast(),
-    @required Result onBroadcastError(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(Buddy buddy) renderClientMap,
+    required TResult Function(MapTool mapTool, Buddy buddy) startBroadcast,
+    required TResult Function() stopSecondBroadcast,
+    required TResult Function() onBroadcastError,
   }) {
-    assert(renderClientMap != null);
-    assert(startBroadcast != null);
-    assert(stopSecondBroadcast != null);
-    assert(onBroadcastError != null);
     return stopSecondBroadcast();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result renderClientMap(Buddy buddy),
-    Result startBroadcast(MapTool mapTool, Buddy buddy),
-    Result stopSecondBroadcast(),
-    Result onBroadcastError(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Buddy buddy)? renderClientMap,
+    TResult Function(MapTool mapTool, Buddy buddy)? startBroadcast,
+    TResult Function()? stopSecondBroadcast,
+    TResult Function()? onBroadcastError,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (stopSecondBroadcast != null) {
       return stopSecondBroadcast();
     }
@@ -411,29 +418,24 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result renderClientMap(RenderBuddyMap value),
-    @required Result startBroadcast(StartBroadcast value),
-    @required Result stopSecondBroadcast(StopSecondBroadcast value),
-    @required Result onBroadcastError(OnBroadcastError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RenderBuddyMap value) renderClientMap,
+    required TResult Function(StartBroadcast value) startBroadcast,
+    required TResult Function(StopSecondBroadcast value) stopSecondBroadcast,
+    required TResult Function(OnBroadcastError value) onBroadcastError,
   }) {
-    assert(renderClientMap != null);
-    assert(startBroadcast != null);
-    assert(stopSecondBroadcast != null);
-    assert(onBroadcastError != null);
     return stopSecondBroadcast(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result renderClientMap(RenderBuddyMap value),
-    Result startBroadcast(StartBroadcast value),
-    Result stopSecondBroadcast(StopSecondBroadcast value),
-    Result onBroadcastError(OnBroadcastError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RenderBuddyMap value)? renderClientMap,
+    TResult Function(StartBroadcast value)? startBroadcast,
+    TResult Function(StopSecondBroadcast value)? stopSecondBroadcast,
+    TResult Function(OnBroadcastError value)? onBroadcastError,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (stopSecondBroadcast != null) {
       return stopSecondBroadcast(this);
     }
@@ -445,12 +447,14 @@ abstract class StopSecondBroadcast implements MapEvent {
   const factory StopSecondBroadcast() = _$StopSecondBroadcast;
 }
 
+/// @nodoc
 abstract class $OnBroadcastErrorCopyWith<$Res> {
   factory $OnBroadcastErrorCopyWith(
           OnBroadcastError value, $Res Function(OnBroadcastError) then) =
       _$OnBroadcastErrorCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$OnBroadcastErrorCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
     implements $OnBroadcastErrorCopyWith<$Res> {
   _$OnBroadcastErrorCopyWithImpl(
@@ -460,6 +464,8 @@ class _$OnBroadcastErrorCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
   @override
   OnBroadcastError get _value => super._value as OnBroadcastError;
 }
+
+/// @nodoc
 
 class _$OnBroadcastError implements OnBroadcastError {
   const _$OnBroadcastError();
@@ -479,29 +485,24 @@ class _$OnBroadcastError implements OnBroadcastError {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result renderClientMap(Buddy buddy),
-    @required Result startBroadcast(MapTool mapTool, Buddy buddy),
-    @required Result stopSecondBroadcast(),
-    @required Result onBroadcastError(),
+  TResult when<TResult extends Object?>({
+    required TResult Function(Buddy buddy) renderClientMap,
+    required TResult Function(MapTool mapTool, Buddy buddy) startBroadcast,
+    required TResult Function() stopSecondBroadcast,
+    required TResult Function() onBroadcastError,
   }) {
-    assert(renderClientMap != null);
-    assert(startBroadcast != null);
-    assert(stopSecondBroadcast != null);
-    assert(onBroadcastError != null);
     return onBroadcastError();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result renderClientMap(Buddy buddy),
-    Result startBroadcast(MapTool mapTool, Buddy buddy),
-    Result stopSecondBroadcast(),
-    Result onBroadcastError(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Buddy buddy)? renderClientMap,
+    TResult Function(MapTool mapTool, Buddy buddy)? startBroadcast,
+    TResult Function()? stopSecondBroadcast,
+    TResult Function()? onBroadcastError,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onBroadcastError != null) {
       return onBroadcastError();
     }
@@ -510,29 +511,24 @@ class _$OnBroadcastError implements OnBroadcastError {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result renderClientMap(RenderBuddyMap value),
-    @required Result startBroadcast(StartBroadcast value),
-    @required Result stopSecondBroadcast(StopSecondBroadcast value),
-    @required Result onBroadcastError(OnBroadcastError value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(RenderBuddyMap value) renderClientMap,
+    required TResult Function(StartBroadcast value) startBroadcast,
+    required TResult Function(StopSecondBroadcast value) stopSecondBroadcast,
+    required TResult Function(OnBroadcastError value) onBroadcastError,
   }) {
-    assert(renderClientMap != null);
-    assert(startBroadcast != null);
-    assert(stopSecondBroadcast != null);
-    assert(onBroadcastError != null);
     return onBroadcastError(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result renderClientMap(RenderBuddyMap value),
-    Result startBroadcast(StartBroadcast value),
-    Result stopSecondBroadcast(StopSecondBroadcast value),
-    Result onBroadcastError(OnBroadcastError value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RenderBuddyMap value)? renderClientMap,
+    TResult Function(StartBroadcast value)? startBroadcast,
+    TResult Function(StopSecondBroadcast value)? stopSecondBroadcast,
+    TResult Function(OnBroadcastError value)? onBroadcastError,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (onBroadcastError != null) {
       return onBroadcastError(this);
     }
@@ -544,22 +540,20 @@ abstract class OnBroadcastError implements MapEvent {
   const factory OnBroadcastError() = _$OnBroadcastError;
 }
 
+/// @nodoc
 class _$MapStateTearOff {
   const _$MapStateTearOff();
 
-// ignore: unused_element
   MapInitial initial() {
     return const MapInitial();
   }
 
-// ignore: unused_element
   MapRendered mapRendered(MapTool mapTool) {
     return MapRendered(
       mapTool,
     );
   }
 
-// ignore: unused_element
   BroadcastStarted broadcastStarted(Buddy buddy, MapTool mapTool) {
     return BroadcastStarted(
       buddy,
@@ -567,71 +561,75 @@ class _$MapStateTearOff {
     );
   }
 
-// ignore: unused_element
   BroadcastEnded broadcastEnded() {
     return const BroadcastEnded();
   }
 
-// ignore: unused_element
   BroadcastError broadcastError() {
     return const BroadcastError();
   }
 
-// ignore: unused_element
   MapLoading loading() {
     return const MapLoading();
   }
 }
 
-// ignore: unused_element
+/// @nodoc
 const $MapState = _$MapStateTearOff();
 
+/// @nodoc
 mixin _$MapState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result mapRendered(MapTool mapTool),
-    @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    @required Result broadcastEnded(),
-    @required Result broadcastError(),
-    @required Result loading(),
-  });
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(MapTool mapTool) mapRendered,
+    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
+    required TResult Function() broadcastEnded,
+    required TResult Function() broadcastError,
+    required TResult Function() loading,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result mapRendered(MapTool mapTool),
-    Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    Result broadcastEnded(),
-    Result broadcastError(),
-    Result loading(),
-    @required Result orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(MapTool mapTool)? mapRendered,
+    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
+    TResult Function()? broadcastEnded,
+    TResult Function()? broadcastError,
+    TResult Function()? loading,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(MapInitial value),
-    @required Result mapRendered(MapRendered value),
-    @required Result broadcastStarted(BroadcastStarted value),
-    @required Result broadcastEnded(BroadcastEnded value),
-    @required Result broadcastError(BroadcastError value),
-    @required Result loading(MapLoading value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(MapInitial value) initial,
+    required TResult Function(MapRendered value) mapRendered,
+    required TResult Function(BroadcastStarted value) broadcastStarted,
+    required TResult Function(BroadcastEnded value) broadcastEnded,
+    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(MapLoading value) loading,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(MapInitial value),
-    Result mapRendered(MapRendered value),
-    Result broadcastStarted(BroadcastStarted value),
-    Result broadcastEnded(BroadcastEnded value),
-    Result broadcastError(BroadcastError value),
-    Result loading(MapLoading value),
-    @required Result orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MapInitial value)? initial,
+    TResult Function(MapRendered value)? mapRendered,
+    TResult Function(BroadcastStarted value)? broadcastStarted,
+    TResult Function(BroadcastEnded value)? broadcastEnded,
+    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(MapLoading value)? loading,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $MapStateCopyWith<$Res> {
   factory $MapStateCopyWith(MapState value, $Res Function(MapState) then) =
       _$MapStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$MapStateCopyWithImpl<$Res> implements $MapStateCopyWith<$Res> {
   _$MapStateCopyWithImpl(this._value, this._then);
 
@@ -640,12 +638,14 @@ class _$MapStateCopyWithImpl<$Res> implements $MapStateCopyWith<$Res> {
   final $Res Function(MapState) _then;
 }
 
+/// @nodoc
 abstract class $MapInitialCopyWith<$Res> {
   factory $MapInitialCopyWith(
           MapInitial value, $Res Function(MapInitial) then) =
       _$MapInitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$MapInitialCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
     implements $MapInitialCopyWith<$Res> {
   _$MapInitialCopyWithImpl(MapInitial _value, $Res Function(MapInitial) _then)
@@ -654,6 +654,8 @@ class _$MapInitialCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
   @override
   MapInitial get _value => super._value as MapInitial;
 }
+
+/// @nodoc
 
 class _$MapInitial implements MapInitial {
   const _$MapInitial();
@@ -673,35 +675,28 @@ class _$MapInitial implements MapInitial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result mapRendered(MapTool mapTool),
-    @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    @required Result broadcastEnded(),
-    @required Result broadcastError(),
-    @required Result loading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(MapTool mapTool) mapRendered,
+    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
+    required TResult Function() broadcastEnded,
+    required TResult Function() broadcastError,
+    required TResult Function() loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return initial();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result mapRendered(MapTool mapTool),
-    Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    Result broadcastEnded(),
-    Result broadcastError(),
-    Result loading(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(MapTool mapTool)? mapRendered,
+    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
+    TResult Function()? broadcastEnded,
+    TResult Function()? broadcastError,
+    TResult Function()? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial();
     }
@@ -710,35 +705,28 @@ class _$MapInitial implements MapInitial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(MapInitial value),
-    @required Result mapRendered(MapRendered value),
-    @required Result broadcastStarted(BroadcastStarted value),
-    @required Result broadcastEnded(BroadcastEnded value),
-    @required Result broadcastError(BroadcastError value),
-    @required Result loading(MapLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(MapInitial value) initial,
+    required TResult Function(MapRendered value) mapRendered,
+    required TResult Function(BroadcastStarted value) broadcastStarted,
+    required TResult Function(BroadcastEnded value) broadcastEnded,
+    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(MapLoading value) loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(MapInitial value),
-    Result mapRendered(MapRendered value),
-    Result broadcastStarted(BroadcastStarted value),
-    Result broadcastEnded(BroadcastEnded value),
-    Result broadcastError(BroadcastError value),
-    Result loading(MapLoading value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MapInitial value)? initial,
+    TResult Function(MapRendered value)? mapRendered,
+    TResult Function(BroadcastStarted value)? broadcastStarted,
+    TResult Function(BroadcastEnded value)? broadcastEnded,
+    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(MapLoading value)? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -750,6 +738,7 @@ abstract class MapInitial implements MapState {
   const factory MapInitial() = _$MapInitial;
 }
 
+/// @nodoc
 abstract class $MapRenderedCopyWith<$Res> {
   factory $MapRenderedCopyWith(
           MapRendered value, $Res Function(MapRendered) then) =
@@ -757,6 +746,7 @@ abstract class $MapRenderedCopyWith<$Res> {
   $Res call({MapTool mapTool});
 }
 
+/// @nodoc
 class _$MapRenderedCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
     implements $MapRenderedCopyWith<$Res> {
   _$MapRenderedCopyWithImpl(
@@ -768,16 +758,21 @@ class _$MapRenderedCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object mapTool = freezed,
+    Object? mapTool = freezed,
   }) {
     return _then(MapRendered(
-      mapTool == freezed ? _value.mapTool : mapTool as MapTool,
+      mapTool == freezed
+          ? _value.mapTool
+          : mapTool // ignore: cast_nullable_to_non_nullable
+              as MapTool,
     ));
   }
 }
 
+/// @nodoc
+
 class _$MapRendered implements MapRendered {
-  const _$MapRendered(this.mapTool) : assert(mapTool != null);
+  const _$MapRendered(this.mapTool);
 
   @override
   final MapTool mapTool;
@@ -799,41 +794,35 @@ class _$MapRendered implements MapRendered {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(mapTool);
 
+  @JsonKey(ignore: true)
   @override
   $MapRenderedCopyWith<MapRendered> get copyWith =>
       _$MapRenderedCopyWithImpl<MapRendered>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result mapRendered(MapTool mapTool),
-    @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    @required Result broadcastEnded(),
-    @required Result broadcastError(),
-    @required Result loading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(MapTool mapTool) mapRendered,
+    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
+    required TResult Function() broadcastEnded,
+    required TResult Function() broadcastError,
+    required TResult Function() loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return mapRendered(mapTool);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result mapRendered(MapTool mapTool),
-    Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    Result broadcastEnded(),
-    Result broadcastError(),
-    Result loading(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(MapTool mapTool)? mapRendered,
+    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
+    TResult Function()? broadcastEnded,
+    TResult Function()? broadcastError,
+    TResult Function()? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (mapRendered != null) {
       return mapRendered(mapTool);
     }
@@ -842,35 +831,28 @@ class _$MapRendered implements MapRendered {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(MapInitial value),
-    @required Result mapRendered(MapRendered value),
-    @required Result broadcastStarted(BroadcastStarted value),
-    @required Result broadcastEnded(BroadcastEnded value),
-    @required Result broadcastError(BroadcastError value),
-    @required Result loading(MapLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(MapInitial value) initial,
+    required TResult Function(MapRendered value) mapRendered,
+    required TResult Function(BroadcastStarted value) broadcastStarted,
+    required TResult Function(BroadcastEnded value) broadcastEnded,
+    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(MapLoading value) loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return mapRendered(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(MapInitial value),
-    Result mapRendered(MapRendered value),
-    Result broadcastStarted(BroadcastStarted value),
-    Result broadcastEnded(BroadcastEnded value),
-    Result broadcastError(BroadcastError value),
-    Result loading(MapLoading value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MapInitial value)? initial,
+    TResult Function(MapRendered value)? mapRendered,
+    TResult Function(BroadcastStarted value)? broadcastStarted,
+    TResult Function(BroadcastEnded value)? broadcastEnded,
+    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(MapLoading value)? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (mapRendered != null) {
       return mapRendered(this);
     }
@@ -881,10 +863,13 @@ class _$MapRendered implements MapRendered {
 abstract class MapRendered implements MapState {
   const factory MapRendered(MapTool mapTool) = _$MapRendered;
 
-  MapTool get mapTool;
-  $MapRenderedCopyWith<MapRendered> get copyWith;
+  MapTool get mapTool => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MapRenderedCopyWith<MapRendered> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $BroadcastStartedCopyWith<$Res> {
   factory $BroadcastStartedCopyWith(
           BroadcastStarted value, $Res Function(BroadcastStarted) then) =
@@ -892,6 +877,7 @@ abstract class $BroadcastStartedCopyWith<$Res> {
   $Res call({Buddy buddy, MapTool mapTool});
 }
 
+/// @nodoc
 class _$BroadcastStartedCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
     implements $BroadcastStartedCopyWith<$Res> {
   _$BroadcastStartedCopyWithImpl(
@@ -903,20 +889,26 @@ class _$BroadcastStartedCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object buddy = freezed,
-    Object mapTool = freezed,
+    Object? buddy = freezed,
+    Object? mapTool = freezed,
   }) {
     return _then(BroadcastStarted(
-      buddy == freezed ? _value.buddy : buddy as Buddy,
-      mapTool == freezed ? _value.mapTool : mapTool as MapTool,
+      buddy == freezed
+          ? _value.buddy
+          : buddy // ignore: cast_nullable_to_non_nullable
+              as Buddy,
+      mapTool == freezed
+          ? _value.mapTool
+          : mapTool // ignore: cast_nullable_to_non_nullable
+              as MapTool,
     ));
   }
 }
 
+/// @nodoc
+
 class _$BroadcastStarted implements BroadcastStarted {
-  const _$BroadcastStarted(this.buddy, this.mapTool)
-      : assert(buddy != null),
-        assert(mapTool != null);
+  const _$BroadcastStarted(this.buddy, this.mapTool);
 
   @override
   final Buddy buddy;
@@ -944,41 +936,35 @@ class _$BroadcastStarted implements BroadcastStarted {
       const DeepCollectionEquality().hash(buddy) ^
       const DeepCollectionEquality().hash(mapTool);
 
+  @JsonKey(ignore: true)
   @override
   $BroadcastStartedCopyWith<BroadcastStarted> get copyWith =>
       _$BroadcastStartedCopyWithImpl<BroadcastStarted>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result mapRendered(MapTool mapTool),
-    @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    @required Result broadcastEnded(),
-    @required Result broadcastError(),
-    @required Result loading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(MapTool mapTool) mapRendered,
+    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
+    required TResult Function() broadcastEnded,
+    required TResult Function() broadcastError,
+    required TResult Function() loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return broadcastStarted(buddy, mapTool);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result mapRendered(MapTool mapTool),
-    Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    Result broadcastEnded(),
-    Result broadcastError(),
-    Result loading(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(MapTool mapTool)? mapRendered,
+    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
+    TResult Function()? broadcastEnded,
+    TResult Function()? broadcastError,
+    TResult Function()? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (broadcastStarted != null) {
       return broadcastStarted(buddy, mapTool);
     }
@@ -987,35 +973,28 @@ class _$BroadcastStarted implements BroadcastStarted {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(MapInitial value),
-    @required Result mapRendered(MapRendered value),
-    @required Result broadcastStarted(BroadcastStarted value),
-    @required Result broadcastEnded(BroadcastEnded value),
-    @required Result broadcastError(BroadcastError value),
-    @required Result loading(MapLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(MapInitial value) initial,
+    required TResult Function(MapRendered value) mapRendered,
+    required TResult Function(BroadcastStarted value) broadcastStarted,
+    required TResult Function(BroadcastEnded value) broadcastEnded,
+    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(MapLoading value) loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return broadcastStarted(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(MapInitial value),
-    Result mapRendered(MapRendered value),
-    Result broadcastStarted(BroadcastStarted value),
-    Result broadcastEnded(BroadcastEnded value),
-    Result broadcastError(BroadcastError value),
-    Result loading(MapLoading value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MapInitial value)? initial,
+    TResult Function(MapRendered value)? mapRendered,
+    TResult Function(BroadcastStarted value)? broadcastStarted,
+    TResult Function(BroadcastEnded value)? broadcastEnded,
+    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(MapLoading value)? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (broadcastStarted != null) {
       return broadcastStarted(this);
     }
@@ -1027,17 +1006,21 @@ abstract class BroadcastStarted implements MapState {
   const factory BroadcastStarted(Buddy buddy, MapTool mapTool) =
       _$BroadcastStarted;
 
-  Buddy get buddy;
-  MapTool get mapTool;
-  $BroadcastStartedCopyWith<BroadcastStarted> get copyWith;
+  Buddy get buddy => throw _privateConstructorUsedError;
+  MapTool get mapTool => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $BroadcastStartedCopyWith<BroadcastStarted> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
+/// @nodoc
 abstract class $BroadcastEndedCopyWith<$Res> {
   factory $BroadcastEndedCopyWith(
           BroadcastEnded value, $Res Function(BroadcastEnded) then) =
       _$BroadcastEndedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$BroadcastEndedCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
     implements $BroadcastEndedCopyWith<$Res> {
   _$BroadcastEndedCopyWithImpl(
@@ -1047,6 +1030,8 @@ class _$BroadcastEndedCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
   @override
   BroadcastEnded get _value => super._value as BroadcastEnded;
 }
+
+/// @nodoc
 
 class _$BroadcastEnded implements BroadcastEnded {
   const _$BroadcastEnded();
@@ -1066,35 +1051,28 @@ class _$BroadcastEnded implements BroadcastEnded {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result mapRendered(MapTool mapTool),
-    @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    @required Result broadcastEnded(),
-    @required Result broadcastError(),
-    @required Result loading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(MapTool mapTool) mapRendered,
+    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
+    required TResult Function() broadcastEnded,
+    required TResult Function() broadcastError,
+    required TResult Function() loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return broadcastEnded();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result mapRendered(MapTool mapTool),
-    Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    Result broadcastEnded(),
-    Result broadcastError(),
-    Result loading(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(MapTool mapTool)? mapRendered,
+    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
+    TResult Function()? broadcastEnded,
+    TResult Function()? broadcastError,
+    TResult Function()? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (broadcastEnded != null) {
       return broadcastEnded();
     }
@@ -1103,35 +1081,28 @@ class _$BroadcastEnded implements BroadcastEnded {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(MapInitial value),
-    @required Result mapRendered(MapRendered value),
-    @required Result broadcastStarted(BroadcastStarted value),
-    @required Result broadcastEnded(BroadcastEnded value),
-    @required Result broadcastError(BroadcastError value),
-    @required Result loading(MapLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(MapInitial value) initial,
+    required TResult Function(MapRendered value) mapRendered,
+    required TResult Function(BroadcastStarted value) broadcastStarted,
+    required TResult Function(BroadcastEnded value) broadcastEnded,
+    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(MapLoading value) loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return broadcastEnded(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(MapInitial value),
-    Result mapRendered(MapRendered value),
-    Result broadcastStarted(BroadcastStarted value),
-    Result broadcastEnded(BroadcastEnded value),
-    Result broadcastError(BroadcastError value),
-    Result loading(MapLoading value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MapInitial value)? initial,
+    TResult Function(MapRendered value)? mapRendered,
+    TResult Function(BroadcastStarted value)? broadcastStarted,
+    TResult Function(BroadcastEnded value)? broadcastEnded,
+    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(MapLoading value)? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (broadcastEnded != null) {
       return broadcastEnded(this);
     }
@@ -1143,12 +1114,14 @@ abstract class BroadcastEnded implements MapState {
   const factory BroadcastEnded() = _$BroadcastEnded;
 }
 
+/// @nodoc
 abstract class $BroadcastErrorCopyWith<$Res> {
   factory $BroadcastErrorCopyWith(
           BroadcastError value, $Res Function(BroadcastError) then) =
       _$BroadcastErrorCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$BroadcastErrorCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
     implements $BroadcastErrorCopyWith<$Res> {
   _$BroadcastErrorCopyWithImpl(
@@ -1158,6 +1131,8 @@ class _$BroadcastErrorCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
   @override
   BroadcastError get _value => super._value as BroadcastError;
 }
+
+/// @nodoc
 
 class _$BroadcastError implements BroadcastError {
   const _$BroadcastError();
@@ -1177,35 +1152,28 @@ class _$BroadcastError implements BroadcastError {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result mapRendered(MapTool mapTool),
-    @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    @required Result broadcastEnded(),
-    @required Result broadcastError(),
-    @required Result loading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(MapTool mapTool) mapRendered,
+    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
+    required TResult Function() broadcastEnded,
+    required TResult Function() broadcastError,
+    required TResult Function() loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return broadcastError();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result mapRendered(MapTool mapTool),
-    Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    Result broadcastEnded(),
-    Result broadcastError(),
-    Result loading(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(MapTool mapTool)? mapRendered,
+    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
+    TResult Function()? broadcastEnded,
+    TResult Function()? broadcastError,
+    TResult Function()? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (broadcastError != null) {
       return broadcastError();
     }
@@ -1214,35 +1182,28 @@ class _$BroadcastError implements BroadcastError {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(MapInitial value),
-    @required Result mapRendered(MapRendered value),
-    @required Result broadcastStarted(BroadcastStarted value),
-    @required Result broadcastEnded(BroadcastEnded value),
-    @required Result broadcastError(BroadcastError value),
-    @required Result loading(MapLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(MapInitial value) initial,
+    required TResult Function(MapRendered value) mapRendered,
+    required TResult Function(BroadcastStarted value) broadcastStarted,
+    required TResult Function(BroadcastEnded value) broadcastEnded,
+    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(MapLoading value) loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return broadcastError(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(MapInitial value),
-    Result mapRendered(MapRendered value),
-    Result broadcastStarted(BroadcastStarted value),
-    Result broadcastEnded(BroadcastEnded value),
-    Result broadcastError(BroadcastError value),
-    Result loading(MapLoading value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MapInitial value)? initial,
+    TResult Function(MapRendered value)? mapRendered,
+    TResult Function(BroadcastStarted value)? broadcastStarted,
+    TResult Function(BroadcastEnded value)? broadcastEnded,
+    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(MapLoading value)? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (broadcastError != null) {
       return broadcastError(this);
     }
@@ -1254,12 +1215,14 @@ abstract class BroadcastError implements MapState {
   const factory BroadcastError() = _$BroadcastError;
 }
 
+/// @nodoc
 abstract class $MapLoadingCopyWith<$Res> {
   factory $MapLoadingCopyWith(
           MapLoading value, $Res Function(MapLoading) then) =
       _$MapLoadingCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$MapLoadingCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
     implements $MapLoadingCopyWith<$Res> {
   _$MapLoadingCopyWithImpl(MapLoading _value, $Res Function(MapLoading) _then)
@@ -1268,6 +1231,8 @@ class _$MapLoadingCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
   @override
   MapLoading get _value => super._value as MapLoading;
 }
+
+/// @nodoc
 
 class _$MapLoading implements MapLoading {
   const _$MapLoading();
@@ -1287,35 +1252,28 @@ class _$MapLoading implements MapLoading {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result mapRendered(MapTool mapTool),
-    @required Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    @required Result broadcastEnded(),
-    @required Result broadcastError(),
-    @required Result loading(),
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(MapTool mapTool) mapRendered,
+    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
+    required TResult Function() broadcastEnded,
+    required TResult Function() broadcastError,
+    required TResult Function() loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return loading();
   }
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result mapRendered(MapTool mapTool),
-    Result broadcastStarted(Buddy buddy, MapTool mapTool),
-    Result broadcastEnded(),
-    Result broadcastError(),
-    Result loading(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(MapTool mapTool)? mapRendered,
+    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
+    TResult Function()? broadcastEnded,
+    TResult Function()? broadcastError,
+    TResult Function()? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading();
     }
@@ -1324,35 +1282,28 @@ class _$MapLoading implements MapLoading {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(MapInitial value),
-    @required Result mapRendered(MapRendered value),
-    @required Result broadcastStarted(BroadcastStarted value),
-    @required Result broadcastEnded(BroadcastEnded value),
-    @required Result broadcastError(BroadcastError value),
-    @required Result loading(MapLoading value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(MapInitial value) initial,
+    required TResult Function(MapRendered value) mapRendered,
+    required TResult Function(BroadcastStarted value) broadcastStarted,
+    required TResult Function(BroadcastEnded value) broadcastEnded,
+    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(MapLoading value) loading,
   }) {
-    assert(initial != null);
-    assert(mapRendered != null);
-    assert(broadcastStarted != null);
-    assert(broadcastEnded != null);
-    assert(broadcastError != null);
-    assert(loading != null);
     return loading(this);
   }
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(MapInitial value),
-    Result mapRendered(MapRendered value),
-    Result broadcastStarted(BroadcastStarted value),
-    Result broadcastEnded(BroadcastEnded value),
-    Result broadcastError(BroadcastError value),
-    Result loading(MapLoading value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MapInitial value)? initial,
+    TResult Function(MapRendered value)? mapRendered,
+    TResult Function(BroadcastStarted value)? broadcastStarted,
+    TResult Function(BroadcastEnded value)? broadcastEnded,
+    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(MapLoading value)? loading,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (loading != null) {
       return loading(this);
     }

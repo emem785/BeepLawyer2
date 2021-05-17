@@ -1,10 +1,10 @@
 class Buddy {
-  int id;
-  String firstname;
-  String lastname;
-  String phonenumber;
-  String relationship;
-  int userId;
+  int? id;
+  String? firstname;
+  String? lastname;
+  String? phonenumber;
+  String? relationship;
+  int? userId;
 
   Buddy(
       {this.id,

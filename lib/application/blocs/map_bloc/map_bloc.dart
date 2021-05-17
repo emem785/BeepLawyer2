@@ -24,21 +24,21 @@ part 'map_bloc.freezed.dart';
 
 @injectable
 class MapBloc extends Bloc<MapEvent, MapState> {
-  final MapInterface mapInterface;
-  final ApiInterface apiInterface;
-  final UserLocationInterface userLocationInterface;
-  final LocalStorageInterface localStorageInterface;
-  final WebSocketInterface webSocketInterface;
-  StreamSubscription<Location> _mapUpdateSubscription;
-  MapTool mapTool;
-  IOWebSocketChannel channel;
+  final MapInterface? mapInterface;
+  final ApiInterface? apiInterface;
+  final UserLocationInterface? userLocationInterface;
+  final LocalStorageInterface? localStorageInterface;
+  final WebSocketInterface? webSocketInterface;
+  late StreamSubscription<Location?> _mapUpdateSubscription;
+  MapTool? mapTool;
+  IOWebSocketChannel? channel;
 
   MapBloc({
-    @required this.userLocationInterface,
-    @required this.mapInterface,
-    @required this.apiInterface,
-    @required this.localStorageInterface,
-    @required this.webSocketInterface,
+    required this.userLocationInterface,
+    required this.mapInterface,
+    required this.apiInterface,
+    required this.localStorageInterface,
+    required this.webSocketInterface,
   }) : super(MapInitial());
 
   @override
@@ -53,9 +53,9 @@ class MapBloc extends Bloc<MapEvent, MapState> {
       add(StartBroadcast(mapTool, e.buddy));
     }, startBroadcast: (e) async* {
       print("broadcast started");
-      channel = webSocketInterface.connect(e.buddy.phonenumber);
+      channel = webSocketInterface!.connect(e.buddy.phonenumber);
 
-      _mapUpdateSubscription = mapInterface.startMapUpdateStreamFromApi(
+      _mapUpdateSubscription = mapInterface!.startMapUpdateStreamFromApi(
           e.mapTool, e.buddy.phonenumber, channel);
 
       _mapUpdateSubscription.onError((error) => this.add(OnBroadcastError()));
@@ -71,7 +71,7 @@ class MapBloc extends Bloc<MapEvent, MapState> {
     });
   }
     Future<Location> _getBuddyLocation(Buddy buddy) async {
-    final response = await apiInterface.getLocation(buddy.phonenumber);
+    final response = await apiInterface!.getLocation(buddy.phonenumber);
     print(buddy.phonenumber);
     return response.fold((l) => Location(latitude: 0, longitude: 0), (r) => r);
   }

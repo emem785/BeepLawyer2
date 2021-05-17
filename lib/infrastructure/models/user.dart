@@ -1,19 +1,19 @@
 class User {
-  int id;
-  int userId;
-  int planId;
-  String firstname;
-  String lastname;
-  String twitterHandle;
-  String address;
-  String email;
-  String phone;
-  String scnNumber;
-  double longitude;
-  double latitude;
-  bool isVerified;
+  int? id;
+  int? userId;
+  int? planId;
+  String? firstname;
+  String? lastname;
+  String? twitterHandle;
+  String? address;
+  String? email;
+  String? phone;
+  String? scnNumber;
+  double? longitude;
+  double? latitude;
+  bool? isVerified;
   Null token;
-  String image;
+  String? image;
 
   User(
       {this.id,

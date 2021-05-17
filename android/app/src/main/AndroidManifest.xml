@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
-        android:name=".Application"
         android:label="beep_lawyer_3"
         android:icon="@mipmap/ic_launcher">
 

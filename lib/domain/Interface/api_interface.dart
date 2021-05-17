@@ -12,18 +12,18 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 
 abstract class ApiInterface {
   //Authentication
-  Future<Either<Failure, bool>> registerUser({User user, String password});
+  Future<Either<Failure, bool>> registerUser({User? user, String? password});
   Future<Either<Failure, bool>> registerUserWithForm(
-      {User user, String password, String imagePath});
+      {User? user, String? password, String? imagePath});
 
-  Future<Either<Failure, Map<String, dynamic>>> signIn(
+  Future<Either<Failure, Map<String, dynamic>?>> signIn(
       String phoneNumber, String password);
   Future<Either<Failure, String>> getVerifyCode(String phoneNumber);
 
-  Future<Either<Failure, Map<String, dynamic>>> mobileVerify(
+  Future<Either<Failure, Map<String, dynamic>?>> mobileVerify(
       String phoneNumber, String code);
   //Modify user details
-  Future<Either<Failure, Map<String, dynamic>>> updateUser(User user);
+  Future<Either<Failure, Map<String, dynamic>?>> updateUser(User user);
   Future<Either<Failure, bool>> updateFirebaseKey(
       FirebaseMessaging firebaseMessaging);
   Future<Either<Failure, bool>> updatePassword(String password);
@@ -31,9 +31,9 @@ abstract class ApiInterface {
   Future<Either<Failure, bool>> setPlan(int plan);
   //Location
   Future<Either<Failure, bool>> startOnCall(String onCall);
-  Future<Either<Failure, bool>> sendLocation(double latitude, double longitude);
-  StreamSubscription<Location> sendLocationAsStream(
+  Future<Either<Failure, bool>> sendLocation(double latitude, double? longitude);
+  StreamSubscription<Location>? sendLocationAsStream(
       Stream<Location> locationStream);
 
-  Future<Either<Failure, Location>> getLocation(String phoneNumber);
+  Future<Either<Failure, Location>> getLocation(String? phoneNumber);
 }

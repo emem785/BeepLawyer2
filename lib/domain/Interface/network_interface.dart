@@ -3,9 +3,9 @@ import 'package:dartz/dartz.dart';
 
 
 abstract class NetworkInterface {
-  Future<Either<Failure, Map<String, dynamic>>> post({endPoint, body});
-  Future<Either<Failure, Map<String, dynamic>>> postForm({endPoint, body});
-  Future<Either<Failure, Map<String, dynamic>>> get(endPoint, [data]);
-  Future<Either<Failure, Map<String, dynamic>>> postAuth({endpoint,body});
-  Future<Either<Failure, Map<String, dynamic>>> getAuth(endpoint,[data]);
+  Future<Either<Failure, Map<String, dynamic>?>> post({required endPoint, body});
+  Future<Either<Failure, Map<String, dynamic>>> postForm({required endPoint, required body});
+  Future<Either<Failure, Map<String, dynamic>?>> get(endPoint, [data]);
+  Future<Either<Failure, Map<String, dynamic>?>> postAuth({required endpoint,body});
+  Future<Either<Failure, Map<String, dynamic>?>> getAuth(endpoint,[data]);
 }

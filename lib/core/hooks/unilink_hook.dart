@@ -19,15 +19,15 @@ class _UnilinkHook extends Hook<Uri> {
 }
 
 class _UnilinkHookState extends HookState<Uri, _UnilinkHook> {
-  StreamSubscription<Uri> _subscription;
+  late StreamSubscription<Uri?> _subscription;
   Uri uri = Uri();
   Future<Null> initUniLinks() async {
     try {
-      String initialLink = await getInitialLink();
+      String? initialLink = await getInitialLink();
       if (initialLink != null) {
         Navigator.pushNamed(context, '/ReceiveBeep');
       }
-      _subscription = getUriLinksStream().listen((Uri uri) {
+      _subscription = getUriLinksStream().listen((Uri? uri) {
         Navigator.pushNamedAndRemoveUntil(
             context, '/ReceiveBeep', ModalRoute.withName('/HomeScreen'));
       }, onError: (err) {
