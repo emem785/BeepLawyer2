@@ -6,6 +6,7 @@ import 'package:beep_lawyer_3/infrastructure/models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:beep_lawyer_3/application/blocs/register_bloc/register_bloc.dart';
+import 'package:image_picker/image_picker.dart';
 
 class RegisterOne extends StatefulWidget {
   @override
@@ -16,22 +17,13 @@ class _RegisterOneState extends State<RegisterOne> {
   TextStyle style = TextStyle(fontFamily: 'Nunito');
   final _formKey = GlobalKey<FormState>();
   final _key = GlobalKey<ScaffoldState>();
-  TextEditingController _firstName;
-  TextEditingController _lastName;
-  TextEditingController _phoneNumber;
-  TextEditingController _twitterHandle;
-  TextEditingController _password;
+  final picker = ImagePicker();
+  TextEditingController _firstName = TextEditingController(text: "");
+  TextEditingController _lastName = TextEditingController(text: "");
+  TextEditingController _phoneNumber = TextEditingController(text: "");
+  TextEditingController _password = TextEditingController(text: "");
   TextEditingController _email = TextEditingController(text: "");
-
-  @override
-  void initState() {
-    super.initState();
-    _firstName = TextEditingController(text: "");
-    _lastName = TextEditingController(text: "");
-    _phoneNumber = TextEditingController(text: "");
-    _twitterHandle = TextEditingController(text: "");
-    _password = TextEditingController(text: "");
-  }
+  TextEditingController _image = TextEditingController(text: "");
 
   @override
   void dispose() {
@@ -39,9 +31,18 @@ class _RegisterOneState extends State<RegisterOne> {
     _firstName.dispose();
     _lastName.dispose();
     _phoneNumber.dispose();
-    _twitterHandle.dispose();
     _password.dispose();
     _email.dispose();
+    _image.dispose();
+  }
+
+  _getImage() async {
+    try {
+      final imageFile = await picker.getImage(source: ImageSource.gallery);
+      _image.text = imageFile?.path ?? "null";
+    } catch (e) {
+      print(e.toString());
+    }
   }
 
   @override
@@ -81,6 +82,11 @@ class _RegisterOneState extends State<RegisterOne> {
                   key: _formKey,
                   child: Column(
                     children: <Widget>[
+                      GestureDetector(
+                        onTap: _getImage,
+                        child:
+                            CustomTextField(controller: _image, title: 'Image'),
+                      ),
                       CustomTextField(
                           controller: _firstName, title: 'First Name'),
                       CustomTextField(
@@ -88,10 +94,6 @@ class _RegisterOneState extends State<RegisterOne> {
                       CustomTextField(controller: _email, title: 'Email'),
                       CustomTextFieldNum(
                           controller: _phoneNumber, title: 'Phone Number'),
-                      CustomTextField(
-                          controller: _twitterHandle,
-                          title: 'Twitter Handle (Optional)',
-                          isOptional: true),
                       CustomTextFieldPassword(
                           controller: _password, header: 'Password'),
                       BlocConsumer<RegisterBloc, RegisterState>(
@@ -129,12 +131,13 @@ class _RegisterOneState extends State<RegisterOne> {
                               if (_formKey.currentState.validate()) {
                                 registerBloc.add(RegisterUser(
                                     user: User(
-                                        firstname: _firstName.text,
-                                        lastname: _lastName.text,
-                                        phone: _phoneNumber.text,
-                                        email: _email.text,
-                                        twitterHandle: _twitterHandle.text),
-                                    password: _password.text));
+                                        firstname: _firstName.text.trimRight(),
+                                        lastname: _lastName.text.trimRight(),
+                                        phone: _phoneNumber.text.trimRight(),
+                                        email: _email.text.trimRight(),
+                                        twitterHandle: ""),
+                                    password: _password.text.trimRight(),
+                                    imagePath: _image.text.trimRight()));
                               }
                               // Navigator.pushNamed(context, '/RegisterTwo',
                               //     arguments: {"phone": 090});

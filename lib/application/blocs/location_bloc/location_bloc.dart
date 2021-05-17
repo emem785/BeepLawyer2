@@ -39,9 +39,9 @@ class LocationBloc extends Bloc<LocationEvent, LocationState> {
     LocationEvent event,
   ) async* {
     yield* event.map(renderMap: (e) async* {
-      // await apiInterface.updateFirebaseKey(e.firebaseMessaging);
+      await apiInterface.updateFirebaseKey(e.firebaseMessaging);
       final location = await userLocation.getLocation();
-      await apiInterface.sendLocation(location.latitude, location.latitude);
+      await apiInterface.sendLocation(location.latitude, location.longitude);
       mapTool = MapTool(location: location);
       final onCallResponse = await localStorageInterface.getOnCall();
       yield* onCallResponse.fold((l) async* {
@@ -58,7 +58,7 @@ class LocationBloc extends Bloc<LocationEvent, LocationState> {
     }, stopOnCallSession: (e) async* {
       final onCall = await apiInterface.startOnCall("False");
       _mapUpdateSubscription.cancel();
-      userLocation.stopLawyerOnCallSession();
+      // userLocation.stopLawyerOnCallSession();
       localStorageInterface.removeOnCall();
       yield BroadcastStopped(mapTool);
     }, resumeOnCallSession: (e) async* {

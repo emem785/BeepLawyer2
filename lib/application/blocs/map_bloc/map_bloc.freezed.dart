@@ -31,6 +31,11 @@ class _$MapEventTearOff {
   StopSecondBroadcast stopSecondBroadcast() {
     return const StopSecondBroadcast();
   }
+
+// ignore: unused_element
+  OnBroadcastError onBroadcastError() {
+    return const OnBroadcastError();
+  }
 }
 
 // ignore: unused_element
@@ -42,12 +47,14 @@ mixin _$MapEvent {
     @required Result renderClientMap(Buddy buddy),
     @required Result startBroadcast(MapTool mapTool, Buddy buddy),
     @required Result stopSecondBroadcast(),
+    @required Result onBroadcastError(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result renderClientMap(Buddy buddy),
     Result startBroadcast(MapTool mapTool, Buddy buddy),
     Result stopSecondBroadcast(),
+    Result onBroadcastError(),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -55,12 +62,14 @@ mixin _$MapEvent {
     @required Result renderClientMap(RenderBuddyMap value),
     @required Result startBroadcast(StartBroadcast value),
     @required Result stopSecondBroadcast(StopSecondBroadcast value),
+    @required Result onBroadcastError(OnBroadcastError value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result renderClientMap(RenderBuddyMap value),
     Result startBroadcast(StartBroadcast value),
     Result stopSecondBroadcast(StopSecondBroadcast value),
+    Result onBroadcastError(OnBroadcastError value),
     @required Result orElse(),
   });
 }
@@ -137,10 +146,12 @@ class _$RenderBuddyMap implements RenderBuddyMap {
     @required Result renderClientMap(Buddy buddy),
     @required Result startBroadcast(MapTool mapTool, Buddy buddy),
     @required Result stopSecondBroadcast(),
+    @required Result onBroadcastError(),
   }) {
     assert(renderClientMap != null);
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
+    assert(onBroadcastError != null);
     return renderClientMap(buddy);
   }
 
@@ -150,6 +161,7 @@ class _$RenderBuddyMap implements RenderBuddyMap {
     Result renderClientMap(Buddy buddy),
     Result startBroadcast(MapTool mapTool, Buddy buddy),
     Result stopSecondBroadcast(),
+    Result onBroadcastError(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -165,10 +177,12 @@ class _$RenderBuddyMap implements RenderBuddyMap {
     @required Result renderClientMap(RenderBuddyMap value),
     @required Result startBroadcast(StartBroadcast value),
     @required Result stopSecondBroadcast(StopSecondBroadcast value),
+    @required Result onBroadcastError(OnBroadcastError value),
   }) {
     assert(renderClientMap != null);
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
+    assert(onBroadcastError != null);
     return renderClientMap(this);
   }
 
@@ -178,6 +192,7 @@ class _$RenderBuddyMap implements RenderBuddyMap {
     Result renderClientMap(RenderBuddyMap value),
     Result startBroadcast(StartBroadcast value),
     Result stopSecondBroadcast(StopSecondBroadcast value),
+    Result onBroadcastError(OnBroadcastError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -265,10 +280,12 @@ class _$StartBroadcast implements StartBroadcast {
     @required Result renderClientMap(Buddy buddy),
     @required Result startBroadcast(MapTool mapTool, Buddy buddy),
     @required Result stopSecondBroadcast(),
+    @required Result onBroadcastError(),
   }) {
     assert(renderClientMap != null);
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
+    assert(onBroadcastError != null);
     return startBroadcast(mapTool, buddy);
   }
 
@@ -278,6 +295,7 @@ class _$StartBroadcast implements StartBroadcast {
     Result renderClientMap(Buddy buddy),
     Result startBroadcast(MapTool mapTool, Buddy buddy),
     Result stopSecondBroadcast(),
+    Result onBroadcastError(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -293,10 +311,12 @@ class _$StartBroadcast implements StartBroadcast {
     @required Result renderClientMap(RenderBuddyMap value),
     @required Result startBroadcast(StartBroadcast value),
     @required Result stopSecondBroadcast(StopSecondBroadcast value),
+    @required Result onBroadcastError(OnBroadcastError value),
   }) {
     assert(renderClientMap != null);
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
+    assert(onBroadcastError != null);
     return startBroadcast(this);
   }
 
@@ -306,6 +326,7 @@ class _$StartBroadcast implements StartBroadcast {
     Result renderClientMap(RenderBuddyMap value),
     Result startBroadcast(StartBroadcast value),
     Result stopSecondBroadcast(StopSecondBroadcast value),
+    Result onBroadcastError(OnBroadcastError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -363,10 +384,12 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
     @required Result renderClientMap(Buddy buddy),
     @required Result startBroadcast(MapTool mapTool, Buddy buddy),
     @required Result stopSecondBroadcast(),
+    @required Result onBroadcastError(),
   }) {
     assert(renderClientMap != null);
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
+    assert(onBroadcastError != null);
     return stopSecondBroadcast();
   }
 
@@ -376,6 +399,7 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
     Result renderClientMap(Buddy buddy),
     Result startBroadcast(MapTool mapTool, Buddy buddy),
     Result stopSecondBroadcast(),
+    Result onBroadcastError(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -391,10 +415,12 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
     @required Result renderClientMap(RenderBuddyMap value),
     @required Result startBroadcast(StartBroadcast value),
     @required Result stopSecondBroadcast(StopSecondBroadcast value),
+    @required Result onBroadcastError(OnBroadcastError value),
   }) {
     assert(renderClientMap != null);
     assert(startBroadcast != null);
     assert(stopSecondBroadcast != null);
+    assert(onBroadcastError != null);
     return stopSecondBroadcast(this);
   }
 
@@ -404,6 +430,7 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
     Result renderClientMap(RenderBuddyMap value),
     Result startBroadcast(StartBroadcast value),
     Result stopSecondBroadcast(StopSecondBroadcast value),
+    Result onBroadcastError(OnBroadcastError value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -416,6 +443,105 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
 
 abstract class StopSecondBroadcast implements MapEvent {
   const factory StopSecondBroadcast() = _$StopSecondBroadcast;
+}
+
+abstract class $OnBroadcastErrorCopyWith<$Res> {
+  factory $OnBroadcastErrorCopyWith(
+          OnBroadcastError value, $Res Function(OnBroadcastError) then) =
+      _$OnBroadcastErrorCopyWithImpl<$Res>;
+}
+
+class _$OnBroadcastErrorCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
+    implements $OnBroadcastErrorCopyWith<$Res> {
+  _$OnBroadcastErrorCopyWithImpl(
+      OnBroadcastError _value, $Res Function(OnBroadcastError) _then)
+      : super(_value, (v) => _then(v as OnBroadcastError));
+
+  @override
+  OnBroadcastError get _value => super._value as OnBroadcastError;
+}
+
+class _$OnBroadcastError implements OnBroadcastError {
+  const _$OnBroadcastError();
+
+  @override
+  String toString() {
+    return 'MapEvent.onBroadcastError()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is OnBroadcastError);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result renderClientMap(Buddy buddy),
+    @required Result startBroadcast(MapTool mapTool, Buddy buddy),
+    @required Result stopSecondBroadcast(),
+    @required Result onBroadcastError(),
+  }) {
+    assert(renderClientMap != null);
+    assert(startBroadcast != null);
+    assert(stopSecondBroadcast != null);
+    assert(onBroadcastError != null);
+    return onBroadcastError();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result renderClientMap(Buddy buddy),
+    Result startBroadcast(MapTool mapTool, Buddy buddy),
+    Result stopSecondBroadcast(),
+    Result onBroadcastError(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (onBroadcastError != null) {
+      return onBroadcastError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result renderClientMap(RenderBuddyMap value),
+    @required Result startBroadcast(StartBroadcast value),
+    @required Result stopSecondBroadcast(StopSecondBroadcast value),
+    @required Result onBroadcastError(OnBroadcastError value),
+  }) {
+    assert(renderClientMap != null);
+    assert(startBroadcast != null);
+    assert(stopSecondBroadcast != null);
+    assert(onBroadcastError != null);
+    return onBroadcastError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result renderClientMap(RenderBuddyMap value),
+    Result startBroadcast(StartBroadcast value),
+    Result stopSecondBroadcast(StopSecondBroadcast value),
+    Result onBroadcastError(OnBroadcastError value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (onBroadcastError != null) {
+      return onBroadcastError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OnBroadcastError implements MapEvent {
+  const factory OnBroadcastError() = _$OnBroadcastError;
 }
 
 class _$MapStateTearOff {

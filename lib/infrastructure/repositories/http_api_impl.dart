@@ -137,20 +137,31 @@ class HttpApiImpl implements ApiInterface {
     return _subscription;
   }
 
-  @override
-  Stream<Location> getLocation(String phoneNumber) async* {
-    while (true) {
-      await Future.delayed(const Duration(seconds: API_LOCATION_REQUEST_DELAY));
-      final response = await client.getAuth("get_user_location", phoneNumber);
-      yield* response.fold((l) async* {
-        yield Location(latitude: 0, longitude: 0);
-      }, (r) async* {
-        final location =
-            r["response"]["content"]["details"]["target_user_location"];
+  // @override
+  // Future<Either<Failure, Location>> getLocation(String phoneNumber) async {
+  // while (true) {
+  //   await Future.delayed(const Duration(seconds: API_LOCATION_REQUEST_DELAY));
+  //   final response = await client.getAuth("get_user_location", phoneNumber);
+  //   yield* response.fold((l) async* {
+  //     yield Location(latitude: 0, longitude: 0);
+  //   }, (r) async* {
+  //     final location =
+  //         r["response"]["content"]["details"]["target_user_location"];
 
-        yield Location(latitude: location["lat"], longitude: location["lng"]);
-      });
-    }
+  //     yield Location(latitude: location["lat"], longitude: location["lng"]);
+  //   });
+  // }
+  // }
+
+  @override
+  Future<Either<Failure, Location>> getLocation(String phoneNumber) async {
+    final response = await client.getAuth("get_user_location", phoneNumber);
+    return response.fold((l) => Left(l), (r) {
+      final location =
+          r["response"]["content"]["details"]["target_user_location"];
+      return Right(
+          Location(latitude: location["lat"], longitude: location["lng"]));
+    });
   }
 
   @override
@@ -162,6 +173,32 @@ class HttpApiImpl implements ApiInterface {
     final response =
         await client.postAuth(endpoint: "update_details", body: body);
 
+    return response.fold((l) => Left(l), (r) => Right(true));
+  }
+
+  @override
+  Future<Either<Failure, bool>> updateScnNumber(String scnNumber) async {
+    final body = {"scn_number": scnNumber};
+    final response =
+        await client.postAuth(endpoint: "update_details", body: body);
+
+    return response.fold((l) => Left(l), (r) => Right(true));
+  }
+
+  @override
+  Future<Either<Failure, bool>> registerUserWithForm(
+      {User user, String password, String imagePath}) async {
+    final body = {
+      "firstname": user.firstname,
+      "lastname": user.lastname,
+      "email": user.email,
+      "phone": user.phone,
+      "twitter_handle": user.twitterHandle,
+      "password": password,
+      "image": imagePath
+    };
+    final response =
+        await client.postForm(endPoint: "mobile_register_lawyer", body: body);
     return response.fold((l) => Left(l), (r) => Right(true));
   }
 }

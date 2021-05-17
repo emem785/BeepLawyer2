@@ -9,7 +9,6 @@ import 'package:beep_lawyer_3/infrastructure/models/location.dart';
 import 'package:beep_lawyer_3/infrastructure/models/map_tools.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_map/flutter_map.dart';
 
 import 'package:provider/provider.dart';
 import '../../../../application/blocs/navigation_bloc/navigation_bloc.dart';
@@ -58,8 +57,8 @@ class _HomeMapState extends State<HomeMap> {
               listener: (context, state) {
                 return state.maybeMap(
                     orElse: () => 1,
-                    mapRendered: (m) =>
-                        context.bloc<AddressBloc>().add(GetAddress()));
+                    mapRendered: (m) => BlocProvider.of<AddressBloc>(context)
+                        .add(GetAddress()));
               },
             )),
             BlocBuilder<LocationBloc, LocationState>(

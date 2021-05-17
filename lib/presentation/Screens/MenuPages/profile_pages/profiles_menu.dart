@@ -55,8 +55,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
             ),
             onPressed: () {
               Navigator.pop(context);
-              context.bloc<NavigationBloc>().add(ChangeNavState(1));
-
+              BlocProvider.of<NavigationBloc>(context).add(ChangeNavState(1));
             }),
         titleSpacing: 0.1,
         title: Text(
@@ -164,7 +163,8 @@ class CusTextFine extends StatelessWidget {
                   Align(
                     child: Row(
                       children: [
-                        SizedBox(width: MediaQuery.of(context).size.width * 0.7),
+                        SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.7),
                         Text(
                           'Edit',
                           style: TextStyle(

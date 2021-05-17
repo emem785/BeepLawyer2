@@ -15,23 +15,23 @@ class PaymentClientImpl implements PaymentInterface {
   @override
   Future<Either<Failure, String>> checkOut(
       Charge charge, BuildContext context) async {
-    CheckoutMethod _method = CheckoutMethod.card;
-    try {
-      CheckoutResponse response = await PaystackPlugin.checkout(context,
-          method: _method,
-          charge: charge,
-          fullscreen: false,
-          logo: SvgPicture.asset('assets/images/logo.svg'));
-      print('Response = $response');
-      if (response.verify == true) {
-        return Right(response.message);
-      } else {
-        return Left(ServerFailure("Transaction Unsuccessful"));
-      }
-    } catch (e) {
-      print(e.toString());
-      return Left(ServerFailure(e.toString()));
-    }
+    // CheckoutMethod _method = CheckoutMethod.card;
+    // try {
+    //   CheckoutResponse response = await PaystackPlugin.checkout(context,
+    //       method: _method,
+    //       charge: charge,
+    //       fullscreen: false,
+    //       logo: SvgPicture.asset('assets/images/logo.svg'));
+    //   print('Response = $response');
+    //   if (response.verify == true) {
+    //     return Right(response.message);
+    //   } else {
+    //     return Left(ServerFailure("Transaction Unsuccessful"));
+    //   }
+    // } catch (e) {
+    //   print(e.toString());
+    //   return Left(ServerFailure(e.toString()));
+    // }
   }
 
   @override
@@ -59,6 +59,6 @@ class PaymentClientImpl implements PaymentInterface {
 
   @override
   initializePlugin() {
-    PaystackPlugin.initialize(publicKey: PAY_STACK_PUBLIC_KEY);
+    // PaystackPlugin.initialize(publicKey: PAY_STACK_PUBLIC_KEY);
   }
 }

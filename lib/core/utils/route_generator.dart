@@ -12,10 +12,10 @@ import 'package:beep_lawyer_3/presentation/Screens/Authentication/Register/regis
 import 'package:beep_lawyer_3/presentation/Screens/Authentication/Register/register_four.dart';
 import 'package:beep_lawyer_3/presentation/Screens/Authentication/Register/register_one.dart';
 import 'package:beep_lawyer_3/presentation/Screens/Authentication/Register/register_three.dart';
+import 'package:beep_lawyer_3/presentation/Screens/Authentication/Register/register_one_profile.dart';
 import 'package:beep_lawyer_3/presentation/Screens/Authentication/Register/register_two.dart';
 import 'package:beep_lawyer_3/presentation/Screens/Authentication/Register/setup_beep/setup_beep_three.dart';
 import 'package:beep_lawyer_3/presentation/Screens/Authentication/Register/setup_beep/setup_beep.dart';
-import 'package:beep_lawyer_3/presentation/Screens/Authentication/Register/setup_beep/setup_beep_two.dart';
 import 'package:beep_lawyer_3/presentation/Screens/Authentication/auth_control.dart';
 import 'package:beep_lawyer_3/presentation/Screens/Authentication/splash_screen.dart';
 import 'package:beep_lawyer_3/presentation/Screens/MenuPages/profile_pages/change_password_one.dart';
@@ -51,6 +51,10 @@ class RouteGenerator {
           screen = RegisterOne();
           break;
 
+        // case '/RegisterOneProfile':
+        //   screen = RegisterOneProfile(user: args["user"]);
+        //   break;
+
         case '/RegisterTwo':
           screen = RegisterTwo(
             phone: args["phone"],
@@ -71,9 +75,9 @@ class RouteGenerator {
           screen = SetupBeepPage();
           break;
 
-        case '/SetupBeepTwo':
-          screen = SetupBeepTwo();
-          break;
+        // case '/SetupBeepTwo':
+        //   screen = SetupBeepTwo();
+        //   break;
         case '/SetupBeepThree':
           screen = SetupBeepThree();
           break;

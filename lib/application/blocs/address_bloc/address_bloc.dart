@@ -30,25 +30,25 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
   ) async* {
     yield AddressLoading();
     yield* event.map(getAddress: (e) async* {
-      final address = await userLocationInterface.getAddressFromLocation();
-      yield* address.fold((l) async* {
-        yield AddressFailure();
-      }, (r) async* {
-        yield AddressGotten(r);
-      });
+      // final address = await userLocationInterface.getAddressFromLocation();
+      // yield* address.fold((l) async* {
+      //   yield AddressFailure();
+      // }, (r) async* {
+      //   yield AddressGotten(r);
+      // });
     }, getBuddyAddress: (e) async* {
-      final location = await _getBuddyLocation();
-      final address =
-          await userLocationInterface.getBuddyAddressFromLocation(location);
-      yield* address.fold((l) async* {
-        yield AddressFailure();
-      }, (r) async* {
-        yield AddressGotten(r);
-      });
+      // final location = await _getBuddyLocation();
+      // final address =
+      //     await userLocationInterface.getBuddyAddressFromLocation(location);
+      // yield* address.fold((l) async* {
+      //   yield AddressFailure();
+      // }, (r) async* {
+      //   yield AddressGotten(r);
+      // });
     });
   }
 
-    Future<Location> _getBuddyLocation() async {
+  Future<Location> _getBuddyLocation() async {
     // final response = await localStorageInterface.getBuddy();
     // final buddy =
     //     response.fold((l) => null, (r) => Buddy.fromJson(jsonDecode(r)));

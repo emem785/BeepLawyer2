@@ -13,10 +13,11 @@ class _$RegisterEventTearOff {
   const _$RegisterEventTearOff();
 
 // ignore: unused_element
-  RegisterUser register({User user, String password}) {
+  RegisterUser register({User user, String password, String imagePath}) {
     return RegisterUser(
       user: user,
       password: password,
+      imagePath: imagePath,
     );
   }
 
@@ -34,6 +35,13 @@ class _$RegisterEventTearOff {
       code,
     );
   }
+
+// ignore: unused_element
+  UpdateScnNumber updateScnNumber(String scnNumber) {
+    return UpdateScnNumber(
+      scnNumber,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -42,15 +50,17 @@ const $RegisterEvent = _$RegisterEventTearOff();
 mixin _$RegisterEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result register(User user, String password),
+    @required Result register(User user, String password, String imagePath),
     @required Result getCode(String phoneNumber),
     @required Result mobileVerify(String phoneNumber, String code),
+    @required Result updateScnNumber(String scnNumber),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result register(User user, String password),
+    Result register(User user, String password, String imagePath),
     Result getCode(String phoneNumber),
     Result mobileVerify(String phoneNumber, String code),
+    Result updateScnNumber(String scnNumber),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -58,12 +68,14 @@ mixin _$RegisterEvent {
     @required Result register(RegisterUser value),
     @required Result getCode(GetCode value),
     @required Result mobileVerify(MobileVerify value),
+    @required Result updateScnNumber(UpdateScnNumber value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result register(RegisterUser value),
     Result getCode(GetCode value),
     Result mobileVerify(MobileVerify value),
+    Result updateScnNumber(UpdateScnNumber value),
     @required Result orElse(),
   });
 }
@@ -87,7 +99,7 @@ abstract class $RegisterUserCopyWith<$Res> {
   factory $RegisterUserCopyWith(
           RegisterUser value, $Res Function(RegisterUser) then) =
       _$RegisterUserCopyWithImpl<$Res>;
-  $Res call({User user, String password});
+  $Res call({User user, String password, String imagePath});
 }
 
 class _$RegisterUserCopyWithImpl<$Res> extends _$RegisterEventCopyWithImpl<$Res>
@@ -103,25 +115,29 @@ class _$RegisterUserCopyWithImpl<$Res> extends _$RegisterEventCopyWithImpl<$Res>
   $Res call({
     Object user = freezed,
     Object password = freezed,
+    Object imagePath = freezed,
   }) {
     return _then(RegisterUser(
       user: user == freezed ? _value.user : user as User,
       password: password == freezed ? _value.password : password as String,
+      imagePath: imagePath == freezed ? _value.imagePath : imagePath as String,
     ));
   }
 }
 
 class _$RegisterUser implements RegisterUser {
-  const _$RegisterUser({this.user, this.password});
+  const _$RegisterUser({this.user, this.password, this.imagePath});
 
   @override
   final User user;
   @override
   final String password;
+  @override
+  final String imagePath;
 
   @override
   String toString() {
-    return 'RegisterEvent.register(user: $user, password: $password)';
+    return 'RegisterEvent.register(user: $user, password: $password, imagePath: $imagePath)';
   }
 
   @override
@@ -132,14 +148,18 @@ class _$RegisterUser implements RegisterUser {
                 const DeepCollectionEquality().equals(other.user, user)) &&
             (identical(other.password, password) ||
                 const DeepCollectionEquality()
-                    .equals(other.password, password)));
+                    .equals(other.password, password)) &&
+            (identical(other.imagePath, imagePath) ||
+                const DeepCollectionEquality()
+                    .equals(other.imagePath, imagePath)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(user) ^
-      const DeepCollectionEquality().hash(password);
+      const DeepCollectionEquality().hash(password) ^
+      const DeepCollectionEquality().hash(imagePath);
 
   @override
   $RegisterUserCopyWith<RegisterUser> get copyWith =>
@@ -148,27 +168,30 @@ class _$RegisterUser implements RegisterUser {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result register(User user, String password),
+    @required Result register(User user, String password, String imagePath),
     @required Result getCode(String phoneNumber),
     @required Result mobileVerify(String phoneNumber, String code),
+    @required Result updateScnNumber(String scnNumber),
   }) {
     assert(register != null);
     assert(getCode != null);
     assert(mobileVerify != null);
-    return register(user, password);
+    assert(updateScnNumber != null);
+    return register(user, password, imagePath);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result register(User user, String password),
+    Result register(User user, String password, String imagePath),
     Result getCode(String phoneNumber),
     Result mobileVerify(String phoneNumber, String code),
+    Result updateScnNumber(String scnNumber),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (register != null) {
-      return register(user, password);
+      return register(user, password, imagePath);
     }
     return orElse();
   }
@@ -179,10 +202,12 @@ class _$RegisterUser implements RegisterUser {
     @required Result register(RegisterUser value),
     @required Result getCode(GetCode value),
     @required Result mobileVerify(MobileVerify value),
+    @required Result updateScnNumber(UpdateScnNumber value),
   }) {
     assert(register != null);
     assert(getCode != null);
     assert(mobileVerify != null);
+    assert(updateScnNumber != null);
     return register(this);
   }
 
@@ -192,6 +217,7 @@ class _$RegisterUser implements RegisterUser {
     Result register(RegisterUser value),
     Result getCode(GetCode value),
     Result mobileVerify(MobileVerify value),
+    Result updateScnNumber(UpdateScnNumber value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -203,10 +229,12 @@ class _$RegisterUser implements RegisterUser {
 }
 
 abstract class RegisterUser implements RegisterEvent {
-  const factory RegisterUser({User user, String password}) = _$RegisterUser;
+  const factory RegisterUser({User user, String password, String imagePath}) =
+      _$RegisterUser;
 
   User get user;
   String get password;
+  String get imagePath;
   $RegisterUserCopyWith<RegisterUser> get copyWith;
 }
 
@@ -265,22 +293,25 @@ class _$GetCode implements GetCode {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result register(User user, String password),
+    @required Result register(User user, String password, String imagePath),
     @required Result getCode(String phoneNumber),
     @required Result mobileVerify(String phoneNumber, String code),
+    @required Result updateScnNumber(String scnNumber),
   }) {
     assert(register != null);
     assert(getCode != null);
     assert(mobileVerify != null);
+    assert(updateScnNumber != null);
     return getCode(phoneNumber);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result register(User user, String password),
+    Result register(User user, String password, String imagePath),
     Result getCode(String phoneNumber),
     Result mobileVerify(String phoneNumber, String code),
+    Result updateScnNumber(String scnNumber),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -296,10 +327,12 @@ class _$GetCode implements GetCode {
     @required Result register(RegisterUser value),
     @required Result getCode(GetCode value),
     @required Result mobileVerify(MobileVerify value),
+    @required Result updateScnNumber(UpdateScnNumber value),
   }) {
     assert(register != null);
     assert(getCode != null);
     assert(mobileVerify != null);
+    assert(updateScnNumber != null);
     return getCode(this);
   }
 
@@ -309,6 +342,7 @@ class _$GetCode implements GetCode {
     Result register(RegisterUser value),
     Result getCode(GetCode value),
     Result mobileVerify(MobileVerify value),
+    Result updateScnNumber(UpdateScnNumber value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -393,22 +427,25 @@ class _$MobileVerify implements MobileVerify {
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result register(User user, String password),
+    @required Result register(User user, String password, String imagePath),
     @required Result getCode(String phoneNumber),
     @required Result mobileVerify(String phoneNumber, String code),
+    @required Result updateScnNumber(String scnNumber),
   }) {
     assert(register != null);
     assert(getCode != null);
     assert(mobileVerify != null);
+    assert(updateScnNumber != null);
     return mobileVerify(phoneNumber, code);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result register(User user, String password),
+    Result register(User user, String password, String imagePath),
     Result getCode(String phoneNumber),
     Result mobileVerify(String phoneNumber, String code),
+    Result updateScnNumber(String scnNumber),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -424,10 +461,12 @@ class _$MobileVerify implements MobileVerify {
     @required Result register(RegisterUser value),
     @required Result getCode(GetCode value),
     @required Result mobileVerify(MobileVerify value),
+    @required Result updateScnNumber(UpdateScnNumber value),
   }) {
     assert(register != null);
     assert(getCode != null);
     assert(mobileVerify != null);
+    assert(updateScnNumber != null);
     return mobileVerify(this);
   }
 
@@ -437,6 +476,7 @@ class _$MobileVerify implements MobileVerify {
     Result register(RegisterUser value),
     Result getCode(GetCode value),
     Result mobileVerify(MobileVerify value),
+    Result updateScnNumber(UpdateScnNumber value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -453,6 +493,131 @@ abstract class MobileVerify implements RegisterEvent {
   String get phoneNumber;
   String get code;
   $MobileVerifyCopyWith<MobileVerify> get copyWith;
+}
+
+abstract class $UpdateScnNumberCopyWith<$Res> {
+  factory $UpdateScnNumberCopyWith(
+          UpdateScnNumber value, $Res Function(UpdateScnNumber) then) =
+      _$UpdateScnNumberCopyWithImpl<$Res>;
+  $Res call({String scnNumber});
+}
+
+class _$UpdateScnNumberCopyWithImpl<$Res>
+    extends _$RegisterEventCopyWithImpl<$Res>
+    implements $UpdateScnNumberCopyWith<$Res> {
+  _$UpdateScnNumberCopyWithImpl(
+      UpdateScnNumber _value, $Res Function(UpdateScnNumber) _then)
+      : super(_value, (v) => _then(v as UpdateScnNumber));
+
+  @override
+  UpdateScnNumber get _value => super._value as UpdateScnNumber;
+
+  @override
+  $Res call({
+    Object scnNumber = freezed,
+  }) {
+    return _then(UpdateScnNumber(
+      scnNumber == freezed ? _value.scnNumber : scnNumber as String,
+    ));
+  }
+}
+
+class _$UpdateScnNumber implements UpdateScnNumber {
+  const _$UpdateScnNumber(this.scnNumber) : assert(scnNumber != null);
+
+  @override
+  final String scnNumber;
+
+  @override
+  String toString() {
+    return 'RegisterEvent.updateScnNumber(scnNumber: $scnNumber)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is UpdateScnNumber &&
+            (identical(other.scnNumber, scnNumber) ||
+                const DeepCollectionEquality()
+                    .equals(other.scnNumber, scnNumber)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(scnNumber);
+
+  @override
+  $UpdateScnNumberCopyWith<UpdateScnNumber> get copyWith =>
+      _$UpdateScnNumberCopyWithImpl<UpdateScnNumber>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result register(User user, String password, String imagePath),
+    @required Result getCode(String phoneNumber),
+    @required Result mobileVerify(String phoneNumber, String code),
+    @required Result updateScnNumber(String scnNumber),
+  }) {
+    assert(register != null);
+    assert(getCode != null);
+    assert(mobileVerify != null);
+    assert(updateScnNumber != null);
+    return updateScnNumber(scnNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result register(User user, String password, String imagePath),
+    Result getCode(String phoneNumber),
+    Result mobileVerify(String phoneNumber, String code),
+    Result updateScnNumber(String scnNumber),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (updateScnNumber != null) {
+      return updateScnNumber(scnNumber);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result register(RegisterUser value),
+    @required Result getCode(GetCode value),
+    @required Result mobileVerify(MobileVerify value),
+    @required Result updateScnNumber(UpdateScnNumber value),
+  }) {
+    assert(register != null);
+    assert(getCode != null);
+    assert(mobileVerify != null);
+    assert(updateScnNumber != null);
+    return updateScnNumber(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result register(RegisterUser value),
+    Result getCode(GetCode value),
+    Result mobileVerify(MobileVerify value),
+    Result updateScnNumber(UpdateScnNumber value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (updateScnNumber != null) {
+      return updateScnNumber(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateScnNumber implements RegisterEvent {
+  const factory UpdateScnNumber(String scnNumber) = _$UpdateScnNumber;
+
+  String get scnNumber;
+  $UpdateScnNumberCopyWith<UpdateScnNumber> get copyWith;
 }
 
 class _$RegisterStateTearOff {
@@ -475,6 +640,11 @@ class _$RegisterStateTearOff {
     return GetCodeComplete(
       code,
     );
+  }
+
+// ignore: unused_element
+  ScnNumberUpdated scnNumberUpdated() {
+    return const ScnNumberUpdated();
   }
 
 // ignore: unused_element
@@ -506,6 +676,7 @@ mixin _$RegisterState {
     @required Result initial(),
     @required Result registerComplete(String phoneNumber),
     @required Result getCodeComplete(String code),
+    @required Result scnNumberUpdated(),
     @required Result verifyComplete(User user),
     @required Result loading(),
     @required Result error(Failure failure),
@@ -515,6 +686,7 @@ mixin _$RegisterState {
     Result initial(),
     Result registerComplete(String phoneNumber),
     Result getCodeComplete(String code),
+    Result scnNumberUpdated(),
     Result verifyComplete(User user),
     Result loading(),
     Result error(Failure failure),
@@ -525,6 +697,7 @@ mixin _$RegisterState {
     @required Result initial(RegisterUserInitial value),
     @required Result registerComplete(RegisterComplete value),
     @required Result getCodeComplete(GetCodeComplete value),
+    @required Result scnNumberUpdated(ScnNumberUpdated value),
     @required Result verifyComplete(VerifyComplete value),
     @required Result loading(RegisterLoading value),
     @required Result error(RegisterError value),
@@ -534,6 +707,7 @@ mixin _$RegisterState {
     Result initial(RegisterUserInitial value),
     Result registerComplete(RegisterComplete value),
     Result getCodeComplete(GetCodeComplete value),
+    Result scnNumberUpdated(ScnNumberUpdated value),
     Result verifyComplete(VerifyComplete value),
     Result loading(RegisterLoading value),
     Result error(RegisterError value),
@@ -595,6 +769,7 @@ class _$RegisterUserInitial implements RegisterUserInitial {
     @required Result initial(),
     @required Result registerComplete(String phoneNumber),
     @required Result getCodeComplete(String code),
+    @required Result scnNumberUpdated(),
     @required Result verifyComplete(User user),
     @required Result loading(),
     @required Result error(Failure failure),
@@ -602,6 +777,7 @@ class _$RegisterUserInitial implements RegisterUserInitial {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -614,6 +790,7 @@ class _$RegisterUserInitial implements RegisterUserInitial {
     Result initial(),
     Result registerComplete(String phoneNumber),
     Result getCodeComplete(String code),
+    Result scnNumberUpdated(),
     Result verifyComplete(User user),
     Result loading(),
     Result error(Failure failure),
@@ -632,6 +809,7 @@ class _$RegisterUserInitial implements RegisterUserInitial {
     @required Result initial(RegisterUserInitial value),
     @required Result registerComplete(RegisterComplete value),
     @required Result getCodeComplete(GetCodeComplete value),
+    @required Result scnNumberUpdated(ScnNumberUpdated value),
     @required Result verifyComplete(VerifyComplete value),
     @required Result loading(RegisterLoading value),
     @required Result error(RegisterError value),
@@ -639,6 +817,7 @@ class _$RegisterUserInitial implements RegisterUserInitial {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -651,6 +830,7 @@ class _$RegisterUserInitial implements RegisterUserInitial {
     Result initial(RegisterUserInitial value),
     Result registerComplete(RegisterComplete value),
     Result getCodeComplete(GetCodeComplete value),
+    Result scnNumberUpdated(ScnNumberUpdated value),
     Result verifyComplete(VerifyComplete value),
     Result loading(RegisterLoading value),
     Result error(RegisterError value),
@@ -729,6 +909,7 @@ class _$RegisterComplete implements RegisterComplete {
     @required Result initial(),
     @required Result registerComplete(String phoneNumber),
     @required Result getCodeComplete(String code),
+    @required Result scnNumberUpdated(),
     @required Result verifyComplete(User user),
     @required Result loading(),
     @required Result error(Failure failure),
@@ -736,6 +917,7 @@ class _$RegisterComplete implements RegisterComplete {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -748,6 +930,7 @@ class _$RegisterComplete implements RegisterComplete {
     Result initial(),
     Result registerComplete(String phoneNumber),
     Result getCodeComplete(String code),
+    Result scnNumberUpdated(),
     Result verifyComplete(User user),
     Result loading(),
     Result error(Failure failure),
@@ -766,6 +949,7 @@ class _$RegisterComplete implements RegisterComplete {
     @required Result initial(RegisterUserInitial value),
     @required Result registerComplete(RegisterComplete value),
     @required Result getCodeComplete(GetCodeComplete value),
+    @required Result scnNumberUpdated(ScnNumberUpdated value),
     @required Result verifyComplete(VerifyComplete value),
     @required Result loading(RegisterLoading value),
     @required Result error(RegisterError value),
@@ -773,6 +957,7 @@ class _$RegisterComplete implements RegisterComplete {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -785,6 +970,7 @@ class _$RegisterComplete implements RegisterComplete {
     Result initial(RegisterUserInitial value),
     Result registerComplete(RegisterComplete value),
     Result getCodeComplete(GetCodeComplete value),
+    Result scnNumberUpdated(ScnNumberUpdated value),
     Result verifyComplete(VerifyComplete value),
     Result loading(RegisterLoading value),
     Result error(RegisterError value),
@@ -865,6 +1051,7 @@ class _$GetCodeComplete implements GetCodeComplete {
     @required Result initial(),
     @required Result registerComplete(String phoneNumber),
     @required Result getCodeComplete(String code),
+    @required Result scnNumberUpdated(),
     @required Result verifyComplete(User user),
     @required Result loading(),
     @required Result error(Failure failure),
@@ -872,6 +1059,7 @@ class _$GetCodeComplete implements GetCodeComplete {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -884,6 +1072,7 @@ class _$GetCodeComplete implements GetCodeComplete {
     Result initial(),
     Result registerComplete(String phoneNumber),
     Result getCodeComplete(String code),
+    Result scnNumberUpdated(),
     Result verifyComplete(User user),
     Result loading(),
     Result error(Failure failure),
@@ -902,6 +1091,7 @@ class _$GetCodeComplete implements GetCodeComplete {
     @required Result initial(RegisterUserInitial value),
     @required Result registerComplete(RegisterComplete value),
     @required Result getCodeComplete(GetCodeComplete value),
+    @required Result scnNumberUpdated(ScnNumberUpdated value),
     @required Result verifyComplete(VerifyComplete value),
     @required Result loading(RegisterLoading value),
     @required Result error(RegisterError value),
@@ -909,6 +1099,7 @@ class _$GetCodeComplete implements GetCodeComplete {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -921,6 +1112,7 @@ class _$GetCodeComplete implements GetCodeComplete {
     Result initial(RegisterUserInitial value),
     Result registerComplete(RegisterComplete value),
     Result getCodeComplete(GetCodeComplete value),
+    Result scnNumberUpdated(ScnNumberUpdated value),
     Result verifyComplete(VerifyComplete value),
     Result loading(RegisterLoading value),
     Result error(RegisterError value),
@@ -939,6 +1131,124 @@ abstract class GetCodeComplete implements RegisterState {
 
   String get code;
   $GetCodeCompleteCopyWith<GetCodeComplete> get copyWith;
+}
+
+abstract class $ScnNumberUpdatedCopyWith<$Res> {
+  factory $ScnNumberUpdatedCopyWith(
+          ScnNumberUpdated value, $Res Function(ScnNumberUpdated) then) =
+      _$ScnNumberUpdatedCopyWithImpl<$Res>;
+}
+
+class _$ScnNumberUpdatedCopyWithImpl<$Res>
+    extends _$RegisterStateCopyWithImpl<$Res>
+    implements $ScnNumberUpdatedCopyWith<$Res> {
+  _$ScnNumberUpdatedCopyWithImpl(
+      ScnNumberUpdated _value, $Res Function(ScnNumberUpdated) _then)
+      : super(_value, (v) => _then(v as ScnNumberUpdated));
+
+  @override
+  ScnNumberUpdated get _value => super._value as ScnNumberUpdated;
+}
+
+class _$ScnNumberUpdated implements ScnNumberUpdated {
+  const _$ScnNumberUpdated();
+
+  @override
+  String toString() {
+    return 'RegisterState.scnNumberUpdated()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is ScnNumberUpdated);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initial(),
+    @required Result registerComplete(String phoneNumber),
+    @required Result getCodeComplete(String code),
+    @required Result scnNumberUpdated(),
+    @required Result verifyComplete(User user),
+    @required Result loading(),
+    @required Result error(Failure failure),
+  }) {
+    assert(initial != null);
+    assert(registerComplete != null);
+    assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
+    assert(verifyComplete != null);
+    assert(loading != null);
+    assert(error != null);
+    return scnNumberUpdated();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initial(),
+    Result registerComplete(String phoneNumber),
+    Result getCodeComplete(String code),
+    Result scnNumberUpdated(),
+    Result verifyComplete(User user),
+    Result loading(),
+    Result error(Failure failure),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (scnNumberUpdated != null) {
+      return scnNumberUpdated();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initial(RegisterUserInitial value),
+    @required Result registerComplete(RegisterComplete value),
+    @required Result getCodeComplete(GetCodeComplete value),
+    @required Result scnNumberUpdated(ScnNumberUpdated value),
+    @required Result verifyComplete(VerifyComplete value),
+    @required Result loading(RegisterLoading value),
+    @required Result error(RegisterError value),
+  }) {
+    assert(initial != null);
+    assert(registerComplete != null);
+    assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
+    assert(verifyComplete != null);
+    assert(loading != null);
+    assert(error != null);
+    return scnNumberUpdated(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initial(RegisterUserInitial value),
+    Result registerComplete(RegisterComplete value),
+    Result getCodeComplete(GetCodeComplete value),
+    Result scnNumberUpdated(ScnNumberUpdated value),
+    Result verifyComplete(VerifyComplete value),
+    Result loading(RegisterLoading value),
+    Result error(RegisterError value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (scnNumberUpdated != null) {
+      return scnNumberUpdated(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ScnNumberUpdated implements RegisterState {
+  const factory ScnNumberUpdated() = _$ScnNumberUpdated;
 }
 
 abstract class $VerifyCompleteCopyWith<$Res> {
@@ -1001,6 +1311,7 @@ class _$VerifyComplete implements VerifyComplete {
     @required Result initial(),
     @required Result registerComplete(String phoneNumber),
     @required Result getCodeComplete(String code),
+    @required Result scnNumberUpdated(),
     @required Result verifyComplete(User user),
     @required Result loading(),
     @required Result error(Failure failure),
@@ -1008,6 +1319,7 @@ class _$VerifyComplete implements VerifyComplete {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -1020,6 +1332,7 @@ class _$VerifyComplete implements VerifyComplete {
     Result initial(),
     Result registerComplete(String phoneNumber),
     Result getCodeComplete(String code),
+    Result scnNumberUpdated(),
     Result verifyComplete(User user),
     Result loading(),
     Result error(Failure failure),
@@ -1038,6 +1351,7 @@ class _$VerifyComplete implements VerifyComplete {
     @required Result initial(RegisterUserInitial value),
     @required Result registerComplete(RegisterComplete value),
     @required Result getCodeComplete(GetCodeComplete value),
+    @required Result scnNumberUpdated(ScnNumberUpdated value),
     @required Result verifyComplete(VerifyComplete value),
     @required Result loading(RegisterLoading value),
     @required Result error(RegisterError value),
@@ -1045,6 +1359,7 @@ class _$VerifyComplete implements VerifyComplete {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -1057,6 +1372,7 @@ class _$VerifyComplete implements VerifyComplete {
     Result initial(RegisterUserInitial value),
     Result registerComplete(RegisterComplete value),
     Result getCodeComplete(GetCodeComplete value),
+    Result scnNumberUpdated(ScnNumberUpdated value),
     Result verifyComplete(VerifyComplete value),
     Result loading(RegisterLoading value),
     Result error(RegisterError value),
@@ -1116,6 +1432,7 @@ class _$RegisterLoading implements RegisterLoading {
     @required Result initial(),
     @required Result registerComplete(String phoneNumber),
     @required Result getCodeComplete(String code),
+    @required Result scnNumberUpdated(),
     @required Result verifyComplete(User user),
     @required Result loading(),
     @required Result error(Failure failure),
@@ -1123,6 +1440,7 @@ class _$RegisterLoading implements RegisterLoading {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -1135,6 +1453,7 @@ class _$RegisterLoading implements RegisterLoading {
     Result initial(),
     Result registerComplete(String phoneNumber),
     Result getCodeComplete(String code),
+    Result scnNumberUpdated(),
     Result verifyComplete(User user),
     Result loading(),
     Result error(Failure failure),
@@ -1153,6 +1472,7 @@ class _$RegisterLoading implements RegisterLoading {
     @required Result initial(RegisterUserInitial value),
     @required Result registerComplete(RegisterComplete value),
     @required Result getCodeComplete(GetCodeComplete value),
+    @required Result scnNumberUpdated(ScnNumberUpdated value),
     @required Result verifyComplete(VerifyComplete value),
     @required Result loading(RegisterLoading value),
     @required Result error(RegisterError value),
@@ -1160,6 +1480,7 @@ class _$RegisterLoading implements RegisterLoading {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -1172,6 +1493,7 @@ class _$RegisterLoading implements RegisterLoading {
     Result initial(RegisterUserInitial value),
     Result registerComplete(RegisterComplete value),
     Result getCodeComplete(GetCodeComplete value),
+    Result scnNumberUpdated(ScnNumberUpdated value),
     Result verifyComplete(VerifyComplete value),
     Result loading(RegisterLoading value),
     Result error(RegisterError value),
@@ -1261,6 +1583,7 @@ class _$RegisterError implements RegisterError {
     @required Result initial(),
     @required Result registerComplete(String phoneNumber),
     @required Result getCodeComplete(String code),
+    @required Result scnNumberUpdated(),
     @required Result verifyComplete(User user),
     @required Result loading(),
     @required Result error(Failure failure),
@@ -1268,6 +1591,7 @@ class _$RegisterError implements RegisterError {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -1280,6 +1604,7 @@ class _$RegisterError implements RegisterError {
     Result initial(),
     Result registerComplete(String phoneNumber),
     Result getCodeComplete(String code),
+    Result scnNumberUpdated(),
     Result verifyComplete(User user),
     Result loading(),
     Result error(Failure failure),
@@ -1298,6 +1623,7 @@ class _$RegisterError implements RegisterError {
     @required Result initial(RegisterUserInitial value),
     @required Result registerComplete(RegisterComplete value),
     @required Result getCodeComplete(GetCodeComplete value),
+    @required Result scnNumberUpdated(ScnNumberUpdated value),
     @required Result verifyComplete(VerifyComplete value),
     @required Result loading(RegisterLoading value),
     @required Result error(RegisterError value),
@@ -1305,6 +1631,7 @@ class _$RegisterError implements RegisterError {
     assert(initial != null);
     assert(registerComplete != null);
     assert(getCodeComplete != null);
+    assert(scnNumberUpdated != null);
     assert(verifyComplete != null);
     assert(loading != null);
     assert(error != null);
@@ -1317,6 +1644,7 @@ class _$RegisterError implements RegisterError {
     Result initial(RegisterUserInitial value),
     Result registerComplete(RegisterComplete value),
     Result getCodeComplete(GetCodeComplete value),
+    Result scnNumberUpdated(ScnNumberUpdated value),
     Result verifyComplete(VerifyComplete value),
     Result loading(RegisterLoading value),
     Result error(RegisterError value),

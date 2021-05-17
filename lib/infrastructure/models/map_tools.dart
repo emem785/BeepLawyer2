@@ -1,34 +1,31 @@
 import 'dart:async';
 import 'package:beep_lawyer_3/infrastructure/models/location.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';
-import 'package:latlong/latlong.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 const ZOOM = 17.0;
 
 class MapTool {
-  MapController mapController;
+  GoogleMapController mapController;
   Marker marker;
   Location location;
   StreamController<Marker> markerStreamController;
   String address;
 
-  MapTool({@required Location location}) {
+  MapTool({Location location}) {
     this.location = location;
     marker = Marker(
-      width: 80.0,
-      height: 80.0,
-      point: LatLng(location.latitude, location.longitude),
-      builder: (ctx) => new Container(
-        child: Icon(Icons.location_on, color: Colors.red),
-      ),
+      markerId: MarkerId("User Location"),
+      position: LatLng(location.latitude, location.longitude),
+      icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueGreen),
     );
-    mapController = MapController();
-    markerStreamController = StreamController<Marker>();
+    markerStreamController = StreamController<Marker>.broadcast();
   }
 
   void updateController(Location location) {
-    mapController.move(LatLng(location.latitude, location.longitude), ZOOM);
+    var cameraPosition = CameraPosition(
+        target: LatLng(location.latitude, location.longitude), zoom: ZOOM);
+    mapController.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
   }
 
   void setAddress(String address) {

@@ -17,7 +17,8 @@ part 'register_bloc.freezed.dart';
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   final ApiInterface apiInterface;
   final LocalStorageInterface localStorageInterface;
-  RegisterBloc({this.localStorageInterface, this.apiInterface}) : super(RegisterUserInitial());
+  RegisterBloc({this.localStorageInterface, this.apiInterface})
+      : super(RegisterUserInitial());
 
   @override
   Stream<RegisterState> mapEventToState(
@@ -25,7 +26,8 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   ) async* {
     yield RegisterLoading();
     yield* event.map(register: (e) async* {
-      final response = await apiInterface.registerUser(user: e.user,password: e.password);
+      final response = await apiInterface.registerUserWithForm(
+          user: e.user, password: e.password, imagePath: e.imagePath);
       yield* response.fold((l) async* {
         yield RegisterError(l);
       }, (r) async* {
@@ -43,8 +45,16 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
       yield* response.fold((l) async* {
         yield RegisterError(l);
       }, (r) async* {
-        final user = await localStorageInterface.cacheUserFromSignIn(r, e.phoneNumber);
+        final user =
+            await localStorageInterface.cacheUserFromSignIn(r, e.phoneNumber);
         yield VerifyComplete(user);
+      });
+    }, updateScnNumber: (e) async* {
+      final response = await apiInterface.updateScnNumber(e.scnNumber);
+      yield* response.fold((l) async* {
+        yield RegisterError(l);
+      }, (r) async* {
+        yield ScnNumberUpdated();
       });
     });
   }

@@ -21,9 +21,11 @@ class HomeInitializer extends HookWidget {
   @override
   Widget build(BuildContext context) {
     // useUnilinkHook();
-    final firebase = useFirebaseMessagingHook();
+    // final firebase = useFirebaseMessagingHook();
     return BlocProvider(
-        create: (_) => getIt<LocationBloc>()..add(RenderMap(firebase)),
+        create: (_) => getIt<LocationBloc>()
+        // ..add(RenderMap(firebase)),
+        ,
         child: HomeScreen());
   }
 }
@@ -39,9 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (_) => getIt<AddressBloc>())
-      ],
+      providers: [BlocProvider(create: (_) => getIt<AddressBloc>())],
       child: Scaffold(
         key: _globalKey,
         bottomNavigationBar: BottomBar(

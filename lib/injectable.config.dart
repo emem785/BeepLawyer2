@@ -30,6 +30,8 @@ import 'application/blocs/sign_in_bloc/signin_bloc.dart';
 import 'application/blocs/user_bloc/user_bloc.dart';
 import 'infrastructure/repositories/user_location_impl.dart';
 import 'domain/Interface/location_interface.dart';
+import 'infrastructure/repositories/websocket_impl.dart';
+import 'domain/Interface/websocket_interface.dart';
 
 /// adds generated dependencies
 /// to the provided [GetIt] instance
@@ -50,6 +52,8 @@ GetIt $initGetIt(
   gh.factory<UserLocationInterface>(() => UserLocationImpl(
       localStorageInterface: get<LocalStorageInterface>(),
       geolocator: get<Geolocator>()));
+  gh.factory<WebSocketInterface>(
+      () => WebSocketImpl(userLocationInterface: get<UserLocationInterface>()));
   gh.lazySingleton<ApiInterface>(() => HttpApiImpl(
       localStorageRepo: get<LocalStorageInterface>(),
       client: get<NetworkInterface>()));
@@ -86,6 +90,7 @@ GetIt $initGetIt(
         mapInterface: get<MapInterface>(),
         apiInterface: get<ApiInterface>(),
         localStorageInterface: get<LocalStorageInterface>(),
+        webSocketInterface: get<WebSocketInterface>(),
       ));
   return get;
 }

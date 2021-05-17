@@ -6,4 +6,5 @@ abstract class MapEvent with _$MapEvent{
   const factory MapEvent.renderClientMap(Buddy buddy) = RenderBuddyMap;
   const factory MapEvent.startBroadcast(MapTool mapTool, Buddy buddy) = StartBroadcast;
   const factory MapEvent.stopSecondBroadcast() = StopSecondBroadcast;
+  const factory MapEvent.onBroadcastError() = OnBroadcastError;
 }

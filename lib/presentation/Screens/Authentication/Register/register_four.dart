@@ -76,10 +76,9 @@ class _RegisterFourState extends State<RegisterFour> {
                             TextFormField(
                               controller: _scnNumber,
                               validator: (value) => (value.isEmpty)
-                                  ? "Please enter 4-digit code"
+                                  ? "Please enter Scn Number"
                                   : null,
                               keyboardType: TextInputType.number,
-                              maxLength: 4,
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(gapPadding: 0.1),
                                 contentPadding: EdgeInsets.symmetric(
@@ -90,20 +89,22 @@ class _RegisterFourState extends State<RegisterFour> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 8.0),
-                          child: BlocListener<UserBloc, UserState>(
+                          child: BlocListener<RegisterBloc, RegisterState>(
                             listener: (_, state) {
                               state.maybeMap(
                                   orElse: () => 1,
-                                  userUpdated: (u) => Navigator.pushNamed(
-                                      context, '/RegisterFive'));
+                                  scnNumberUpdated: (u) => Navigator.pushNamed(
+                                      context, '/RegisterFive'),
+                                  error: (e) => _key.currentState.showSnackBar(
+                                      SnackBar(
+                                          content: Text(e.failure.message))));
                             },
                             child: CommonButton(
                               onPressed: () {
-                                // if (_formKey.currentState.validate()) {
-                                //   userBloc.add(CacheScnNumber(_scnNumber.text));
-                                // }
-                                //TODO
-                                Navigator.pushNamed(context, '/RegisterFive');
+                                if (_formKey.currentState.validate()) {
+                                  BlocProvider.of<RegisterBloc>(context)
+                                      .add(UpdateScnNumber(_scnNumber.text));
+                                }
                               },
                               text: "Verify Number",
                             ),
