@@ -10,6 +10,8 @@
     <application
         android:label="beep_lawyer_3"
         android:icon="@mipmap/ic_launcher">
+    <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyDa0Av3isZ_ll9R6rc4Nrnf0G7Jk-olaSk"/>
 
         <activity
             android:name=".MainActivity"

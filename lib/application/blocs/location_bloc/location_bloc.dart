@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:beep_lawyer_3/core/utils/enums.dart';
 import 'package:beep_lawyer_3/domain/Interface/api_interface.dart';
+import 'package:beep_lawyer_3/domain/Interface/idle_map_interface.dart';
 import 'package:beep_lawyer_3/domain/Interface/local_storage_interface.dart';
 import 'package:beep_lawyer_3/domain/Interface/location_interface.dart';
 import 'package:beep_lawyer_3/domain/Interface/map_interface.dart';
@@ -20,53 +22,35 @@ part 'location_bloc.freezed.dart';
 
 @injectable
 class LocationBloc extends Bloc<LocationEvent, LocationState> {
-  final UserLocationInterface? userLocation;
-  final MapInterface? mapInterface;
-  final LocalStorageInterface? localStorageInterface;
-  final ApiInterface? apiInterface;
-  late StreamSubscription<Location> _mapUpdateSubscription;
-  MapTool? mapTool;
+  final IdleMapInterface? idleMapInterface;
+  late OncallStatus oncallStatus;
 
   LocationBloc({
-    required this.localStorageInterface,
-    required this.mapInterface,
-    required this.userLocation,
-    required this.apiInterface,
+    required this.idleMapInterface,
   }) : super(Initial());
 
   @override
   Stream<LocationState> mapEventToState(
     LocationEvent event,
   ) async* {
-    yield* event.map(renderMap: (e) async* {
-      await apiInterface!.updateFirebaseKey(e.firebaseMessaging);
-      final location = await userLocation!.getLocation();
-      await apiInterface!.sendLocation(location.latitude, location.longitude);
-      mapTool = MapTool(location: location);
-      final onCallResponse = await localStorageInterface!.getOnCall();
-      yield* onCallResponse.fold((l) async* {
-        yield MapRendered(mapTool!);
-      }, (r) async* {
-        add(StartOnCallSession());
-      });
-    }, startOnCallSession: (e) async* {
-       final onCall = await apiInterface!.startOnCall("True");
-      _mapUpdateSubscription = mapInterface!.startMapUpdateStream(mapTool);
-      // userLocation.startLawyerOnCallSession();
-      localStorageInterface!.cacheOncall(true);
-      yield BroadcastStarted(mapTool!);
-    }, stopOnCallSession: (e) async* {
-      final onCall = await apiInterface!.startOnCall("False");
-      _mapUpdateSubscription.cancel();
-      // userLocation.stopLawyerOnCallSession();
-      localStorageInterface!.removeOnCall();
-      yield BroadcastStopped(mapTool!);
-    }, resumeOnCallSession: (e) async* {
-      final onCall = await apiInterface!.startOnCall("True");
-      _mapUpdateSubscription = mapInterface!.startMapUpdateStream(mapTool);
-      // userLocation.startLawyerOnCallSession();
-      localStorageInterface!.cacheOncall(true);
-      yield BroadcastStarted(mapTool!);
-    });
+    yield* event.map(
+      renderMap: (RenderMap value) async* {
+        final oncallStatus = await idleMapInterface?.getOnCallStatus();
+        if (oncallStatus == OncallStatus.onCall) {
+          yield OnCallSessionState();
+        }
+        yield IdleSessionState();
+      },
+      startOnCallSession: (StartOnCallSession value) async* {
+        idleMapInterface?.changeOnCallStatus(OncallStatus.onCall);
+        yield OnCallSessionState();
+      },
+      stopOnCallSession: (StopOnCallSession value) async* {
+        idleMapInterface?.changeOnCallStatus(OncallStatus.off);
+        yield IdleSessionState();
+      },
+      startTracking: (StartTracking value) async* {},
+      stopTracking: (StopTracking value) async* {},
+    );
   }
 }

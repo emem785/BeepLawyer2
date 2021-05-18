@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:beep_lawyer_3/domain/Interface/address_interface.dart';
 import 'package:beep_lawyer_3/domain/Interface/api_interface.dart';
 import 'package:beep_lawyer_3/domain/Interface/local_storage_interface.dart';
 import 'package:beep_lawyer_3/domain/Interface/location_interface.dart';
@@ -15,14 +16,8 @@ part 'address_bloc.freezed.dart';
 
 @injectable
 class AddressBloc extends Bloc<AddressEvent, AddressState> {
-  final UserLocationInterface? userLocationInterface;
-  final ApiInterface? apiInterface;
-  final LocalStorageInterface? localStorageInterface;
-  AddressBloc(
-      {this.apiInterface,
-      this.localStorageInterface,
-      this.userLocationInterface})
-      : super(AddressInitial());
+  final AddressInterface addressInterface;
+  AddressBloc({required this.addressInterface}) : super(AddressInitial());
 
   @override
   Stream<AddressState> mapEventToState(
@@ -30,13 +25,13 @@ class AddressBloc extends Bloc<AddressEvent, AddressState> {
   ) async* {
     yield AddressLoading();
     yield* event.map(getAddress: (e) async* {
-      // final address = await userLocationInterface.getAddressFromLocation();
-      // yield* address.fold((l) async* {
-      //   yield AddressFailure();
-      // }, (r) async* {
-      //   yield AddressGotten(r);
-      // });
-    }, getBuddyAddress: (e) async* {
+      final address = await addressInterface.getAddressFromLocation();
+      yield* address.fold((l) async* {
+        yield AddressFailure();
+      }, (r) async* {
+        yield AddressGotten(r!);
+      });
+    }, getCivilianAddress: (e) async* {
       // final location = await _getBuddyLocation();
       // final address =
       //     await userLocationInterface.getBuddyAddressFromLocation(location);

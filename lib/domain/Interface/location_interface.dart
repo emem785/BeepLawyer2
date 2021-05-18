@@ -7,4 +7,6 @@ import 'package:dartz/dartz.dart';
 abstract class UserLocationInterface {
   Stream<Location> getUserLocationStream();
   Future<Location> getLocation();
+  Future<void> startLawyerOnCallSession();
+  Future<void> stopLawyerOnCallSession();
 }

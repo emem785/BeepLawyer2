@@ -33,7 +33,7 @@ class _ReceiveBeepState extends State<ReceiveBeep> {
               ),
               new FlatButton(
                 onPressed: () {
-                  mapBloc.add(StopSecondBroadcast());
+                  // mapBloc.add(StopSecondBroadcast());
                   Navigator.of(context).pop(true);
                 },
                 child: new Text('YES', style: nunitoMidPrompt),
@@ -60,9 +60,6 @@ class _ReceiveBeepState extends State<ReceiveBeep> {
                   mapRendered: (r) => Map(
                       mapTool: r.mapTool,
                       markerStream: r.mapTool.markerStreamController.stream),
-                  broadcastStarted: (b) => Map(
-                      mapTool: b.mapTool,
-                      markerStream: b.mapTool.markerStreamController.stream),
                 );
               })),
               // Align(
@@ -79,14 +76,16 @@ class _ReceiveBeepState extends State<ReceiveBeep> {
               //             BottomContainerLoading(height: size.maxHeight * 0.2));
               //   }),
               // ),
-                           BlocBuilder<AddressBloc, AddressState>(builder: (context, state) {
+              BlocBuilder<AddressBloc, AddressState>(builder: (context, state) {
                 return state.map(
-                    addressInitial: (i) => TopBar(address: ""),
-                    addressLoading: (l) =>
-                        TopBar(address: "Getting Address ...."),
-                    addressFailure: (f) =>
-                        TopBar(address: "Failed to get address"),
-                    addressGotten: (g) => TopBar(address: g.address));
+                    addressInitial: (i) =>
+                        TopBar(address: "", mapBloc: mapBloc),
+                    addressLoading: (l) => TopBar(
+                        address: "Getting Address ....", mapBloc: mapBloc),
+                    addressFailure: (f) => TopBar(
+                        address: "Failed to get address", mapBloc: mapBloc),
+                    addressGotten: (g) =>
+                        TopBar(address: g.address, mapBloc: mapBloc));
               }),
             ],
           ),

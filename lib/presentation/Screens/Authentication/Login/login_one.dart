@@ -1,17 +1,34 @@
+import 'package:beep_lawyer_3/application/blocs/location_bloc/location_bloc.dart';
+import 'package:beep_lawyer_3/core/hooks/firbase_messaging_hook.dart';
 import 'package:beep_lawyer_3/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/common_button.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/custom_text_form_field.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/spinner.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:beep_lawyer_3/application/blocs/sign_in_bloc/signin_bloc.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
-class LoginOne extends StatefulWidget {
+class LoginOne extends HookWidget {
+  @override
+  Widget build(BuildContext context) {
+    final locationBloc = BlocProvider.of<LocationBloc>(context);
+    final firebaseMessaging = useFirebaseMessagingHook(locationBloc);
+    return LoginOnePage(firebaseMessaging: firebaseMessaging);
+  }
+}
+
+class LoginOnePage extends StatefulWidget {
+  final FirebaseMessaging firebaseMessaging;
+
+  const LoginOnePage({Key? key, required this.firebaseMessaging})
+      : super(key: key);
   @override
   _LoginOneState createState() => _LoginOneState();
 }
 
-class _LoginOneState extends State<LoginOne> {
+class _LoginOneState extends State<LoginOnePage> {
   final _formKey = GlobalKey<FormState>();
   final _key = GlobalKey<ScaffoldState>();
   TextEditingController? _phoneNumber;
@@ -71,7 +88,8 @@ class _LoginOneState extends State<LoginOne> {
                     children: <Widget>[
                       CustomTextFieldNum(
                           controller: _phoneNumber, title: 'Phone number'),
-                      CustomTextFieldPassword(controller: _password, header: 'Password'),
+                      CustomTextFieldPassword(
+                          controller: _password, header: 'Password'),
                       InkWell(
                         onTap: () =>
                             Navigator.pushNamed(context, '/ForgotPassword'),

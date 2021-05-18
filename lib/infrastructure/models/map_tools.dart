@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:beep_lawyer_3/infrastructure/models/location.dart';
-import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 const ZOOM = 17.0;
@@ -24,11 +23,9 @@ class MapTool {
 
   void updateController(Location location) {
     var cameraPosition = CameraPosition(
-        target: LatLng(location.latitude, location.longitude!), zoom: ZOOM);
+      target: LatLng(location.latitude, location.longitude!),
+      zoom: ZOOM,
+    );
     mapController.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
-  }
-
-  void setAddress(String address) {
-    this.address = address;
   }
 }

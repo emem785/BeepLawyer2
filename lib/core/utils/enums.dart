@@ -1,12 +1,8 @@
+enum menu { navMenu, navHome, navHomeWithSheet }
 
-  enum menu{
-    navMenu,
-    navHome,
-    navHomeWithSheet
-  }
+enum plan { basicPlan, essentialPlan, noPlan }
 
-  enum plan{
-    basicPlan,
-    essentialPlan,
-    noPlan
-  }
+enum OncallStatus {
+  onCall,
+  off,
+}

@@ -1,70 +1,80 @@
 class User {
-  int? id;
-  int? userId;
-  int? planId;
-  String? firstname;
-  String? lastname;
-  String? twitterHandle;
-  String? address;
-  String? email;
-  String? phone;
-  String? scnNumber;
-  double? longitude;
-  double? latitude;
-  bool? isVerified;
-  Null token;
-  String? image;
+	String? firstname;
+	String? lastname;
+	dynamic twitterHandle;
+	String? email;
+	String? phone;
+	bool? isVerified;
+	bool? onCall;
+	String? scnNumber;
+	String? token;
 
-  User(
-      {this.id,
-      this.userId,
-      this.planId,
-      this.firstname,
-      this.lastname,
-      this.twitterHandle,
-      this.address,
-      this.email,
-      this.phone,
-      this.longitude,
-      this.latitude,
-      this.isVerified,
-      this.token,
-      this.scnNumber,
-      this.image});
+	User({
+		this.firstname,
+		this.lastname,
+		this.twitterHandle,
+		this.email,
+		this.phone,
+		this.isVerified,
+		this.onCall,
+		this.scnNumber,
+		this.token,
+	});
 
-  User.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    userId = json['user_id'];
-    planId = json['plan_id'];
-    firstname = json['firstname'];
-    lastname = json['lastname'];
-    twitterHandle = json['twitter_handle'];
-    address = json['address'];
-    email = json['email'];
-    phone = json['phone'];
-    longitude = json['longitude'];
-    latitude = json['latitude'];
-    isVerified = json['is_verified'];
-    token = json['token'];
-    image = json['image'];
-  }
+	@override
+	String toString() {
+		return 'User(firstname: $firstname, lastname: $lastname, twitterHandle: $twitterHandle, email: $email, phone: $phone, isVerified: $isVerified, onCall: $onCall, scnNumber: $scnNumber, token: $token)';
+	}
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['user_id'] = this.userId;
-    data['plan_id'] = this.planId;
-    data['firstname'] = this.firstname;
-    data['lastname'] = this.lastname;
-    data['twitter_handle'] = this.twitterHandle;
-    data['address'] = this.address;
-    data['email'] = this.email;
-    data['phone'] = this.phone;
-    data['longitude'] = this.longitude;
-    data['latitude'] = this.latitude;
-    data['is_verified'] = this.isVerified;
-    data['token'] = this.token;
-    data['image'] = this.image;
-    return data;
-  }
+	factory User.fromJson(Map<String, dynamic> json) {
+		return User(
+			firstname: json['firstname'] as String?,
+			lastname: json['lastname'] as String?,
+			twitterHandle: json['twitter_handle'],
+			email: json['email'] as String?,
+			phone: json['phone'] as String?,
+			isVerified: json['is_verified'] as bool?,
+			onCall: json['onCall'] as bool?,
+			scnNumber: json['scnNumber'] as String?,
+			token: json['token'] as String?,
+		);
+	}
+
+	Map<String, dynamic> toJson() {
+		return {
+			'firstname': firstname,
+			'lastname': lastname,
+			'twitter_handle': twitterHandle,
+			'email': email,
+			'phone': phone,
+			'is_verified': isVerified,
+			'onCall': onCall,
+			'scnNumber': scnNumber,
+			'token': token,
+		};
+	}	
+
+	User copyWith({
+		String? firstname,
+		String? lastname,
+		dynamic twitterHandle,
+		String? email,
+		String? phone,
+		bool? isVerified,
+		bool? onCall,
+		String? scnNumber,
+		String? token,
+	}) {
+		return User(
+			firstname: firstname ?? this.firstname,
+			lastname: lastname ?? this.lastname,
+			twitterHandle: twitterHandle ?? this.twitterHandle,
+			email: email ?? this.email,
+			phone: phone ?? this.phone,
+			isVerified: isVerified ?? this.isVerified,
+			onCall: onCall ?? this.onCall,
+			scnNumber: scnNumber ?? this.scnNumber,
+			token: token ?? this.token,
+		);
+	}
 }

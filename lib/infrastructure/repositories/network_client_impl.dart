@@ -202,4 +202,22 @@ class NetworkClientImpl implements NetworkInterface {
       return Left(ServerFailure("Server error"));
     }
   }
+
+  @override
+  Future<Map<String, String>?> getHeader() async {
+    final token = await localStorageInterface!.getToken().then((value) {
+      return value.fold((l) => -1, (r) => jsonDecode(r));
+    });
+    final userMap = await localStorageInterface!.getUser().then((value) {
+      return value.fold((l) => -1, (r) => jsonDecode(r));
+    });
+    final phone = userMap["phone"].toString();
+
+    final Map<String, String> headers = {
+      HttpHeaders.authorizationHeader: token,
+      "phone": phone,
+      HttpHeaders.contentTypeHeader: "application/json"
+    };
+    return headers;
+  }
 }

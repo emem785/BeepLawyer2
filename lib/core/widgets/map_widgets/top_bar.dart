@@ -1,11 +1,15 @@
+import 'package:beep_lawyer_3/application/blocs/map_bloc/map_bloc.dart';
 import 'package:beep_lawyer_3/core/utils/StyleGuide.dart';
+import 'package:beep_lawyer_3/domain/Interface/address_interface.dart';
 import 'package:flutter/material.dart';
 
 class TopBar extends StatelessWidget {
   final String address;
+  final MapBloc mapBloc;
   const TopBar({
     Key? key,
     required this.address,
+    required this.mapBloc,
   }) : super(key: key);
 
   @override
@@ -46,7 +50,9 @@ class TopBar extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  mapBloc.add(MapEvent.animateMap());
+                },
                 child: Container(
                   width: 60,
                   child: Center(

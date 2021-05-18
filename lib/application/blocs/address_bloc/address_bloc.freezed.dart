@@ -20,8 +20,10 @@ class _$AddressEventTearOff {
     return const GetAddress();
   }
 
-  GetBuddyAddress getBuddyAddress() {
-    return const GetBuddyAddress();
+  GetCivilianAddress getCivilianAddress(String phoneNumber) {
+    return GetCivilianAddress(
+      phoneNumber,
+    );
   }
 }
 
@@ -33,26 +35,26 @@ mixin _$AddressEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getAddress,
-    required TResult Function() getBuddyAddress,
+    required TResult Function(String phoneNumber) getCivilianAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getAddress,
-    TResult Function()? getBuddyAddress,
+    TResult Function(String phoneNumber)? getCivilianAddress,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(GetAddress value) getAddress,
-    required TResult Function(GetBuddyAddress value) getBuddyAddress,
+    required TResult Function(GetCivilianAddress value) getCivilianAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GetAddress value)? getAddress,
-    TResult Function(GetBuddyAddress value)? getBuddyAddress,
+    TResult Function(GetCivilianAddress value)? getCivilianAddress,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -113,7 +115,7 @@ class _$GetAddress implements GetAddress {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getAddress,
-    required TResult Function() getBuddyAddress,
+    required TResult Function(String phoneNumber) getCivilianAddress,
   }) {
     return getAddress();
   }
@@ -122,7 +124,7 @@ class _$GetAddress implements GetAddress {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getAddress,
-    TResult Function()? getBuddyAddress,
+    TResult Function(String phoneNumber)? getCivilianAddress,
     required TResult orElse(),
   }) {
     if (getAddress != null) {
@@ -135,7 +137,7 @@ class _$GetAddress implements GetAddress {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(GetAddress value) getAddress,
-    required TResult Function(GetBuddyAddress value) getBuddyAddress,
+    required TResult Function(GetCivilianAddress value) getCivilianAddress,
   }) {
     return getAddress(this);
   }
@@ -144,7 +146,7 @@ class _$GetAddress implements GetAddress {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GetAddress value)? getAddress,
-    TResult Function(GetBuddyAddress value)? getBuddyAddress,
+    TResult Function(GetCivilianAddress value)? getCivilianAddress,
     required TResult orElse(),
   }) {
     if (getAddress != null) {
@@ -159,60 +161,86 @@ abstract class GetAddress implements AddressEvent {
 }
 
 /// @nodoc
-abstract class $GetBuddyAddressCopyWith<$Res> {
-  factory $GetBuddyAddressCopyWith(
-          GetBuddyAddress value, $Res Function(GetBuddyAddress) then) =
-      _$GetBuddyAddressCopyWithImpl<$Res>;
+abstract class $GetCivilianAddressCopyWith<$Res> {
+  factory $GetCivilianAddressCopyWith(
+          GetCivilianAddress value, $Res Function(GetCivilianAddress) then) =
+      _$GetCivilianAddressCopyWithImpl<$Res>;
+  $Res call({String phoneNumber});
 }
 
 /// @nodoc
-class _$GetBuddyAddressCopyWithImpl<$Res>
+class _$GetCivilianAddressCopyWithImpl<$Res>
     extends _$AddressEventCopyWithImpl<$Res>
-    implements $GetBuddyAddressCopyWith<$Res> {
-  _$GetBuddyAddressCopyWithImpl(
-      GetBuddyAddress _value, $Res Function(GetBuddyAddress) _then)
-      : super(_value, (v) => _then(v as GetBuddyAddress));
+    implements $GetCivilianAddressCopyWith<$Res> {
+  _$GetCivilianAddressCopyWithImpl(
+      GetCivilianAddress _value, $Res Function(GetCivilianAddress) _then)
+      : super(_value, (v) => _then(v as GetCivilianAddress));
 
   @override
-  GetBuddyAddress get _value => super._value as GetBuddyAddress;
+  GetCivilianAddress get _value => super._value as GetCivilianAddress;
+
+  @override
+  $Res call({
+    Object? phoneNumber = freezed,
+  }) {
+    return _then(GetCivilianAddress(
+      phoneNumber == freezed
+          ? _value.phoneNumber
+          : phoneNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$GetBuddyAddress implements GetBuddyAddress {
-  const _$GetBuddyAddress();
+class _$GetCivilianAddress implements GetCivilianAddress {
+  const _$GetCivilianAddress(this.phoneNumber);
+
+  @override
+  final String phoneNumber;
 
   @override
   String toString() {
-    return 'AddressEvent.getBuddyAddress()';
+    return 'AddressEvent.getCivilianAddress(phoneNumber: $phoneNumber)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is GetBuddyAddress);
+    return identical(this, other) ||
+        (other is GetCivilianAddress &&
+            (identical(other.phoneNumber, phoneNumber) ||
+                const DeepCollectionEquality()
+                    .equals(other.phoneNumber, phoneNumber)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(phoneNumber);
+
+  @JsonKey(ignore: true)
+  @override
+  $GetCivilianAddressCopyWith<GetCivilianAddress> get copyWith =>
+      _$GetCivilianAddressCopyWithImpl<GetCivilianAddress>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() getAddress,
-    required TResult Function() getBuddyAddress,
+    required TResult Function(String phoneNumber) getCivilianAddress,
   }) {
-    return getBuddyAddress();
+    return getCivilianAddress(phoneNumber);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? getAddress,
-    TResult Function()? getBuddyAddress,
+    TResult Function(String phoneNumber)? getCivilianAddress,
     required TResult orElse(),
   }) {
-    if (getBuddyAddress != null) {
-      return getBuddyAddress();
+    if (getCivilianAddress != null) {
+      return getCivilianAddress(phoneNumber);
     }
     return orElse();
   }
@@ -221,27 +249,32 @@ class _$GetBuddyAddress implements GetBuddyAddress {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(GetAddress value) getAddress,
-    required TResult Function(GetBuddyAddress value) getBuddyAddress,
+    required TResult Function(GetCivilianAddress value) getCivilianAddress,
   }) {
-    return getBuddyAddress(this);
+    return getCivilianAddress(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(GetAddress value)? getAddress,
-    TResult Function(GetBuddyAddress value)? getBuddyAddress,
+    TResult Function(GetCivilianAddress value)? getCivilianAddress,
     required TResult orElse(),
   }) {
-    if (getBuddyAddress != null) {
-      return getBuddyAddress(this);
+    if (getCivilianAddress != null) {
+      return getCivilianAddress(this);
     }
     return orElse();
   }
 }
 
-abstract class GetBuddyAddress implements AddressEvent {
-  const factory GetBuddyAddress() = _$GetBuddyAddress;
+abstract class GetCivilianAddress implements AddressEvent {
+  const factory GetCivilianAddress(String phoneNumber) = _$GetCivilianAddress;
+
+  String get phoneNumber => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetCivilianAddressCopyWith<GetCivilianAddress> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

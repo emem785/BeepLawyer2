@@ -26,30 +26,6 @@ class WebSocketImpl implements WebSocketInterface {
   }
 
   @override
-  Stream<Location> getUserLocationStreamWithSocket(String phoneNumber) {
-    final url = URL2 + phoneNumber + "/";
-    final channel = IOWebSocketChannel.connect(url);
-    return channel.stream.map((event) {
-      final map = jsonDecode(event);
-      Location(latitude: map["lat"], longitude: map["lng"]);
-    }).asBroadcastStream() as Stream<Location>;
-  }
-
-  @override
-  StreamSubscription<Location> sendLocationAsStreamWithSocket(
-      IOWebSocketChannel channel) {
-    final locationSub =
-        userLocationInterface!.getUserLocationStream().listen((event) {
-      channel.sink.add(jsonEncode({
-        "lat": event.latitude,
-        "lng": event.longitude,
-        "type": "send_location"
-      }));
-    });
-    return locationSub;
-  }
-
-  @override
   IOWebSocketChannel connect(String? phoneNumber) {
     final url = URL2 + phoneNumber! + "/";
     final channel = IOWebSocketChannel.connect(url);

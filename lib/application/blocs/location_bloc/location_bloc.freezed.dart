@@ -16,12 +16,6 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$LocationEventTearOff {
   const _$LocationEventTearOff();
 
-  RenderMap renderMap(FirebaseMessaging firebaseMessaging) {
-    return RenderMap(
-      firebaseMessaging,
-    );
-  }
-
   StartOnCallSession startOnCallSession() {
     return const StartOnCallSession();
   }
@@ -30,8 +24,18 @@ class _$LocationEventTearOff {
     return const StopOnCallSession();
   }
 
-  ResumeOnCallSession resumeOnCallSession() {
-    return const ResumeOnCallSession();
+  StartTracking startTracking() {
+    return const StartTracking();
+  }
+
+  StopTracking stopTracking() {
+    return const StopTracking();
+  }
+
+  RenderMap renderMap(FirebaseMessaging firebaseMessaging) {
+    return RenderMap(
+      firebaseMessaging,
+    );
   }
 }
 
@@ -42,35 +46,39 @@ const $LocationEvent = _$LocationEventTearOff();
 mixin _$LocationEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FirebaseMessaging firebaseMessaging) renderMap,
     required TResult Function() startOnCallSession,
     required TResult Function() stopOnCallSession,
-    required TResult Function() resumeOnCallSession,
+    required TResult Function() startTracking,
+    required TResult Function() stopTracking,
+    required TResult Function(FirebaseMessaging firebaseMessaging) renderMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FirebaseMessaging firebaseMessaging)? renderMap,
     TResult Function()? startOnCallSession,
     TResult Function()? stopOnCallSession,
-    TResult Function()? resumeOnCallSession,
+    TResult Function()? startTracking,
+    TResult Function()? stopTracking,
+    TResult Function(FirebaseMessaging firebaseMessaging)? renderMap,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(RenderMap value) renderMap,
     required TResult Function(StartOnCallSession value) startOnCallSession,
     required TResult Function(StopOnCallSession value) stopOnCallSession,
-    required TResult Function(ResumeOnCallSession value) resumeOnCallSession,
+    required TResult Function(StartTracking value) startTracking,
+    required TResult Function(StopTracking value) stopTracking,
+    required TResult Function(RenderMap value) renderMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(RenderMap value)? renderMap,
     TResult Function(StartOnCallSession value)? startOnCallSession,
     TResult Function(StopOnCallSession value)? stopOnCallSession,
-    TResult Function(ResumeOnCallSession value)? resumeOnCallSession,
+    TResult Function(StartTracking value)? startTracking,
+    TResult Function(StopTracking value)? stopTracking,
+    TResult Function(RenderMap value)? renderMap,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -91,6 +99,427 @@ class _$LocationEventCopyWithImpl<$Res>
   final LocationEvent _value;
   // ignore: unused_field
   final $Res Function(LocationEvent) _then;
+}
+
+/// @nodoc
+abstract class $StartOnCallSessionCopyWith<$Res> {
+  factory $StartOnCallSessionCopyWith(
+          StartOnCallSession value, $Res Function(StartOnCallSession) then) =
+      _$StartOnCallSessionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$StartOnCallSessionCopyWithImpl<$Res>
+    extends _$LocationEventCopyWithImpl<$Res>
+    implements $StartOnCallSessionCopyWith<$Res> {
+  _$StartOnCallSessionCopyWithImpl(
+      StartOnCallSession _value, $Res Function(StartOnCallSession) _then)
+      : super(_value, (v) => _then(v as StartOnCallSession));
+
+  @override
+  StartOnCallSession get _value => super._value as StartOnCallSession;
+}
+
+/// @nodoc
+
+class _$StartOnCallSession
+    with DiagnosticableTreeMixin
+    implements StartOnCallSession {
+  const _$StartOnCallSession();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'LocationEvent.startOnCallSession()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'LocationEvent.startOnCallSession'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is StartOnCallSession);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() startOnCallSession,
+    required TResult Function() stopOnCallSession,
+    required TResult Function() startTracking,
+    required TResult Function() stopTracking,
+    required TResult Function(FirebaseMessaging firebaseMessaging) renderMap,
+  }) {
+    return startOnCallSession();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? startOnCallSession,
+    TResult Function()? stopOnCallSession,
+    TResult Function()? startTracking,
+    TResult Function()? stopTracking,
+    TResult Function(FirebaseMessaging firebaseMessaging)? renderMap,
+    required TResult orElse(),
+  }) {
+    if (startOnCallSession != null) {
+      return startOnCallSession();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(StartOnCallSession value) startOnCallSession,
+    required TResult Function(StopOnCallSession value) stopOnCallSession,
+    required TResult Function(StartTracking value) startTracking,
+    required TResult Function(StopTracking value) stopTracking,
+    required TResult Function(RenderMap value) renderMap,
+  }) {
+    return startOnCallSession(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(StartOnCallSession value)? startOnCallSession,
+    TResult Function(StopOnCallSession value)? stopOnCallSession,
+    TResult Function(StartTracking value)? startTracking,
+    TResult Function(StopTracking value)? stopTracking,
+    TResult Function(RenderMap value)? renderMap,
+    required TResult orElse(),
+  }) {
+    if (startOnCallSession != null) {
+      return startOnCallSession(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class StartOnCallSession implements LocationEvent {
+  const factory StartOnCallSession() = _$StartOnCallSession;
+}
+
+/// @nodoc
+abstract class $StopOnCallSessionCopyWith<$Res> {
+  factory $StopOnCallSessionCopyWith(
+          StopOnCallSession value, $Res Function(StopOnCallSession) then) =
+      _$StopOnCallSessionCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$StopOnCallSessionCopyWithImpl<$Res>
+    extends _$LocationEventCopyWithImpl<$Res>
+    implements $StopOnCallSessionCopyWith<$Res> {
+  _$StopOnCallSessionCopyWithImpl(
+      StopOnCallSession _value, $Res Function(StopOnCallSession) _then)
+      : super(_value, (v) => _then(v as StopOnCallSession));
+
+  @override
+  StopOnCallSession get _value => super._value as StopOnCallSession;
+}
+
+/// @nodoc
+
+class _$StopOnCallSession
+    with DiagnosticableTreeMixin
+    implements StopOnCallSession {
+  const _$StopOnCallSession();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'LocationEvent.stopOnCallSession()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'LocationEvent.stopOnCallSession'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is StopOnCallSession);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() startOnCallSession,
+    required TResult Function() stopOnCallSession,
+    required TResult Function() startTracking,
+    required TResult Function() stopTracking,
+    required TResult Function(FirebaseMessaging firebaseMessaging) renderMap,
+  }) {
+    return stopOnCallSession();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? startOnCallSession,
+    TResult Function()? stopOnCallSession,
+    TResult Function()? startTracking,
+    TResult Function()? stopTracking,
+    TResult Function(FirebaseMessaging firebaseMessaging)? renderMap,
+    required TResult orElse(),
+  }) {
+    if (stopOnCallSession != null) {
+      return stopOnCallSession();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(StartOnCallSession value) startOnCallSession,
+    required TResult Function(StopOnCallSession value) stopOnCallSession,
+    required TResult Function(StartTracking value) startTracking,
+    required TResult Function(StopTracking value) stopTracking,
+    required TResult Function(RenderMap value) renderMap,
+  }) {
+    return stopOnCallSession(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(StartOnCallSession value)? startOnCallSession,
+    TResult Function(StopOnCallSession value)? stopOnCallSession,
+    TResult Function(StartTracking value)? startTracking,
+    TResult Function(StopTracking value)? stopTracking,
+    TResult Function(RenderMap value)? renderMap,
+    required TResult orElse(),
+  }) {
+    if (stopOnCallSession != null) {
+      return stopOnCallSession(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class StopOnCallSession implements LocationEvent {
+  const factory StopOnCallSession() = _$StopOnCallSession;
+}
+
+/// @nodoc
+abstract class $StartTrackingCopyWith<$Res> {
+  factory $StartTrackingCopyWith(
+          StartTracking value, $Res Function(StartTracking) then) =
+      _$StartTrackingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$StartTrackingCopyWithImpl<$Res>
+    extends _$LocationEventCopyWithImpl<$Res>
+    implements $StartTrackingCopyWith<$Res> {
+  _$StartTrackingCopyWithImpl(
+      StartTracking _value, $Res Function(StartTracking) _then)
+      : super(_value, (v) => _then(v as StartTracking));
+
+  @override
+  StartTracking get _value => super._value as StartTracking;
+}
+
+/// @nodoc
+
+class _$StartTracking with DiagnosticableTreeMixin implements StartTracking {
+  const _$StartTracking();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'LocationEvent.startTracking()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'LocationEvent.startTracking'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is StartTracking);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() startOnCallSession,
+    required TResult Function() stopOnCallSession,
+    required TResult Function() startTracking,
+    required TResult Function() stopTracking,
+    required TResult Function(FirebaseMessaging firebaseMessaging) renderMap,
+  }) {
+    return startTracking();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? startOnCallSession,
+    TResult Function()? stopOnCallSession,
+    TResult Function()? startTracking,
+    TResult Function()? stopTracking,
+    TResult Function(FirebaseMessaging firebaseMessaging)? renderMap,
+    required TResult orElse(),
+  }) {
+    if (startTracking != null) {
+      return startTracking();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(StartOnCallSession value) startOnCallSession,
+    required TResult Function(StopOnCallSession value) stopOnCallSession,
+    required TResult Function(StartTracking value) startTracking,
+    required TResult Function(StopTracking value) stopTracking,
+    required TResult Function(RenderMap value) renderMap,
+  }) {
+    return startTracking(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(StartOnCallSession value)? startOnCallSession,
+    TResult Function(StopOnCallSession value)? stopOnCallSession,
+    TResult Function(StartTracking value)? startTracking,
+    TResult Function(StopTracking value)? stopTracking,
+    TResult Function(RenderMap value)? renderMap,
+    required TResult orElse(),
+  }) {
+    if (startTracking != null) {
+      return startTracking(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class StartTracking implements LocationEvent {
+  const factory StartTracking() = _$StartTracking;
+}
+
+/// @nodoc
+abstract class $StopTrackingCopyWith<$Res> {
+  factory $StopTrackingCopyWith(
+          StopTracking value, $Res Function(StopTracking) then) =
+      _$StopTrackingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$StopTrackingCopyWithImpl<$Res> extends _$LocationEventCopyWithImpl<$Res>
+    implements $StopTrackingCopyWith<$Res> {
+  _$StopTrackingCopyWithImpl(
+      StopTracking _value, $Res Function(StopTracking) _then)
+      : super(_value, (v) => _then(v as StopTracking));
+
+  @override
+  StopTracking get _value => super._value as StopTracking;
+}
+
+/// @nodoc
+
+class _$StopTracking with DiagnosticableTreeMixin implements StopTracking {
+  const _$StopTracking();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'LocationEvent.stopTracking()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties..add(DiagnosticsProperty('type', 'LocationEvent.stopTracking'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is StopTracking);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() startOnCallSession,
+    required TResult Function() stopOnCallSession,
+    required TResult Function() startTracking,
+    required TResult Function() stopTracking,
+    required TResult Function(FirebaseMessaging firebaseMessaging) renderMap,
+  }) {
+    return stopTracking();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? startOnCallSession,
+    TResult Function()? stopOnCallSession,
+    TResult Function()? startTracking,
+    TResult Function()? stopTracking,
+    TResult Function(FirebaseMessaging firebaseMessaging)? renderMap,
+    required TResult orElse(),
+  }) {
+    if (stopTracking != null) {
+      return stopTracking();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(StartOnCallSession value) startOnCallSession,
+    required TResult Function(StopOnCallSession value) stopOnCallSession,
+    required TResult Function(StartTracking value) startTracking,
+    required TResult Function(StopTracking value) stopTracking,
+    required TResult Function(RenderMap value) renderMap,
+  }) {
+    return stopTracking(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(StartOnCallSession value)? startOnCallSession,
+    TResult Function(StopOnCallSession value)? stopOnCallSession,
+    TResult Function(StartTracking value)? startTracking,
+    TResult Function(StopTracking value)? stopTracking,
+    TResult Function(RenderMap value)? renderMap,
+    required TResult orElse(),
+  }) {
+    if (stopTracking != null) {
+      return stopTracking(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class StopTracking implements LocationEvent {
+  const factory StopTracking() = _$StopTracking;
 }
 
 /// @nodoc
@@ -165,10 +594,11 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FirebaseMessaging firebaseMessaging) renderMap,
     required TResult Function() startOnCallSession,
     required TResult Function() stopOnCallSession,
-    required TResult Function() resumeOnCallSession,
+    required TResult Function() startTracking,
+    required TResult Function() stopTracking,
+    required TResult Function(FirebaseMessaging firebaseMessaging) renderMap,
   }) {
     return renderMap(firebaseMessaging);
   }
@@ -176,10 +606,11 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FirebaseMessaging firebaseMessaging)? renderMap,
     TResult Function()? startOnCallSession,
     TResult Function()? stopOnCallSession,
-    TResult Function()? resumeOnCallSession,
+    TResult Function()? startTracking,
+    TResult Function()? stopTracking,
+    TResult Function(FirebaseMessaging firebaseMessaging)? renderMap,
     required TResult orElse(),
   }) {
     if (renderMap != null) {
@@ -191,10 +622,11 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(RenderMap value) renderMap,
     required TResult Function(StartOnCallSession value) startOnCallSession,
     required TResult Function(StopOnCallSession value) stopOnCallSession,
-    required TResult Function(ResumeOnCallSession value) resumeOnCallSession,
+    required TResult Function(StartTracking value) startTracking,
+    required TResult Function(StopTracking value) stopTracking,
+    required TResult Function(RenderMap value) renderMap,
   }) {
     return renderMap(this);
   }
@@ -202,10 +634,11 @@ class _$RenderMap with DiagnosticableTreeMixin implements RenderMap {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(RenderMap value)? renderMap,
     TResult Function(StartOnCallSession value)? startOnCallSession,
     TResult Function(StopOnCallSession value)? stopOnCallSession,
-    TResult Function(ResumeOnCallSession value)? resumeOnCallSession,
+    TResult Function(StartTracking value)? startTracking,
+    TResult Function(StopTracking value)? stopTracking,
+    TResult Function(RenderMap value)? renderMap,
     required TResult orElse(),
   }) {
     if (renderMap != null) {
@@ -225,315 +658,6 @@ abstract class RenderMap implements LocationEvent {
 }
 
 /// @nodoc
-abstract class $StartOnCallSessionCopyWith<$Res> {
-  factory $StartOnCallSessionCopyWith(
-          StartOnCallSession value, $Res Function(StartOnCallSession) then) =
-      _$StartOnCallSessionCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class _$StartOnCallSessionCopyWithImpl<$Res>
-    extends _$LocationEventCopyWithImpl<$Res>
-    implements $StartOnCallSessionCopyWith<$Res> {
-  _$StartOnCallSessionCopyWithImpl(
-      StartOnCallSession _value, $Res Function(StartOnCallSession) _then)
-      : super(_value, (v) => _then(v as StartOnCallSession));
-
-  @override
-  StartOnCallSession get _value => super._value as StartOnCallSession;
-}
-
-/// @nodoc
-
-class _$StartOnCallSession
-    with DiagnosticableTreeMixin
-    implements StartOnCallSession {
-  const _$StartOnCallSession();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LocationEvent.startOnCallSession()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'LocationEvent.startOnCallSession'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is StartOnCallSession);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(FirebaseMessaging firebaseMessaging) renderMap,
-    required TResult Function() startOnCallSession,
-    required TResult Function() stopOnCallSession,
-    required TResult Function() resumeOnCallSession,
-  }) {
-    return startOnCallSession();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FirebaseMessaging firebaseMessaging)? renderMap,
-    TResult Function()? startOnCallSession,
-    TResult Function()? stopOnCallSession,
-    TResult Function()? resumeOnCallSession,
-    required TResult orElse(),
-  }) {
-    if (startOnCallSession != null) {
-      return startOnCallSession();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(RenderMap value) renderMap,
-    required TResult Function(StartOnCallSession value) startOnCallSession,
-    required TResult Function(StopOnCallSession value) stopOnCallSession,
-    required TResult Function(ResumeOnCallSession value) resumeOnCallSession,
-  }) {
-    return startOnCallSession(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(RenderMap value)? renderMap,
-    TResult Function(StartOnCallSession value)? startOnCallSession,
-    TResult Function(StopOnCallSession value)? stopOnCallSession,
-    TResult Function(ResumeOnCallSession value)? resumeOnCallSession,
-    required TResult orElse(),
-  }) {
-    if (startOnCallSession != null) {
-      return startOnCallSession(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class StartOnCallSession implements LocationEvent {
-  const factory StartOnCallSession() = _$StartOnCallSession;
-}
-
-/// @nodoc
-abstract class $StopOnCallSessionCopyWith<$Res> {
-  factory $StopOnCallSessionCopyWith(
-          StopOnCallSession value, $Res Function(StopOnCallSession) then) =
-      _$StopOnCallSessionCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class _$StopOnCallSessionCopyWithImpl<$Res>
-    extends _$LocationEventCopyWithImpl<$Res>
-    implements $StopOnCallSessionCopyWith<$Res> {
-  _$StopOnCallSessionCopyWithImpl(
-      StopOnCallSession _value, $Res Function(StopOnCallSession) _then)
-      : super(_value, (v) => _then(v as StopOnCallSession));
-
-  @override
-  StopOnCallSession get _value => super._value as StopOnCallSession;
-}
-
-/// @nodoc
-
-class _$StopOnCallSession
-    with DiagnosticableTreeMixin
-    implements StopOnCallSession {
-  const _$StopOnCallSession();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LocationEvent.stopOnCallSession()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'LocationEvent.stopOnCallSession'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is StopOnCallSession);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(FirebaseMessaging firebaseMessaging) renderMap,
-    required TResult Function() startOnCallSession,
-    required TResult Function() stopOnCallSession,
-    required TResult Function() resumeOnCallSession,
-  }) {
-    return stopOnCallSession();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FirebaseMessaging firebaseMessaging)? renderMap,
-    TResult Function()? startOnCallSession,
-    TResult Function()? stopOnCallSession,
-    TResult Function()? resumeOnCallSession,
-    required TResult orElse(),
-  }) {
-    if (stopOnCallSession != null) {
-      return stopOnCallSession();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(RenderMap value) renderMap,
-    required TResult Function(StartOnCallSession value) startOnCallSession,
-    required TResult Function(StopOnCallSession value) stopOnCallSession,
-    required TResult Function(ResumeOnCallSession value) resumeOnCallSession,
-  }) {
-    return stopOnCallSession(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(RenderMap value)? renderMap,
-    TResult Function(StartOnCallSession value)? startOnCallSession,
-    TResult Function(StopOnCallSession value)? stopOnCallSession,
-    TResult Function(ResumeOnCallSession value)? resumeOnCallSession,
-    required TResult orElse(),
-  }) {
-    if (stopOnCallSession != null) {
-      return stopOnCallSession(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class StopOnCallSession implements LocationEvent {
-  const factory StopOnCallSession() = _$StopOnCallSession;
-}
-
-/// @nodoc
-abstract class $ResumeOnCallSessionCopyWith<$Res> {
-  factory $ResumeOnCallSessionCopyWith(
-          ResumeOnCallSession value, $Res Function(ResumeOnCallSession) then) =
-      _$ResumeOnCallSessionCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class _$ResumeOnCallSessionCopyWithImpl<$Res>
-    extends _$LocationEventCopyWithImpl<$Res>
-    implements $ResumeOnCallSessionCopyWith<$Res> {
-  _$ResumeOnCallSessionCopyWithImpl(
-      ResumeOnCallSession _value, $Res Function(ResumeOnCallSession) _then)
-      : super(_value, (v) => _then(v as ResumeOnCallSession));
-
-  @override
-  ResumeOnCallSession get _value => super._value as ResumeOnCallSession;
-}
-
-/// @nodoc
-
-class _$ResumeOnCallSession
-    with DiagnosticableTreeMixin
-    implements ResumeOnCallSession {
-  const _$ResumeOnCallSession();
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LocationEvent.resumeOnCallSession()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'LocationEvent.resumeOnCallSession'));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is ResumeOnCallSession);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(FirebaseMessaging firebaseMessaging) renderMap,
-    required TResult Function() startOnCallSession,
-    required TResult Function() stopOnCallSession,
-    required TResult Function() resumeOnCallSession,
-  }) {
-    return resumeOnCallSession();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FirebaseMessaging firebaseMessaging)? renderMap,
-    TResult Function()? startOnCallSession,
-    TResult Function()? stopOnCallSession,
-    TResult Function()? resumeOnCallSession,
-    required TResult orElse(),
-  }) {
-    if (resumeOnCallSession != null) {
-      return resumeOnCallSession();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(RenderMap value) renderMap,
-    required TResult Function(StartOnCallSession value) startOnCallSession,
-    required TResult Function(StopOnCallSession value) stopOnCallSession,
-    required TResult Function(ResumeOnCallSession value) resumeOnCallSession,
-  }) {
-    return resumeOnCallSession(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(RenderMap value)? renderMap,
-    TResult Function(StartOnCallSession value)? startOnCallSession,
-    TResult Function(StopOnCallSession value)? stopOnCallSession,
-    TResult Function(ResumeOnCallSession value)? resumeOnCallSession,
-    required TResult orElse(),
-  }) {
-    if (resumeOnCallSession != null) {
-      return resumeOnCallSession(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class ResumeOnCallSession implements LocationEvent {
-  const factory ResumeOnCallSession() = _$ResumeOnCallSession;
-}
-
-/// @nodoc
 class _$LocationStateTearOff {
   const _$LocationStateTearOff();
 
@@ -541,22 +665,12 @@ class _$LocationStateTearOff {
     return const Initial();
   }
 
-  MapRendered mapRendered(MapTool mapTool) {
-    return MapRendered(
-      mapTool,
-    );
+  IdleSessionState idleSessionState() {
+    return const IdleSessionState();
   }
 
-  BroadcastStarted broadcastStarted(MapTool mapTool) {
-    return BroadcastStarted(
-      mapTool,
-    );
-  }
-
-  BroadcastStopped broadcastStopped(MapTool mapTool) {
-    return BroadcastStopped(
-      mapTool,
-    );
+  OnCallSessionState onCallSessionState() {
+    return const OnCallSessionState();
   }
 }
 
@@ -568,34 +682,30 @@ mixin _$LocationState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(MapTool mapTool) broadcastStarted,
-    required TResult Function(MapTool mapTool) broadcastStopped,
+    required TResult Function() idleSessionState,
+    required TResult Function() onCallSessionState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(MapTool mapTool)? broadcastStarted,
-    TResult Function(MapTool mapTool)? broadcastStopped,
+    TResult Function()? idleSessionState,
+    TResult Function()? onCallSessionState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
-    required TResult Function(BroadcastStopped value) broadcastStopped,
+    required TResult Function(IdleSessionState value) idleSessionState,
+    required TResult Function(OnCallSessionState value) onCallSessionState,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
-    TResult Function(BroadcastStopped value)? broadcastStopped,
+    TResult Function(IdleSessionState value)? idleSessionState,
+    TResult Function(OnCallSessionState value)? onCallSessionState,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -662,9 +772,8 @@ class _$Initial with DiagnosticableTreeMixin implements Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(MapTool mapTool) broadcastStarted,
-    required TResult Function(MapTool mapTool) broadcastStopped,
+    required TResult Function() idleSessionState,
+    required TResult Function() onCallSessionState,
   }) {
     return initial();
   }
@@ -673,9 +782,8 @@ class _$Initial with DiagnosticableTreeMixin implements Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(MapTool mapTool)? broadcastStarted,
-    TResult Function(MapTool mapTool)? broadcastStopped,
+    TResult Function()? idleSessionState,
+    TResult Function()? onCallSessionState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -688,9 +796,8 @@ class _$Initial with DiagnosticableTreeMixin implements Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
-    required TResult Function(BroadcastStopped value) broadcastStopped,
+    required TResult Function(IdleSessionState value) idleSessionState,
+    required TResult Function(OnCallSessionState value) onCallSessionState,
   }) {
     return initial(this);
   }
@@ -699,9 +806,8 @@ class _$Initial with DiagnosticableTreeMixin implements Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
-    TResult Function(BroadcastStopped value)? broadcastStopped,
+    TResult Function(IdleSessionState value)? idleSessionState,
+    TResult Function(OnCallSessionState value)? onCallSessionState,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -716,230 +822,71 @@ abstract class Initial implements LocationState {
 }
 
 /// @nodoc
-abstract class $MapRenderedCopyWith<$Res> {
-  factory $MapRenderedCopyWith(
-          MapRendered value, $Res Function(MapRendered) then) =
-      _$MapRenderedCopyWithImpl<$Res>;
-  $Res call({MapTool mapTool});
+abstract class $IdleSessionStateCopyWith<$Res> {
+  factory $IdleSessionStateCopyWith(
+          IdleSessionState value, $Res Function(IdleSessionState) then) =
+      _$IdleSessionStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$MapRenderedCopyWithImpl<$Res> extends _$LocationStateCopyWithImpl<$Res>
-    implements $MapRenderedCopyWith<$Res> {
-  _$MapRenderedCopyWithImpl(
-      MapRendered _value, $Res Function(MapRendered) _then)
-      : super(_value, (v) => _then(v as MapRendered));
-
-  @override
-  MapRendered get _value => super._value as MapRendered;
-
-  @override
-  $Res call({
-    Object? mapTool = freezed,
-  }) {
-    return _then(MapRendered(
-      mapTool == freezed
-          ? _value.mapTool
-          : mapTool // ignore: cast_nullable_to_non_nullable
-              as MapTool,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$MapRendered with DiagnosticableTreeMixin implements MapRendered {
-  const _$MapRendered(this.mapTool);
-
-  @override
-  final MapTool mapTool;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LocationState.mapRendered(mapTool: $mapTool)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'LocationState.mapRendered'))
-      ..add(DiagnosticsProperty('mapTool', mapTool));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is MapRendered &&
-            (identical(other.mapTool, mapTool) ||
-                const DeepCollectionEquality().equals(other.mapTool, mapTool)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(mapTool);
-
-  @JsonKey(ignore: true)
-  @override
-  $MapRenderedCopyWith<MapRendered> get copyWith =>
-      _$MapRenderedCopyWithImpl<MapRendered>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(MapTool mapTool) broadcastStarted,
-    required TResult Function(MapTool mapTool) broadcastStopped,
-  }) {
-    return mapRendered(mapTool);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(MapTool mapTool)? broadcastStarted,
-    TResult Function(MapTool mapTool)? broadcastStopped,
-    required TResult orElse(),
-  }) {
-    if (mapRendered != null) {
-      return mapRendered(mapTool);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
-    required TResult Function(BroadcastStopped value) broadcastStopped,
-  }) {
-    return mapRendered(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
-    TResult Function(BroadcastStopped value)? broadcastStopped,
-    required TResult orElse(),
-  }) {
-    if (mapRendered != null) {
-      return mapRendered(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class MapRendered implements LocationState {
-  const factory MapRendered(MapTool mapTool) = _$MapRendered;
-
-  MapTool get mapTool => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $MapRenderedCopyWith<MapRendered> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $BroadcastStartedCopyWith<$Res> {
-  factory $BroadcastStartedCopyWith(
-          BroadcastStarted value, $Res Function(BroadcastStarted) then) =
-      _$BroadcastStartedCopyWithImpl<$Res>;
-  $Res call({MapTool mapTool});
-}
-
-/// @nodoc
-class _$BroadcastStartedCopyWithImpl<$Res>
+class _$IdleSessionStateCopyWithImpl<$Res>
     extends _$LocationStateCopyWithImpl<$Res>
-    implements $BroadcastStartedCopyWith<$Res> {
-  _$BroadcastStartedCopyWithImpl(
-      BroadcastStarted _value, $Res Function(BroadcastStarted) _then)
-      : super(_value, (v) => _then(v as BroadcastStarted));
+    implements $IdleSessionStateCopyWith<$Res> {
+  _$IdleSessionStateCopyWithImpl(
+      IdleSessionState _value, $Res Function(IdleSessionState) _then)
+      : super(_value, (v) => _then(v as IdleSessionState));
 
   @override
-  BroadcastStarted get _value => super._value as BroadcastStarted;
-
-  @override
-  $Res call({
-    Object? mapTool = freezed,
-  }) {
-    return _then(BroadcastStarted(
-      mapTool == freezed
-          ? _value.mapTool
-          : mapTool // ignore: cast_nullable_to_non_nullable
-              as MapTool,
-    ));
-  }
+  IdleSessionState get _value => super._value as IdleSessionState;
 }
 
 /// @nodoc
 
-class _$BroadcastStarted
+class _$IdleSessionState
     with DiagnosticableTreeMixin
-    implements BroadcastStarted {
-  const _$BroadcastStarted(this.mapTool);
-
-  @override
-  final MapTool mapTool;
+    implements IdleSessionState {
+  const _$IdleSessionState();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LocationState.broadcastStarted(mapTool: $mapTool)';
+    return 'LocationState.idleSessionState()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'LocationState.broadcastStarted'))
-      ..add(DiagnosticsProperty('mapTool', mapTool));
+      ..add(DiagnosticsProperty('type', 'LocationState.idleSessionState'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is BroadcastStarted &&
-            (identical(other.mapTool, mapTool) ||
-                const DeepCollectionEquality().equals(other.mapTool, mapTool)));
+    return identical(this, other) || (other is IdleSessionState);
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(mapTool);
-
-  @JsonKey(ignore: true)
-  @override
-  $BroadcastStartedCopyWith<BroadcastStarted> get copyWith =>
-      _$BroadcastStartedCopyWithImpl<BroadcastStarted>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(MapTool mapTool) broadcastStarted,
-    required TResult Function(MapTool mapTool) broadcastStopped,
+    required TResult Function() idleSessionState,
+    required TResult Function() onCallSessionState,
   }) {
-    return broadcastStarted(mapTool);
+    return idleSessionState();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(MapTool mapTool)? broadcastStarted,
-    TResult Function(MapTool mapTool)? broadcastStopped,
+    TResult Function()? idleSessionState,
+    TResult Function()? onCallSessionState,
     required TResult orElse(),
   }) {
-    if (broadcastStarted != null) {
-      return broadcastStarted(mapTool);
+    if (idleSessionState != null) {
+      return idleSessionState();
     }
     return orElse();
   }
@@ -948,132 +895,97 @@ class _$BroadcastStarted
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
-    required TResult Function(BroadcastStopped value) broadcastStopped,
+    required TResult Function(IdleSessionState value) idleSessionState,
+    required TResult Function(OnCallSessionState value) onCallSessionState,
   }) {
-    return broadcastStarted(this);
+    return idleSessionState(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
-    TResult Function(BroadcastStopped value)? broadcastStopped,
+    TResult Function(IdleSessionState value)? idleSessionState,
+    TResult Function(OnCallSessionState value)? onCallSessionState,
     required TResult orElse(),
   }) {
-    if (broadcastStarted != null) {
-      return broadcastStarted(this);
+    if (idleSessionState != null) {
+      return idleSessionState(this);
     }
     return orElse();
   }
 }
 
-abstract class BroadcastStarted implements LocationState {
-  const factory BroadcastStarted(MapTool mapTool) = _$BroadcastStarted;
-
-  MapTool get mapTool => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $BroadcastStartedCopyWith<BroadcastStarted> get copyWith =>
-      throw _privateConstructorUsedError;
+abstract class IdleSessionState implements LocationState {
+  const factory IdleSessionState() = _$IdleSessionState;
 }
 
 /// @nodoc
-abstract class $BroadcastStoppedCopyWith<$Res> {
-  factory $BroadcastStoppedCopyWith(
-          BroadcastStopped value, $Res Function(BroadcastStopped) then) =
-      _$BroadcastStoppedCopyWithImpl<$Res>;
-  $Res call({MapTool mapTool});
+abstract class $OnCallSessionStateCopyWith<$Res> {
+  factory $OnCallSessionStateCopyWith(
+          OnCallSessionState value, $Res Function(OnCallSessionState) then) =
+      _$OnCallSessionStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$BroadcastStoppedCopyWithImpl<$Res>
+class _$OnCallSessionStateCopyWithImpl<$Res>
     extends _$LocationStateCopyWithImpl<$Res>
-    implements $BroadcastStoppedCopyWith<$Res> {
-  _$BroadcastStoppedCopyWithImpl(
-      BroadcastStopped _value, $Res Function(BroadcastStopped) _then)
-      : super(_value, (v) => _then(v as BroadcastStopped));
+    implements $OnCallSessionStateCopyWith<$Res> {
+  _$OnCallSessionStateCopyWithImpl(
+      OnCallSessionState _value, $Res Function(OnCallSessionState) _then)
+      : super(_value, (v) => _then(v as OnCallSessionState));
 
   @override
-  BroadcastStopped get _value => super._value as BroadcastStopped;
-
-  @override
-  $Res call({
-    Object? mapTool = freezed,
-  }) {
-    return _then(BroadcastStopped(
-      mapTool == freezed
-          ? _value.mapTool
-          : mapTool // ignore: cast_nullable_to_non_nullable
-              as MapTool,
-    ));
-  }
+  OnCallSessionState get _value => super._value as OnCallSessionState;
 }
 
 /// @nodoc
 
-class _$BroadcastStopped
+class _$OnCallSessionState
     with DiagnosticableTreeMixin
-    implements BroadcastStopped {
-  const _$BroadcastStopped(this.mapTool);
-
-  @override
-  final MapTool mapTool;
+    implements OnCallSessionState {
+  const _$OnCallSessionState();
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LocationState.broadcastStopped(mapTool: $mapTool)';
+    return 'LocationState.onCallSessionState()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'LocationState.broadcastStopped'))
-      ..add(DiagnosticsProperty('mapTool', mapTool));
+      ..add(DiagnosticsProperty('type', 'LocationState.onCallSessionState'));
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is BroadcastStopped &&
-            (identical(other.mapTool, mapTool) ||
-                const DeepCollectionEquality().equals(other.mapTool, mapTool)));
+    return identical(this, other) || (other is OnCallSessionState);
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(mapTool);
-
-  @JsonKey(ignore: true)
-  @override
-  $BroadcastStoppedCopyWith<BroadcastStopped> get copyWith =>
-      _$BroadcastStoppedCopyWithImpl<BroadcastStopped>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(MapTool mapTool) broadcastStarted,
-    required TResult Function(MapTool mapTool) broadcastStopped,
+    required TResult Function() idleSessionState,
+    required TResult Function() onCallSessionState,
   }) {
-    return broadcastStopped(mapTool);
+    return onCallSessionState();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(MapTool mapTool)? broadcastStarted,
-    TResult Function(MapTool mapTool)? broadcastStopped,
+    TResult Function()? idleSessionState,
+    TResult Function()? onCallSessionState,
     required TResult orElse(),
   }) {
-    if (broadcastStopped != null) {
-      return broadcastStopped(mapTool);
+    if (onCallSessionState != null) {
+      return onCallSessionState();
     }
     return orElse();
   }
@@ -1082,34 +994,27 @@ class _$BroadcastStopped
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
-    required TResult Function(BroadcastStopped value) broadcastStopped,
+    required TResult Function(IdleSessionState value) idleSessionState,
+    required TResult Function(OnCallSessionState value) onCallSessionState,
   }) {
-    return broadcastStopped(this);
+    return onCallSessionState(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
-    TResult Function(BroadcastStopped value)? broadcastStopped,
+    TResult Function(IdleSessionState value)? idleSessionState,
+    TResult Function(OnCallSessionState value)? onCallSessionState,
     required TResult orElse(),
   }) {
-    if (broadcastStopped != null) {
-      return broadcastStopped(this);
+    if (onCallSessionState != null) {
+      return onCallSessionState(this);
     }
     return orElse();
   }
 }
 
-abstract class BroadcastStopped implements LocationState {
-  const factory BroadcastStopped(MapTool mapTool) = _$BroadcastStopped;
-
-  MapTool get mapTool => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $BroadcastStoppedCopyWith<BroadcastStopped> get copyWith =>
-      throw _privateConstructorUsedError;
+abstract class OnCallSessionState implements LocationState {
+  const factory OnCallSessionState() = _$OnCallSessionState;
 }

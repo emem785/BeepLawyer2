@@ -19,10 +19,10 @@ class ReceiveBeepPage extends StatelessWidget {
         key: _globalKey,
         body: MultiBlocProvider(
           providers: [
-            BlocProvider(
-                create: (_) => getIt<MapBloc>()..add(RenderBuddyMap(buddy!))),
-            BlocProvider(
-                create: (_) => getIt<AddressBloc>()..add(GetBuddyAddress())),
+            // BlocProvider(
+            //     create: (_) => getIt<MapBloc>()..add(RenderBuddyMap(buddy!))),
+            // BlocProvider(
+            //     create: (_) => getIt<AddressBloc>()..add(GetBuddyAddress())),
           ],
           child: ReceiveBeep(),
         ),

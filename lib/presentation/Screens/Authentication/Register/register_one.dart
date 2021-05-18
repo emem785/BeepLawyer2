@@ -1,19 +1,36 @@
+import 'package:beep_lawyer_3/application/blocs/location_bloc/location_bloc.dart';
+import 'package:beep_lawyer_3/core/hooks/firbase_messaging_hook.dart';
 import 'package:beep_lawyer_3/core/utils/StyleGuide.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/common_button.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/custom_text_form_field.dart';
 import 'package:beep_lawyer_3/core/widgets/common_widgets/spinner.dart';
 import 'package:beep_lawyer_3/infrastructure/models/user.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:beep_lawyer_3/application/blocs/register_bloc/register_bloc.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:image_picker/image_picker.dart';
 
-class RegisterOne extends StatefulWidget {
+class RegisterOne extends HookWidget {
+  @override
+  Widget build(BuildContext context) {
+    final locationBloc = BlocProvider.of<LocationBloc>(context);
+    final firebaseMessaging = useFirebaseMessagingHook(locationBloc);
+    return RegisterOnePage(firebaseMessaging: firebaseMessaging);
+  }
+}
+
+class RegisterOnePage extends StatefulWidget {
+  final FirebaseMessaging firebaseMessaging;
+
+  const RegisterOnePage({Key? key, required this.firebaseMessaging})
+      : super(key: key);
   @override
   _RegisterOneState createState() => _RegisterOneState();
 }
 
-class _RegisterOneState extends State<RegisterOne> {
+class _RegisterOneState extends State<RegisterOnePage> {
   TextStyle style = TextStyle(fontFamily: 'Nunito');
   final _formKey = GlobalKey<FormState>();
   final _key = GlobalKey<ScaffoldState>();

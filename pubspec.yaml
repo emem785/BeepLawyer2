@@ -35,10 +35,11 @@ dependencies:
   geocoding: ^2.0.0
   geolocator: ^7.0.3
   get_it: ^7.1.3
-  google_maps_flutter: ^2.0.4
+  google_maps_flutter: ^2.0.5
   http: ^0.13.3
   image_picker: ^0.7.5
   injectable: ^1.4.0
+  share: ^2.0.1
   shared_preferences: ^2.0.5
   uni_links: ^0.5.1
   url_launcher: ^6.0.3

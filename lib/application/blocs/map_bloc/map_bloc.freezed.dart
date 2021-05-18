@@ -16,25 +16,30 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$MapEventTearOff {
   const _$MapEventTearOff();
 
-  RenderBuddyMap renderClientMap(Buddy buddy) {
-    return RenderBuddyMap(
-      buddy,
+  RenderMap renderMap(LocationBloc locationBloc) {
+    return RenderMap(
+      locationBloc,
     );
   }
 
-  StartBroadcast startBroadcast(MapTool mapTool, Buddy buddy) {
-    return StartBroadcast(
-      mapTool,
-      buddy,
+  OnErrorMap onErrorMap(Failure failure) {
+    return OnErrorMap(
+      failure,
     );
   }
 
-  StopSecondBroadcast stopSecondBroadcast() {
-    return const StopSecondBroadcast();
+  StopTrackingMap stopTrackingMap() {
+    return const StopTrackingMap();
   }
 
-  OnBroadcastError onBroadcastError() {
-    return const OnBroadcastError();
+  AnimateMap animateMap() {
+    return const AnimateMap();
+  }
+
+  StartTrackingMap startTrackingMap(String phoneNumber) {
+    return StartTrackingMap(
+      phoneNumber,
+    );
   }
 }
 
@@ -45,35 +50,39 @@ const $MapEvent = _$MapEventTearOff();
 mixin _$MapEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Buddy buddy) renderClientMap,
-    required TResult Function(MapTool mapTool, Buddy buddy) startBroadcast,
-    required TResult Function() stopSecondBroadcast,
-    required TResult Function() onBroadcastError,
+    required TResult Function(LocationBloc locationBloc) renderMap,
+    required TResult Function(Failure failure) onErrorMap,
+    required TResult Function() stopTrackingMap,
+    required TResult Function() animateMap,
+    required TResult Function(String phoneNumber) startTrackingMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Buddy buddy)? renderClientMap,
-    TResult Function(MapTool mapTool, Buddy buddy)? startBroadcast,
-    TResult Function()? stopSecondBroadcast,
-    TResult Function()? onBroadcastError,
+    TResult Function(LocationBloc locationBloc)? renderMap,
+    TResult Function(Failure failure)? onErrorMap,
+    TResult Function()? stopTrackingMap,
+    TResult Function()? animateMap,
+    TResult Function(String phoneNumber)? startTrackingMap,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(RenderBuddyMap value) renderClientMap,
-    required TResult Function(StartBroadcast value) startBroadcast,
-    required TResult Function(StopSecondBroadcast value) stopSecondBroadcast,
-    required TResult Function(OnBroadcastError value) onBroadcastError,
+    required TResult Function(RenderMap value) renderMap,
+    required TResult Function(OnErrorMap value) onErrorMap,
+    required TResult Function(StopTrackingMap value) stopTrackingMap,
+    required TResult Function(AnimateMap value) animateMap,
+    required TResult Function(StartTrackingMap value) startTrackingMap,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(RenderBuddyMap value)? renderClientMap,
-    TResult Function(StartBroadcast value)? startBroadcast,
-    TResult Function(StopSecondBroadcast value)? stopSecondBroadcast,
-    TResult Function(OnBroadcastError value)? onBroadcastError,
+    TResult Function(RenderMap value)? renderMap,
+    TResult Function(OnErrorMap value)? onErrorMap,
+    TResult Function(StopTrackingMap value)? stopTrackingMap,
+    TResult Function(AnimateMap value)? animateMap,
+    TResult Function(StartTrackingMap value)? startTrackingMap,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -95,223 +104,89 @@ class _$MapEventCopyWithImpl<$Res> implements $MapEventCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $RenderBuddyMapCopyWith<$Res> {
-  factory $RenderBuddyMapCopyWith(
-          RenderBuddyMap value, $Res Function(RenderBuddyMap) then) =
-      _$RenderBuddyMapCopyWithImpl<$Res>;
-  $Res call({Buddy buddy});
+abstract class $RenderMapCopyWith<$Res> {
+  factory $RenderMapCopyWith(RenderMap value, $Res Function(RenderMap) then) =
+      _$RenderMapCopyWithImpl<$Res>;
+  $Res call({LocationBloc locationBloc});
 }
 
 /// @nodoc
-class _$RenderBuddyMapCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
-    implements $RenderBuddyMapCopyWith<$Res> {
-  _$RenderBuddyMapCopyWithImpl(
-      RenderBuddyMap _value, $Res Function(RenderBuddyMap) _then)
-      : super(_value, (v) => _then(v as RenderBuddyMap));
+class _$RenderMapCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
+    implements $RenderMapCopyWith<$Res> {
+  _$RenderMapCopyWithImpl(RenderMap _value, $Res Function(RenderMap) _then)
+      : super(_value, (v) => _then(v as RenderMap));
 
   @override
-  RenderBuddyMap get _value => super._value as RenderBuddyMap;
+  RenderMap get _value => super._value as RenderMap;
 
   @override
   $Res call({
-    Object? buddy = freezed,
+    Object? locationBloc = freezed,
   }) {
-    return _then(RenderBuddyMap(
-      buddy == freezed
-          ? _value.buddy
-          : buddy // ignore: cast_nullable_to_non_nullable
-              as Buddy,
+    return _then(RenderMap(
+      locationBloc == freezed
+          ? _value.locationBloc
+          : locationBloc // ignore: cast_nullable_to_non_nullable
+              as LocationBloc,
     ));
   }
 }
 
 /// @nodoc
 
-class _$RenderBuddyMap implements RenderBuddyMap {
-  const _$RenderBuddyMap(this.buddy);
+class _$RenderMap implements RenderMap {
+  const _$RenderMap(this.locationBloc);
 
   @override
-  final Buddy buddy;
+  final LocationBloc locationBloc;
 
   @override
   String toString() {
-    return 'MapEvent.renderClientMap(buddy: $buddy)';
+    return 'MapEvent.renderMap(locationBloc: $locationBloc)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is RenderBuddyMap &&
-            (identical(other.buddy, buddy) ||
-                const DeepCollectionEquality().equals(other.buddy, buddy)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(buddy);
-
-  @JsonKey(ignore: true)
-  @override
-  $RenderBuddyMapCopyWith<RenderBuddyMap> get copyWith =>
-      _$RenderBuddyMapCopyWithImpl<RenderBuddyMap>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(Buddy buddy) renderClientMap,
-    required TResult Function(MapTool mapTool, Buddy buddy) startBroadcast,
-    required TResult Function() stopSecondBroadcast,
-    required TResult Function() onBroadcastError,
-  }) {
-    return renderClientMap(buddy);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Buddy buddy)? renderClientMap,
-    TResult Function(MapTool mapTool, Buddy buddy)? startBroadcast,
-    TResult Function()? stopSecondBroadcast,
-    TResult Function()? onBroadcastError,
-    required TResult orElse(),
-  }) {
-    if (renderClientMap != null) {
-      return renderClientMap(buddy);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(RenderBuddyMap value) renderClientMap,
-    required TResult Function(StartBroadcast value) startBroadcast,
-    required TResult Function(StopSecondBroadcast value) stopSecondBroadcast,
-    required TResult Function(OnBroadcastError value) onBroadcastError,
-  }) {
-    return renderClientMap(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(RenderBuddyMap value)? renderClientMap,
-    TResult Function(StartBroadcast value)? startBroadcast,
-    TResult Function(StopSecondBroadcast value)? stopSecondBroadcast,
-    TResult Function(OnBroadcastError value)? onBroadcastError,
-    required TResult orElse(),
-  }) {
-    if (renderClientMap != null) {
-      return renderClientMap(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class RenderBuddyMap implements MapEvent {
-  const factory RenderBuddyMap(Buddy buddy) = _$RenderBuddyMap;
-
-  Buddy get buddy => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $RenderBuddyMapCopyWith<RenderBuddyMap> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $StartBroadcastCopyWith<$Res> {
-  factory $StartBroadcastCopyWith(
-          StartBroadcast value, $Res Function(StartBroadcast) then) =
-      _$StartBroadcastCopyWithImpl<$Res>;
-  $Res call({MapTool mapTool, Buddy buddy});
-}
-
-/// @nodoc
-class _$StartBroadcastCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
-    implements $StartBroadcastCopyWith<$Res> {
-  _$StartBroadcastCopyWithImpl(
-      StartBroadcast _value, $Res Function(StartBroadcast) _then)
-      : super(_value, (v) => _then(v as StartBroadcast));
-
-  @override
-  StartBroadcast get _value => super._value as StartBroadcast;
-
-  @override
-  $Res call({
-    Object? mapTool = freezed,
-    Object? buddy = freezed,
-  }) {
-    return _then(StartBroadcast(
-      mapTool == freezed
-          ? _value.mapTool
-          : mapTool // ignore: cast_nullable_to_non_nullable
-              as MapTool,
-      buddy == freezed
-          ? _value.buddy
-          : buddy // ignore: cast_nullable_to_non_nullable
-              as Buddy,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$StartBroadcast implements StartBroadcast {
-  const _$StartBroadcast(this.mapTool, this.buddy);
-
-  @override
-  final MapTool mapTool;
-  @override
-  final Buddy buddy;
-
-  @override
-  String toString() {
-    return 'MapEvent.startBroadcast(mapTool: $mapTool, buddy: $buddy)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is StartBroadcast &&
-            (identical(other.mapTool, mapTool) ||
+        (other is RenderMap &&
+            (identical(other.locationBloc, locationBloc) ||
                 const DeepCollectionEquality()
-                    .equals(other.mapTool, mapTool)) &&
-            (identical(other.buddy, buddy) ||
-                const DeepCollectionEquality().equals(other.buddy, buddy)));
+                    .equals(other.locationBloc, locationBloc)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(mapTool) ^
-      const DeepCollectionEquality().hash(buddy);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(locationBloc);
 
   @JsonKey(ignore: true)
   @override
-  $StartBroadcastCopyWith<StartBroadcast> get copyWith =>
-      _$StartBroadcastCopyWithImpl<StartBroadcast>(this, _$identity);
+  $RenderMapCopyWith<RenderMap> get copyWith =>
+      _$RenderMapCopyWithImpl<RenderMap>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Buddy buddy) renderClientMap,
-    required TResult Function(MapTool mapTool, Buddy buddy) startBroadcast,
-    required TResult Function() stopSecondBroadcast,
-    required TResult Function() onBroadcastError,
+    required TResult Function(LocationBloc locationBloc) renderMap,
+    required TResult Function(Failure failure) onErrorMap,
+    required TResult Function() stopTrackingMap,
+    required TResult Function() animateMap,
+    required TResult Function(String phoneNumber) startTrackingMap,
   }) {
-    return startBroadcast(mapTool, buddy);
+    return renderMap(locationBloc);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Buddy buddy)? renderClientMap,
-    TResult Function(MapTool mapTool, Buddy buddy)? startBroadcast,
-    TResult Function()? stopSecondBroadcast,
-    TResult Function()? onBroadcastError,
+    TResult Function(LocationBloc locationBloc)? renderMap,
+    TResult Function(Failure failure)? onErrorMap,
+    TResult Function()? stopTrackingMap,
+    TResult Function()? animateMap,
+    TResult Function(String phoneNumber)? startTrackingMap,
     required TResult orElse(),
   }) {
-    if (startBroadcast != null) {
-      return startBroadcast(mapTool, buddy);
+    if (renderMap != null) {
+      return renderMap(locationBloc);
     }
     return orElse();
   }
@@ -319,72 +194,207 @@ class _$StartBroadcast implements StartBroadcast {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(RenderBuddyMap value) renderClientMap,
-    required TResult Function(StartBroadcast value) startBroadcast,
-    required TResult Function(StopSecondBroadcast value) stopSecondBroadcast,
-    required TResult Function(OnBroadcastError value) onBroadcastError,
+    required TResult Function(RenderMap value) renderMap,
+    required TResult Function(OnErrorMap value) onErrorMap,
+    required TResult Function(StopTrackingMap value) stopTrackingMap,
+    required TResult Function(AnimateMap value) animateMap,
+    required TResult Function(StartTrackingMap value) startTrackingMap,
   }) {
-    return startBroadcast(this);
+    return renderMap(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(RenderBuddyMap value)? renderClientMap,
-    TResult Function(StartBroadcast value)? startBroadcast,
-    TResult Function(StopSecondBroadcast value)? stopSecondBroadcast,
-    TResult Function(OnBroadcastError value)? onBroadcastError,
+    TResult Function(RenderMap value)? renderMap,
+    TResult Function(OnErrorMap value)? onErrorMap,
+    TResult Function(StopTrackingMap value)? stopTrackingMap,
+    TResult Function(AnimateMap value)? animateMap,
+    TResult Function(StartTrackingMap value)? startTrackingMap,
     required TResult orElse(),
   }) {
-    if (startBroadcast != null) {
-      return startBroadcast(this);
+    if (renderMap != null) {
+      return renderMap(this);
     }
     return orElse();
   }
 }
 
-abstract class StartBroadcast implements MapEvent {
-  const factory StartBroadcast(MapTool mapTool, Buddy buddy) = _$StartBroadcast;
+abstract class RenderMap implements MapEvent {
+  const factory RenderMap(LocationBloc locationBloc) = _$RenderMap;
 
-  MapTool get mapTool => throw _privateConstructorUsedError;
-  Buddy get buddy => throw _privateConstructorUsedError;
+  LocationBloc get locationBloc => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StartBroadcastCopyWith<StartBroadcast> get copyWith =>
+  $RenderMapCopyWith<RenderMap> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $StopSecondBroadcastCopyWith<$Res> {
-  factory $StopSecondBroadcastCopyWith(
-          StopSecondBroadcast value, $Res Function(StopSecondBroadcast) then) =
-      _$StopSecondBroadcastCopyWithImpl<$Res>;
+abstract class $OnErrorMapCopyWith<$Res> {
+  factory $OnErrorMapCopyWith(
+          OnErrorMap value, $Res Function(OnErrorMap) then) =
+      _$OnErrorMapCopyWithImpl<$Res>;
+  $Res call({Failure failure});
+
+  $FailureCopyWith<$Res> get failure;
 }
 
 /// @nodoc
-class _$StopSecondBroadcastCopyWithImpl<$Res>
-    extends _$MapEventCopyWithImpl<$Res>
-    implements $StopSecondBroadcastCopyWith<$Res> {
-  _$StopSecondBroadcastCopyWithImpl(
-      StopSecondBroadcast _value, $Res Function(StopSecondBroadcast) _then)
-      : super(_value, (v) => _then(v as StopSecondBroadcast));
+class _$OnErrorMapCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
+    implements $OnErrorMapCopyWith<$Res> {
+  _$OnErrorMapCopyWithImpl(OnErrorMap _value, $Res Function(OnErrorMap) _then)
+      : super(_value, (v) => _then(v as OnErrorMap));
 
   @override
-  StopSecondBroadcast get _value => super._value as StopSecondBroadcast;
+  OnErrorMap get _value => super._value as OnErrorMap;
+
+  @override
+  $Res call({
+    Object? failure = freezed,
+  }) {
+    return _then(OnErrorMap(
+      failure == freezed
+          ? _value.failure
+          : failure // ignore: cast_nullable_to_non_nullable
+              as Failure,
+    ));
+  }
+
+  @override
+  $FailureCopyWith<$Res> get failure {
+    return $FailureCopyWith<$Res>(_value.failure, (value) {
+      return _then(_value.copyWith(failure: value));
+    });
+  }
 }
 
 /// @nodoc
 
-class _$StopSecondBroadcast implements StopSecondBroadcast {
-  const _$StopSecondBroadcast();
+class _$OnErrorMap implements OnErrorMap {
+  const _$OnErrorMap(this.failure);
+
+  @override
+  final Failure failure;
 
   @override
   String toString() {
-    return 'MapEvent.stopSecondBroadcast()';
+    return 'MapEvent.onErrorMap(failure: $failure)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is StopSecondBroadcast);
+    return identical(this, other) ||
+        (other is OnErrorMap &&
+            (identical(other.failure, failure) ||
+                const DeepCollectionEquality().equals(other.failure, failure)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failure);
+
+  @JsonKey(ignore: true)
+  @override
+  $OnErrorMapCopyWith<OnErrorMap> get copyWith =>
+      _$OnErrorMapCopyWithImpl<OnErrorMap>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(LocationBloc locationBloc) renderMap,
+    required TResult Function(Failure failure) onErrorMap,
+    required TResult Function() stopTrackingMap,
+    required TResult Function() animateMap,
+    required TResult Function(String phoneNumber) startTrackingMap,
+  }) {
+    return onErrorMap(failure);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(LocationBloc locationBloc)? renderMap,
+    TResult Function(Failure failure)? onErrorMap,
+    TResult Function()? stopTrackingMap,
+    TResult Function()? animateMap,
+    TResult Function(String phoneNumber)? startTrackingMap,
+    required TResult orElse(),
+  }) {
+    if (onErrorMap != null) {
+      return onErrorMap(failure);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(RenderMap value) renderMap,
+    required TResult Function(OnErrorMap value) onErrorMap,
+    required TResult Function(StopTrackingMap value) stopTrackingMap,
+    required TResult Function(AnimateMap value) animateMap,
+    required TResult Function(StartTrackingMap value) startTrackingMap,
+  }) {
+    return onErrorMap(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RenderMap value)? renderMap,
+    TResult Function(OnErrorMap value)? onErrorMap,
+    TResult Function(StopTrackingMap value)? stopTrackingMap,
+    TResult Function(AnimateMap value)? animateMap,
+    TResult Function(StartTrackingMap value)? startTrackingMap,
+    required TResult orElse(),
+  }) {
+    if (onErrorMap != null) {
+      return onErrorMap(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class OnErrorMap implements MapEvent {
+  const factory OnErrorMap(Failure failure) = _$OnErrorMap;
+
+  Failure get failure => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $OnErrorMapCopyWith<OnErrorMap> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $StopTrackingMapCopyWith<$Res> {
+  factory $StopTrackingMapCopyWith(
+          StopTrackingMap value, $Res Function(StopTrackingMap) then) =
+      _$StopTrackingMapCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$StopTrackingMapCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
+    implements $StopTrackingMapCopyWith<$Res> {
+  _$StopTrackingMapCopyWithImpl(
+      StopTrackingMap _value, $Res Function(StopTrackingMap) _then)
+      : super(_value, (v) => _then(v as StopTrackingMap));
+
+  @override
+  StopTrackingMap get _value => super._value as StopTrackingMap;
+}
+
+/// @nodoc
+
+class _$StopTrackingMap implements StopTrackingMap {
+  const _$StopTrackingMap();
+
+  @override
+  String toString() {
+    return 'MapEvent.stopTrackingMap()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is StopTrackingMap);
   }
 
   @override
@@ -393,25 +403,27 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Buddy buddy) renderClientMap,
-    required TResult Function(MapTool mapTool, Buddy buddy) startBroadcast,
-    required TResult Function() stopSecondBroadcast,
-    required TResult Function() onBroadcastError,
+    required TResult Function(LocationBloc locationBloc) renderMap,
+    required TResult Function(Failure failure) onErrorMap,
+    required TResult Function() stopTrackingMap,
+    required TResult Function() animateMap,
+    required TResult Function(String phoneNumber) startTrackingMap,
   }) {
-    return stopSecondBroadcast();
+    return stopTrackingMap();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Buddy buddy)? renderClientMap,
-    TResult Function(MapTool mapTool, Buddy buddy)? startBroadcast,
-    TResult Function()? stopSecondBroadcast,
-    TResult Function()? onBroadcastError,
+    TResult Function(LocationBloc locationBloc)? renderMap,
+    TResult Function(Failure failure)? onErrorMap,
+    TResult Function()? stopTrackingMap,
+    TResult Function()? animateMap,
+    TResult Function(String phoneNumber)? startTrackingMap,
     required TResult orElse(),
   }) {
-    if (stopSecondBroadcast != null) {
-      return stopSecondBroadcast();
+    if (stopTrackingMap != null) {
+      return stopTrackingMap();
     }
     return orElse();
   }
@@ -419,65 +431,66 @@ class _$StopSecondBroadcast implements StopSecondBroadcast {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(RenderBuddyMap value) renderClientMap,
-    required TResult Function(StartBroadcast value) startBroadcast,
-    required TResult Function(StopSecondBroadcast value) stopSecondBroadcast,
-    required TResult Function(OnBroadcastError value) onBroadcastError,
+    required TResult Function(RenderMap value) renderMap,
+    required TResult Function(OnErrorMap value) onErrorMap,
+    required TResult Function(StopTrackingMap value) stopTrackingMap,
+    required TResult Function(AnimateMap value) animateMap,
+    required TResult Function(StartTrackingMap value) startTrackingMap,
   }) {
-    return stopSecondBroadcast(this);
+    return stopTrackingMap(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(RenderBuddyMap value)? renderClientMap,
-    TResult Function(StartBroadcast value)? startBroadcast,
-    TResult Function(StopSecondBroadcast value)? stopSecondBroadcast,
-    TResult Function(OnBroadcastError value)? onBroadcastError,
+    TResult Function(RenderMap value)? renderMap,
+    TResult Function(OnErrorMap value)? onErrorMap,
+    TResult Function(StopTrackingMap value)? stopTrackingMap,
+    TResult Function(AnimateMap value)? animateMap,
+    TResult Function(StartTrackingMap value)? startTrackingMap,
     required TResult orElse(),
   }) {
-    if (stopSecondBroadcast != null) {
-      return stopSecondBroadcast(this);
+    if (stopTrackingMap != null) {
+      return stopTrackingMap(this);
     }
     return orElse();
   }
 }
 
-abstract class StopSecondBroadcast implements MapEvent {
-  const factory StopSecondBroadcast() = _$StopSecondBroadcast;
+abstract class StopTrackingMap implements MapEvent {
+  const factory StopTrackingMap() = _$StopTrackingMap;
 }
 
 /// @nodoc
-abstract class $OnBroadcastErrorCopyWith<$Res> {
-  factory $OnBroadcastErrorCopyWith(
-          OnBroadcastError value, $Res Function(OnBroadcastError) then) =
-      _$OnBroadcastErrorCopyWithImpl<$Res>;
+abstract class $AnimateMapCopyWith<$Res> {
+  factory $AnimateMapCopyWith(
+          AnimateMap value, $Res Function(AnimateMap) then) =
+      _$AnimateMapCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$OnBroadcastErrorCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
-    implements $OnBroadcastErrorCopyWith<$Res> {
-  _$OnBroadcastErrorCopyWithImpl(
-      OnBroadcastError _value, $Res Function(OnBroadcastError) _then)
-      : super(_value, (v) => _then(v as OnBroadcastError));
+class _$AnimateMapCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
+    implements $AnimateMapCopyWith<$Res> {
+  _$AnimateMapCopyWithImpl(AnimateMap _value, $Res Function(AnimateMap) _then)
+      : super(_value, (v) => _then(v as AnimateMap));
 
   @override
-  OnBroadcastError get _value => super._value as OnBroadcastError;
+  AnimateMap get _value => super._value as AnimateMap;
 }
 
 /// @nodoc
 
-class _$OnBroadcastError implements OnBroadcastError {
-  const _$OnBroadcastError();
+class _$AnimateMap implements AnimateMap {
+  const _$AnimateMap();
 
   @override
   String toString() {
-    return 'MapEvent.onBroadcastError()';
+    return 'MapEvent.animateMap()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is OnBroadcastError);
+    return identical(this, other) || (other is AnimateMap);
   }
 
   @override
@@ -486,25 +499,27 @@ class _$OnBroadcastError implements OnBroadcastError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Buddy buddy) renderClientMap,
-    required TResult Function(MapTool mapTool, Buddy buddy) startBroadcast,
-    required TResult Function() stopSecondBroadcast,
-    required TResult Function() onBroadcastError,
+    required TResult Function(LocationBloc locationBloc) renderMap,
+    required TResult Function(Failure failure) onErrorMap,
+    required TResult Function() stopTrackingMap,
+    required TResult Function() animateMap,
+    required TResult Function(String phoneNumber) startTrackingMap,
   }) {
-    return onBroadcastError();
+    return animateMap();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Buddy buddy)? renderClientMap,
-    TResult Function(MapTool mapTool, Buddy buddy)? startBroadcast,
-    TResult Function()? stopSecondBroadcast,
-    TResult Function()? onBroadcastError,
+    TResult Function(LocationBloc locationBloc)? renderMap,
+    TResult Function(Failure failure)? onErrorMap,
+    TResult Function()? stopTrackingMap,
+    TResult Function()? animateMap,
+    TResult Function(String phoneNumber)? startTrackingMap,
     required TResult orElse(),
   }) {
-    if (onBroadcastError != null) {
-      return onBroadcastError();
+    if (animateMap != null) {
+      return animateMap();
     }
     return orElse();
   }
@@ -512,32 +527,162 @@ class _$OnBroadcastError implements OnBroadcastError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(RenderBuddyMap value) renderClientMap,
-    required TResult Function(StartBroadcast value) startBroadcast,
-    required TResult Function(StopSecondBroadcast value) stopSecondBroadcast,
-    required TResult Function(OnBroadcastError value) onBroadcastError,
+    required TResult Function(RenderMap value) renderMap,
+    required TResult Function(OnErrorMap value) onErrorMap,
+    required TResult Function(StopTrackingMap value) stopTrackingMap,
+    required TResult Function(AnimateMap value) animateMap,
+    required TResult Function(StartTrackingMap value) startTrackingMap,
   }) {
-    return onBroadcastError(this);
+    return animateMap(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(RenderBuddyMap value)? renderClientMap,
-    TResult Function(StartBroadcast value)? startBroadcast,
-    TResult Function(StopSecondBroadcast value)? stopSecondBroadcast,
-    TResult Function(OnBroadcastError value)? onBroadcastError,
+    TResult Function(RenderMap value)? renderMap,
+    TResult Function(OnErrorMap value)? onErrorMap,
+    TResult Function(StopTrackingMap value)? stopTrackingMap,
+    TResult Function(AnimateMap value)? animateMap,
+    TResult Function(StartTrackingMap value)? startTrackingMap,
     required TResult orElse(),
   }) {
-    if (onBroadcastError != null) {
-      return onBroadcastError(this);
+    if (animateMap != null) {
+      return animateMap(this);
     }
     return orElse();
   }
 }
 
-abstract class OnBroadcastError implements MapEvent {
-  const factory OnBroadcastError() = _$OnBroadcastError;
+abstract class AnimateMap implements MapEvent {
+  const factory AnimateMap() = _$AnimateMap;
+}
+
+/// @nodoc
+abstract class $StartTrackingMapCopyWith<$Res> {
+  factory $StartTrackingMapCopyWith(
+          StartTrackingMap value, $Res Function(StartTrackingMap) then) =
+      _$StartTrackingMapCopyWithImpl<$Res>;
+  $Res call({String phoneNumber});
+}
+
+/// @nodoc
+class _$StartTrackingMapCopyWithImpl<$Res> extends _$MapEventCopyWithImpl<$Res>
+    implements $StartTrackingMapCopyWith<$Res> {
+  _$StartTrackingMapCopyWithImpl(
+      StartTrackingMap _value, $Res Function(StartTrackingMap) _then)
+      : super(_value, (v) => _then(v as StartTrackingMap));
+
+  @override
+  StartTrackingMap get _value => super._value as StartTrackingMap;
+
+  @override
+  $Res call({
+    Object? phoneNumber = freezed,
+  }) {
+    return _then(StartTrackingMap(
+      phoneNumber == freezed
+          ? _value.phoneNumber
+          : phoneNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$StartTrackingMap implements StartTrackingMap {
+  const _$StartTrackingMap(this.phoneNumber);
+
+  @override
+  final String phoneNumber;
+
+  @override
+  String toString() {
+    return 'MapEvent.startTrackingMap(phoneNumber: $phoneNumber)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is StartTrackingMap &&
+            (identical(other.phoneNumber, phoneNumber) ||
+                const DeepCollectionEquality()
+                    .equals(other.phoneNumber, phoneNumber)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(phoneNumber);
+
+  @JsonKey(ignore: true)
+  @override
+  $StartTrackingMapCopyWith<StartTrackingMap> get copyWith =>
+      _$StartTrackingMapCopyWithImpl<StartTrackingMap>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(LocationBloc locationBloc) renderMap,
+    required TResult Function(Failure failure) onErrorMap,
+    required TResult Function() stopTrackingMap,
+    required TResult Function() animateMap,
+    required TResult Function(String phoneNumber) startTrackingMap,
+  }) {
+    return startTrackingMap(phoneNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(LocationBloc locationBloc)? renderMap,
+    TResult Function(Failure failure)? onErrorMap,
+    TResult Function()? stopTrackingMap,
+    TResult Function()? animateMap,
+    TResult Function(String phoneNumber)? startTrackingMap,
+    required TResult orElse(),
+  }) {
+    if (startTrackingMap != null) {
+      return startTrackingMap(phoneNumber);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(RenderMap value) renderMap,
+    required TResult Function(OnErrorMap value) onErrorMap,
+    required TResult Function(StopTrackingMap value) stopTrackingMap,
+    required TResult Function(AnimateMap value) animateMap,
+    required TResult Function(StartTrackingMap value) startTrackingMap,
+  }) {
+    return startTrackingMap(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(RenderMap value)? renderMap,
+    TResult Function(OnErrorMap value)? onErrorMap,
+    TResult Function(StopTrackingMap value)? stopTrackingMap,
+    TResult Function(AnimateMap value)? animateMap,
+    TResult Function(StartTrackingMap value)? startTrackingMap,
+    required TResult orElse(),
+  }) {
+    if (startTrackingMap != null) {
+      return startTrackingMap(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class StartTrackingMap implements MapEvent {
+  const factory StartTrackingMap(String phoneNumber) = _$StartTrackingMap;
+
+  String get phoneNumber => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $StartTrackingMapCopyWith<StartTrackingMap> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -554,19 +699,16 @@ class _$MapStateTearOff {
     );
   }
 
-  BroadcastStarted broadcastStarted(Buddy buddy, MapTool mapTool) {
-    return BroadcastStarted(
-      buddy,
+  BroadcastEnded broadcastEnded(MapTool mapTool) {
+    return BroadcastEnded(
       mapTool,
     );
   }
 
-  BroadcastEnded broadcastEnded() {
-    return const BroadcastEnded();
-  }
-
-  BroadcastError broadcastError() {
-    return const BroadcastError();
+  ErrorMap errorMap(MapTool mapTool) {
+    return ErrorMap(
+      mapTool,
+    );
   }
 
   MapLoading loading() {
@@ -583,9 +725,8 @@ mixin _$MapState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
-    required TResult Function() broadcastEnded,
-    required TResult Function() broadcastError,
+    required TResult Function(MapTool mapTool) broadcastEnded,
+    required TResult Function(MapTool mapTool) errorMap,
     required TResult Function() loading,
   }) =>
       throw _privateConstructorUsedError;
@@ -593,9 +734,8 @@ mixin _$MapState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
-    TResult Function()? broadcastEnded,
-    TResult Function()? broadcastError,
+    TResult Function(MapTool mapTool)? broadcastEnded,
+    TResult Function(MapTool mapTool)? errorMap,
     TResult Function()? loading,
     required TResult orElse(),
   }) =>
@@ -604,9 +744,8 @@ mixin _$MapState {
   TResult map<TResult extends Object?>({
     required TResult Function(MapInitial value) initial,
     required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
     required TResult Function(BroadcastEnded value) broadcastEnded,
-    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(ErrorMap value) errorMap,
     required TResult Function(MapLoading value) loading,
   }) =>
       throw _privateConstructorUsedError;
@@ -614,9 +753,8 @@ mixin _$MapState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MapInitial value)? initial,
     TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
     TResult Function(BroadcastEnded value)? broadcastEnded,
-    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(ErrorMap value)? errorMap,
     TResult Function(MapLoading value)? loading,
     required TResult orElse(),
   }) =>
@@ -678,9 +816,8 @@ class _$MapInitial implements MapInitial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
-    required TResult Function() broadcastEnded,
-    required TResult Function() broadcastError,
+    required TResult Function(MapTool mapTool) broadcastEnded,
+    required TResult Function(MapTool mapTool) errorMap,
     required TResult Function() loading,
   }) {
     return initial();
@@ -691,9 +828,8 @@ class _$MapInitial implements MapInitial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
-    TResult Function()? broadcastEnded,
-    TResult Function()? broadcastError,
+    TResult Function(MapTool mapTool)? broadcastEnded,
+    TResult Function(MapTool mapTool)? errorMap,
     TResult Function()? loading,
     required TResult orElse(),
   }) {
@@ -708,9 +844,8 @@ class _$MapInitial implements MapInitial {
   TResult map<TResult extends Object?>({
     required TResult Function(MapInitial value) initial,
     required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
     required TResult Function(BroadcastEnded value) broadcastEnded,
-    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(ErrorMap value) errorMap,
     required TResult Function(MapLoading value) loading,
   }) {
     return initial(this);
@@ -721,9 +856,8 @@ class _$MapInitial implements MapInitial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MapInitial value)? initial,
     TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
     TResult Function(BroadcastEnded value)? broadcastEnded,
-    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(ErrorMap value)? errorMap,
     TResult Function(MapLoading value)? loading,
     required TResult orElse(),
   }) {
@@ -804,9 +938,8 @@ class _$MapRendered implements MapRendered {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
-    required TResult Function() broadcastEnded,
-    required TResult Function() broadcastError,
+    required TResult Function(MapTool mapTool) broadcastEnded,
+    required TResult Function(MapTool mapTool) errorMap,
     required TResult Function() loading,
   }) {
     return mapRendered(mapTool);
@@ -817,9 +950,8 @@ class _$MapRendered implements MapRendered {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
-    TResult Function()? broadcastEnded,
-    TResult Function()? broadcastError,
+    TResult Function(MapTool mapTool)? broadcastEnded,
+    TResult Function(MapTool mapTool)? errorMap,
     TResult Function()? loading,
     required TResult orElse(),
   }) {
@@ -834,9 +966,8 @@ class _$MapRendered implements MapRendered {
   TResult map<TResult extends Object?>({
     required TResult Function(MapInitial value) initial,
     required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
     required TResult Function(BroadcastEnded value) broadcastEnded,
-    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(ErrorMap value) errorMap,
     required TResult Function(MapLoading value) loading,
   }) {
     return mapRendered(this);
@@ -847,9 +978,8 @@ class _$MapRendered implements MapRendered {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MapInitial value)? initial,
     TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
     TResult Function(BroadcastEnded value)? broadcastEnded,
-    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(ErrorMap value)? errorMap,
     TResult Function(MapLoading value)? loading,
     required TResult orElse(),
   }) {
@@ -870,154 +1000,11 @@ abstract class MapRendered implements MapState {
 }
 
 /// @nodoc
-abstract class $BroadcastStartedCopyWith<$Res> {
-  factory $BroadcastStartedCopyWith(
-          BroadcastStarted value, $Res Function(BroadcastStarted) then) =
-      _$BroadcastStartedCopyWithImpl<$Res>;
-  $Res call({Buddy buddy, MapTool mapTool});
-}
-
-/// @nodoc
-class _$BroadcastStartedCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
-    implements $BroadcastStartedCopyWith<$Res> {
-  _$BroadcastStartedCopyWithImpl(
-      BroadcastStarted _value, $Res Function(BroadcastStarted) _then)
-      : super(_value, (v) => _then(v as BroadcastStarted));
-
-  @override
-  BroadcastStarted get _value => super._value as BroadcastStarted;
-
-  @override
-  $Res call({
-    Object? buddy = freezed,
-    Object? mapTool = freezed,
-  }) {
-    return _then(BroadcastStarted(
-      buddy == freezed
-          ? _value.buddy
-          : buddy // ignore: cast_nullable_to_non_nullable
-              as Buddy,
-      mapTool == freezed
-          ? _value.mapTool
-          : mapTool // ignore: cast_nullable_to_non_nullable
-              as MapTool,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$BroadcastStarted implements BroadcastStarted {
-  const _$BroadcastStarted(this.buddy, this.mapTool);
-
-  @override
-  final Buddy buddy;
-  @override
-  final MapTool mapTool;
-
-  @override
-  String toString() {
-    return 'MapState.broadcastStarted(buddy: $buddy, mapTool: $mapTool)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is BroadcastStarted &&
-            (identical(other.buddy, buddy) ||
-                const DeepCollectionEquality().equals(other.buddy, buddy)) &&
-            (identical(other.mapTool, mapTool) ||
-                const DeepCollectionEquality().equals(other.mapTool, mapTool)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(buddy) ^
-      const DeepCollectionEquality().hash(mapTool);
-
-  @JsonKey(ignore: true)
-  @override
-  $BroadcastStartedCopyWith<BroadcastStarted> get copyWith =>
-      _$BroadcastStartedCopyWithImpl<BroadcastStarted>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
-    required TResult Function() broadcastEnded,
-    required TResult Function() broadcastError,
-    required TResult Function() loading,
-  }) {
-    return broadcastStarted(buddy, mapTool);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
-    TResult Function()? broadcastEnded,
-    TResult Function()? broadcastError,
-    TResult Function()? loading,
-    required TResult orElse(),
-  }) {
-    if (broadcastStarted != null) {
-      return broadcastStarted(buddy, mapTool);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(MapInitial value) initial,
-    required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
-    required TResult Function(BroadcastEnded value) broadcastEnded,
-    required TResult Function(BroadcastError value) broadcastError,
-    required TResult Function(MapLoading value) loading,
-  }) {
-    return broadcastStarted(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(MapInitial value)? initial,
-    TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
-    TResult Function(BroadcastEnded value)? broadcastEnded,
-    TResult Function(BroadcastError value)? broadcastError,
-    TResult Function(MapLoading value)? loading,
-    required TResult orElse(),
-  }) {
-    if (broadcastStarted != null) {
-      return broadcastStarted(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class BroadcastStarted implements MapState {
-  const factory BroadcastStarted(Buddy buddy, MapTool mapTool) =
-      _$BroadcastStarted;
-
-  Buddy get buddy => throw _privateConstructorUsedError;
-  MapTool get mapTool => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $BroadcastStartedCopyWith<BroadcastStarted> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
 abstract class $BroadcastEndedCopyWith<$Res> {
   factory $BroadcastEndedCopyWith(
           BroadcastEnded value, $Res Function(BroadcastEnded) then) =
       _$BroadcastEndedCopyWithImpl<$Res>;
+  $Res call({MapTool mapTool});
 }
 
 /// @nodoc
@@ -1029,37 +1016,60 @@ class _$BroadcastEndedCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
 
   @override
   BroadcastEnded get _value => super._value as BroadcastEnded;
+
+  @override
+  $Res call({
+    Object? mapTool = freezed,
+  }) {
+    return _then(BroadcastEnded(
+      mapTool == freezed
+          ? _value.mapTool
+          : mapTool // ignore: cast_nullable_to_non_nullable
+              as MapTool,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$BroadcastEnded implements BroadcastEnded {
-  const _$BroadcastEnded();
+  const _$BroadcastEnded(this.mapTool);
+
+  @override
+  final MapTool mapTool;
 
   @override
   String toString() {
-    return 'MapState.broadcastEnded()';
+    return 'MapState.broadcastEnded(mapTool: $mapTool)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is BroadcastEnded);
+    return identical(this, other) ||
+        (other is BroadcastEnded &&
+            (identical(other.mapTool, mapTool) ||
+                const DeepCollectionEquality().equals(other.mapTool, mapTool)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(mapTool);
+
+  @JsonKey(ignore: true)
+  @override
+  $BroadcastEndedCopyWith<BroadcastEnded> get copyWith =>
+      _$BroadcastEndedCopyWithImpl<BroadcastEnded>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
-    required TResult Function() broadcastEnded,
-    required TResult Function() broadcastError,
+    required TResult Function(MapTool mapTool) broadcastEnded,
+    required TResult Function(MapTool mapTool) errorMap,
     required TResult Function() loading,
   }) {
-    return broadcastEnded();
+    return broadcastEnded(mapTool);
   }
 
   @override
@@ -1067,14 +1077,13 @@ class _$BroadcastEnded implements BroadcastEnded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
-    TResult Function()? broadcastEnded,
-    TResult Function()? broadcastError,
+    TResult Function(MapTool mapTool)? broadcastEnded,
+    TResult Function(MapTool mapTool)? errorMap,
     TResult Function()? loading,
     required TResult orElse(),
   }) {
     if (broadcastEnded != null) {
-      return broadcastEnded();
+      return broadcastEnded(mapTool);
     }
     return orElse();
   }
@@ -1084,9 +1093,8 @@ class _$BroadcastEnded implements BroadcastEnded {
   TResult map<TResult extends Object?>({
     required TResult Function(MapInitial value) initial,
     required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
     required TResult Function(BroadcastEnded value) broadcastEnded,
-    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(ErrorMap value) errorMap,
     required TResult Function(MapLoading value) loading,
   }) {
     return broadcastEnded(this);
@@ -1097,9 +1105,8 @@ class _$BroadcastEnded implements BroadcastEnded {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MapInitial value)? initial,
     TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
     TResult Function(BroadcastEnded value)? broadcastEnded,
-    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(ErrorMap value)? errorMap,
     TResult Function(MapLoading value)? loading,
     required TResult orElse(),
   }) {
@@ -1111,56 +1118,83 @@ class _$BroadcastEnded implements BroadcastEnded {
 }
 
 abstract class BroadcastEnded implements MapState {
-  const factory BroadcastEnded() = _$BroadcastEnded;
+  const factory BroadcastEnded(MapTool mapTool) = _$BroadcastEnded;
+
+  MapTool get mapTool => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $BroadcastEndedCopyWith<BroadcastEnded> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BroadcastErrorCopyWith<$Res> {
-  factory $BroadcastErrorCopyWith(
-          BroadcastError value, $Res Function(BroadcastError) then) =
-      _$BroadcastErrorCopyWithImpl<$Res>;
+abstract class $ErrorMapCopyWith<$Res> {
+  factory $ErrorMapCopyWith(ErrorMap value, $Res Function(ErrorMap) then) =
+      _$ErrorMapCopyWithImpl<$Res>;
+  $Res call({MapTool mapTool});
 }
 
 /// @nodoc
-class _$BroadcastErrorCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
-    implements $BroadcastErrorCopyWith<$Res> {
-  _$BroadcastErrorCopyWithImpl(
-      BroadcastError _value, $Res Function(BroadcastError) _then)
-      : super(_value, (v) => _then(v as BroadcastError));
+class _$ErrorMapCopyWithImpl<$Res> extends _$MapStateCopyWithImpl<$Res>
+    implements $ErrorMapCopyWith<$Res> {
+  _$ErrorMapCopyWithImpl(ErrorMap _value, $Res Function(ErrorMap) _then)
+      : super(_value, (v) => _then(v as ErrorMap));
 
   @override
-  BroadcastError get _value => super._value as BroadcastError;
+  ErrorMap get _value => super._value as ErrorMap;
+
+  @override
+  $Res call({
+    Object? mapTool = freezed,
+  }) {
+    return _then(ErrorMap(
+      mapTool == freezed
+          ? _value.mapTool
+          : mapTool // ignore: cast_nullable_to_non_nullable
+              as MapTool,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$BroadcastError implements BroadcastError {
-  const _$BroadcastError();
+class _$ErrorMap implements ErrorMap {
+  const _$ErrorMap(this.mapTool);
+
+  @override
+  final MapTool mapTool;
 
   @override
   String toString() {
-    return 'MapState.broadcastError()';
+    return 'MapState.errorMap(mapTool: $mapTool)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is BroadcastError);
+    return identical(this, other) ||
+        (other is ErrorMap &&
+            (identical(other.mapTool, mapTool) ||
+                const DeepCollectionEquality().equals(other.mapTool, mapTool)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(mapTool);
+
+  @JsonKey(ignore: true)
+  @override
+  $ErrorMapCopyWith<ErrorMap> get copyWith =>
+      _$ErrorMapCopyWithImpl<ErrorMap>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
-    required TResult Function() broadcastEnded,
-    required TResult Function() broadcastError,
+    required TResult Function(MapTool mapTool) broadcastEnded,
+    required TResult Function(MapTool mapTool) errorMap,
     required TResult Function() loading,
   }) {
-    return broadcastError();
+    return errorMap(mapTool);
   }
 
   @override
@@ -1168,14 +1202,13 @@ class _$BroadcastError implements BroadcastError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
-    TResult Function()? broadcastEnded,
-    TResult Function()? broadcastError,
+    TResult Function(MapTool mapTool)? broadcastEnded,
+    TResult Function(MapTool mapTool)? errorMap,
     TResult Function()? loading,
     required TResult orElse(),
   }) {
-    if (broadcastError != null) {
-      return broadcastError();
+    if (errorMap != null) {
+      return errorMap(mapTool);
     }
     return orElse();
   }
@@ -1185,12 +1218,11 @@ class _$BroadcastError implements BroadcastError {
   TResult map<TResult extends Object?>({
     required TResult Function(MapInitial value) initial,
     required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
     required TResult Function(BroadcastEnded value) broadcastEnded,
-    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(ErrorMap value) errorMap,
     required TResult Function(MapLoading value) loading,
   }) {
-    return broadcastError(this);
+    return errorMap(this);
   }
 
   @override
@@ -1198,21 +1230,25 @@ class _$BroadcastError implements BroadcastError {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MapInitial value)? initial,
     TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
     TResult Function(BroadcastEnded value)? broadcastEnded,
-    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(ErrorMap value)? errorMap,
     TResult Function(MapLoading value)? loading,
     required TResult orElse(),
   }) {
-    if (broadcastError != null) {
-      return broadcastError(this);
+    if (errorMap != null) {
+      return errorMap(this);
     }
     return orElse();
   }
 }
 
-abstract class BroadcastError implements MapState {
-  const factory BroadcastError() = _$BroadcastError;
+abstract class ErrorMap implements MapState {
+  const factory ErrorMap(MapTool mapTool) = _$ErrorMap;
+
+  MapTool get mapTool => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ErrorMapCopyWith<ErrorMap> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1255,9 +1291,8 @@ class _$MapLoading implements MapLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(MapTool mapTool) mapRendered,
-    required TResult Function(Buddy buddy, MapTool mapTool) broadcastStarted,
-    required TResult Function() broadcastEnded,
-    required TResult Function() broadcastError,
+    required TResult Function(MapTool mapTool) broadcastEnded,
+    required TResult Function(MapTool mapTool) errorMap,
     required TResult Function() loading,
   }) {
     return loading();
@@ -1268,9 +1303,8 @@ class _$MapLoading implements MapLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function(MapTool mapTool)? mapRendered,
-    TResult Function(Buddy buddy, MapTool mapTool)? broadcastStarted,
-    TResult Function()? broadcastEnded,
-    TResult Function()? broadcastError,
+    TResult Function(MapTool mapTool)? broadcastEnded,
+    TResult Function(MapTool mapTool)? errorMap,
     TResult Function()? loading,
     required TResult orElse(),
   }) {
@@ -1285,9 +1319,8 @@ class _$MapLoading implements MapLoading {
   TResult map<TResult extends Object?>({
     required TResult Function(MapInitial value) initial,
     required TResult Function(MapRendered value) mapRendered,
-    required TResult Function(BroadcastStarted value) broadcastStarted,
     required TResult Function(BroadcastEnded value) broadcastEnded,
-    required TResult Function(BroadcastError value) broadcastError,
+    required TResult Function(ErrorMap value) errorMap,
     required TResult Function(MapLoading value) loading,
   }) {
     return loading(this);
@@ -1298,9 +1331,8 @@ class _$MapLoading implements MapLoading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MapInitial value)? initial,
     TResult Function(MapRendered value)? mapRendered,
-    TResult Function(BroadcastStarted value)? broadcastStarted,
     TResult Function(BroadcastEnded value)? broadcastEnded,
-    TResult Function(BroadcastError value)? broadcastError,
+    TResult Function(ErrorMap value)? errorMap,
     TResult Function(MapLoading value)? loading,
     required TResult orElse(),
   }) {

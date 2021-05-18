@@ -1,4 +1,5 @@
 import 'package:beep_lawyer_3/application/blocs/auth_bloc/auth_bloc.dart';
+import 'package:share/share.dart';
 import '../../../application/blocs/navigation_bloc/navigation_bloc.dart';
 import 'package:beep_lawyer_3/presentation/Screens/MenuPages/profile_pages/profiles_menu.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +49,9 @@ class MoreMenu extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Share.share("https:\\beeep.xyz", subject: "invite to beep");
+              },
               child: MenuItem(
                   icon: SvgPicture.asset('assets/images/Share.svg'),
                   mainText: 'Invite',

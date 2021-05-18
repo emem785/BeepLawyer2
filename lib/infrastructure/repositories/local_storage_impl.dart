@@ -113,7 +113,8 @@ class LocalStorageImpl implements LocalStorageInterface {
   @override
   cacheScnNumber(String scnNumber) async {
     final response = await getUser();
-    final userString = response.fold(((l) => null) as String Function(Failure), (r) => r);
+    final userString =
+        response.fold(((l) => null) as String Function(Failure), (r) => r);
     final user = User.fromJson(jsonDecode(userString));
     user.scnNumber = scnNumber;
     await cacheUser(jsonEncode(user));
@@ -122,8 +123,8 @@ class LocalStorageImpl implements LocalStorageInterface {
   @override
   Future<String?> getPhoneNumber() async {
     final response = await getUser();
-    final user =
-        response.fold(((l) => null) as User Function(Failure), (r) => User.fromJson(jsonDecode(r)));
+    final user = response.fold(((l) => null) as User Function(Failure),
+        (r) => User.fromJson(jsonDecode(r)));
     final phone = user.phone;
     return phone;
   }
